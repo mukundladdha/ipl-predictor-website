@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 @import "tailwindcss";
 
 * {
@@ -19,4 +19,16 @@ body {
 
 .recharts-tooltip-wrapper {
   z-index: 100;
+}
+
+.sec {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+@media (max-width: 640px) {
+  .sec {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }

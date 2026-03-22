@@ -19,11 +19,11 @@ export default function ConceptCards() {
   const { activeModel, setActiveModel } = useModel()
 
   return (
-    <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 24px 40px' }}>
+    <div className="sec" style={{ paddingBottom: 40 }}>
       <div style={{
         fontSize: 11,
         color: '#FFD700',
-        letterSpacing: '1.5px',
+        letterSpacing: '2px',
         textTransform: 'uppercase',
         marginBottom: 16,
       }}>
@@ -54,9 +54,9 @@ export default function ConceptCards() {
             >
               <div style={{ fontSize: 22, marginBottom: 10 }}>{card.icon}</div>
               <div style={{
-                fontSize: 14,
-                fontWeight: 600,
-                color: active ? '#FFD700' : '#888',
+                fontSize: 13,
+                fontWeight: 500,
+                color: active ? '#FFD700' : '#ccc',
                 marginBottom: 10,
                 transition: 'color 0.2s',
               }}>
@@ -64,8 +64,8 @@ export default function ConceptCards() {
               </div>
               <div style={{
                 fontSize: 13,
-                color: active ? '#666' : '#444',
-                lineHeight: 1.6,
+                color: active ? '#aaa' : '#666',
+                lineHeight: 1.75,
                 transition: 'color 0.2s',
               }}>
                 {card.body}

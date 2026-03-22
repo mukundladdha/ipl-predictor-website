@@ -20,11 +20,11 @@ export default function PlayoffRace({ teams }) {
     .sort((a, b) => b.adjPct - a.adjPct)
 
   return (
-    <div style={{ maxWidth: 900, margin: '0 auto', padding: '40px 24px 32px' }}>
+    <div className="sec" style={{ paddingTop: 40, paddingBottom: 32 }}>
 
       {/* Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>
-        <div style={{ fontSize: 11, color: '#FFD700', letterSpacing: '1.5px', textTransform: 'uppercase' }}>
+        <div style={{ fontSize: 11, color: '#FFD700', letterSpacing: '2px', textTransform: 'uppercase' }}>
           Playoff Race
         </div>
         <div style={{ display: 'flex', gap: 6 }}>
@@ -39,9 +39,9 @@ export default function PlayoffRace({ teams }) {
                   borderRadius: 20,
                   border: `1px solid ${active ? '#FFD700' : '#2a2d3a'}`,
                   background: active ? 'rgba(255,215,0,0.06)' : 'transparent',
-                  color: active ? '#FFD700' : '#555',
+                  color: active ? '#FFD700' : '#aaa',
                   fontSize: 12,
-                  fontWeight: active ? 600 : 400,
+                  fontWeight: active ? 500 : 400,
                   cursor: 'pointer',
                   transition: 'all 0.2s',
                 }}
@@ -69,12 +69,12 @@ export default function PlayoffRace({ teams }) {
 
             <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
               {/* Rank */}
-              <div style={{ width: 18, fontSize: 11, color: '#333', textAlign: 'right', flexShrink: 0 }}>
+              <div style={{ width: 18, fontSize: 11, color: '#888', textAlign: 'right', flexShrink: 0 }}>
                 {i + 1}
               </div>
 
               {/* Short code */}
-              <div style={{ width: 34, fontSize: 10, color: '#555', flexShrink: 0 }}>
+              <div style={{ width: 34, fontSize: 10, color: '#aaa', flexShrink: 0 }}>
                 {team.short}
               </div>
 
@@ -120,7 +120,7 @@ export default function PlayoffRace({ teams }) {
                     top: '50%',
                     transform: 'translateY(-50%)',
                     fontSize: 11,
-                    color: '#666',
+                    color: '#888',
                     whiteSpace: 'nowrap',
                   }}>
                     {team.name}
@@ -132,7 +132,7 @@ export default function PlayoffRace({ teams }) {
               <div style={{
                 width: 38,
                 fontSize: 13,
-                fontWeight: 600,
+                fontWeight: 500,
                 color: pctColor(team.adjPct),
                 textAlign: 'right',
                 flexShrink: 0,

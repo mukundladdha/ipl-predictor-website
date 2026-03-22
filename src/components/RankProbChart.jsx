@@ -28,7 +28,7 @@ const CustomTooltip = ({ active, payload }) => {
     }}>
       {payload.map(p => (
         <div key={p.dataKey} style={{ color: '#888' }}>
-          {p.dataKey}: <span style={{ color: '#fff', fontWeight: 600 }}>{p.value}%</span>
+          {p.dataKey}: <span style={{ color: '#fff', fontWeight: 500 }}>{p.value}%</span>
         </div>
       ))}
     </div>
@@ -42,19 +42,18 @@ export default function RankProbChart({ teams }) {
   const team = teams.find(t => t.short === selectedShort) ?? teams[0]
   const probs = team?.models[activeModel]?.rank_probs ?? []
 
-  // One data row per position for a vertical bar chart
   const chartData = POSITIONS.map((pos, i) => ({
     pos,
     pct: probs[i] ?? 0,
   }))
 
   return (
-    <div style={{ maxWidth: 900, margin: '0 auto', padding: '40px 24px' }}>
+    <div className="sec" style={{ paddingTop: 40, paddingBottom: 40 }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>
         <div style={{
           fontSize: 11,
           color: '#FFD700',
-          letterSpacing: '1.5px',
+          letterSpacing: '2px',
           textTransform: 'uppercase',
         }}>
           How likely is each finish?
@@ -79,7 +78,6 @@ export default function RankProbChart({ teams }) {
         </select>
       </div>
 
-      {/* Stacked horizontal bar (one row = the team, segments = each rank) */}
       <ResponsiveContainer width="100%" height={64}>
         <BarChart
           layout="vertical"
@@ -89,17 +87,13 @@ export default function RankProbChart({ teams }) {
         >
           <XAxis type="number" domain={[0, 100]} hide />
           <YAxis type="category" dataKey="name" hide />
-          <Tooltip
-            content={<CustomTooltip />}
-            cursor={false}
-          />
+          <Tooltip content={<CustomTooltip />} cursor={false} />
           {POSITIONS.map((pos, i) => (
             <Bar key={pos} dataKey={pos} stackId="a" fill={rankColor(team.color, i, POSITIONS.length)} />
           ))}
         </BarChart>
       </ResponsiveContainer>
 
-      {/* Legend */}
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 16px', marginTop: 16 }}>
         {POSITIONS.map((pos, i) => (
           <div key={pos} style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
@@ -110,7 +104,7 @@ export default function RankProbChart({ teams }) {
               backgroundColor: rankColor(team.color, i, POSITIONS.length),
               flexShrink: 0,
             }} />
-            <span style={{ fontSize: 11, color: '#444' }}>
+            <span style={{ fontSize: 11, color: '#888' }}>
               {pos}: {probs[i] ?? 0}%
             </span>
           </div>

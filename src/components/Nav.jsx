@@ -4,31 +4,29 @@ const S = {
     background: '#0f1117',
   },
   inner: {
-    maxWidth: 900,
-    margin: '0 auto',
-    padding: '14px 24px',
+    padding: '14px 0',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
   logo: {
     fontSize: 15,
-    fontWeight: 600,
+    fontWeight: 500,
     color: '#fff',
     letterSpacing: '-0.3px',
   },
   updated: {
     fontSize: 12,
-    color: '#444',
+    color: '#888',
   },
 }
 
 export default function Nav({ lastUpdated }) {
   return (
     <nav style={S.nav}>
-      <div style={S.inner}>
+      <div className="sec" style={S.inner}>
         <div style={S.logo}>
-          IPL <span style={{ color: '#FFD700' }}>Forecast</span> 2025
+          <span style={{ color: '#FFD700' }}>Duckworth</span>
         </div>
         <div style={S.updated}>Updated · {lastUpdated}</div>
       </div>

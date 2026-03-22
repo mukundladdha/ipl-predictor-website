@@ -29,14 +29,14 @@ const CustomTooltip = ({ active, payload, label }) => {
       fontSize: 12,
       minWidth: 140,
     }}>
-      <div style={{ color: '#555', marginBottom: 8, fontSize: 11 }}>{label}</div>
+      <div style={{ color: '#aaa', marginBottom: 8, fontSize: 11 }}>{label}</div>
       {sorted.map(e => (
         <div key={e.dataKey} style={{ display: 'flex', justifyContent: 'space-between', gap: 16, padding: '2px 0' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
             <div style={{ width: 8, height: 8, borderRadius: '50%', backgroundColor: e.color, flexShrink: 0 }} />
             <span style={{ color: '#888' }}>{e.dataKey}</span>
           </div>
-          <span style={{ fontWeight: 600, color: e.color, fontVariantNumeric: 'tabular-nums' }}>
+          <span style={{ fontWeight: 500, color: e.color, fontVariantNumeric: 'tabular-nums' }}>
             {e.value}%
           </span>
         </div>
@@ -50,11 +50,11 @@ export default function BumpsChart({ teams }) {
   const data = buildChartData(teams, activeModel)
 
   return (
-    <div style={{ maxWidth: 900, margin: '0 auto', padding: '40px 24px' }}>
+    <div className="sec" style={{ paddingTop: 40, paddingBottom: 40 }}>
       <div style={{
         fontSize: 11,
         color: '#FFD700',
-        letterSpacing: '1.5px',
+        letterSpacing: '2px',
         textTransform: 'uppercase',
         marginBottom: 24,
       }}>
@@ -66,13 +66,13 @@ export default function BumpsChart({ teams }) {
           <CartesianGrid strokeDasharray="3 3" stroke="#1e2130" />
           <XAxis
             dataKey="md"
-            tick={{ fill: '#444', fontSize: 11 }}
+            tick={{ fill: '#888', fontSize: 11 }}
             axisLine={{ stroke: '#2a2d3a' }}
             tickLine={false}
           />
           <YAxis
             domain={[0, 100]}
-            tick={{ fill: '#444', fontSize: 11 }}
+            tick={{ fill: '#888', fontSize: 11 }}
             axisLine={false}
             tickLine={false}
             tickFormatter={v => `${v}%`}
@@ -82,7 +82,7 @@ export default function BumpsChart({ teams }) {
           <Legend
             wrapperStyle={{ paddingTop: 20 }}
             formatter={v => (
-              <span style={{ color: '#555', fontSize: 11 }}>{v}</span>
+              <span style={{ color: '#aaa', fontSize: 11 }}>{v}</span>
             )}
             iconType="circle"
             iconSize={8}

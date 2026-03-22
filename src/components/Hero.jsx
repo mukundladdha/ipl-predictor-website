@@ -1,11 +1,11 @@
 export default function Hero({ teamCount = 10 }) {
   return (
-    <div style={{ maxWidth: 900, margin: '0 auto', padding: '60px 24px 44px' }}>
+    <div className="sec" style={{ paddingTop: 60, paddingBottom: 44 }}>
       <h1 style={{
-        fontSize: 32,
+        fontSize: 44,
         fontWeight: 500,
-        letterSpacing: '-1px',
-        lineHeight: 1.15,
+        letterSpacing: '-1.5px',
+        lineHeight: 1.1,
         color: '#fff',
         margin: '0 0 18px',
       }}>
@@ -14,9 +14,9 @@ export default function Hero({ teamCount = 10 }) {
         Who survives?
       </h1>
       <p style={{
-        fontSize: 13,
-        color: '#555',
-        lineHeight: 1.7,
+        fontSize: 15,
+        color: '#bbb',
+        lineHeight: 1.75,
         maxWidth: 520,
         margin: 0,
       }}>

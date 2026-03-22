@@ -45,17 +45,17 @@ export default function ScenarioExplorer({ teams }) {
   if (!fixtures.length) return null
 
   return (
-    <div style={{ maxWidth: 900, margin: '0 auto', padding: '40px 24px' }}>
+    <div className="sec" style={{ paddingTop: 40, paddingBottom: 40 }}>
       <div style={{
         fontSize: 11,
         color: '#FFD700',
-        letterSpacing: '1.5px',
+        letterSpacing: '2px',
         textTransform: 'uppercase',
         marginBottom: 8,
       }}>
         What if?
       </div>
-      <p style={{ fontSize: 12, color: '#444', lineHeight: 1.7, margin: '0 0 20px' }}>
+      <p style={{ fontSize: 12, color: '#888', lineHeight: 1.7, margin: '0 0 20px' }}>
         Toggle match outcomes below and see how playoff odds shift.
       </p>
 
@@ -73,7 +73,7 @@ export default function ScenarioExplorer({ teams }) {
             background: winner === short ? (meta?.color ?? '#FFD700') : '#13151e',
             color: winner === short
               ? (meta?.textDark ? '#111' : '#fff')
-              : (winner && winner !== short) ? '#333' : '#555',
+              : (winner && winner !== short) ? '#555' : '#aaa',
             fontSize: 13,
             fontWeight: 500,
             cursor: 'pointer',
@@ -91,7 +91,7 @@ export default function ScenarioExplorer({ teams }) {
                 padding: '14px 16px',
               }}
             >
-              <div style={{ fontSize: 12, color: '#444', marginBottom: 10 }}>
+              <div style={{ fontSize: 12, color: '#888', marginBottom: 10 }}>
                 {fix.date} · {fix.venue}
               </div>
               <div style={{ display: 'flex', gap: 8 }}>
@@ -116,7 +116,7 @@ export default function ScenarioExplorer({ teams }) {
             borderRadius: 20,
             border: '0.5px solid #2a2d3a',
             background: 'transparent',
-            color: '#555',
+            color: '#aaa',
             fontSize: 12,
             cursor: 'pointer',
           }}

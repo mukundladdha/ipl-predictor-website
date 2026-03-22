@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { useModel } from '../context/ModelContext'
 
 const BASE_COLS = [
@@ -98,9 +98,8 @@ export default function PlayoffOddsTable({ teams }) {
           </thead>
           <tbody>
             {sorted.map((team, i) => (
-              <>
+              <React.Fragment key={team.short}>
                 <tr
-                  key={team.short}
                   onClick={() => setExpanded(expanded === team.short ? null : team.short)}
                   className={`border-b border-[#2a2d3a] cursor-pointer hover:bg-[#1e2130] transition-colors
                     ${i % 2 === 0 ? 'bg-[#0f1117]' : 'bg-[#13161f]'}`}
@@ -143,7 +142,6 @@ export default function PlayoffOddsTable({ teams }) {
                 </tr>
                 {expanded === team.short && (
                   <tr
-                    key={`${team.short}-exp`}
                     className={`border-b border-[#2a2d3a] ${i % 2 === 0 ? 'bg-[#0f1117]' : 'bg-[#13161f]'}`}
                   >
                     <td colSpan={9} className="px-5 py-2.5 pb-3">
@@ -176,7 +174,7 @@ export default function PlayoffOddsTable({ teams }) {
                     </td>
                   </tr>
                 )}
-              </>
+              </React.Fragment>
             ))}
           </tbody>
         </table>
