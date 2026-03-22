@@ -146,18 +146,18 @@ def build_elo(matches):
     return dict(ratings)
 
 # ─── Form model ───────────────────────────────────────────────────────────────
-DECAY = [0.5 ** i for i in range(8)]  # most recent = index 0
+DECAY = [0.75 ** i for i in range(12)]  # most recent = index 0, last 12 matches
 
 def build_form(matches, as_of=None):
-    """Return form score ∈ [0,1] per team from last 8 matches."""
+    """Return form score ∈ [0,1] per team from last 12 matches."""
     recent = defaultdict(list)  # team -> list of 1/0 (win/loss), most recent first
     relevant = [m for m in matches if as_of is None or m["date"] <= as_of]
 
     for m in reversed(relevant):
         w, l = m["winner"], (m["team2"] if m["winner"] == m["team1"] else m["team1"])
-        if len(recent[w]) < 8:
+        if len(recent[w]) < 12:
             recent[w].append(1)
-        if len(recent[l]) < 8:
+        if len(recent[l]) < 12:
             recent[l].append(0)
 
     scores = {}

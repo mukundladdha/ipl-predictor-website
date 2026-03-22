@@ -1,12 +1,20 @@
 import { useState, useEffect } from 'react'
 import { ModelProvider } from './context/ModelContext'
-import Header from './components/Header'
-import PlayoffOddsTable from './components/PlayoffOddsTable'
+import Nav from './components/Nav'
+import Hero from './components/Hero'
+import ConceptCards from './components/ConceptCards'
+import MonteCarloStrip from './components/MonteCarloStrip'
+import PlayoffRace from './components/PlayoffRace'
+import BottomMetaStrip from './components/BottomMetaStrip'
 import BumpsChart from './components/BumpsChart'
-import RankProbabilityChart from './components/RankProbabilityChart'
+import RankProbChart from './components/RankProbChart'
 import ScenarioExplorer from './components/ScenarioExplorer'
 import Footer from './components/Footer'
 import './index.css'
+
+const Divider = () => (
+  <div style={{ height: '0.5px', background: '#2a2d3a', maxWidth: 900, margin: '0 auto' }} />
+)
 
 function App() {
   const [data, setData] = useState(null)
@@ -21,7 +29,15 @@ function App() {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-[#0f1117] flex items-center justify-center text-red-400">
+      <div style={{
+        minHeight: '100vh',
+        background: '#0f1117',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: '#f87171',
+        fontSize: 14,
+      }}>
         {error}
       </div>
     )
@@ -29,39 +45,39 @@ function App() {
 
   if (!data) {
     return (
-      <div className="min-h-screen bg-[#0f1117] flex items-center justify-center">
-        <div className="flex items-center gap-3 text-gray-400">
-          <svg className="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
-            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-          </svg>
-          Loading forecast data…
-        </div>
+      <div style={{
+        minHeight: '100vh',
+        background: '#0f1117',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: '#444',
+        fontSize: 14,
+      }}>
+        Loading…
       </div>
     )
   }
 
-  const divider = <div className="h-px bg-[#2a2d3a] max-w-7xl mx-auto" />
-
   return (
     <ModelProvider>
-      <div className="min-h-screen bg-[#0f1117]">
-        <Header
-          lastUpdated={data.last_updated}
-          seasonStart={data.season_start}
-          defendingChampion={data.defending_champion}
+      <div style={{ background: '#0f1117', minHeight: '100vh' }}>
+        <Nav lastUpdated={data.last_updated} />
+        <Hero teamCount={data.teams.length} />
+        <ConceptCards />
+        <MonteCarloStrip />
+        <PlayoffRace teams={data.teams} />
+        <BottomMetaStrip
+          matchesPlayed={data.matches_played}
+          matchesRemaining={data.matches_remaining}
+          playoffSpots={data.playoff_spots}
         />
-
-        <main>
-          <PlayoffOddsTable teams={data.teams} />
-          {divider}
-          <BumpsChart teams={data.teams} />
-          {divider}
-          <RankProbabilityChart teams={data.teams} />
-          {divider}
-          <ScenarioExplorer teams={data.teams} />
-        </main>
-
+        <Divider />
+        <BumpsChart teams={data.teams} />
+        <Divider />
+        <RankProbChart teams={data.teams} />
+        <Divider />
+        <ScenarioExplorer teams={data.teams} />
         <Footer />
       </div>
     </ModelProvider>

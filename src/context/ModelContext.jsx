@@ -3,10 +3,11 @@ import { createContext, useContext, useState } from 'react'
 const ModelContext = createContext(null)
 
 export function ModelProvider({ children }) {
-  const [model, setModel] = useState('elo') // 'elo' | 'form'
+  const [activeModel, setActiveModel] = useState('elo') // 'elo' | 'form'
+  const [scenarioOverrides, setScenarioOverrides] = useState({}) // { [teamShort]: bonusPts }
 
   return (
-    <ModelContext.Provider value={{ model, setModel }}>
+    <ModelContext.Provider value={{ activeModel, setActiveModel, scenarioOverrides, setScenarioOverrides }}>
       {children}
     </ModelContext.Provider>
   )

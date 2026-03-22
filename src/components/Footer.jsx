@@ -1,61 +1,36 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-[#2a2d3a] bg-[#0f1117] mt-8">
-      <div className="max-w-7xl mx-auto px-4 py-10">
-        <div className="grid md:grid-cols-3 gap-8">
-
-          <div>
-            <h3 className="text-sm font-semibold text-white mb-3">Elo Model</h3>
-            <p className="text-xs text-gray-500 leading-relaxed">
-              Uses every IPL match since 2008 (1,100+ games from Cricsheet) to build a
-              running Elo rating for each franchise. K-factor of 32, base rating 1000.
-              Higher Elo = consistently strong franchise. Home advantage modeled as
-              +30 Elo points for the home side.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold text-white mb-3">Form Model</h3>
-            <p className="text-xs text-gray-500 leading-relaxed">
-              Captures recent momentum using the last 8 matches per team with exponential
-              decay weights (0.5ⁱ — most recent match counts most). Win = 1, loss = 0.
-              Produces a form score ∈ [0,1]. Home advantage +4% per match. Volatile by
-              design — reacts quickly to hot/cold streaks.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold text-white mb-3">Monte Carlo Simulation</h3>
-            <p className="text-xs text-gray-500 leading-relaxed">
-              Both models feed win probabilities into 100,000 simulations of all remaining
-              74 league matches. Playoff % = fraction of sims where team finishes top 4.
-              Rank probabilities show finish-position distributions across all simulations.
-              NRR used as tiebreaker in each sim.
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-8 pt-6 border-t border-[#2a2d3a] flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div className="text-xs text-gray-600">
-            IPL 2026 Forecast · TATA IPL 19th Edition · Inspired by FiveThirtyEight
-          </div>
-          <div className="flex items-center gap-4 text-xs text-gray-600">
-            <a
-              href="https://cricsheet.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#FFD700] transition-colors flex items-center gap-1"
-            >
-              <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-              Data: Cricsheet
-            </a>
-            <span>·</span>
-            <span>React · Recharts · Tailwind CSS</span>
-          </div>
-        </div>
+    <footer style={{ borderTop: '0.5px solid #1e2130', marginTop: 40 }}>
+      <div style={{ maxWidth: 600, margin: '0 auto', padding: '48px 24px 56px' }}>
+        <p style={{ fontSize: 12, color: '#444', lineHeight: 1.8, margin: '0 0 16px' }}>
+          <strong style={{ color: '#555' }}>Elo model:</strong> Each team's Elo rating is
+          built from every IPL match since 2008 using a K-factor of 32 and a base rating of
+          1,000. A win against a higher-rated opponent earns more points than a win against a
+          weaker one. Home advantage is modelled as a 30-point Elo boost for the home side.
+          Ratings partially regress toward the mean between seasons.
+        </p>
+        <p style={{ fontSize: 12, color: '#444', lineHeight: 1.8, margin: '0 0 28px' }}>
+          <strong style={{ color: '#555' }}>Form model:</strong> Captures recent momentum
+          using the last 12 matches per team with exponential decay weights (0.75ⁱ — most
+          recent match counts most, oldest carries ~3% of the weight). A win is 1, a loss is
+          0. This form score ∈ [0,1] is converted into a per-match win probability. Both
+          models then feed into 100,000 Monte Carlo simulations of all remaining fixtures.
+          The playoff % is the fraction of simulations in which a team finishes top 4.
+        </p>
+        <a
+          href="https://cricsheet.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            fontSize: 12,
+            color: '#555',
+            textDecoration: 'none',
+            borderBottom: '1px solid #333',
+            paddingBottom: 1,
+          }}
+        >
+          Data: Cricsheet.org
+        </a>
       </div>
     </footer>
   )

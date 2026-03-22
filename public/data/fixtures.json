@@ -1,49 +1,9 @@
 {
   "fixtures": [
-    {
-      "id": 1,
-      "teamA": "RCB",
-      "teamB": "SRH",
-      "team1": "Royal Challengers Bengaluru",
-      "team2": "Sunrisers Hyderabad",
-      "date": "2026-03-28",
-      "venue": "M. Chinnaswamy Stadium, Bengaluru"
-    },
-    {
-      "id": 2,
-      "teamA": "MI",
-      "teamB": "KKR",
-      "team1": "Mumbai Indians",
-      "team2": "Kolkata Knight Riders",
-      "date": "2026-03-29",
-      "venue": "Wankhede Stadium, Mumbai"
-    },
-    {
-      "id": 3,
-      "teamA": "RR",
-      "teamB": "CSK",
-      "team1": "Rajasthan Royals",
-      "team2": "Chennai Super Kings",
-      "date": "2026-03-30",
-      "venue": "Barsapara Cricket Stadium, Guwahati"
-    },
-    {
-      "id": 4,
-      "teamA": "PBKS",
-      "teamB": "GT",
-      "team1": "Punjab Kings",
-      "team2": "Gujarat Titans",
-      "date": "2026-03-31",
-      "venue": "PCA Stadium, New Chandigarh"
-    },
-    {
-      "id": 5,
-      "teamA": "LSG",
-      "teamB": "DC",
-      "team1": "Lucknow Super Giants",
-      "team2": "Delhi Capitals",
-      "date": "2026-03-31",
-      "venue": "BRSABV Ekana Cricket Stadium, Lucknow"
-    }
+    { "team1": "MI",   "team2": "CSK",  "date": "2025-03-23", "venue": "Wankhede Stadium" },
+    { "team1": "RCB",  "team2": "KKR",  "date": "2025-03-24", "venue": "Chinnaswamy Stadium" },
+    { "team1": "GT",   "team2": "RR",   "date": "2025-03-25", "venue": "Narendra Modi Stadium" },
+    { "team1": "SRH",  "team2": "DC",   "date": "2025-03-26", "venue": "Rajiv Gandhi Stadium" },
+    { "team1": "PBKS", "team2": "LSG",  "date": "2025-03-27", "venue": "Punjab Cricket Association Stadium" }
   ]
 }

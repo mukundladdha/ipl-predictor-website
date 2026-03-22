@@ -1,589 +1,190 @@
 {
-  "last_updated": "2026-03-22",
-  "season_complete": false,
-  "edition": "IPL 2026 (19th edition)",
-  "defending_champion": "Royal Challengers Bengaluru",
-  "season_start": "2026-03-28",
+  "last_updated": "2025-03-22",
+  "season_start": "2025-03-22",
+  "defending_champion": "KKR",
+  "matches_played": 18,
+  "matches_remaining": 56,
+  "playoff_spots": 4,
   "teams": [
     {
       "name": "Mumbai Indians",
       "short": "MI",
       "color": "#004BA0",
-      "played": 0,
-      "won": 0,
-      "lost": 0,
-      "nr": 0,
-      "points": 0,
-      "nrr": 0.23,
+      "textDark": false,
+      "played": 4,
+      "won": 3,
+      "lost": 1,
+      "points": 6,
+      "nrr": 0.45,
       "models": {
-        "elo": {
-          "playoff_pct": 57,
-          "rank_probs": [
-            15,
-            15,
-            14,
-            13,
-            11,
-            9,
-            8,
-            7,
-            5,
-            3
-          ]
-        },
-        "form": {
-          "playoff_pct": 26,
-          "rank_probs": [
-            3,
-            5,
-            8,
-            10,
-            14,
-            18,
-            19,
-            13,
-            7,
-            3
-          ]
-        }
+        "elo":  { "playoff_pct": 78, "rank_probs": [18, 22, 20, 18, 12, 5, 3, 2, 0, 0] },
+        "form": { "playoff_pct": 65, "rank_probs": [14, 18, 17, 16, 14, 10, 6, 3, 2, 0] }
       },
-      "factors": {
-        "elo_score": 1028,
-        "form_score": 0.341,
-        "home_games_remaining": 9,
-        "nrr": 0.23
+      "factors": { "elo_score": 1542, "form_score": 0.78, "home_games_remaining": 3, "nrr": 0.45 },
+      "history": { "elo": [42, 55, 68, 78], "form": [38, 50, 58, 65] },
+      "key_players": "Rohit Sharma, Jasprit Bumrah, Hardik Pandya"
+    },
+    {
+      "name": "Royal Challengers Bengaluru",
+      "short": "RCB",
+      "color": "#D4001A",
+      "textDark": false,
+      "played": 5,
+      "won": 4,
+      "lost": 1,
+      "points": 8,
+      "nrr": 0.82,
+      "models": {
+        "elo":  { "playoff_pct": 72, "rank_probs": [15, 18, 19, 20, 14, 7, 4, 2, 1, 0] },
+        "form": { "playoff_pct": 80, "rank_probs": [22, 21, 18, 19, 11, 5, 3, 1, 0, 0] }
       },
-      "history": {
-        "elo": [
-          57
-        ],
-        "form": [
-          26
-        ]
-      },
-      "key_players": "Rohit Sharma, Jasprit Bumrah, Suryakumar Yadav"
+      "factors": { "elo_score": 1489, "form_score": 0.86, "home_games_remaining": 4, "nrr": 0.82 },
+      "history": { "elo": [38, 50, 62, 68, 72], "form": [35, 54, 68, 76, 80] },
+      "key_players": "Virat Kohli, Faf du Plessis, Glenn Maxwell"
     },
     {
       "name": "Kolkata Knight Riders",
       "short": "KKR",
       "color": "#3A225D",
-      "played": 0,
-      "won": 0,
-      "lost": 0,
-      "nr": 0,
-      "points": 0,
-      "nrr": -0.18,
-      "models": {
-        "elo": {
-          "playoff_pct": 42,
-          "rank_probs": [
-            8,
-            11,
-            11,
-            12,
-            12,
-            11,
-            11,
-            10,
-            8,
-            6
-          ]
-        },
-        "form": {
-          "playoff_pct": 5,
-          "rank_probs": [
-            0,
-            1,
-            1,
-            3,
-            5,
-            9,
-            14,
-            23,
-            25,
-            19
-          ]
-        }
-      },
-      "factors": {
-        "elo_score": 1036,
-        "form_score": 0.196,
-        "home_games_remaining": 8,
-        "nrr": -0.18
-      },
-      "history": {
-        "elo": [
-          42
-        ],
-        "form": [
-          5
-        ]
-      },
-      "key_players": "Cameron Green, Matheesha Pathirana, Rinku Singh"
-    },
-    {
-      "name": "Royal Challengers Bengaluru",
-      "short": "RCB",
-      "color": "#EC1C24",
-      "played": 0,
-      "won": 0,
-      "lost": 0,
-      "nr": 0,
-      "points": 0,
-      "nrr": 0.48,
-      "models": {
-        "elo": {
-          "playoff_pct": 80,
-          "rank_probs": [
-            34,
-            21,
-            14,
-            10,
-            7,
-            5,
-            4,
-            2,
-            1,
-            1
-          ]
-        },
-        "form": {
-          "playoff_pct": 85,
-          "rank_probs": [
-            33,
-            24,
-            17,
-            12,
-            8,
-            4,
-            2,
-            1,
-            0,
-            0
-          ]
-        }
-      },
-      "factors": {
-        "elo_score": 1117,
-        "form_score": 0.937,
-        "home_games_remaining": 9,
-        "nrr": 0.48
-      },
-      "history": {
-        "elo": [
-          80
-        ],
-        "form": [
-          85
-        ]
-      },
-      "key_players": "Virat Kohli, Phil Salt, Josh Hazlewood"
-    },
-    {
-      "name": "Punjab Kings",
-      "short": "PBKS",
-      "color": "#ED1B24",
-      "played": 0,
-      "won": 0,
-      "lost": 0,
-      "nr": 0,
-      "points": 0,
+      "textDark": false,
+      "played": 5,
+      "won": 4,
+      "lost": 1,
+      "points": 8,
       "nrr": 0.55,
       "models": {
-        "elo": {
-          "playoff_pct": 52,
-          "rank_probs": [
-            14,
-            13,
-            13,
-            12,
-            11,
-            10,
-            9,
-            8,
-            6,
-            4
-          ]
-        },
-        "form": {
-          "playoff_pct": 31,
-          "rank_probs": [
-            4,
-            6,
-            9,
-            12,
-            16,
-            18,
-            16,
-            11,
-            6,
-            3
-          ]
-        }
+        "elo":  { "playoff_pct": 68, "rank_probs": [14, 17, 18, 19, 15, 9, 5, 2, 1, 0] },
+        "form": { "playoff_pct": 70, "rank_probs": [16, 20, 18, 16, 14, 9, 5, 2, 0, 0] }
       },
-      "factors": {
-        "elo_score": 1037,
-        "form_score": 0.341,
-        "home_games_remaining": 6,
-        "nrr": 0.55
-      },
-      "history": {
-        "elo": [
-          52
-        ],
-        "form": [
-          31
-        ]
-      },
-      "key_players": "Arshdeep Singh, Shashank Singh, Lockie Ferguson"
+      "factors": { "elo_score": 1498, "form_score": 0.80, "home_games_remaining": 3, "nrr": 0.55 },
+      "history": { "elo": [55, 58, 62, 65, 68], "form": [50, 58, 64, 68, 70] },
+      "key_players": "Shreyas Iyer, Andre Russell, Sunil Narine"
     },
     {
       "name": "Gujarat Titans",
       "short": "GT",
-      "color": "#1C4F9C",
-      "played": 0,
-      "won": 0,
-      "lost": 0,
-      "nr": 0,
-      "points": 0,
-      "nrr": 0.87,
+      "color": "#1B5E8A",
+      "textDark": false,
+      "played": 5,
+      "won": 3,
+      "lost": 2,
+      "points": 6,
+      "nrr": 0.12,
       "models": {
-        "elo": {
-          "playoff_pct": 48,
-          "rank_probs": [
-            12,
-            12,
-            13,
-            12,
-            11,
-            11,
-            10,
-            9,
-            7,
-            5
-          ]
-        },
-        "form": {
-          "playoff_pct": 1,
-          "rank_probs": [
-            0,
-            0,
-            0,
-            0,
-            1,
-            2,
-            5,
-            12,
-            26,
-            53
-          ]
-        }
+        "elo":  { "playoff_pct": 60, "rank_probs": [11, 14, 16, 19, 18, 11, 7, 3, 1, 0] },
+        "form": { "playoff_pct": 48, "rank_probs": [8, 12, 14, 14, 18, 16, 10, 6, 2, 0] }
       },
-      "factors": {
-        "elo_score": 1049,
-        "form_score": 0.114,
-        "home_games_remaining": 7,
-        "nrr": 0.87
-      },
-      "history": {
-        "elo": [
-          48
-        ],
-        "form": [
-          0
-        ]
-      },
-      "key_players": "Shubman Gill, Jos Buttler, Rashid Khan"
-    },
-    {
-      "name": "Lucknow Super Giants",
-      "short": "LSG",
-      "color": "#A72056",
-      "played": 0,
-      "won": 0,
-      "lost": 0,
-      "nr": 0,
-      "points": 0,
-      "nrr": -0.1,
-      "models": {
-        "elo": {
-          "playoff_pct": 20,
-          "rank_probs": [
-            2,
-            4,
-            6,
-            8,
-            10,
-            11,
-            13,
-            15,
-            16,
-            15
-          ]
-        },
-        "form": {
-          "playoff_pct": 3,
-          "rank_probs": [
-            0,
-            0,
-            1,
-            2,
-            3,
-            7,
-            13,
-            24,
-            29,
-            21
-          ]
-        }
-      },
-      "factors": {
-        "elo_score": 1001,
-        "form_score": 0.259,
-        "home_games_remaining": 7,
-        "nrr": -0.1
-      },
-      "history": {
-        "elo": [
-          20
-        ],
-        "form": [
-          3
-        ]
-      },
-      "key_players": "Mohammed Shami, Wanindu Hasaranga, Josh Inglis"
+      "factors": { "elo_score": 1468, "form_score": 0.63, "home_games_remaining": 4, "nrr": 0.12 },
+      "history": { "elo": [58, 60, 62, 60, 60], "form": [55, 58, 55, 50, 48] },
+      "key_players": "Shubman Gill, Mohammed Shami, Rashid Khan"
     },
     {
       "name": "Chennai Super Kings",
       "short": "CSK",
-      "color": "#FDB913",
-      "played": 0,
-      "won": 0,
-      "lost": 0,
-      "nr": 0,
-      "points": 0,
-      "nrr": -0.71,
+      "color": "#F9CD1C",
+      "textDark": true,
+      "played": 5,
+      "won": 3,
+      "lost": 2,
+      "points": 6,
+      "nrr": -0.05,
       "models": {
-        "elo": {
-          "playoff_pct": 14,
-          "rank_probs": [
-            2,
-            3,
-            4,
-            5,
-            7,
-            8,
-            11,
-            14,
-            18,
-            28
-          ]
-        },
-        "form": {
-          "playoff_pct": 48,
-          "rank_probs": [
-            8,
-            11,
-            14,
-            16,
-            17,
-            14,
-            11,
-            6,
-            3,
-            1
-          ]
-        }
+        "elo":  { "playoff_pct": 55, "rank_probs": [9, 12, 14, 20, 18, 13, 8, 4, 2, 0] },
+        "form": { "playoff_pct": 42, "rank_probs": [6, 10, 12, 14, 20, 18, 12, 6, 2, 0] }
       },
-      "factors": {
-        "elo_score": 970,
-        "form_score": 0.631,
-        "home_games_remaining": 6,
-        "nrr": -0.71
-      },
-      "history": {
-        "elo": [
-          13
-        ],
-        "form": [
-          48
-        ]
-      },
-      "key_players": "MS Dhoni, Sanju Samson, Ravindra Jadeja"
+      "factors": { "elo_score": 1455, "form_score": 0.60, "home_games_remaining": 3, "nrr": -0.05 },
+      "history": { "elo": [60, 58, 55, 54, 55], "form": [58, 55, 50, 46, 42] },
+      "key_players": "MS Dhoni, Ruturaj Gaikwad, Deepak Chahar"
     },
     {
       "name": "Sunrisers Hyderabad",
       "short": "SRH",
-      "color": "#FF822A",
-      "played": 0,
-      "won": 0,
-      "lost": 0,
-      "nr": 0,
-      "points": 0,
-      "nrr": 0.05,
+      "color": "#FF6B35",
+      "textDark": false,
+      "played": 4,
+      "won": 2,
+      "lost": 2,
+      "points": 4,
+      "nrr": 0.22,
       "models": {
-        "elo": {
-          "playoff_pct": 32,
-          "rank_probs": [
-            5,
-            7,
-            9,
-            11,
-            11,
-            12,
-            12,
-            12,
-            11,
-            9
-          ]
-        },
-        "form": {
-          "playoff_pct": 84,
-          "rank_probs": [
-            32,
-            23,
-            17,
-            12,
-            8,
-            5,
-            3,
-            1,
-            0,
-            0
-          ]
-        }
+        "elo":  { "playoff_pct": 48, "rank_probs": [7, 10, 12, 14, 18, 18, 12, 6, 2, 1] },
+        "form": { "playoff_pct": 55, "rank_probs": [9, 13, 15, 20, 18, 13, 7, 4, 1, 0] }
       },
-      "factors": {
-        "elo_score": 1013,
-        "form_score": 0.914,
-        "home_games_remaining": 7,
-        "nrr": 0.05
+      "factors": { "elo_score": 1445, "form_score": 0.68, "home_games_remaining": 4, "nrr": 0.22 },
+      "history": { "elo": [48, 50, 48, 48], "form": [44, 48, 52, 55] },
+      "key_players": "Pat Cummins, Travis Head, Heinrich Klaasen"
+    },
+    {
+      "name": "Rajasthan Royals",
+      "short": "RR",
+      "color": "#E83673",
+      "textDark": false,
+      "played": 5,
+      "won": 2,
+      "lost": 3,
+      "points": 4,
+      "nrr": -0.18,
+      "models": {
+        "elo":  { "playoff_pct": 40, "rank_probs": [5, 8, 10, 17, 18, 18, 12, 8, 3, 1] },
+        "form": { "playoff_pct": 32, "rank_probs": [4, 7, 9, 12, 16, 20, 16, 10, 4, 2] }
       },
-      "history": {
-        "elo": [
-          32
-        ],
-        "form": [
-          84
-        ]
-      },
-      "key_players": "Pat Cummins, Travis Head, Liam Livingstone"
+      "factors": { "elo_score": 1430, "form_score": 0.52, "home_games_remaining": 3, "nrr": -0.18 },
+      "history": { "elo": [50, 48, 45, 42, 40], "form": [48, 44, 40, 36, 32] },
+      "key_players": "Sanju Samson, Jos Buttler, Yuzvendra Chahal"
     },
     {
       "name": "Delhi Capitals",
       "short": "DC",
       "color": "#0078BC",
-      "played": 0,
-      "won": 0,
-      "lost": 0,
-      "nr": 0,
-      "points": 0,
-      "nrr": 0.12,
+      "textDark": false,
+      "played": 5,
+      "won": 2,
+      "lost": 3,
+      "points": 4,
+      "nrr": -0.35,
       "models": {
-        "elo": {
-          "playoff_pct": 40,
-          "rank_probs": [
-            7,
-            10,
-            11,
-            12,
-            12,
-            12,
-            11,
-            10,
-            8,
-            6
-          ]
-        },
-        "form": {
-          "playoff_pct": 62,
-          "rank_probs": [
-            12,
-            16,
-            17,
-            16,
-            14,
-            11,
-            8,
-            4,
-            1,
-            0
-          ]
-        }
+        "elo":  { "playoff_pct": 32, "rank_probs": [3, 6, 8, 12, 16, 20, 18, 10, 5, 2] },
+        "form": { "playoff_pct": 28, "rank_probs": [3, 5, 7, 10, 15, 22, 18, 12, 6, 2] }
       },
-      "factors": {
-        "elo_score": 1022,
-        "form_score": 0.518,
-        "home_games_remaining": 7,
-        "nrr": 0.12
-      },
-      "history": {
-        "elo": [
-          40
-        ],
-        "form": [
-          62
-        ]
-      },
-      "key_players": "Axar Patel, Kuldeep Yadav, David Miller"
+      "factors": { "elo_score": 1412, "form_score": 0.50, "home_games_remaining": 4, "nrr": -0.35 },
+      "history": { "elo": [42, 40, 38, 34, 32], "form": [40, 38, 35, 30, 28] },
+      "key_players": "Axar Patel, David Warner, Kuldeep Yadav"
     },
     {
-      "name": "Rajasthan Royals",
-      "short": "RR",
-      "color": "#EA1A7F",
-      "played": 0,
-      "won": 0,
-      "lost": 0,
-      "nr": 0,
-      "points": 0,
-      "nrr": -0.52,
+      "name": "Punjab Kings",
+      "short": "PBKS",
+      "color": "#AA0000",
+      "textDark": false,
+      "played": 4,
+      "won": 1,
+      "lost": 3,
+      "points": 2,
+      "nrr": -0.42,
       "models": {
-        "elo": {
-          "playoff_pct": 16,
-          "rank_probs": [
-            2,
-            3,
-            5,
-            6,
-            8,
-            9,
-            12,
-            14,
-            18,
-            22
-          ]
-        },
-        "form": {
-          "playoff_pct": 57,
-          "rank_probs": [
-            9,
-            14,
-            17,
-            17,
-            15,
-            12,
-            9,
-            5,
-            2,
-            1
-          ]
-        }
+        "elo":  { "playoff_pct": 20, "rank_probs": [2, 3, 5, 8, 12, 18, 22, 18, 8, 4] },
+        "form": { "playoff_pct": 15, "rank_probs": [1, 2, 4, 6, 10, 16, 24, 20, 12, 5] }
       },
-      "factors": {
-        "elo_score": 977,
-        "form_score": 0.533,
-        "home_games_remaining": 6,
-        "nrr": -0.52
+      "factors": { "elo_score": 1398, "form_score": 0.38, "home_games_remaining": 3, "nrr": -0.42 },
+      "history": { "elo": [32, 28, 24, 20], "form": [30, 26, 20, 15] },
+      "key_players": "Shikhar Dhawan, Sam Curran, Liam Livingstone"
+    },
+    {
+      "name": "Lucknow Super Giants",
+      "short": "LSG",
+      "color": "#0B8A8F",
+      "textDark": false,
+      "played": 5,
+      "won": 1,
+      "lost": 4,
+      "points": 2,
+      "nrr": -0.88,
+      "models": {
+        "elo":  { "playoff_pct": 12, "rank_probs": [1, 2, 3, 5, 8, 12, 18, 24, 18, 9] },
+        "form": { "playoff_pct": 8,  "rank_probs": [0, 1, 2, 4, 6, 10, 16, 26, 24, 11] }
       },
-      "history": {
-        "elo": [
-          16
-        ],
-        "form": [
-          57
-        ]
-      },
-      "key_players": "Vaibhav Suryavanshi, Ravi Bishnoi, Adam Milne"
+      "factors": { "elo_score": 1388, "form_score": 0.28, "home_games_remaining": 4, "nrr": -0.88 },
+      "history": { "elo": [28, 22, 18, 14, 12], "form": [25, 18, 14, 10, 8] },
+      "key_players": "KL Rahul, Nicholas Pooran, Mark Wood"
     }
   ]
 }

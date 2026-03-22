@@ -1,199 +1,129 @@
 import { useState, useEffect } from 'react'
 import { useModel } from '../context/ModelContext'
 
-function recalculate(teams, results, model) {
-  return teams.map(t => {
-    const bonus = (results[t.short] ?? 0) * 2  // +2 pts per simulated win
-    const base  = t.models?.[model]?.playoff_pct ?? 0
-    return {
-      ...t,
-      _simPct: Math.min(99, Math.max(1, Math.round(base + bonus * 2.5))),
-    }
-  })
-}
-
 export default function ScenarioExplorer({ teams }) {
-  const { model } = useModel()
+  const { setScenarioOverrides } = useModel()
   const [fixtures, setFixtures] = useState([])
-  const [results, setResults] = useState({})   // short -> wins count
-  const [simTeams, setSimTeams] = useState(teams)
-  const [loading, setLoading] = useState(true)
+  // picks[i] = winning team short, or undefined if no pick for fixture i
+  const [picks, setPicks] = useState({})
 
   useEffect(() => {
     fetch('/data/fixtures.json')
       .then(r => r.json())
-      .then(d => { setFixtures(d.fixtures ?? []); setLoading(false) })
-      .catch(() => setLoading(false))
+      .then(d => setFixtures(d.fixtures ?? []))
+      .catch(() => {})
   }, [])
 
-  // Re-run whenever teams, results or model changes
+  // Recompute context overrides whenever picks change
   useEffect(() => {
-    setSimTeams(recalculate(teams, results, model))
-  }, [teams, results, model])
+    const overrides = {}
+    fixtures.forEach((_, i) => {
+      const winner = picks[i]
+      if (winner) overrides[winner] = (overrides[winner] ?? 0) + 2
+    })
+    setScenarioOverrides(overrides)
+  }, [picks, fixtures, setScenarioOverrides])
 
-  const teamByShort = short => teams.find(t => t.short === short)
-
-  function handlePick(fixtureId, winnerShort, loserShort) {
-    setResults(prev => {
-      const next = { ...prev }
-      // Toggle: clicking same winner again deselects
-      if (next[`fix_${fixtureId}`] === winnerShort) {
-        delete next[`fix_${fixtureId}`]
-        // undo point
-        next[winnerShort] = Math.max(0, (next[winnerShort] ?? 0) - 1)
-      } else {
-        // Remove old winner's point if previously set
-        const old = next[`fix_${fixtureId}`]
-        if (old) next[old] = Math.max(0, (next[old] ?? 0) - 1)
-        next[`fix_${fixtureId}`] = winnerShort
-        next[winnerShort] = (next[winnerShort] ?? 0) + 1
+  function togglePick(fixtureIdx, teamShort) {
+    setPicks(prev => {
+      if (prev[fixtureIdx] === teamShort) {
+        const next = { ...prev }
+        delete next[fixtureIdx]
+        return next
       }
-      return next
+      return { ...prev, [fixtureIdx]: teamShort }
     })
   }
 
-  function handleReset() {
-    setResults({})
+  function reset() {
+    setPicks({})
   }
 
-  const hasSelections = Object.keys(results).some(k => k.startsWith('fix_'))
+  const teamByShort = Object.fromEntries(teams.map(t => [t.short, t]))
+  const hasAnyPick = Object.keys(picks).length > 0
+
+  if (!fixtures.length) return null
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-8">
-      <div className="flex items-center justify-between mb-1">
-        <div className="flex items-center gap-3">
-          <h2 className="text-lg font-bold text-white">Scenario Explorer</h2>
-          <span className={`px-2 py-0.5 text-xs font-bold rounded-full ${
-            model === 'elo'
-              ? 'bg-[#FFD700]/20 text-[#FFD700] border border-[#FFD700]/30'
-              : 'bg-blue-500/20 text-blue-300 border border-blue-500/30'
-          }`}>
-            {model === 'elo' ? 'Elo base' : 'Form base'}
-          </span>
-        </div>
-        {hasSelections && (
-          <button
-            onClick={handleReset}
-            className="text-xs px-3 py-1.5 bg-[#2a2d3a] hover:bg-[#3a3d4a] text-gray-300 rounded-lg transition-colors font-medium"
-          >
-            ↺ Reset
-          </button>
-        )}
+    <div style={{ maxWidth: 900, margin: '0 auto', padding: '40px 24px' }}>
+      <div style={{
+        fontSize: 11,
+        color: '#FFD700',
+        letterSpacing: '1.5px',
+        textTransform: 'uppercase',
+        marginBottom: 8,
+      }}>
+        What if?
       </div>
-      <p className="text-sm text-gray-400 mb-6">
-        Pick winners for upcoming fixtures — playoff odds update in real time
+      <p style={{ fontSize: 12, color: '#444', lineHeight: 1.7, margin: '0 0 20px' }}>
+        Toggle match outcomes below and see how playoff odds shift.
       </p>
 
-      <div className="grid lg:grid-cols-2 gap-4">
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        {fixtures.map((fix, i) => {
+          const t1 = teamByShort[fix.team1]
+          const t2 = teamByShort[fix.team2]
+          const winner = picks[i]
 
-        {/* Fixtures */}
-        <div className="space-y-3">
-          <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
-            Upcoming Fixtures
-          </h3>
+          const btnStyle = (short, meta) => ({
+            flex: 1,
+            padding: '8px 12px',
+            borderRadius: 8,
+            border: 'none',
+            background: winner === short ? (meta?.color ?? '#FFD700') : '#13151e',
+            color: winner === short
+              ? (meta?.textDark ? '#111' : '#fff')
+              : (winner && winner !== short) ? '#333' : '#555',
+            fontSize: 13,
+            fontWeight: 500,
+            cursor: 'pointer',
+            transition: 'all 0.15s',
+            opacity: (winner && winner !== short) ? 0.5 : 1,
+          })
 
-          {loading && (
-            <div className="text-sm text-gray-500 text-center py-8">Loading fixtures…</div>
-          )}
-
-          {!loading && fixtures.map(fix => {
-            const tA = teamByShort(fix.teamA)
-            const tB = teamByShort(fix.teamB)
-            const selected = results[`fix_${fix.id}`]
-
-            return (
-              <div key={fix.id} className="bg-[#1a1d27] border border-[#2a2d3a] rounded-xl p-4">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs text-gray-500">
-                    {fix.date} · {fix.venue?.split(',')[0]}
-                  </span>
-                  {selected && (
-                    <span className="text-xs text-[#FFD700] font-medium">
-                      {teamByShort(selected)?.name ?? selected} wins
-                    </span>
-                  )}
-                </div>
-
-                <div className="flex items-center gap-2">
-                  {[fix.teamA, fix.teamB].map(short => {
-                    const t = teamByShort(short)
-                    const isSelected = selected === short
-                    const otherSelected = selected && selected !== short
-                    return (
-                      <button
-                        key={short}
-                        onClick={() => handlePick(fix.id, short, short === fix.teamA ? fix.teamB : fix.teamA)}
-                        className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg
-                          text-sm font-semibold transition-all
-                          ${isSelected
-                            ? 'text-white ring-2 ring-offset-1 ring-offset-[#1a1d27]'
-                            : otherSelected
-                              ? 'opacity-35 bg-[#13161f] text-gray-500 border border-[#2a2d3a]'
-                              : 'bg-[#13161f] text-white border border-[#2a2d3a] hover:border-[#FFD700]'
-                          }`}
-                        style={isSelected ? { backgroundColor: t?.color, borderColor: t?.color } : {}}
-                      >
-                        <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: t?.color }} />
-                        {short}
-                      </button>
-                    )
-                  })}
-                </div>
+          return (
+            <div
+              key={`${fix.team1}-${fix.team2}`}
+              style={{
+                background: '#1a1d27',
+                border: '0.5px solid #2a2d3a',
+                borderRadius: 12,
+                padding: '14px 16px',
+              }}
+            >
+              <div style={{ fontSize: 12, color: '#444', marginBottom: 10 }}>
+                {fix.date} · {fix.venue}
               </div>
-            )
-          })}
-        </div>
-
-        {/* Live odds */}
-        <div>
-          <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
-            Updated Playoff Odds
-            {hasSelections && <span className="ml-2 text-[#FFD700]">● Live</span>}
-          </h3>
-          <div className="bg-[#1a1d27] border border-[#2a2d3a] rounded-xl overflow-hidden">
-            {[...simTeams]
-              .sort((a, b) => (b._simPct ?? 0) - (a._simPct ?? 0))
-              .map((team, i) => {
-                const base   = team.models?.[model]?.playoff_pct ?? 0
-                const simPct = team._simPct ?? base
-                const delta  = simPct - base
-
-                return (
-                  <div
-                    key={team.short}
-                    className={`flex items-center gap-3 px-4 py-3 border-b border-[#2a2d3a] last:border-0
-                      ${i % 2 === 0 ? '' : 'bg-[#13161f]/40'}`}
-                  >
-                    <span className="text-xs text-gray-600 w-4 text-center font-mono tabular-nums">{i+1}</span>
-                    <div className="w-2.5 h-2.5 rounded-sm flex-shrink-0" style={{ backgroundColor: team.color }} />
-                    <span className="text-sm text-gray-300 flex-1 truncate">{team.name}</span>
-
-                    {delta !== 0 && (
-                      <span className={`text-xs font-bold tabular-nums flex-shrink-0 ${delta > 0 ? 'text-green-400' : 'text-red-400'}`}>
-                        {delta > 0 ? '+' : ''}{delta}%
-                      </span>
-                    )}
-
-                    <div className="flex items-center gap-2 w-28 flex-shrink-0">
-                      <div className="flex-1 h-1.5 rounded-full bg-[#2a2d3a] overflow-hidden">
-                        <div
-                          className="h-full rounded-full transition-all duration-500"
-                          style={{
-                            width: `${Math.min(simPct, 100)}%`,
-                            backgroundColor: simPct >= 60 ? '#22c55e' : simPct >= 30 ? '#eab308' : '#ef4444'
-                          }}
-                        />
-                      </div>
-                      <span className="text-xs font-bold text-gray-300 w-9 text-right tabular-nums">
-                        {simPct}%
-                      </span>
-                    </div>
-                  </div>
-                )
-              })}
-          </div>
-        </div>
+              <div style={{ display: 'flex', gap: 8 }}>
+                <button onClick={() => togglePick(i, fix.team1)} style={btnStyle(fix.team1, t1)}>
+                  {fix.team1}
+                </button>
+                <button onClick={() => togglePick(i, fix.team2)} style={btnStyle(fix.team2, t2)}>
+                  {fix.team2}
+                </button>
+              </div>
+            </div>
+          )
+        })}
       </div>
-    </section>
+
+      {hasAnyPick && (
+        <button
+          onClick={reset}
+          style={{
+            marginTop: 16,
+            padding: '7px 20px',
+            borderRadius: 20,
+            border: '0.5px solid #2a2d3a',
+            background: 'transparent',
+            color: '#555',
+            fontSize: 12,
+            cursor: 'pointer',
+          }}
+        >
+          ↺ Reset
+        </button>
+      )}
+    </div>
   )
 }
