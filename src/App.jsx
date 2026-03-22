@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { ModelProvider } from './context/ModelContext'
 import Header from './components/Header'
 import PlayoffOddsTable from './components/PlayoffOddsTable'
 import BumpsChart from './components/BumpsChart'
@@ -7,7 +8,7 @@ import ScenarioExplorer from './components/ScenarioExplorer'
 import Footer from './components/Footer'
 import './index.css'
 
-export default function App() {
+function App() {
   const [data, setData] = useState(null)
   const [error, setError] = useState(null)
 
@@ -15,7 +16,7 @@ export default function App() {
     fetch('/data/projections.json')
       .then(r => r.json())
       .then(setData)
-      .catch(() => setError('Failed to load data'))
+      .catch(() => setError('Failed to load forecast data'))
   }, [])
 
   if (error) {
@@ -40,31 +41,31 @@ export default function App() {
     )
   }
 
+  const divider = <div className="h-px bg-[#2a2d3a] max-w-7xl mx-auto" />
+
   return (
-    <div className="min-h-screen bg-[#0f1117]">
-      <Header
-        lastUpdated={data.last_updated}
-        seasonStart={data.season_start}
-        defendingChampion={data.defending_champion}
-      />
+    <ModelProvider>
+      <div className="min-h-screen bg-[#0f1117]">
+        <Header
+          lastUpdated={data.last_updated}
+          seasonStart={data.season_start}
+          defendingChampion={data.defending_champion}
+        />
 
-      <main>
-        <PlayoffOddsTable teams={data.teams} />
+        <main>
+          <PlayoffOddsTable teams={data.teams} />
+          {divider}
+          <BumpsChart teams={data.teams} />
+          {divider}
+          <RankProbabilityChart teams={data.teams} />
+          {divider}
+          <ScenarioExplorer teams={data.teams} />
+        </main>
 
-        <div className="h-px bg-[#2a2d3a] max-w-7xl mx-auto" />
-
-        <BumpsChart teams={data.teams} seasonStart={data.season_start} />
-
-        <div className="h-px bg-[#2a2d3a] max-w-7xl mx-auto" />
-
-        <RankProbabilityChart teams={data.teams} />
-
-        <div className="h-px bg-[#2a2d3a] max-w-7xl mx-auto" />
-
-        <ScenarioExplorer teams={data.teams} fixtures={data.fixtures} />
-      </main>
-
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </ModelProvider>
   )
 }
+
+export default App

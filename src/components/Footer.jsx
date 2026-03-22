@@ -3,42 +3,58 @@ export default function Footer() {
     <footer className="border-t border-[#2a2d3a] bg-[#0f1117] mt-8">
       <div className="max-w-7xl mx-auto px-4 py-10">
         <div className="grid md:grid-cols-3 gap-8">
+
           <div>
-            <h3 className="text-sm font-semibold text-white mb-3">Methodology</h3>
+            <h3 className="text-sm font-semibold text-white mb-3">Elo Model</h3>
             <p className="text-xs text-gray-500 leading-relaxed">
-              Playoff probabilities are derived from 10,000 Monte Carlo simulations of the
-              IPL 2026 season (74 league matches). Pre-season win probabilities are estimated
-              using ELO ratings seeded from IPL 2025 final standings, adjusted for squad changes
-              from the December 2025 mini-auction and home advantage (+4%).
+              Uses every IPL match since 2008 (1,100+ games from Cricsheet) to build a
+              running Elo rating for each franchise. K-factor of 32, base rating 1000.
+              Higher Elo = consistently strong franchise. Home advantage modeled as
+              +30 Elo points for the home side.
             </p>
           </div>
+
           <div>
-            <h3 className="text-sm font-semibold text-white mb-3">Season at a Glance</h3>
-            <ul className="text-xs text-gray-500 space-y-1">
-              <li>📅 <span className="text-gray-400">Start:</span> March 28, 2026</li>
-              <li>🏁 <span className="text-gray-400">Final:</span> May 31, 2026</li>
-              <li>🏟 <span className="text-gray-400">Matches:</span> 84 total (74 league + 4 playoffs)</li>
-              <li>🏆 <span className="text-gray-400">Defending Champions:</span> Royal Challengers Bengaluru</li>
-              <li>🎯 <span className="text-gray-400">Opening Match:</span> RCB vs SRH, Bengaluru</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-sm font-semibold text-white mb-3">Assumptions & Limitations</h3>
+            <h3 className="text-sm font-semibold text-white mb-3">Form Model</h3>
             <p className="text-xs text-gray-500 leading-relaxed">
-              Pre-season forecasts carry high uncertainty — form, injuries, pitch conditions,
-              and weather are not yet modeled. The Scenario Explorer uses a simplified linear
-              model for illustration. Data is for educational purposes only and not suitable
-              for betting decisions.
+              Captures recent momentum using the last 8 matches per team with exponential
+              decay weights (0.5ⁱ — most recent match counts most). Win = 1, loss = 0.
+              Produces a form score ∈ [0,1]. Home advantage +4% per match. Volatile by
+              design — reacts quickly to hot/cold streaks.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-semibold text-white mb-3">Monte Carlo Simulation</h3>
+            <p className="text-xs text-gray-500 leading-relaxed">
+              Both models feed win probabilities into 100,000 simulations of all remaining
+              74 league matches. Playoff % = fraction of sims where team finishes top 4.
+              Rank probabilities show finish-position distributions across all simulations.
+              NRR used as tiebreaker in each sim.
             </p>
           </div>
         </div>
-        <div className="mt-8 pt-6 border-t border-[#2a2d3a] flex flex-col sm:flex-row items-center justify-between gap-2">
-          <span className="text-xs text-gray-600">
+
+        <div className="mt-8 pt-6 border-t border-[#2a2d3a] flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="text-xs text-gray-600">
             IPL 2026 Forecast · TATA IPL 19th Edition · Inspired by FiveThirtyEight
-          </span>
-          <span className="text-xs text-gray-600">
-            Built with React · Recharts · Tailwind CSS
-          </span>
+          </div>
+          <div className="flex items-center gap-4 text-xs text-gray-600">
+            <a
+              href="https://cricsheet.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#FFD700] transition-colors flex items-center gap-1"
+            >
+              <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              Data: Cricsheet
+            </a>
+            <span>·</span>
+            <span>React · Recharts · Tailwind CSS</span>
+          </div>
         </div>
       </div>
     </footer>

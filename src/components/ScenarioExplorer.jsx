@@ -1,57 +1,77 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useModel } from '../context/ModelContext'
 
-function recalculate(teams, results) {
-  const updated = teams.map(t => ({ ...t }))
-  Object.entries(results).forEach(([fixtureId, winner]) => {
-    const team = updated.find(t => t.short === winner)
-    if (team) team._bonusPoints = (team._bonusPoints || 0) + 4
-  })
-  return updated.map(t => {
-    const bonus = t._bonusPoints || 0
-    const rawPct = t.playoff_pct + bonus * 2.5
-    return { ...t, playoff_pct: Math.min(99, Math.max(1, Math.round(rawPct))) }
+function recalculate(teams, results, model) {
+  return teams.map(t => {
+    const bonus = (results[t.short] ?? 0) * 2  // +2 pts per simulated win
+    const base  = t.models?.[model]?.playoff_pct ?? 0
+    return {
+      ...t,
+      _simPct: Math.min(99, Math.max(1, Math.round(base + bonus * 2.5))),
+    }
   })
 }
 
-function PlayoffResultBadge({ result }) {
-  if (!result) return null
-  const isChamp = result.includes('🏆')
-  const isQualified = result.includes('Runner') || result.includes('Eliminator') || result.includes('Qualifier 2')
-  if (isChamp) return <span className="text-xs font-bold text-yellow-400">🏆 Champions</span>
-  if (result.includes('Runner')) return <span className="text-xs font-medium text-gray-300">Runner-up</span>
-  if (isQualified) return <span className="text-xs font-medium text-blue-400">Playoff exit</span>
-  return null
-}
+export default function ScenarioExplorer({ teams }) {
+  const { model } = useModel()
+  const [fixtures, setFixtures] = useState([])
+  const [results, setResults] = useState({})   // short -> wins count
+  const [simTeams, setSimTeams] = useState(teams)
+  const [loading, setLoading] = useState(true)
 
-export default function ScenarioExplorer({ teams: initialTeams, fixtures, seasonComplete }) {
-  const [results, setResults] = useState({})
-  const [teams, setTeams] = useState(initialTeams)
+  useEffect(() => {
+    fetch('/data/fixtures.json')
+      .then(r => r.json())
+      .then(d => { setFixtures(d.fixtures ?? []); setLoading(false) })
+      .catch(() => setLoading(false))
+  }, [])
 
-  function teamByShort(short) {
-    return initialTeams.find(t => t.short === short)
-  }
+  // Re-run whenever teams, results or model changes
+  useEffect(() => {
+    setSimTeams(recalculate(teams, results, model))
+  }, [teams, results, model])
 
-  function handlePick(fixtureId, winner) {
-    if (seasonComplete) return
-    const newResults = { ...results, [fixtureId]: winner }
-    setResults(newResults)
-    setTeams(recalculate(initialTeams, newResults))
+  const teamByShort = short => teams.find(t => t.short === short)
+
+  function handlePick(fixtureId, winnerShort, loserShort) {
+    setResults(prev => {
+      const next = { ...prev }
+      // Toggle: clicking same winner again deselects
+      if (next[`fix_${fixtureId}`] === winnerShort) {
+        delete next[`fix_${fixtureId}`]
+        // undo point
+        next[winnerShort] = Math.max(0, (next[winnerShort] ?? 0) - 1)
+      } else {
+        // Remove old winner's point if previously set
+        const old = next[`fix_${fixtureId}`]
+        if (old) next[old] = Math.max(0, (next[old] ?? 0) - 1)
+        next[`fix_${fixtureId}`] = winnerShort
+        next[winnerShort] = (next[winnerShort] ?? 0) + 1
+      }
+      return next
+    })
   }
 
   function handleReset() {
     setResults({})
-    setTeams(initialTeams)
   }
 
-  const changed = Object.keys(results).length > 0
+  const hasSelections = Object.keys(results).some(k => k.startsWith('fix_'))
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-8">
       <div className="flex items-center justify-between mb-1">
-        <h2 className="text-lg font-bold text-white">
-          {seasonComplete ? 'Playoff Results' : 'Scenario Explorer'}
-        </h2>
-        {!seasonComplete && changed && (
+        <div className="flex items-center gap-3">
+          <h2 className="text-lg font-bold text-white">Scenario Explorer</h2>
+          <span className={`px-2 py-0.5 text-xs font-bold rounded-full ${
+            model === 'elo'
+              ? 'bg-[#FFD700]/20 text-[#FFD700] border border-[#FFD700]/30'
+              : 'bg-blue-500/20 text-blue-300 border border-blue-500/30'
+          }`}>
+            {model === 'elo' ? 'Elo base' : 'Form base'}
+          </span>
+        </div>
+        {hasSelections && (
           <button
             onClick={handleReset}
             className="text-xs px-3 py-1.5 bg-[#2a2d3a] hover:bg-[#3a3d4a] text-gray-300 rounded-lg transition-colors font-medium"
@@ -61,141 +81,113 @@ export default function ScenarioExplorer({ teams: initialTeams, fixtures, season
         )}
       </div>
       <p className="text-sm text-gray-400 mb-6">
-        {seasonComplete
-          ? 'Playoff bracket results — all four knockout matches from May 29 – June 3, 2025'
-          : 'Simulate upcoming results to see how playoff odds shift in real time'}
+        Pick winners for upcoming fixtures — playoff odds update in real time
       </p>
 
       <div className="grid lg:grid-cols-2 gap-4">
-        {/* Fixtures / Results */}
+
+        {/* Fixtures */}
         <div className="space-y-3">
-          <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-            {seasonComplete ? 'Playoff Bracket' : 'Upcoming Fixtures'}
+          <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+            Upcoming Fixtures
           </h3>
-          {fixtures.map(fixture => {
-            const tA = teamByShort(fixture.teamA)
-            const tB = teamByShort(fixture.teamB)
-            const winner = results[fixture.id]
-            const hasResult = !!fixture.result
+
+          {loading && (
+            <div className="text-sm text-gray-500 text-center py-8">Loading fixtures…</div>
+          )}
+
+          {!loading && fixtures.map(fix => {
+            const tA = teamByShort(fix.teamA)
+            const tB = teamByShort(fix.teamB)
+            const selected = results[`fix_${fix.id}`]
 
             return (
-              <div
-                key={fixture.id}
-                className="bg-[#1a1d27] border border-[#2a2d3a] rounded-xl p-4"
-              >
+              <div key={fix.id} className="bg-[#1a1d27] border border-[#2a2d3a] rounded-xl p-4">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs text-gray-500">{fixture.date} · {fixture.venue}</span>
-                  {hasResult && (
-                    <span className="text-xs text-[#FFD700] font-medium">{fixture.result}</span>
-                  )}
-                  {!hasResult && winner && (
+                  <span className="text-xs text-gray-500">
+                    {fix.date} · {fix.venue?.split(',')[0]}
+                  </span>
+                  {selected && (
                     <span className="text-xs text-[#FFD700] font-medium">
-                      {winner === fixture.teamA ? tA?.name : tB?.name} wins
+                      {teamByShort(selected)?.name ?? selected} wins
                     </span>
                   )}
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <button
-                    onClick={() => handlePick(fixture.id, fixture.teamA)}
-                    disabled={seasonComplete}
-                    className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-semibold transition-all
-                      ${seasonComplete && fixture.result && !fixture.result.startsWith(fixture.teamA)
-                        ? 'opacity-40 bg-[#13161f] text-gray-500 cursor-default'
-                        : seasonComplete
-                          ? 'bg-[#13161f] text-white border border-[#2a2d3a] cursor-default'
-                          : winner === fixture.teamA
-                            ? 'ring-2 ring-offset-1 ring-offset-[#1a1d27] text-white'
-                            : winner && winner !== fixture.teamA
-                              ? 'opacity-40 bg-[#13161f] text-gray-500'
-                              : 'bg-[#13161f] hover:bg-[#1e2130] text-white border border-[#2a2d3a] hover:border-[#FFD700]'
-                      }`}
-                    style={(!seasonComplete && winner === fixture.teamA) ? { backgroundColor: tA?.color } : {}}
-                  >
-                    <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: tA?.color }} />
-                    {fixture.teamA}
-                  </button>
-
-                  <span className="text-xs text-gray-600 font-bold px-1">VS</span>
-
-                  <button
-                    onClick={() => handlePick(fixture.id, fixture.teamB)}
-                    disabled={seasonComplete}
-                    className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-semibold transition-all
-                      ${seasonComplete && fixture.result && !fixture.result.startsWith(fixture.teamB)
-                        ? 'opacity-40 bg-[#13161f] text-gray-500 cursor-default'
-                        : seasonComplete
-                          ? 'bg-[#13161f] text-white border border-[#2a2d3a] cursor-default'
-                          : winner === fixture.teamB
-                            ? 'ring-2 ring-offset-1 ring-offset-[#1a1d27] text-white'
-                            : winner && winner !== fixture.teamB
-                              ? 'opacity-40 bg-[#13161f] text-gray-500'
-                              : 'bg-[#13161f] hover:bg-[#1e2130] text-white border border-[#2a2d3a] hover:border-[#FFD700]'
-                      }`}
-                    style={(!seasonComplete && winner === fixture.teamB) ? { backgroundColor: tB?.color } : {}}
-                  >
-                    <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: tB?.color }} />
-                    {fixture.teamB}
-                  </button>
+                  {[fix.teamA, fix.teamB].map(short => {
+                    const t = teamByShort(short)
+                    const isSelected = selected === short
+                    const otherSelected = selected && selected !== short
+                    return (
+                      <button
+                        key={short}
+                        onClick={() => handlePick(fix.id, short, short === fix.teamA ? fix.teamB : fix.teamA)}
+                        className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg
+                          text-sm font-semibold transition-all
+                          ${isSelected
+                            ? 'text-white ring-2 ring-offset-1 ring-offset-[#1a1d27]'
+                            : otherSelected
+                              ? 'opacity-35 bg-[#13161f] text-gray-500 border border-[#2a2d3a]'
+                              : 'bg-[#13161f] text-white border border-[#2a2d3a] hover:border-[#FFD700]'
+                          }`}
+                        style={isSelected ? { backgroundColor: t?.color, borderColor: t?.color } : {}}
+                      >
+                        <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: t?.color }} />
+                        {short}
+                      </button>
+                    )
+                  })}
                 </div>
               </div>
             )
           })}
         </div>
 
-        {/* Final Standings / Updated Odds */}
+        {/* Live odds */}
         <div>
           <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
-            {seasonComplete ? 'Final Playoff Outcomes' : 'Updated Playoff Odds'}
-            {!seasonComplete && changed && <span className="ml-2 text-[#FFD700]">● Live</span>}
+            Updated Playoff Odds
+            {hasSelections && <span className="ml-2 text-[#FFD700]">● Live</span>}
           </h3>
           <div className="bg-[#1a1d27] border border-[#2a2d3a] rounded-xl overflow-hidden">
-            {[...teams]
-              .sort((a, b) => b.points - a.points || b.nrr - a.nrr)
+            {[...simTeams]
+              .sort((a, b) => (b._simPct ?? 0) - (a._simPct ?? 0))
               .map((team, i) => {
-                const original = initialTeams.find(t => t.short === team.short)
-                const delta = team.playoff_pct - original.playoff_pct
-                const isChamp = team.playoff_result?.includes('🏆')
+                const base   = team.models?.[model]?.playoff_pct ?? 0
+                const simPct = team._simPct ?? base
+                const delta  = simPct - base
 
                 return (
                   <div
                     key={team.short}
                     className={`flex items-center gap-3 px-4 py-3 border-b border-[#2a2d3a] last:border-0
-                      ${i % 2 === 0 ? '' : 'bg-[#13161f]/40'}
-                      ${isChamp ? 'ring-1 ring-inset ring-yellow-500/30' : ''}`}
+                      ${i % 2 === 0 ? '' : 'bg-[#13161f]/40'}`}
                   >
-                    <span className="text-xs text-gray-600 w-4 text-center font-mono">{i + 1}</span>
-                    <div
-                      className="w-2.5 h-2.5 rounded-sm flex-shrink-0"
-                      style={{ backgroundColor: team.color }}
-                    />
-                    <span className="text-sm text-gray-300 flex-1">{team.name}</span>
+                    <span className="text-xs text-gray-600 w-4 text-center font-mono tabular-nums">{i+1}</span>
+                    <div className="w-2.5 h-2.5 rounded-sm flex-shrink-0" style={{ backgroundColor: team.color }} />
+                    <span className="text-sm text-gray-300 flex-1 truncate">{team.name}</span>
 
-                    {seasonComplete ? (
-                      <PlayoffResultBadge result={team.playoff_result} />
-                    ) : (
-                      <>
-                        {delta !== 0 && (
-                          <span className={`text-xs font-medium ${delta > 0 ? 'text-green-400' : 'text-red-400'}`}>
-                            {delta > 0 ? '+' : ''}{delta}%
-                          </span>
-                        )}
-                        <div className="flex items-center gap-2 w-32">
-                          <div className="flex-1 h-1.5 rounded-full bg-[#2a2d3a] overflow-hidden">
-                            <div
-                              className="h-full rounded-full transition-all duration-500"
-                              style={{
-                                width: `${team.playoff_pct}%`,
-                                backgroundColor: team.playoff_pct >= 60 ? '#22c55e' : team.playoff_pct >= 30 ? '#eab308' : '#ef4444'
-                              }}
-                            />
-                          </div>
-                          <span className="text-xs font-bold text-gray-300 w-9 text-right">
-                            {team.playoff_pct}%
-                          </span>
-                        </div>
-                      </>
+                    {delta !== 0 && (
+                      <span className={`text-xs font-bold tabular-nums flex-shrink-0 ${delta > 0 ? 'text-green-400' : 'text-red-400'}`}>
+                        {delta > 0 ? '+' : ''}{delta}%
+                      </span>
                     )}
+
+                    <div className="flex items-center gap-2 w-28 flex-shrink-0">
+                      <div className="flex-1 h-1.5 rounded-full bg-[#2a2d3a] overflow-hidden">
+                        <div
+                          className="h-full rounded-full transition-all duration-500"
+                          style={{
+                            width: `${Math.min(simPct, 100)}%`,
+                            backgroundColor: simPct >= 60 ? '#22c55e' : simPct >= 30 ? '#eab308' : '#ef4444'
+                          }}
+                        />
+                      </div>
+                      <span className="text-xs font-bold text-gray-300 w-9 text-right tabular-nums">
+                        {simPct}%
+                      </span>
+                    </div>
                   </div>
                 )
               })}
