@@ -4,7 +4,6 @@ import { useModel } from '../context/ModelContext'
 export default function ScenarioExplorer({ teams }) {
   const { setScenarioOverrides } = useModel()
   const [fixtures, setFixtures] = useState([])
-  // picks[i] = winning team short, or undefined if no pick for fixture i
   const [picks, setPicks] = useState({})
 
   useEffect(() => {
@@ -14,7 +13,6 @@ export default function ScenarioExplorer({ teams }) {
       .catch(() => {})
   }, [])
 
-  // Recompute context overrides whenever picks change
   useEffect(() => {
     const overrides = {}
     fixtures.forEach((_, i) => {
@@ -45,85 +43,93 @@ export default function ScenarioExplorer({ teams }) {
   if (!fixtures.length) return null
 
   return (
-    <div className="sec" style={{ paddingTop: 40, paddingBottom: 40 }}>
-      <div style={{
-        fontSize: 11,
-        color: '#FFD700',
-        letterSpacing: '2px',
-        textTransform: 'uppercase',
-        marginBottom: 8,
-      }}>
-        What if?
-      </div>
-      <p style={{ fontSize: 12, color: '#888', lineHeight: 1.7, margin: '0 0 20px' }}>
-        Toggle match outcomes below and see how playoff odds shift.
-      </p>
+    <div style={{
+      background: '#0d0f16',
+      borderTop: '0.5px solid #1e2130',
+      borderBottom: '0.5px solid #1e2130',
+    }}>
+      <div className="sec" style={{ paddingTop: 48, paddingBottom: 56 }}>
+        <div style={{
+          fontSize: 11,
+          color: '#FFD700',
+          letterSpacing: '2px',
+          textTransform: 'uppercase',
+          marginBottom: 8,
+        }}>
+          What if?
+        </div>
+        <p style={{ fontSize: 12, color: '#888', lineHeight: 1.7, margin: '0 0 20px' }}>
+          Toggle match outcomes below and see how playoff odds shift.
+        </p>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-        {fixtures.map((fix, i) => {
-          const t1 = teamByShort[fix.team1]
-          const t2 = teamByShort[fix.team2]
-          const winner = picks[i]
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+          {fixtures.map((fix, i) => {
+            const t1 = teamByShort[fix.team1]
+            const t2 = teamByShort[fix.team2]
+            const winner = picks[i]
 
-          const btnStyle = (short, meta) => ({
-            flex: 1,
-            padding: '8px 12px',
-            borderRadius: 8,
-            border: 'none',
-            background: winner === short ? (meta?.color ?? '#FFD700') : '#13151e',
-            color: winner === short
-              ? (meta?.textDark ? '#111' : '#fff')
-              : (winner && winner !== short) ? '#555' : '#aaa',
-            fontSize: 13,
-            fontWeight: 500,
-            cursor: 'pointer',
-            transition: 'all 0.15s',
-            opacity: (winner && winner !== short) ? 0.5 : 1,
-          })
+            const btnStyle = (short, meta) => ({
+              flex: 1,
+              padding: '10px 20px',
+              minWidth: 120,
+              borderRadius: 8,
+              border: 'none',
+              background: winner === short ? (meta?.color ?? '#FFD700') : '#13151e',
+              color: winner === short
+                ? (meta?.textDark ? '#111' : '#fff')
+                : (winner && winner !== short) ? '#555' : '#aaa',
+              fontSize: 13,
+              fontWeight: 500,
+              cursor: 'pointer',
+              transition: 'all 0.15s',
+              opacity: (winner && winner !== short) ? 0.5 : 1,
+            })
 
-          return (
-            <div
-              key={`${fix.team1}-${fix.team2}`}
-              style={{
-                background: '#1a1d27',
-                border: '0.5px solid #2a2d3a',
-                borderRadius: 12,
-                padding: '14px 16px',
-              }}
-            >
-              <div style={{ fontSize: 12, color: '#888', marginBottom: 10 }}>
-                {fix.date} · {fix.venue}
+            return (
+              <div
+                key={`${fix.team1}-${fix.team2}`}
+                style={{
+                  background: '#1a1d27',
+                  border: '0.5px solid #2a2d3a',
+                  borderRadius: 12,
+                  padding: '20px',
+                  marginBottom: 16,
+                }}
+              >
+                <div style={{ fontSize: 12, color: '#888', marginBottom: 10 }}>
+                  {fix.date} · {fix.venue}
+                </div>
+                <div style={{ display: 'flex', gap: 8 }}>
+                  <button onClick={() => togglePick(i, fix.team1)} style={btnStyle(fix.team1, t1)}>
+                    {fix.team1}
+                  </button>
+                  <button onClick={() => togglePick(i, fix.team2)} style={btnStyle(fix.team2, t2)}>
+                    {fix.team2}
+                  </button>
+                </div>
               </div>
-              <div style={{ display: 'flex', gap: 8 }}>
-                <button onClick={() => togglePick(i, fix.team1)} style={btnStyle(fix.team1, t1)}>
-                  {fix.team1}
-                </button>
-                <button onClick={() => togglePick(i, fix.team2)} style={btnStyle(fix.team2, t2)}>
-                  {fix.team2}
-                </button>
-              </div>
-            </div>
-          )
-        })}
-      </div>
+            )
+          })}
+        </div>
 
-      {hasAnyPick && (
-        <button
-          onClick={reset}
-          style={{
-            marginTop: 16,
-            padding: '7px 20px',
-            borderRadius: 20,
-            border: '0.5px solid #2a2d3a',
-            background: 'transparent',
-            color: '#aaa',
-            fontSize: 12,
-            cursor: 'pointer',
-          }}
-        >
-          ↺ Reset
-        </button>
-      )}
+        {hasAnyPick && (
+          <button
+            onClick={reset}
+            style={{
+              marginTop: 4,
+              padding: '7px 20px',
+              borderRadius: 20,
+              border: '0.5px solid #2a2d3a',
+              background: 'transparent',
+              color: '#aaa',
+              fontSize: 12,
+              cursor: 'pointer',
+            }}
+          >
+            ↺ Reset
+          </button>
+        )}
+      </div>
     </div>
   )
 }

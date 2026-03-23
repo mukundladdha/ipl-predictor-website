@@ -50,57 +50,63 @@ export default function BumpsChart({ teams }) {
   const data = buildChartData(teams, activeModel)
 
   return (
-    <div className="sec" style={{ paddingTop: 40, paddingBottom: 40 }}>
-      <div style={{
-        fontSize: 11,
-        color: '#FFD700',
-        letterSpacing: '2px',
-        textTransform: 'uppercase',
-        marginBottom: 24,
-      }}>
-        Playoff odds over the season
-      </div>
+    <div style={{
+      background: '#0d0f16',
+      borderTop: '0.5px solid #1e2130',
+      borderBottom: '0.5px solid #1e2130',
+    }}>
+      <div className="sec" style={{ paddingTop: 40, paddingBottom: 40 }}>
+        <div style={{
+          fontSize: 11,
+          color: '#FFD700',
+          letterSpacing: '2px',
+          textTransform: 'uppercase',
+          marginBottom: 24,
+        }}>
+          Playoff odds over the season
+        </div>
 
-      <ResponsiveContainer width="100%" height={340}>
-        <LineChart data={data} margin={{ top: 5, right: 10, left: 0, bottom: 5 }}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#1e2130" />
-          <XAxis
-            dataKey="md"
-            tick={{ fill: '#888', fontSize: 11 }}
-            axisLine={{ stroke: '#2a2d3a' }}
-            tickLine={false}
-          />
-          <YAxis
-            domain={[0, 100]}
-            tick={{ fill: '#888', fontSize: 11 }}
-            axisLine={false}
-            tickLine={false}
-            tickFormatter={v => `${v}%`}
-            width={36}
-          />
-          <Tooltip content={<CustomTooltip />} />
-          <Legend
-            wrapperStyle={{ paddingTop: 20 }}
-            formatter={v => (
-              <span style={{ color: '#aaa', fontSize: 11 }}>{v}</span>
-            )}
-            iconType="circle"
-            iconSize={8}
-          />
-          {teams.map(t => (
-            <Line
-              key={t.short}
-              type="monotone"
-              dataKey={t.short}
-              stroke={t.color}
-              strokeWidth={2}
-              dot={{ r: 3, fill: t.color, strokeWidth: 0 }}
-              activeDot={{ r: 5, strokeWidth: 2, stroke: '#fff' }}
-              connectNulls={false}
+        <ResponsiveContainer width="100%" height={340}>
+          <LineChart data={data} margin={{ top: 5, right: 10, left: 0, bottom: 5 }}>
+            <CartesianGrid strokeDasharray="3 3" stroke="#1e2130" />
+            <XAxis
+              dataKey="md"
+              tick={{ fill: '#888', fontSize: 11 }}
+              axisLine={{ stroke: '#2a2d3a' }}
+              tickLine={false}
             />
-          ))}
-        </LineChart>
-      </ResponsiveContainer>
+            <YAxis
+              domain={[0, 100]}
+              tick={{ fill: '#888', fontSize: 11 }}
+              axisLine={false}
+              tickLine={false}
+              tickFormatter={v => `${v}%`}
+              width={36}
+            />
+            <Tooltip content={<CustomTooltip />} />
+            <Legend
+              wrapperStyle={{ paddingTop: 20 }}
+              formatter={v => (
+                <span style={{ color: '#aaa', fontSize: 11 }}>{v}</span>
+              )}
+              iconType="circle"
+              iconSize={8}
+            />
+            {teams.map(t => (
+              <Line
+                key={t.short}
+                type="monotone"
+                dataKey={t.short}
+                stroke={t.color}
+                strokeWidth={2}
+                dot={{ r: 3, fill: t.color, strokeWidth: 0 }}
+                activeDot={{ r: 5, strokeWidth: 2, stroke: '#fff' }}
+                connectNulls={false}
+              />
+            ))}
+          </LineChart>
+        </ResponsiveContainer>
+      </div>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer style={{ borderTop: '0.5px solid #1e2130', marginTop: 40 }}>
-      <div className="sec" style={{ paddingTop: 48, paddingBottom: 56 }}>
+      <div className="sec" style={{ paddingTop: 48, paddingBottom: 64 }}>
         <p style={{ fontSize: 12, color: '#888', lineHeight: 1.8, margin: '0 0 16px' }}>
           <strong style={{ color: '#aaa' }}>Elo model:</strong> Each team's Elo rating is
           built from every IPL match since 2008 using a K-factor of 32 and a base rating of

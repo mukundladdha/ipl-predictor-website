@@ -1,6 +1,6 @@
 export default function Hero({ teamCount = 10 }) {
   return (
-    <div className="sec" style={{ paddingTop: 60, paddingBottom: 44 }}>
+    <div className="sec" style={{ paddingTop: 64, paddingBottom: 48 }}>
       <h1 style={{
         fontSize: 44,
         fontWeight: 500,

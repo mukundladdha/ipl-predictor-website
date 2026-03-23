@@ -20,7 +20,7 @@ export default function PlayoffRace({ teams }) {
     .sort((a, b) => b.adjPct - a.adjPct)
 
   return (
-    <div className="sec" style={{ paddingTop: 40, paddingBottom: 32 }}>
+    <div className="sec" style={{ paddingTop: 32, paddingBottom: 40 }}>
 
       {/* Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>
