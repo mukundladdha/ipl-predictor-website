@@ -63,7 +63,12 @@ function App() {
     <ModelProvider>
       <div style={{ background: '#0f1117', minHeight: '100vh' }}>
         <Nav lastUpdated={data.last_updated} />
-        <Hero teamCount={data.teams.length} />
+        <Hero
+          teams={data.teams}
+          matchesPlayed={data.matches_played}
+          matchesRemaining={data.matches_remaining}
+          playoffSpots={data.playoff_spots}
+        />
         <ConceptCards />
         <MonteCarloStrip />
         <PlayoffRace teams={data.teams} />
