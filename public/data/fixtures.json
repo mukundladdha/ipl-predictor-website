@@ -1,9 +1,9 @@
 {
   "fixtures": [
-    { "team1": "MI",   "team2": "CSK",  "date": "2025-03-23", "venue": "Wankhede Stadium" },
-    { "team1": "RCB",  "team2": "KKR",  "date": "2025-03-24", "venue": "Chinnaswamy Stadium" },
-    { "team1": "GT",   "team2": "RR",   "date": "2025-03-25", "venue": "Narendra Modi Stadium" },
-    { "team1": "SRH",  "team2": "DC",   "date": "2025-03-26", "venue": "Rajiv Gandhi Stadium" },
-    { "team1": "PBKS", "team2": "LSG",  "date": "2025-03-27", "venue": "Punjab Cricket Association Stadium" }
+    { "team1": "RCB",  "team2": "SRH",  "date": "2026-03-28", "venue": "Chinnaswamy Stadium" },
+    { "team1": "KKR",  "team2": "DC",   "date": "2026-03-29", "venue": "Eden Gardens" },
+    { "team1": "MI",   "team2": "CSK",  "date": "2026-03-30", "venue": "Wankhede Stadium" },
+    { "team1": "RR",   "team2": "PBKS", "date": "2026-04-01", "venue": "Sawai Mansingh Stadium" },
+    { "team1": "GT",   "team2": "LSG",  "date": "2026-04-02", "venue": "Narendra Modi Stadium" }
   ]
 }

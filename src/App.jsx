@@ -16,6 +16,22 @@ const Divider = () => (
   <div style={{ height: '0.5px', background: '#2a2d3a' }} />
 )
 
+const PreSeasonBanner = () => (
+  <div style={{
+    background: '#1a1d27',
+    borderBottom: '0.5px solid #2a2d3a',
+    padding: '9px 0',
+    textAlign: 'center',
+    fontSize: 12,
+    color: '#FFD700',
+    letterSpacing: '0.2px',
+    lineHeight: 1.5,
+  }}>
+    IPL 2026 starts March 28. These are pre-season projections based on historical Elo ratings.
+    Odds will update after each match.
+  </div>
+)
+
 function App() {
   const [data, setData] = useState(null)
   const [error, setError] = useState(null)
@@ -63,6 +79,7 @@ function App() {
     <ModelProvider>
       <div style={{ background: '#0f1117', minHeight: '100vh' }}>
         <Nav lastUpdated={data.last_updated} />
+        {data.pre_season && <PreSeasonBanner />}
         <Hero
           teams={data.teams}
           matchesPlayed={data.matches_played}
