@@ -25,7 +25,7 @@ export default function PreSeasonBanner({ modelNote }) {
             fontWeight: 500,
             whiteSpace: 'nowrap',
           }}>
-            IPL 2026 opens today · Pre-season forecast
+            IPL starts today · Pre-season forecast
           </span>
         </div>
 

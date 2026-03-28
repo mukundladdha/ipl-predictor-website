@@ -13,7 +13,32 @@ function getDelta(team, model) {
   return current - hist[hist.length - 2]
 }
 
-function getHeadlineData(teams, model) {
+function getHeadlineData(teams, model, preSeason, seasonStart) {
+  // Pre-season: check against today's date
+  if (preSeason && seasonStart) {
+    const today = new Date()
+    today.setHours(0, 0, 0, 0)
+    const start = new Date(seasonStart)
+    start.setHours(0, 0, 0, 0)
+    const diffDays = Math.round((start - today) / (1000 * 60 * 60 * 24))
+
+    if (diffDays === 0) {
+      return {
+        headline: 'IPL 2026 is here.',
+        headlineEm: 'Who goes all the way?',
+        sub: "RCB vs SRH opens the season today. Our model has simulated the full season 100,000 times — here's who we think makes the playoffs.",
+      }
+    }
+    if (diffDays > 0) {
+      return {
+        headline: 'IPL 2026 starts',
+        headlineEm: `in ${diffDays} day${diffDays === 1 ? '' : 's'}.`,
+        sub: "Our pre-season model has simulated the full season 100,000 times. Here's who we think makes the playoffs.",
+      }
+    }
+  }
+
+  // Mid-season dynamic logic
   // Priority 1: big drop (pct < 30 AND delta <= -6)
   const dropper = teams.find(t => {
     const pct = t.models[model]?.playoff_pct ?? 0
@@ -50,7 +75,7 @@ function getHeadlineData(teams, model) {
   return {
     headline: '4 spots.',
     headlineEm: 'No team is safe.',
-    sub: "The race is tighter than the points table suggests. We simulate the remaining season 100,000 times so you don't have to guess.",
+    sub: "We simulate the remaining season 100,000 times so you don't have to guess.",
   }
 }
 
@@ -59,6 +84,8 @@ export default function Hero({
   matchesPlayed = 0,
   matchesRemaining = 0,
   playoffSpots = 4,
+  preSeason = false,
+  seasonStart = null,
 }) {
   const [model, setModel] = useState('elo')
 
@@ -66,7 +93,7 @@ export default function Hero({
     (a, b) => (b.models[model]?.playoff_pct ?? 0) - (a.models[model]?.playoff_pct ?? 0)
   )
   const top4 = sorted.slice(0, 4)
-  const { headline, headlineEm, sub } = getHeadlineData(teams, model)
+  const { headline, headlineEm, sub } = getHeadlineData(teams, model, preSeason, seasonStart)
 
   return (
     <div className="sec" style={{ paddingTop: 20, paddingBottom: 0 }}>

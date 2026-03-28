@@ -8,7 +8,6 @@ import PlayoffRace from './components/PlayoffRace'
 import BottomMetaStrip from './components/BottomMetaStrip'
 import BumpsChart from './components/BumpsChart'
 import RankProbChart from './components/RankProbChart'
-import ScenarioExplorer from './components/ScenarioExplorer'
 import Footer from './components/Footer'
 import PreSeasonBanner from './components/PreSeasonBanner'
 import './index.css'
@@ -72,6 +71,8 @@ function App() {
           matchesPlayed={data.matches_played}
           matchesRemaining={data.matches_remaining}
           playoffSpots={data.playoff_spots}
+          preSeason={data.pre_season ?? false}
+          seasonStart={data.season_start ?? null}
         />
         <ConceptCards />
         <MonteCarloStrip />
@@ -85,8 +86,6 @@ function App() {
         <BumpsChart teams={data.teams} />
         <Divider />
         <RankProbChart teams={data.teams} />
-        <Divider />
-        <ScenarioExplorer teams={data.teams} />
         <Footer />
       </div>
     </ModelProvider>

@@ -19,7 +19,7 @@ export default function ConceptCards() {
   const { activeModel, setActiveModel } = useModel()
 
   return (
-    <div className="sec" style={{ paddingBottom: 40 }}>
+    <div className="sec" style={{ paddingTop: 56, paddingBottom: 40 }}>
       <div style={{
         fontSize: 11,
         color: '#FFD700',
