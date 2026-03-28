@@ -9,7 +9,6 @@ import BottomMetaStrip from './components/BottomMetaStrip'
 import BumpsChart from './components/BumpsChart'
 import RankProbChart from './components/RankProbChart'
 import Footer from './components/Footer'
-import PreSeasonBanner from './components/PreSeasonBanner'
 import './index.css'
 
 const Divider = () => (
@@ -63,9 +62,6 @@ function App() {
     <ModelProvider>
       <div style={{ background: '#0f1117', minHeight: '100vh' }}>
         <Nav lastUpdated={data.last_updated} />
-        {data.pre_season && (
-          <PreSeasonBanner modelNote={data.model_note} />
-        )}
         <Hero
           teams={data.teams}
           matchesPlayed={data.matches_played}
