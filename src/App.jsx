@@ -10,26 +10,11 @@ import BumpsChart from './components/BumpsChart'
 import RankProbChart from './components/RankProbChart'
 import ScenarioExplorer from './components/ScenarioExplorer'
 import Footer from './components/Footer'
+import PreSeasonBanner from './components/PreSeasonBanner'
 import './index.css'
 
 const Divider = () => (
   <div style={{ height: '0.5px', background: '#2a2d3a' }} />
-)
-
-const PreSeasonBanner = () => (
-  <div style={{
-    background: '#1a1d27',
-    borderBottom: '0.5px solid #2a2d3a',
-    padding: '9px 0',
-    textAlign: 'center',
-    fontSize: 12,
-    color: '#FFD700',
-    letterSpacing: '0.2px',
-    lineHeight: 1.5,
-  }}>
-    IPL 2026 starts March 28. These are pre-season projections based on historical Elo ratings.
-    Odds will update after each match.
-  </div>
 )
 
 function App() {
@@ -79,7 +64,9 @@ function App() {
     <ModelProvider>
       <div style={{ background: '#0f1117', minHeight: '100vh' }}>
         <Nav lastUpdated={data.last_updated} />
-        {data.pre_season && <PreSeasonBanner />}
+        {data.pre_season && (
+          <PreSeasonBanner modelNote={data.model_note} />
+        )}
         <Hero
           teams={data.teams}
           matchesPlayed={data.matches_played}
@@ -88,7 +75,7 @@ function App() {
         />
         <ConceptCards />
         <MonteCarloStrip />
-        <PlayoffRace teams={data.teams} />
+        <PlayoffRace teams={data.teams} defChampion={data.defending_champion} />
         <BottomMetaStrip
           matchesPlayed={data.matches_played}
           matchesRemaining={data.matches_remaining}

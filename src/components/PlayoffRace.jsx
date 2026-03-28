@@ -7,7 +7,7 @@ function pctColor(pct) {
   return '#f87171'
 }
 
-export default function PlayoffRace({ teams }) {
+export default function PlayoffRace({ teams, defChampion }) {
   const { activeModel, setActiveModel, scenarioOverrides } = useModel()
 
   // Apply scenario overrides and sort
@@ -128,17 +128,38 @@ export default function PlayoffRace({ teams }) {
                 )}
               </div>
 
-              {/* Pct */}
+              {/* Pct + defending champion badge */}
               <div style={{
-                width: 38,
-                fontSize: 13,
-                fontWeight: 500,
-                color: pctColor(team.adjPct),
-                textAlign: 'right',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 6,
                 flexShrink: 0,
-                fontVariantNumeric: 'tabular-nums',
+                justifyContent: 'flex-end',
               }}>
-                {Math.round(team.adjPct)}%
+                {defChampion && team.short === defChampion && (
+                  <span style={{
+                    fontSize: 9,
+                    background: 'rgba(255,215,0,0.15)',
+                    color: '#FFD700',
+                    border: '0.5px solid rgba(255,215,0,0.3)',
+                    borderRadius: 4,
+                    padding: '2px 6px',
+                    whiteSpace: 'nowrap',
+                    letterSpacing: '0.2px',
+                  }}>
+                    Champions
+                  </span>
+                )}
+                <div style={{
+                  fontSize: 13,
+                  fontWeight: 500,
+                  color: pctColor(team.adjPct),
+                  textAlign: 'right',
+                  fontVariantNumeric: 'tabular-nums',
+                  width: 38,
+                }}>
+                  {Math.round(team.adjPct)}%
+                </div>
               </div>
             </div>
           </React.Fragment>
