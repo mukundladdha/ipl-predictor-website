@@ -158,7 +158,7 @@ export default function PlayoffRace({ teams, defChampion }) {
                   fontVariantNumeric: 'tabular-nums',
                   width: 38,
                 }}>
-                  {Math.round(team.adjPct)}%
+                  {team.adjPct.toFixed(1)}%
                 </div>
               </div>
             </div>

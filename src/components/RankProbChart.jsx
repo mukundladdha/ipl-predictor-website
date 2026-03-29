@@ -28,7 +28,7 @@ const CustomTooltip = ({ active, payload }) => {
     }}>
       {payload.map(p => (
         <div key={p.dataKey} style={{ color: '#888' }}>
-          {p.dataKey}: <span style={{ color: '#fff', fontWeight: 500 }}>{p.value}%</span>
+          {p.dataKey}: <span style={{ color: '#fff', fontWeight: 500 }}>{Number(p.value).toFixed(1)}%</span>
         </div>
       ))}
     </div>
@@ -105,7 +105,7 @@ export default function RankProbChart({ teams }) {
               flexShrink: 0,
             }} />
             <span style={{ fontSize: 11, color: '#888' }}>
-              {pos}: {probs[i] ?? 0}%
+              {pos}: {Number(probs[i] ?? 0).toFixed(1)}%
             </span>
           </div>
         ))}

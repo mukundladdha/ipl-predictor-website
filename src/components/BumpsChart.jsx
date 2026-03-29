@@ -37,7 +37,7 @@ const CustomTooltip = ({ active, payload, label }) => {
             <span style={{ color: '#888' }}>{e.dataKey}</span>
           </div>
           <span style={{ fontWeight: 500, color: e.color, fontVariantNumeric: 'tabular-nums' }}>
-            {e.value}%
+            {Number(e.value).toFixed(1)}%
           </span>
         </div>
       ))}

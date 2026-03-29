@@ -20,38 +20,38 @@
       "nrr": 0.0,
       "models": {
         "elo": {
-          "playoff_pct": 39.5,
+          "playoff_pct": 55.7,
           "rank_probs": [
-            9.7,
-            9.9,
-            10.0,
-            10.0,
-            10.0,
-            10.0,
-            10.2,
-            10.1,
-            10.2,
-            9.9
+            16.2,
+            14.4,
+            13.2,
+            11.9,
+            11.0,
+            9.6,
+            8.3,
+            7.0,
+            5.2,
+            3.1
           ]
         },
         "form": {
-          "playoff_pct": 32.8,
+          "playoff_pct": 32.5,
           "rank_probs": [
-            5.2,
+            5.1,
             7.8,
-            9.3,
+            9.2,
             10.4,
             11.2,
-            12.2,
-            13.2,
-            14.4,
-            16.1,
+            12.5,
+            13.3,
+            14.5,
+            16.0,
             0.0
           ]
         }
       },
       "factors": {
-        "elo_score": 1500.0,
+        "elo_score": 1545.0,
         "form_score": 0.5,
         "home_games_remaining": 7,
         "nrr": 0.0
@@ -59,11 +59,11 @@
       "history": {
         "elo": [
           72,
-          39.5
+          55.7
         ],
         "form": [
           62,
-          32.8
+          32.5
         ]
       },
       "key_players": "Rohit Sharma, Jasprit Bumrah, Hardik Pandya"
@@ -80,30 +80,30 @@
       "nrr": 0.0,
       "models": {
         "elo": {
-          "playoff_pct": 56.9,
+          "playoff_pct": 72.3,
           "rank_probs": [
-            18.0,
-            14.8,
-            12.7,
+            27.5,
+            19.0,
+            14.4,
             11.4,
-            10.0,
-            9.0,
-            7.9,
-            6.8,
-            5.5,
-            3.9
+            8.7,
+            6.9,
+            5.1,
+            3.6,
+            2.3,
+            1.2
           ]
         },
         "form": {
-          "playoff_pct": 87.0,
+          "playoff_pct": 86.8,
           "rank_probs": [
-            47.0,
-            20.2,
+            46.7,
+            20.3,
             12.0,
-            7.8,
-            5.2,
+            7.7,
+            5.4,
             3.5,
-            2.2,
+            2.3,
             1.4,
             0.7,
             0.0
@@ -111,7 +111,7 @@
         }
       },
       "factors": {
-        "elo_score": 1516.0,
+        "elo_score": 1553.9,
         "form_score": 1.0,
         "home_games_remaining": 7,
         "nrr": 0.0
@@ -119,11 +119,11 @@
       "history": {
         "elo": [
           68,
-          56.9
+          72.3
         ],
         "form": [
           76,
-          87.0
+          86.8
         ]
       },
       "key_players": "Virat Kohli, Faf du Plessis, Josh Hazlewood"
@@ -140,38 +140,38 @@
       "nrr": 0.0,
       "models": {
         "elo": {
-          "playoff_pct": 40.3,
+          "playoff_pct": 45.1,
           "rank_probs": [
-            9.9,
             10.0,
-            10.3,
-            10.1,
+            11.4,
+            11.9,
+            11.8,
+            11.4,
+            11.0,
             10.0,
-            10.0,
-            10.1,
-            10.0,
-            9.8,
-            9.7
+            9.2,
+            7.6,
+            5.7
           ]
         },
         "form": {
-          "playoff_pct": 45.7,
+          "playoff_pct": 45.5,
           "rank_probs": [
             8.1,
             12.1,
-            12.7,
-            12.7,
+            12.9,
             12.4,
-            11.7,
-            11.1,
-            10.3,
-            8.7,
+            12.5,
+            11.9,
+            11.2,
+            10.2,
+            8.8,
             0.0
           ]
         }
       },
       "factors": {
-        "elo_score": 1500.0,
+        "elo_score": 1510.0,
         "form_score": 0.5,
         "home_games_remaining": 7,
         "nrr": 0.0
@@ -179,11 +179,11 @@
       "history": {
         "elo": [
           55,
-          40.3
+          45.1
         ],
         "form": [
           52,
-          45.7
+          45.5
         ]
       },
       "key_players": "Ajinkya Rahane, Andre Russell, Sunil Narine"
@@ -200,38 +200,38 @@
       "nrr": 0.0,
       "models": {
         "elo": {
-          "playoff_pct": 39.4,
+          "playoff_pct": 44.8,
           "rank_probs": [
-            9.7,
-            9.8,
-            10.0,
-            10.0,
-            10.1,
-            10.3,
-            10.0,
-            10.3,
-            10.0,
-            9.8
+            10.4,
+            11.4,
+            11.5,
+            11.6,
+            11.3,
+            11.0,
+            10.4,
+            9.2,
+            7.8,
+            5.5
           ]
         },
         "form": {
-          "playoff_pct": 32.4,
+          "playoff_pct": 32.7,
           "rank_probs": [
             5.1,
-            7.8,
-            9.1,
+            7.9,
+            9.3,
             10.4,
             11.3,
-            12.4,
-            13.5,
+            12.1,
+            13.3,
             14.3,
-            16.1,
+            16.2,
             0.0
           ]
         }
       },
       "factors": {
-        "elo_score": 1500.0,
+        "elo_score": 1520.0,
         "form_score": 0.5,
         "home_games_remaining": 7,
         "nrr": 0.0
@@ -239,11 +239,11 @@
       "history": {
         "elo": [
           58,
-          39.4
+          44.8
         ],
         "form": [
           46,
-          32.4
+          32.7
         ]
       },
       "key_players": "Shubman Gill, Rashid Khan, Jos Buttler"
@@ -260,38 +260,38 @@
       "nrr": 0.0,
       "models": {
         "elo": {
-          "playoff_pct": 40.5,
+          "playoff_pct": 42.8,
           "rank_probs": [
-            9.9,
-            10.2,
-            10.2,
-            10.2,
-            10.1,
-            10.1,
-            10.1,
-            9.9,
-            9.8,
-            9.5
+            9.0,
+            10.7,
+            11.4,
+            11.6,
+            11.5,
+            11.0,
+            10.7,
+            9.6,
+            8.3,
+            6.1
           ]
         },
         "form": {
-          "playoff_pct": 45.9,
+          "playoff_pct": 46.2,
           "rank_probs": [
-            8.1,
-            12.3,
+            8.3,
+            12.2,
             12.9,
-            12.6,
-            12.4,
-            11.9,
+            12.9,
+            12.3,
+            11.6,
             11.0,
-            10.0,
+            10.1,
             8.8,
             0.0
           ]
         }
       },
       "factors": {
-        "elo_score": 1500.0,
+        "elo_score": 1505.0,
         "form_score": 0.5,
         "home_games_remaining": 7,
         "nrr": 0.0
@@ -299,11 +299,11 @@
       "history": {
         "elo": [
           52,
-          40.5
+          42.8
         ],
         "form": [
           40,
-          45.9
+          46.2
         ]
       },
       "key_players": "Ruturaj Gaikwad, Ravindra Jadeja, Deepak Chahar"
@@ -320,18 +320,18 @@
       "nrr": 0.0,
       "models": {
         "elo": {
-          "playoff_pct": 24.2,
+          "playoff_pct": 21.5,
           "rank_probs": [
-            4.2,
-            5.6,
-            6.7,
+            2.8,
+            4.7,
+            6.4,
             7.7,
-            8.9,
-            10.0,
-            11.3,
-            12.7,
-            14.7,
-            18.2
+            9.4,
+            10.9,
+            12.6,
+            14.5,
+            15.9,
+            15.1
           ]
         },
         "form": {
@@ -351,7 +351,7 @@
         }
       },
       "factors": {
-        "elo_score": 1484.0,
+        "elo_score": 1481.1,
         "form_score": 0.0,
         "home_games_remaining": 7,
         "nrr": 0.0
@@ -359,7 +359,7 @@
       "history": {
         "elo": [
           46,
-          24.2
+          21.5
         ],
         "form": [
           52,
@@ -380,38 +380,38 @@
       "nrr": 0.0,
       "models": {
         "elo": {
-          "playoff_pct": 40.6,
+          "playoff_pct": 53.7,
           "rank_probs": [
-            9.8,
-            10.1,
-            10.2,
-            10.5,
-            10.2,
-            9.9,
-            9.9,
-            9.9,
-            9.9,
-            9.7
+            14.1,
+            14.1,
+            13.2,
+            12.3,
+            11.0,
+            10.0,
+            8.7,
+            7.0,
+            5.6,
+            3.9
           ]
         },
         "form": {
           "playoff_pct": 45.8,
           "rank_probs": [
-            8.3,
-            12.1,
+            8.2,
+            11.9,
+            12.9,
             12.8,
-            12.7,
-            12.4,
+            12.3,
             11.8,
-            10.9,
+            11.2,
             10.2,
-            8.8,
+            8.7,
             0.0
           ]
         }
       },
       "factors": {
-        "elo_score": 1500.0,
+        "elo_score": 1530.0,
         "form_score": 0.5,
         "home_games_remaining": 7,
         "nrr": 0.0
@@ -419,7 +419,7 @@
       "history": {
         "elo": [
           62,
-          40.6
+          53.7
         ],
         "form": [
           68,
@@ -440,38 +440,38 @@
       "nrr": 0.0,
       "models": {
         "elo": {
-          "playoff_pct": 40.1,
+          "playoff_pct": 31.8,
           "rank_probs": [
-            9.6,
-            10.0,
-            10.3,
-            10.2,
-            10.2,
-            10.1,
-            10.1,
+            5.6,
+            7.5,
+            8.7,
             9.9,
-            9.9,
-            9.7
+            11.0,
+            11.6,
+            12.0,
+            11.9,
+            11.6,
+            10.1
           ]
         },
         "form": {
-          "playoff_pct": 45.7,
+          "playoff_pct": 45.8,
           "rank_probs": [
-            8.2,
-            12.0,
-            12.9,
+            8.1,
+            12.2,
+            12.7,
             12.7,
             12.4,
-            11.8,
-            11.0,
+            11.9,
+            10.8,
             10.2,
-            8.8,
+            8.9,
             0.0
           ]
         }
       },
       "factors": {
-        "elo_score": 1500.0,
+        "elo_score": 1480.0,
         "form_score": 0.5,
         "home_games_remaining": 7,
         "nrr": 0.0
@@ -479,11 +479,11 @@
       "history": {
         "elo": [
           38,
-          40.1
+          31.8
         ],
         "form": [
           30,
-          45.7
+          45.8
         ]
       },
       "key_players": "Sanju Samson, Shimron Hetmyer, Wanindu Hasaranga"
@@ -500,30 +500,30 @@
       "nrr": 0.0,
       "models": {
         "elo": {
-          "playoff_pct": 39.3,
+          "playoff_pct": 23.0,
           "rank_probs": [
-            9.6,
-            9.8,
-            9.8,
-            10.1,
-            10.2,
-            10.2,
-            10.2,
-            10.2,
-            10.1,
-            9.8
+            3.5,
+            5.0,
+            6.6,
+            7.9,
+            9.4,
+            10.9,
+            12.4,
+            14.0,
+            15.3,
+            15.1
           ]
         },
         "form": {
-          "playoff_pct": 32.4,
+          "playoff_pct": 32.3,
           "rank_probs": [
-            5.0,
+            5.1,
             7.8,
-            9.2,
-            10.4,
-            11.3,
-            12.2,
-            13.4,
+            9.1,
+            10.3,
+            11.2,
+            12.4,
+            13.5,
             14.6,
             16.0,
             0.0
@@ -531,7 +531,7 @@
         }
       },
       "factors": {
-        "elo_score": 1500.0,
+        "elo_score": 1465.0,
         "form_score": 0.5,
         "home_games_remaining": 7,
         "nrr": 0.0
@@ -539,11 +539,11 @@
       "history": {
         "elo": [
           30,
-          39.3
+          23.0
         ],
         "form": [
           26,
-          32.4
+          32.3
         ]
       },
       "key_players": "Axar Patel, Jake Fraser-McGurk, Kuldeep Yadav"
@@ -560,38 +560,38 @@
       "nrr": 0.0,
       "models": {
         "elo": {
-          "playoff_pct": 39.2,
+          "playoff_pct": 9.3,
           "rank_probs": [
-            9.7,
-            9.9,
+            0.9,
+            1.7,
+            2.7,
+            3.9,
+            5.4,
+            7.0,
             9.8,
-            9.7,
-            10.2,
-            10.4,
-            10.2,
-            10.2,
-            10.1,
-            9.8
+            13.9,
+            20.1,
+            34.4
           ]
         },
         "form": {
-          "playoff_pct": 32.3,
+          "playoff_pct": 32.5,
           "rank_probs": [
-            5.0,
-            7.8,
-            9.1,
+            5.1,
+            7.9,
+            9.0,
             10.4,
-            11.3,
+            11.4,
             12.4,
-            13.6,
+            13.5,
             14.5,
-            15.9,
+            15.8,
             0.0
           ]
         }
       },
       "factors": {
-        "elo_score": 1500.0,
+        "elo_score": 1410.0,
         "form_score": 0.5,
         "home_games_remaining": 7,
         "nrr": 0.0
@@ -599,11 +599,11 @@
       "history": {
         "elo": [
           14,
-          39.2
+          9.3
         ],
         "form": [
           10,
-          32.3
+          32.5
         ]
       },
       "key_players": "Nicholas Pooran, Ravi Bishnoi, David Miller"

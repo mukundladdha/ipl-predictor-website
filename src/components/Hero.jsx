@@ -50,7 +50,7 @@ function getHeadlineData(teams, model, preSeason, seasonStart) {
     const pct = dropper.models[model].playoff_pct
     return {
       headline: `${dropper.name} just fell off a cliff.`,
-      sub: `Their playoff probability dropped ${Math.abs(d)}% after the last match. Our model now gives them just ${pct}% — here's where all 10 teams stand.`,
+      sub: `Their playoff probability dropped ${Math.abs(d).toFixed(1)}% after the last match. Our model now gives them just ${pct.toFixed(1)}% — here's where all 10 teams stand.`,
     }
   }
 
@@ -67,7 +67,7 @@ function getHeadlineData(teams, model, preSeason, seasonStart) {
   if (bestTeam) {
     return {
       headline: `${bestTeam.name} are pulling away.`,
-      sub: `Up ${bestDelta}% after the last result. The gap between the top 4 and the rest is widening — here's what the model says.`,
+      sub: `Up ${bestDelta.toFixed(1)}% after the last result. The gap between the top 4 and the rest is widening — here's what the model says.`,
     }
   }
 
@@ -156,10 +156,10 @@ export default function Hero({
               deltaText = '— first match day'
               deltaColor = '#444'
             } else if (delta > 0) {
-              deltaText = `↑ ${delta}% since last match`
+              deltaText = `↑ ${delta.toFixed(1)}% since last match`
               deltaColor = '#4ade80'
             } else if (delta < 0) {
-              deltaText = `↓ ${Math.abs(delta)}% since last match`
+              deltaText = `↓ ${Math.abs(delta).toFixed(1)}% since last match`
               deltaColor = '#f87171'
             } else {
               deltaText = '— no change'
@@ -182,7 +182,7 @@ export default function Hero({
                   <span style={{ fontSize: 11, color: '#666' }}>{team.name}</span>
                 </div>
                 <div style={{ fontSize: 26, fontWeight: 500, color: pctColor(pct), marginBottom: 6 }}>
-                  {pct}%
+                  {pct.toFixed(1)}%
                 </div>
                 <div style={{ fontSize: 10, color: '#444', marginBottom: 4 }}>
                   Rank #{i + 1} · Playoff odds

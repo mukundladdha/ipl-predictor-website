@@ -34,6 +34,22 @@ FORM_DECAY = [0.75 ** i for i in range(FORM_WINDOW)]
 N_SIM = 100_000
 SEASON_YEAR = "2026"
 
+# Pre-season calibrated Elo baselines (sum = 15,000 → avg 1500).
+# Derived from historical IPL performance, squad strength for 2026.
+# All results in data/results.csv are applied on top of these values.
+ELO_INITIAL = {
+    "Mumbai Indians":               1545,
+    "Royal Challengers Bengaluru":  1540,
+    "Punjab Kings":                 1530,
+    "Gujarat Titans":               1520,
+    "Kolkata Knight Riders":        1510,
+    "Chennai Super Kings":          1505,
+    "Sunrisers Hyderabad":          1495,
+    "Rajasthan Royals":             1480,
+    "Delhi Capitals":               1465,
+    "Lucknow Super Giants":         1410,
+}
+
 CANONICAL_TEAMS = [
     "Mumbai Indians",
     "Royal Challengers Bengaluru",
@@ -176,7 +192,7 @@ def calculate_elo(results: list[dict]) -> dict[str, float]:
     Starts all teams at ELO_BASE (1500).
     No-result matches skip Elo update.
     """
-    elo = {t: float(ELO_BASE) for t in CANONICAL_TEAMS}
+    elo = {t: float(ELO_INITIAL.get(t, ELO_BASE)) for t in CANONICAL_TEAMS}
     for r in results:
         t1, t2, winner = r["team1"], r["team2"], r["winner"]
         if winner == "no_result":
