@@ -31,6 +31,12 @@ ELO_BASE = 1500
 ELO_K = 32
 FORM_WINDOW = 12
 FORM_DECAY = [0.75 ** i for i in range(FORM_WINDOW)]
+# Bayesian prior strength for form smoothing.
+# Equivalent to ~4 "phantom" games at 50% win rate.
+# Calibrated to match the decay-weight sum of a full 12-game window (~3.9),
+# so the prior fades naturally as real results accumulate.
+# Prevents 0%/100% extremes for teams with only 1–2 results.
+FORM_PRIOR = 4.0
 N_SIM = 100_000
 SEASON_YEAR = "2026"
 
@@ -231,7 +237,11 @@ def calculate_form(results: list[dict]) -> dict[str, float]:
             form[team] = 0.5  # neutral if no data
             continue
         weights = FORM_DECAY[: len(recent)]
-        form[team] = sum(w * v for w, v in zip(weights, recent)) / sum(weights)
+        total_w = sum(weights)
+        raw = sum(w * v for w, v in zip(weights, recent)) / total_w
+        # Bayesian smoothing: blend with neutral 0.5 prior.
+        # Prior fades as total_w grows (full 12-game window ≈ 3.9 weight).
+        form[team] = (total_w * raw + FORM_PRIOR * 0.5) / (total_w + FORM_PRIOR)
     return form
 
 
