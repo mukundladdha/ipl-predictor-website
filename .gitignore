@@ -24,3 +24,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+logs/*.txt
+data/raw/*
+!data/raw/.gitkeep

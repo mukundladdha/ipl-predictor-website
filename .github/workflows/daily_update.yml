@@ -1,0 +1,51 @@
+name: Daily IPL Update
+
+on:
+  schedule:
+    - cron: '30 2 * * *'   # 08:00 IST (UTC+5:30) = 02:30 UTC
+  workflow_dispatch:         # Manual trigger from GitHub Actions UI
+
+jobs:
+  update-projections:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write        # Required to push commits
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements-scripts.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 pandas numpy
+
+      - name: Fetch latest match results
+        run: python scripts/fetch_results.py
+
+      - name: Update projections and fixtures
+        run: python scripts/update_projections.py
+
+      - name: Commit and push if data changed
+        run: |
+          git config user.name  "Duckworth Bot"
+          git config user.email "bot@duckworth.in"
+          git add data/results.csv
+          git add public/data/projections.json
+          git add public/data/fixtures.json
+          git diff --staged --quiet || \
+            git commit -m "auto: update projections $(date +'%Y-%m-%d')"
+          git push
