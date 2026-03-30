@@ -10,19 +10,13 @@ const S = {
     display: 'flex',
     alignItems: 'center',
   },
-  updated: {
-    fontSize: 12,
-    color: '#888',
-    marginLeft: 'auto',
-  },
 }
 
-export default function Nav({ lastUpdated }) {
+export default function Nav() {
   return (
     <nav style={S.nav}>
       <div className="sec" style={S.inner}>
         <DuckworthLogo />
-        <div style={S.updated}>Updated · {lastUpdated}</div>
       </div>
     </nav>
   )
