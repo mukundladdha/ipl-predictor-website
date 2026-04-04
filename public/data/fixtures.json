@@ -1,18 +1,6 @@
 {
   "fixtures": [
     {
-      "team1": "DC",
-      "team2": "MI",
-      "date": "2026-04-04",
-      "venue": "Arun Jaitley Stadium"
-    },
-    {
-      "team1": "GT",
-      "team2": "RR",
-      "date": "2026-04-04",
-      "venue": "Narendra Modi Stadium"
-    },
-    {
       "team1": "SRH",
       "team2": "LSG",
       "date": "2026-04-05",
