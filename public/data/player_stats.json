@@ -52,7 +52,7 @@
         62
       ],
       "impact_score": 29.0,
-      "playoff_contribution": 7.1
+      "playoff_contribution": 7.0
     },
     {
       "name": "Travis Head",
@@ -91,7 +91,7 @@
         62
       ],
       "impact_score": 29.0,
-      "playoff_contribution": 4.8
+      "playoff_contribution": 4.9
     },
     {
       "name": "Jasprit Bumrah",
@@ -115,7 +115,7 @@
       "form_trend": "stable",
       "last_5_scores": [],
       "impact_score": 28.9,
-      "playoff_contribution": 7.1
+      "playoff_contribution": 7.0
     },
     {
       "name": "Jofra Archer",
@@ -241,7 +241,7 @@
         45
       ],
       "impact_score": 21.1,
-      "playoff_contribution": 8.3
+      "playoff_contribution": 8.4
     },
     {
       "name": "Devdutt Padikkal",
@@ -297,7 +297,7 @@
         45
       ],
       "impact_score": 19.3,
-      "playoff_contribution": 6.2
+      "playoff_contribution": 6.1
     },
     {
       "name": "Hardik Pandya",
@@ -336,7 +336,7 @@
         15
       ],
       "impact_score": 17.7,
-      "playoff_contribution": 6.1
+      "playoff_contribution": 6.0
     },
     {
       "name": "Devon Conway",
@@ -732,7 +732,7 @@
         23
       ],
       "impact_score": 10.7,
-      "playoff_contribution": 5.5
+      "playoff_contribution": 5.4
     },
     {
       "name": "Jos Buttler",
@@ -914,7 +914,7 @@
         28
       ],
       "impact_score": 7.9,
-      "playoff_contribution": 1.6
+      "playoff_contribution": 1.5
     },
     {
       "name": "Harshit Rana",
@@ -1241,7 +1241,7 @@
         5
       ],
       "impact_score": 0.2,
-      "playoff_contribution": 4.5
+      "playoff_contribution": 4.4
     },
     {
       "name": "Riyan Parag",
@@ -1265,7 +1265,7 @@
       "form_trend": "stable",
       "last_5_scores": [],
       "impact_score": -3.5,
-      "playoff_contribution": 5.4
+      "playoff_contribution": 5.5
     },
     {
       "name": "Mohammed Siraj",
@@ -1551,6 +1551,24 @@
         "score": 28.6
       }
     },
+    "SRH": {
+      "top_batter": {
+        "name": "Travis Head",
+        "runs": 62,
+        "balls": 38,
+        "sr": 163.2
+      },
+      "top_bowler": {
+        "name": "Harshal Patel",
+        "wickets": 1,
+        "runs": 29,
+        "econ": 8.7
+      },
+      "biggest_impact": {
+        "name": "Travis Head",
+        "score": 29.0
+      }
+    },
     "RCB": {
       "top_batter": {
         "name": "Devdutt Padikkal",
@@ -1603,24 +1621,6 @@
       "biggest_impact": {
         "name": "Varun Chakaravarthy",
         "score": 15.7
-      }
-    },
-    "SRH": {
-      "top_batter": {
-        "name": "Travis Head",
-        "runs": 62,
-        "balls": 38,
-        "sr": 163.2
-      },
-      "top_bowler": {
-        "name": "Harshal Patel",
-        "wickets": 1,
-        "runs": 29,
-        "econ": 8.7
-      },
-      "biggest_impact": {
-        "name": "Travis Head",
-        "score": 29.0
       }
     },
     "CSK": {
