@@ -1,0 +1,125 @@
+{
+  "total_predictions": 9,
+  "correct": 4,
+  "accuracy_pct": 44.4,
+  "predictions": [
+    {
+      "match_key": "2026-03-28_RCB_SRH",
+      "date": "2026-03-28",
+      "match": "RCB vs SRH",
+      "predicted_winner_elo": "RCB",
+      "predicted_probability": 0.5,
+      "actual_winner": "RCB",
+      "correct_elo": true,
+      "correct_form": true
+    },
+    {
+      "match_key": "2026-03-29_KKR_MI",
+      "date": "2026-03-29",
+      "match": "KKR vs MI",
+      "predicted_winner_elo": "KKR",
+      "predicted_probability": 0.5,
+      "actual_winner": "MI",
+      "correct_elo": false,
+      "correct_form": false
+    },
+    {
+      "match_key": "2026-03-30_RR_CSK",
+      "date": "2026-03-30",
+      "match": "RR vs CSK",
+      "predicted_winner_elo": "RR",
+      "predicted_probability": 0.5,
+      "actual_winner": "RR",
+      "correct_elo": true,
+      "correct_form": true
+    },
+    {
+      "match_key": "2026-03-31_PBKS_GT",
+      "date": "2026-03-31",
+      "match": "PBKS vs GT",
+      "predicted_winner_elo": "PBKS",
+      "predicted_probability": 0.5,
+      "actual_winner": "PBKS",
+      "correct_elo": true,
+      "correct_form": true
+    },
+    {
+      "match_key": "2026-04-01_LSG_DC",
+      "date": "2026-04-01",
+      "match": "LSG vs DC",
+      "predicted_winner_elo": "LSG",
+      "predicted_probability": 0.5,
+      "actual_winner": "DC",
+      "correct_elo": false,
+      "correct_form": false
+    },
+    {
+      "match_key": "2026-04-02_KKR_SRH",
+      "date": "2026-04-02",
+      "match": "KKR vs SRH",
+      "predicted_winner_elo": "KKR",
+      "predicted_probability": 0.5,
+      "actual_winner": "SRH",
+      "correct_elo": false,
+      "correct_form": false
+    },
+    {
+      "match_key": "2026-04-03_CSK_PBKS",
+      "date": "2026-04-03",
+      "match": "CSK vs PBKS",
+      "predicted_winner_elo": "CSK",
+      "predicted_probability": 0.5,
+      "actual_winner": "PBKS",
+      "correct_elo": false,
+      "correct_form": false
+    },
+    {
+      "match_key": "2026-04-04_GT_RR",
+      "date": "2026-04-04",
+      "match": "GT vs RR",
+      "predicted_winner_elo": "GT",
+      "predicted_probability": 0.5,
+      "actual_winner": "RR",
+      "correct_elo": false,
+      "correct_form": false
+    },
+    {
+      "match_key": "2026-04-04_DC_MI",
+      "date": "2026-04-04",
+      "match": "DC vs MI",
+      "predicted_winner_elo": "DC",
+      "predicted_probability": 0.5,
+      "actual_winner": "DC",
+      "correct_elo": true,
+      "correct_form": true
+    }
+  ],
+  "calibration": {
+    "50_60": {
+      "predictions": 9,
+      "correct": 4
+    },
+    "60_70": {
+      "predictions": 0,
+      "correct": 0
+    },
+    "70_80": {
+      "predictions": 0,
+      "correct": 0
+    },
+    "80_plus": {
+      "predictions": 0,
+      "correct": 0
+    }
+  },
+  "by_model": {
+    "elo": {
+      "correct": 4,
+      "total": 9
+    },
+    "form": {
+      "correct": 4,
+      "total": 9
+    }
+  }
+}

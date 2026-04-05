@@ -2,9 +2,12 @@ import { useState, useEffect } from 'react'
 import { ModelProvider } from './context/ModelContext'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
+import MatchStory from './components/MatchStory'
 import ConceptCards from './components/ConceptCards'
 import MonteCarloStrip from './components/MonteCarloStrip'
 import PlayoffRace from './components/PlayoffRace'
+import WeeklyNarrative from './components/WeeklyNarrative'
+import ModelAccuracy from './components/ModelAccuracy'
 import BottomMetaStrip from './components/BottomMetaStrip'
 import BumpsChart from './components/BumpsChart'
 import RankProbChart from './components/RankProbChart'
@@ -71,18 +74,23 @@ function App() {
           preSeason={data.pre_season ?? false}
           seasonStart={data.season_start ?? null}
         />
+        <MatchStory />
+        <Divider />
+        <PlayoffRace teams={data.teams} defChampion={data.defending_champion} />
+        <WeeklyNarrative />
+        <Divider />
         <ConceptCards />
         <MonteCarloStrip />
-        <PlayoffRace teams={data.teams} defChampion={data.defending_champion} />
+        <ModelAccuracy />
         <BottomMetaStrip
           matchesPlayed={data.matches_played}
           matchesRemaining={data.matches_remaining}
           playoffSpots={data.playoff_spots}
         />
         <Divider />
-        <PlayerLeaderboard />
-        <Divider />
         <BumpsChart teams={data.teams} />
+        <Divider />
+        <PlayerLeaderboard />
         <Divider />
         <RankProbChart teams={data.teams} />
         <Footer />

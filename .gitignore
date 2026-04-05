@@ -27,5 +27,7 @@ dist-ssr
 
 logs/*.txt
 data/raw/*
+data/projections_previous.json
+.env
 !data/raw/.gitkeep
 !data/raw/ipl_2026_bbb.csv

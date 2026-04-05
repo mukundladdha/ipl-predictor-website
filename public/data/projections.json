@@ -90,7 +90,8 @@
           33.4
         ]
       },
-      "key_players": "Rohit Sharma, Jasprit Bumrah, Hardik Pandya"
+      "key_players": "Rohit Sharma, Jasprit Bumrah, Hardik Pandya",
+      "why_changed": "Lost vs DC · Elo 1540→1540 · odds 0.0% to 49.0% · Next: vs RR (2026-04-07)"
     },
     {
       "name": "Royal Challengers Bengaluru",
@@ -174,7 +175,8 @@
           63.8
         ]
       },
-      "key_players": "Virat Kohli, Faf du Plessis, Josh Hazlewood"
+      "key_players": "Virat Kohli, Faf du Plessis, Josh Hazlewood",
+      "why_changed": "Lost vs None · Elo 1554→1554 · odds 0.0% to 71.3% · Next: vs CSK (2026-04-05)"
     },
     {
       "name": "Kolkata Knight Riders",
@@ -258,7 +260,8 @@
           7.2
         ]
       },
-      "key_players": "Ajinkya Rahane, Andre Russell, Sunil Narine"
+      "key_players": "Ajinkya Rahane, Andre Russell, Sunil Narine",
+      "why_changed": "Lost vs None · Elo 1479→1479 · odds 0.0% to 15.0% · Next: vs PBKS (2026-04-06)"
     },
     {
       "name": "Gujarat Titans",
@@ -342,7 +345,8 @@
           7.5
         ]
       },
-      "key_players": "Shubman Gill, Rashid Khan, Jos Buttler"
+      "key_players": "Shubman Gill, Rashid Khan, Jos Buttler",
+      "why_changed": "Lost vs None · Elo 1488→1488 · odds 0.0% to 15.0% · Next: vs DC (2026-04-08)"
     },
     {
       "name": "Chennai Super Kings",
@@ -426,7 +430,8 @@
           8.2
         ]
       },
-      "key_players": "Ruturaj Gaikwad, Ravindra Jadeja, Deepak Chahar"
+      "key_players": "Ruturaj Gaikwad, Ravindra Jadeja, Deepak Chahar",
+      "why_changed": "Lost vs None · Elo 1474→1474 · odds 0.0% to 14.6% · Next: vs RCB (2026-04-05)"
     },
     {
       "name": "Sunrisers Hyderabad",
@@ -510,7 +515,8 @@
           38.8
         ]
       },
-      "key_players": "Pat Cummins, Travis Head, Heinrich Klaasen"
+      "key_players": "Pat Cummins, Travis Head, Heinrich Klaasen",
+      "why_changed": "Lost vs None · Elo 1498→1498 · odds 0.0% to 33.7% · Next: vs LSG (2026-04-05)"
     },
     {
       "name": "Punjab Kings",
@@ -594,7 +600,8 @@
           74.5
         ]
       },
-      "key_players": "Shreyas Iyer, Yuzvendra Chahal, Arshdeep Singh"
+      "key_players": "Shreyas Iyer, Yuzvendra Chahal, Arshdeep Singh",
+      "why_changed": "Lost vs None · Elo 1559→1559 · odds 0.0% to 80.0% · Next: vs KKR (2026-04-06)"
     },
     {
       "name": "Rajasthan Royals",
@@ -678,7 +685,8 @@
           74.5
         ]
       },
-      "key_players": "Sanju Samson, Shimron Hetmyer, Wanindu Hasaranga"
+      "key_players": "Sanju Samson, Shimron Hetmyer, Wanindu Hasaranga",
+      "why_changed": "Lost vs None · Elo 1514→1514 · odds 0.0% to 64.6% · Next: vs MI (2026-04-07)"
     },
     {
       "name": "Delhi Capitals",
@@ -762,7 +770,8 @@
           75.3
         ]
       },
-      "key_players": "Axar Patel, Jake Fraser-McGurk, Kuldeep Yadav"
+      "key_players": "Axar Patel, Jake Fraser-McGurk, Kuldeep Yadav",
+      "why_changed": "Won vs MI · Elo 1498→1498 · odds 0.0% to 52.7% · Next: vs GT (2026-04-08)"
     },
     {
       "name": "Lucknow Super Giants",
@@ -846,7 +855,8 @@
           16.8
         ]
       },
-      "key_players": "Nicholas Pooran, Ravi Bishnoi, David Miller"
+      "key_players": "Nicholas Pooran, Ravi Bishnoi, David Miller",
+      "why_changed": "Lost vs None · Elo 1396→1396 · odds 0.0% to 4.1% · Next: vs SRH (2026-04-05)"
     }
   ]
 }

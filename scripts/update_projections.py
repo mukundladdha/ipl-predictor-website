@@ -11,6 +11,7 @@ Run: python scripts/update_projections.py
 import csv
 import json
 import logging
+import shutil
 import sys
 from copy import deepcopy
 from datetime import datetime
@@ -404,10 +405,18 @@ def update_fixtures_json(remaining: list[dict]):
         json.dump({"fixtures": out}, f, indent=2)
 
 
+PREV_PROJ = ROOT / "data" / "projections_previous.json"
+
+
 def main():
     setup_logging()
     log = logging.getLogger(__name__)
     log.info("=== update_projections.py start ===")
+
+    # Snapshot current projections BEFORE updating — used by generate_match_story.py
+    if PROJECTIONS_JSON.exists():
+        shutil.copy(PROJECTIONS_JSON, PREV_PROJ)
+        log.info(f"Snapshot saved → {PREV_PROJ}")
 
     # Load existing projections (needed for colors, short codes, history)
     with open(PROJECTIONS_JSON, encoding="utf-8") as f:

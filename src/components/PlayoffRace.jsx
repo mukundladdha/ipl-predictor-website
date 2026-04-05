@@ -1,6 +1,39 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { useModel } from '../context/ModelContext'
 import TeamPlayerCards from './TeamPlayerCards'
+
+function WhyChangedTooltip({ text }) {
+  const [visible, setVisible] = useState(false)
+  const ref = useRef(null)
+  if (!text) return null
+  return (
+    <div
+      ref={ref}
+      style={{ position: 'relative', display: 'inline-flex', alignItems: 'center' }}
+      onMouseEnter={() => setVisible(true)}
+      onMouseLeave={() => setVisible(false)}
+      onClick={e => { e.stopPropagation(); setVisible(v => !v) }}
+    >
+      <span style={{
+        fontSize: 11, color: '#3a3d4a', cursor: 'pointer',
+        userSelect: 'none', lineHeight: 1,
+      }}>ⓘ</span>
+      {visible && (
+        <div style={{
+          position: 'absolute', bottom: 'calc(100% + 8px)', right: 0,
+          background: '#1a1d27', border: '0.5px solid #2a2d3a',
+          borderRadius: 8, padding: '10px 14px',
+          fontSize: 12, color: '#aaa', lineHeight: 1.6,
+          maxWidth: 280, whiteSpace: 'normal',
+          zIndex: 100, pointerEvents: 'none',
+          boxShadow: '0 4px 16px rgba(0,0,0,0.4)',
+        }}>
+          {text}
+        </div>
+      )}
+    </div>
+  )
+}
 
 function pctColor(pct) {
   if (pct >= 60) return '#4ade80'
@@ -168,6 +201,7 @@ export default function PlayoffRace({ teams, defChampion }) {
                 }}>
                   {team.adjPct.toFixed(1)}%
                 </div>
+                <WhyChangedTooltip text={team.why_changed} />
                 <div style={{
                   fontSize: 10,
                   color: '#444',

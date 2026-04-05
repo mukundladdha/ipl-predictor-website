@@ -32,7 +32,7 @@ jobs:
             ${{ runner.os }}-pip-
 
       - name: Install dependencies
-        run: pip install requests beautifulsoup4 pandas numpy
+        run: pip install -r requirements-scripts.txt
 
       - name: Fetch latest match results
         run: python scripts/fetch_results.py
@@ -40,8 +40,29 @@ jobs:
       - name: Update projections and fixtures
         run: python scripts/update_projections.py
 
+      - name: Generate why-changed explanations
+        run: python scripts/generate_why_changed.py
+
+      - name: Track model accuracy
+        run: python scripts/track_accuracy.py
+
       - name: Calculate player stats
         run: python scripts/calculate_player_stats.py
+
+      - name: Generate match story
+        run: python scripts/generate_match_story.py
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+      - name: Generate weekly narrative (Mondays only)
+        if: github.event_name == 'schedule' && startsWith(github.event.schedule, '30 2')
+        run: |
+          DAY=$(date +%u)
+          if [ "$DAY" = "1" ]; then
+            python scripts/generate_weekly_narrative.py
+          fi
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Commit and push if data changed
         run: |
@@ -51,7 +72,9 @@ jobs:
           git add public/data/projections.json
           git add public/data/fixtures.json
           git add public/data/player_stats.json
+          git add public/data/stories.json
+          git add public/data/accuracy.json
           git add data/raw/ipl_2026_bbb.csv
           git diff --staged --quiet || \
-            git commit -m "auto: update projections + player stats $(date +'%Y-%m-%d')"
+            git commit -m "auto: update projections + stories + accuracy $(date +'%Y-%m-%d')"
           git push
