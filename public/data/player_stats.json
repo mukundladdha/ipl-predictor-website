@@ -24,7 +24,7 @@
       "form_trend": "stable",
       "last_5_scores": [],
       "impact_score": 31.2,
-      "playoff_contribution": 10.6
+      "playoff_contribution": 10.5
     },
     {
       "name": "Suryakumar Yadav",
@@ -52,7 +52,7 @@
         62
       ],
       "impact_score": 29.0,
-      "playoff_contribution": 7.1
+      "playoff_contribution": 7.0
     },
     {
       "name": "Travis Head",
@@ -91,7 +91,7 @@
         62
       ],
       "impact_score": 29.0,
-      "playoff_contribution": 4.8
+      "playoff_contribution": 4.9
     },
     {
       "name": "Jasprit Bumrah",
@@ -139,7 +139,7 @@
       "form_trend": "stable",
       "last_5_scores": [],
       "impact_score": 28.6,
-      "playoff_contribution": 9.3
+      "playoff_contribution": 9.2
     },
     {
       "name": "Yashasvi Jaiswal",
@@ -178,7 +178,7 @@
         55
       ],
       "impact_score": 25.3,
-      "playoff_contribution": 8.9
+      "playoff_contribution": 8.8
     },
     {
       "name": "Trent Boult",
@@ -509,7 +509,7 @@
         30
       ],
       "impact_score": 14.2,
-      "playoff_contribution": 3.9
+      "playoff_contribution": 4.0
     },
     {
       "name": "Ruturaj Gaikwad",
@@ -693,7 +693,7 @@
         28
       ],
       "impact_score": 11.0,
-      "playoff_contribution": 8.0
+      "playoff_contribution": 7.9
     },
     {
       "name": "Tilak Varma",
@@ -760,7 +760,7 @@
         22
       ],
       "impact_score": 9.9,
-      "playoff_contribution": 7.1
+      "playoff_contribution": 7.0
     },
     {
       "name": "Harshal Patel",
@@ -823,7 +823,7 @@
       "form_trend": "stable",
       "last_5_scores": [],
       "impact_score": 8.8,
-      "playoff_contribution": 7.7
+      "playoff_contribution": 7.6
     },
     {
       "name": "Deepak Chahar",
@@ -1005,7 +1005,7 @@
       "form_trend": "stable",
       "last_5_scores": [],
       "impact_score": 6.0,
-      "playoff_contribution": 3.4
+      "playoff_contribution": 3.5
     },
     {
       "name": "MS Dhoni",
@@ -1551,22 +1551,40 @@
         "score": 29.0
       }
     },
-    "RCB": {
+    "CSK": {
       "top_batter": {
-        "name": "Devdutt Padikkal",
-        "runs": 47,
-        "balls": 32,
-        "sr": 146.9
+        "name": "Devon Conway",
+        "runs": 42,
+        "balls": 35,
+        "sr": 120.0
       },
       "top_bowler": {
-        "name": "Jacob Duffy",
-        "wickets": 3,
-        "runs": 29,
-        "econ": 7.2
+        "name": "Deepak Chahar",
+        "wickets": 1,
+        "runs": 25,
+        "econ": 8.8
       },
       "biggest_impact": {
-        "name": "Jacob Duffy",
-        "score": 31.2
+        "name": "Devon Conway",
+        "score": 16.0
+      }
+    },
+    "RR": {
+      "top_batter": {
+        "name": "Yashasvi Jaiswal",
+        "runs": 55,
+        "balls": 35,
+        "sr": 157.1
+      },
+      "top_bowler": {
+        "name": "Jofra Archer",
+        "wickets": 2,
+        "runs": 19,
+        "econ": 5.4
+      },
+      "biggest_impact": {
+        "name": "Jofra Archer",
+        "score": 28.6
       }
     },
     "KKR": {
@@ -1605,40 +1623,22 @@
         "score": 29.0
       }
     },
-    "CSK": {
+    "RCB": {
       "top_batter": {
-        "name": "Devon Conway",
-        "runs": 42,
-        "balls": 35,
-        "sr": 120.0
+        "name": "Devdutt Padikkal",
+        "runs": 47,
+        "balls": 32,
+        "sr": 146.9
       },
       "top_bowler": {
-        "name": "Deepak Chahar",
-        "wickets": 1,
-        "runs": 25,
-        "econ": 8.8
+        "name": "Jacob Duffy",
+        "wickets": 3,
+        "runs": 29,
+        "econ": 7.2
       },
       "biggest_impact": {
-        "name": "Devon Conway",
-        "score": 16.0
-      }
-    },
-    "RR": {
-      "top_batter": {
-        "name": "Yashasvi Jaiswal",
-        "runs": 55,
-        "balls": 35,
-        "sr": 157.1
-      },
-      "top_bowler": {
-        "name": "Jofra Archer",
-        "wickets": 2,
-        "runs": 19,
-        "econ": 5.4
-      },
-      "biggest_impact": {
-        "name": "Jofra Archer",
-        "score": 28.6
+        "name": "Jacob Duffy",
+        "score": 31.2
       }
     }
   }
