@@ -91,7 +91,7 @@
         62
       ],
       "impact_score": 29.0,
-      "playoff_contribution": 4.9
+      "playoff_contribution": 4.8
     },
     {
       "name": "Jasprit Bumrah",
@@ -297,7 +297,7 @@
         45
       ],
       "impact_score": 19.3,
-      "playoff_contribution": 6.1
+      "playoff_contribution": 6.2
     },
     {
       "name": "Hardik Pandya",
@@ -1241,7 +1241,7 @@
         5
       ],
       "impact_score": 0.2,
-      "playoff_contribution": 4.4
+      "playoff_contribution": 4.5
     },
     {
       "name": "Riyan Parag",
@@ -1533,6 +1533,24 @@
     ]
   },
   "team_performers": {
+    "MI": {
+      "top_batter": {
+        "name": "Suryakumar Yadav",
+        "runs": 62,
+        "balls": 38,
+        "sr": 163.2
+      },
+      "top_bowler": {
+        "name": "Jasprit Bumrah",
+        "wickets": 3,
+        "runs": 25,
+        "econ": 7.5
+      },
+      "biggest_impact": {
+        "name": "Suryakumar Yadav",
+        "score": 29.0
+      }
+    },
     "RR": {
       "top_batter": {
         "name": "Yashasvi Jaiswal",
@@ -1569,6 +1587,24 @@
         "score": 29.0
       }
     },
+    "CSK": {
+      "top_batter": {
+        "name": "Devon Conway",
+        "runs": 42,
+        "balls": 35,
+        "sr": 120.0
+      },
+      "top_bowler": {
+        "name": "Deepak Chahar",
+        "wickets": 1,
+        "runs": 25,
+        "econ": 8.8
+      },
+      "biggest_impact": {
+        "name": "Devon Conway",
+        "score": 16.0
+      }
+    },
     "RCB": {
       "top_batter": {
         "name": "Devdutt Padikkal",
@@ -1587,24 +1623,6 @@
         "score": 31.2
       }
     },
-    "MI": {
-      "top_batter": {
-        "name": "Suryakumar Yadav",
-        "runs": 62,
-        "balls": 38,
-        "sr": 163.2
-      },
-      "top_bowler": {
-        "name": "Jasprit Bumrah",
-        "wickets": 3,
-        "runs": 25,
-        "econ": 7.5
-      },
-      "biggest_impact": {
-        "name": "Suryakumar Yadav",
-        "score": 29.0
-      }
-    },
     "KKR": {
       "top_batter": {
         "name": "Sunil Narine",
@@ -1621,24 +1639,6 @@
       "biggest_impact": {
         "name": "Varun Chakaravarthy",
         "score": 15.7
-      }
-    },
-    "CSK": {
-      "top_batter": {
-        "name": "Devon Conway",
-        "runs": 42,
-        "balls": 35,
-        "sr": 120.0
-      },
-      "top_bowler": {
-        "name": "Deepak Chahar",
-        "wickets": 1,
-        "runs": 25,
-        "econ": 8.8
-      },
-      "biggest_impact": {
-        "name": "Devon Conway",
-        "score": 16.0
       }
     }
   }
