@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useModel } from '../context/ModelContext'
+import TeamPlayerCards from './TeamPlayerCards'
 
 function pctColor(pct) {
   if (pct >= 60) return '#4ade80'
@@ -9,6 +10,10 @@ function pctColor(pct) {
 
 export default function PlayoffRace({ teams, defChampion }) {
   const { activeModel, setActiveModel, scenarioOverrides } = useModel()
+  const [expandedTeam, setExpandedTeam] = useState(null)
+
+  const toggleTeam = (short) =>
+    setExpandedTeam(prev => prev === short ? null : short)
 
   // Apply scenario overrides and sort
   const sorted = [...teams]
@@ -67,7 +72,10 @@ export default function PlayoffRace({ teams, defChampion }) {
               </div>
             )}
 
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+            <div
+              style={{ display: 'flex', alignItems: 'center', gap: 10, cursor: 'pointer' }}
+              onClick={() => toggleTeam(team.short)}
+            >
               {/* Rank */}
               <div style={{ width: 18, fontSize: 11, color: '#888', textAlign: 'right', flexShrink: 0 }}>
                 {i + 1}
@@ -128,7 +136,7 @@ export default function PlayoffRace({ teams, defChampion }) {
                 )}
               </div>
 
-              {/* Pct + defending champion badge */}
+              {/* Pct + defending champion badge + chevron */}
               <div style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -160,8 +168,21 @@ export default function PlayoffRace({ teams, defChampion }) {
                 }}>
                   {team.adjPct.toFixed(1)}%
                 </div>
+                <div style={{
+                  fontSize: 10,
+                  color: '#444',
+                  width: 12,
+                  textAlign: 'center',
+                  transition: 'transform 0.2s',
+                  transform: expandedTeam === team.short ? 'rotate(180deg)' : 'rotate(0deg)',
+                }}>▾</div>
               </div>
             </div>
+
+            {/* Expanded player cards */}
+            {expandedTeam === team.short && (
+              <TeamPlayerCards teamShort={team.short} />
+            )}
           </React.Fragment>
         ))}
       </div>

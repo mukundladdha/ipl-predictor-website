@@ -40,6 +40,9 @@ jobs:
       - name: Update projections and fixtures
         run: python scripts/update_projections.py
 
+      - name: Calculate player stats
+        run: python scripts/calculate_player_stats.py
+
       - name: Commit and push if data changed
         run: |
           git config user.name  "Duckworth Bot"
@@ -47,6 +50,8 @@ jobs:
           git add data/results.csv
           git add public/data/projections.json
           git add public/data/fixtures.json
+          git add public/data/player_stats.json
+          git add data/raw/ipl_2026_bbb.csv
           git diff --staged --quiet || \
-            git commit -m "auto: update projections $(date +'%Y-%m-%d')"
+            git commit -m "auto: update projections + player stats $(date +'%Y-%m-%d')"
           git push

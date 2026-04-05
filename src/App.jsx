@@ -8,6 +8,7 @@ import PlayoffRace from './components/PlayoffRace'
 import BottomMetaStrip from './components/BottomMetaStrip'
 import BumpsChart from './components/BumpsChart'
 import RankProbChart from './components/RankProbChart'
+import PlayerLeaderboard from './components/PlayerLeaderboard'
 import Footer from './components/Footer'
 import './index.css'
 
@@ -78,6 +79,8 @@ function App() {
           matchesRemaining={data.matches_remaining}
           playoffSpots={data.playoff_spots}
         />
+        <Divider />
+        <PlayerLeaderboard />
         <Divider />
         <BumpsChart teams={data.teams} />
         <Divider />

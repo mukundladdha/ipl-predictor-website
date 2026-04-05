@@ -1,0 +1,1645 @@
+{
+  "last_updated": "2026-04-05",
+  "season": "2026",
+  "players": [
+    {
+      "name": "Jacob Duffy",
+      "team": "RCB",
+      "team_color": "#D4001A",
+      "role": "bowler",
+      "season_stats": null,
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 24,
+        "overs": 4.0,
+        "runs_conceded": 29,
+        "wickets": 3,
+        "economy": 7.2,
+        "average": 9.7,
+        "best_figures": "3/29",
+        "dot_balls": 4
+      },
+      "form_score": 5.4,
+      "form_trend": "stable",
+      "last_5_scores": [],
+      "impact_score": 31.2,
+      "playoff_contribution": 10.6
+    },
+    {
+      "name": "Suryakumar Yadav",
+      "team": "MI",
+      "team_color": "#004BA0",
+      "role": "batter",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 62,
+        "balls_faced": 38,
+        "fours": 4,
+        "sixes": 3,
+        "dismissals": 0,
+        "strike_rate": 163.2,
+        "average": 62.0,
+        "highest_score": 62,
+        "fifties": 0,
+        "hundreds": 1
+      },
+      "bowling_stats": null,
+      "form_score": 10.0,
+      "form_trend": "stable",
+      "last_5_scores": [
+        62
+      ],
+      "impact_score": 29.0,
+      "playoff_contribution": 10.2
+    },
+    {
+      "name": "Travis Head",
+      "team": "SRH",
+      "team_color": "#F26522",
+      "role": "batter",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 62,
+        "balls_faced": 38,
+        "fours": 5,
+        "sixes": 3,
+        "dismissals": 1,
+        "strike_rate": 163.2,
+        "average": 62.0,
+        "highest_score": 62,
+        "fifties": 0,
+        "hundreds": 1
+      },
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 18,
+        "overs": 3.0,
+        "runs_conceded": 18,
+        "wickets": 0,
+        "economy": 6.0,
+        "average": 18.0,
+        "best_figures": "0/18",
+        "dot_balls": 5
+      },
+      "form_score": 10.0,
+      "form_trend": "stable",
+      "last_5_scores": [
+        62
+      ],
+      "impact_score": 29.0,
+      "playoff_contribution": 3.2
+    },
+    {
+      "name": "Jasprit Bumrah",
+      "team": "MI",
+      "team_color": "#004BA0",
+      "role": "bowler",
+      "season_stats": null,
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 20,
+        "overs": 3.3,
+        "runs_conceded": 25,
+        "wickets": 3,
+        "economy": 7.5,
+        "average": 8.3,
+        "best_figures": "3/25",
+        "dot_balls": 6
+      },
+      "form_score": 5.2,
+      "form_trend": "stable",
+      "last_5_scores": [],
+      "impact_score": 28.9,
+      "playoff_contribution": 10.2
+    },
+    {
+      "name": "Jofra Archer",
+      "team": "RR",
+      "team_color": "#E83673",
+      "role": "bowler",
+      "season_stats": null,
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 21,
+        "overs": 3.5,
+        "runs_conceded": 19,
+        "wickets": 2,
+        "economy": 5.4,
+        "average": 9.5,
+        "best_figures": "2/19",
+        "dot_balls": 7
+      },
+      "form_score": 4.8,
+      "form_trend": "stable",
+      "last_5_scores": [],
+      "impact_score": 28.6,
+      "playoff_contribution": 7.0
+    },
+    {
+      "name": "Yashasvi Jaiswal",
+      "team": "RR",
+      "team_color": "#E83673",
+      "role": "batter",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 55,
+        "balls_faced": 35,
+        "fours": 5,
+        "sixes": 3,
+        "dismissals": 1,
+        "strike_rate": 157.1,
+        "average": 55.0,
+        "highest_score": 55,
+        "fifties": 0,
+        "hundreds": 1
+      },
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 20,
+        "overs": 3.3,
+        "runs_conceded": 16,
+        "wickets": 0,
+        "economy": 4.8,
+        "average": 16.0,
+        "best_figures": "0/16",
+        "dot_balls": 7
+      },
+      "form_score": 10.0,
+      "form_trend": "stable",
+      "last_5_scores": [
+        55
+      ],
+      "impact_score": 25.3,
+      "playoff_contribution": 6.7
+    },
+    {
+      "name": "Trent Boult",
+      "team": "RR",
+      "team_color": "#E83673",
+      "role": "bowler",
+      "season_stats": null,
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 22,
+        "overs": 3.7,
+        "runs_conceded": 25,
+        "wickets": 2,
+        "economy": 6.8,
+        "average": 12.5,
+        "best_figures": "2/25",
+        "dot_balls": 6
+      },
+      "form_score": 4.1,
+      "form_trend": "stable",
+      "last_5_scores": [],
+      "impact_score": 24.1,
+      "playoff_contribution": 6.6
+    },
+    {
+      "name": "Sanju Samson",
+      "team": "RR",
+      "team_color": "#E83673",
+      "role": "wicketkeeper",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 45,
+        "balls_faced": 28,
+        "fours": 4,
+        "sixes": 2,
+        "dismissals": 0,
+        "strike_rate": 160.7,
+        "average": 45.0,
+        "highest_score": 45,
+        "fifties": 1,
+        "hundreds": 0
+      },
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 20,
+        "overs": 3.3,
+        "runs_conceded": 30,
+        "wickets": 0,
+        "economy": 9.0,
+        "average": 30.0,
+        "best_figures": "0/30",
+        "dot_balls": 6
+      },
+      "form_score": 9.6,
+      "form_trend": "stable",
+      "last_5_scores": [
+        45
+      ],
+      "impact_score": 21.1,
+      "playoff_contribution": 6.3
+    },
+    {
+      "name": "Devdutt Padikkal",
+      "team": "RCB",
+      "team_color": "#D4001A",
+      "role": "batter",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 47,
+        "balls_faced": 32,
+        "fours": 5,
+        "sixes": 2,
+        "dismissals": 0,
+        "strike_rate": 146.9,
+        "average": 47.0,
+        "highest_score": 47,
+        "fifties": 1,
+        "hundreds": 0
+      },
+      "bowling_stats": null,
+      "form_score": 9.2,
+      "form_trend": "stable",
+      "last_5_scores": [
+        47
+      ],
+      "impact_score": 20.8,
+      "playoff_contribution": 9.2
+    },
+    {
+      "name": "Rohit Sharma",
+      "team": "MI",
+      "team_color": "#004BA0",
+      "role": "batter",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 45,
+        "balls_faced": 32,
+        "fours": 4,
+        "sixes": 2,
+        "dismissals": 1,
+        "strike_rate": 140.6,
+        "average": 45.0,
+        "highest_score": 45,
+        "fifties": 1,
+        "hundreds": 0
+      },
+      "bowling_stats": null,
+      "form_score": 8.4,
+      "form_trend": "stable",
+      "last_5_scores": [
+        45
+      ],
+      "impact_score": 19.3,
+      "playoff_contribution": 8.9
+    },
+    {
+      "name": "Hardik Pandya",
+      "team": "MI",
+      "team_color": "#004BA0",
+      "role": "allrounder",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 15,
+        "balls_faced": 10,
+        "fours": 1,
+        "sixes": 1,
+        "dismissals": 1,
+        "strike_rate": 150.0,
+        "average": 15.0,
+        "highest_score": 15,
+        "fifties": 0,
+        "hundreds": 0
+      },
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 19,
+        "overs": 3.2,
+        "runs_conceded": 23,
+        "wickets": 2,
+        "economy": 7.3,
+        "average": 11.5,
+        "best_figures": "2/23",
+        "dot_balls": 4
+      },
+      "form_score": 3.9,
+      "form_trend": "stable",
+      "last_5_scores": [
+        15
+      ],
+      "impact_score": 17.7,
+      "playoff_contribution": 8.7
+    },
+    {
+      "name": "Devon Conway",
+      "team": "CSK",
+      "team_color": "#F5C000",
+      "role": "batter",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 42,
+        "balls_faced": 35,
+        "fours": 4,
+        "sixes": 1,
+        "dismissals": 1,
+        "strike_rate": 120.0,
+        "average": 42.0,
+        "highest_score": 42,
+        "fifties": 1,
+        "hundreds": 0
+      },
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 15,
+        "overs": 2.5,
+        "runs_conceded": 22,
+        "wickets": 0,
+        "economy": 8.8,
+        "average": 22.0,
+        "best_figures": "0/22",
+        "dot_balls": 4
+      },
+      "form_score": 6.7,
+      "form_trend": "stable",
+      "last_5_scores": [
+        42
+      ],
+      "impact_score": 16.0,
+      "playoff_contribution": 3.1
+    },
+    {
+      "name": "Varun Chakaravarthy",
+      "team": "KKR",
+      "team_color": "#3A225D",
+      "role": "bowler",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 4,
+        "balls_faced": 5,
+        "fours": 0,
+        "sixes": 0,
+        "dismissals": 1,
+        "strike_rate": 80.0,
+        "average": 4.0,
+        "highest_score": 4,
+        "fifties": 0,
+        "hundreds": 0
+      },
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 21,
+        "overs": 3.5,
+        "runs_conceded": 32,
+        "wickets": 2,
+        "economy": 9.1,
+        "average": 16.0,
+        "best_figures": "2/32",
+        "dot_balls": 3
+      },
+      "form_score": 3.0,
+      "form_trend": "stable",
+      "last_5_scores": [
+        4
+      ],
+      "impact_score": 15.7,
+      "playoff_contribution": 3.5
+    },
+    {
+      "name": "Sunil Narine",
+      "team": "KKR",
+      "team_color": "#3A225D",
+      "role": "allrounder",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 35,
+        "balls_faced": 25,
+        "fours": 3,
+        "sixes": 2,
+        "dismissals": 1,
+        "strike_rate": 140.0,
+        "average": 35.0,
+        "highest_score": 35,
+        "fifties": 1,
+        "hundreds": 0
+      },
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 20,
+        "overs": 3.3,
+        "runs_conceded": 29,
+        "wickets": 0,
+        "economy": 8.7,
+        "average": 29.0,
+        "best_figures": "0/29",
+        "dot_balls": 5
+      },
+      "form_score": 6.5,
+      "form_trend": "stable",
+      "last_5_scores": [
+        35
+      ],
+      "impact_score": 15.5,
+      "playoff_contribution": 3.5
+    },
+    {
+      "name": "Rajat Patidar",
+      "team": "RCB",
+      "team_color": "#D4001A",
+      "role": "batter",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 32,
+        "balls_faced": 20,
+        "fours": 3,
+        "sixes": 1,
+        "dismissals": 1,
+        "strike_rate": 160.0,
+        "average": 32.0,
+        "highest_score": 32,
+        "fifties": 1,
+        "hundreds": 0
+      },
+      "bowling_stats": null,
+      "form_score": 6.8,
+      "form_trend": "stable",
+      "last_5_scores": [
+        32
+      ],
+      "impact_score": 15.2,
+      "playoff_contribution": 8.5
+    },
+    {
+      "name": "Heinrich Klaasen",
+      "team": "SRH",
+      "team_color": "#F26522",
+      "role": "wicketkeeper",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 30,
+        "balls_faced": 19,
+        "fours": 2,
+        "sixes": 2,
+        "dismissals": 1,
+        "strike_rate": 157.9,
+        "average": 30.0,
+        "highest_score": 30,
+        "fifties": 1,
+        "hundreds": 0
+      },
+      "bowling_stats": null,
+      "form_score": 6.3,
+      "form_trend": "stable",
+      "last_5_scores": [
+        30
+      ],
+      "impact_score": 14.2,
+      "playoff_contribution": 2.6
+    },
+    {
+      "name": "Ruturaj Gaikwad",
+      "team": "CSK",
+      "team_color": "#F5C000",
+      "role": "batter",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 35,
+        "balls_faced": 28,
+        "fours": 3,
+        "sixes": 1,
+        "dismissals": 1,
+        "strike_rate": 125.0,
+        "average": 35.0,
+        "highest_score": 35,
+        "fifties": 1,
+        "hundreds": 0
+      },
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 14,
+        "overs": 2.3,
+        "runs_conceded": 16,
+        "wickets": 0,
+        "economy": 6.9,
+        "average": 16.0,
+        "best_figures": "0/16",
+        "dot_balls": 6
+      },
+      "form_score": 5.8,
+      "form_trend": "stable",
+      "last_5_scores": [
+        35
+      ],
+      "impact_score": 13.7,
+      "playoff_contribution": 3.0
+    },
+    {
+      "name": "Venkatesh Iyer",
+      "team": "KKR",
+      "team_color": "#3A225D",
+      "role": "allrounder",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 28,
+        "balls_faced": 20,
+        "fours": 2,
+        "sixes": 1,
+        "dismissals": 1,
+        "strike_rate": 140.0,
+        "average": 28.0,
+        "highest_score": 28,
+        "fifties": 0,
+        "hundreds": 0
+      },
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 18,
+        "overs": 3.0,
+        "runs_conceded": 26,
+        "wickets": 0,
+        "economy": 8.7,
+        "average": 26.0,
+        "best_figures": "0/26",
+        "dot_balls": 2
+      },
+      "form_score": 5.2,
+      "form_trend": "stable",
+      "last_5_scores": [
+        28
+      ],
+      "impact_score": 12.4,
+      "playoff_contribution": 3.4
+    },
+    {
+      "name": "Andre Russell",
+      "team": "KKR",
+      "team_color": "#3A225D",
+      "role": "allrounder",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 22,
+        "balls_faced": 12,
+        "fours": 1,
+        "sixes": 2,
+        "dismissals": 1,
+        "strike_rate": 183.3,
+        "average": 22.0,
+        "highest_score": 22,
+        "fifties": 0,
+        "hundreds": 0
+      },
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 20,
+        "overs": 3.3,
+        "runs_conceded": 30,
+        "wickets": 0,
+        "economy": 9.0,
+        "average": 30.0,
+        "best_figures": "0/30",
+        "dot_balls": 6
+      },
+      "form_score": 5.4,
+      "form_trend": "stable",
+      "last_5_scores": [
+        22
+      ],
+      "impact_score": 12.1,
+      "playoff_contribution": 3.4
+    },
+    {
+      "name": "Glenn Maxwell",
+      "team": "RCB",
+      "team_color": "#D4001A",
+      "role": "allrounder",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 15,
+        "balls_faced": 10,
+        "fours": 0,
+        "sixes": 1,
+        "dismissals": 0,
+        "strike_rate": 150.0,
+        "average": 15.0,
+        "highest_score": 15,
+        "fifties": 0,
+        "hundreds": 0
+      },
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 18,
+        "overs": 3.0,
+        "runs_conceded": 18,
+        "wickets": 0,
+        "economy": 6.0,
+        "average": 18.0,
+        "best_figures": "0/18",
+        "dot_balls": 8
+      },
+      "form_score": 3.0,
+      "form_trend": "stable",
+      "last_5_scores": [
+        15
+      ],
+      "impact_score": 11.5,
+      "playoff_contribution": 8.0
+    },
+    {
+      "name": "Virat Kohli",
+      "team": "RCB",
+      "team_color": "#D4001A",
+      "role": "batter",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 28,
+        "balls_faced": 22,
+        "fours": 2,
+        "sixes": 1,
+        "dismissals": 1,
+        "strike_rate": 127.3,
+        "average": 28.0,
+        "highest_score": 28,
+        "fifties": 0,
+        "hundreds": 0
+      },
+      "bowling_stats": null,
+      "form_score": 4.8,
+      "form_trend": "stable",
+      "last_5_scores": [
+        28
+      ],
+      "impact_score": 11.0,
+      "playoff_contribution": 8.0
+    },
+    {
+      "name": "Tilak Varma",
+      "team": "MI",
+      "team_color": "#004BA0",
+      "role": "batter",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 23,
+        "balls_faced": 15,
+        "fours": 2,
+        "sixes": 1,
+        "dismissals": 1,
+        "strike_rate": 153.3,
+        "average": 23.0,
+        "highest_score": 23,
+        "fifties": 0,
+        "hundreds": 0
+      },
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 17,
+        "overs": 2.8,
+        "runs_conceded": 20,
+        "wickets": 0,
+        "economy": 7.1,
+        "average": 20.0,
+        "best_figures": "0/20",
+        "dot_balls": 5
+      },
+      "form_score": 4.7,
+      "form_trend": "stable",
+      "last_5_scores": [
+        23
+      ],
+      "impact_score": 10.7,
+      "playoff_contribution": 7.8
+    },
+    {
+      "name": "Jos Buttler",
+      "team": "RR",
+      "team_color": "#E83673",
+      "role": "batter",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 22,
+        "balls_faced": 15,
+        "fours": 2,
+        "sixes": 1,
+        "dismissals": 0,
+        "strike_rate": 146.7,
+        "average": 22.0,
+        "highest_score": 22,
+        "fifties": 0,
+        "hundreds": 0
+      },
+      "bowling_stats": null,
+      "form_score": 4.3,
+      "form_trend": "stable",
+      "last_5_scores": [
+        22
+      ],
+      "impact_score": 9.9,
+      "playoff_contribution": 5.3
+    },
+    {
+      "name": "Harshal Patel",
+      "team": "SRH",
+      "team_color": "#F26522",
+      "role": "bowler",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 10,
+        "balls_faced": 7,
+        "fours": 1,
+        "sixes": 0,
+        "dismissals": 1,
+        "strike_rate": 142.9,
+        "average": 10.0,
+        "highest_score": 10,
+        "fifties": 0,
+        "hundreds": 0
+      },
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 20,
+        "overs": 3.3,
+        "runs_conceded": 29,
+        "wickets": 1,
+        "economy": 8.7,
+        "average": 29.0,
+        "best_figures": "1/29",
+        "dot_balls": 2
+      },
+      "form_score": 1.7,
+      "form_trend": "stable",
+      "last_5_scores": [
+        10
+      ],
+      "impact_score": 9.0,
+      "playoff_contribution": 2.4
+    },
+    {
+      "name": "Krunal Pandya",
+      "team": "RCB",
+      "team_color": "#D4001A",
+      "role": "allrounder",
+      "season_stats": null,
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 21,
+        "overs": 3.5,
+        "runs_conceded": 22,
+        "wickets": 1,
+        "economy": 6.3,
+        "average": 22.0,
+        "best_figures": "1/22",
+        "dot_balls": 5
+      },
+      "form_score": 2.9,
+      "form_trend": "stable",
+      "last_5_scores": [],
+      "impact_score": 8.8,
+      "playoff_contribution": 7.7
+    },
+    {
+      "name": "Deepak Chahar",
+      "team": "CSK",
+      "team_color": "#F5C000",
+      "role": "bowler",
+      "season_stats": null,
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 17,
+        "overs": 2.8,
+        "runs_conceded": 25,
+        "wickets": 1,
+        "economy": 8.8,
+        "average": 25.0,
+        "best_figures": "1/25",
+        "dot_balls": 6
+      },
+      "form_score": 1.6,
+      "form_trend": "stable",
+      "last_5_scores": [],
+      "impact_score": 8.6,
+      "playoff_contribution": 2.7
+    },
+    {
+      "name": "Rassie van der Dussen",
+      "team": "SRH",
+      "team_color": "#F26522",
+      "role": "batter",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 22,
+        "balls_faced": 18,
+        "fours": 3,
+        "sixes": 0,
+        "dismissals": 1,
+        "strike_rate": 122.2,
+        "average": 22.0,
+        "highest_score": 22,
+        "fifties": 0,
+        "hundreds": 0
+      },
+      "bowling_stats": null,
+      "form_score": 3.6,
+      "form_trend": "stable",
+      "last_5_scores": [
+        22
+      ],
+      "impact_score": 8.2,
+      "playoff_contribution": 2.3
+    },
+    {
+      "name": "Shivam Dube",
+      "team": "CSK",
+      "team_color": "#F5C000",
+      "role": "allrounder",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 28,
+        "balls_faced": 18,
+        "fours": 2,
+        "sixes": 2,
+        "dismissals": 1,
+        "strike_rate": 155.6,
+        "average": 28.0,
+        "highest_score": 28,
+        "fifties": 0,
+        "hundreds": 0
+      },
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 16,
+        "overs": 2.7,
+        "runs_conceded": 34,
+        "wickets": 0,
+        "economy": 12.8,
+        "average": 34.0,
+        "best_figures": "0/34",
+        "dot_balls": 1
+      },
+      "form_score": 5.8,
+      "form_trend": "stable",
+      "last_5_scores": [
+        28
+      ],
+      "impact_score": 7.9,
+      "playoff_contribution": 2.7
+    },
+    {
+      "name": "Harshit Rana",
+      "team": "KKR",
+      "team_color": "#3A225D",
+      "role": "bowler",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 5,
+        "balls_faced": 5,
+        "fours": 0,
+        "sixes": 0,
+        "dismissals": 1,
+        "strike_rate": 100.0,
+        "average": 5.0,
+        "highest_score": 5,
+        "fifties": 0,
+        "hundreds": 0
+      },
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 21,
+        "overs": 3.5,
+        "runs_conceded": 33,
+        "wickets": 1,
+        "economy": 9.4,
+        "average": 33.0,
+        "best_figures": "1/33",
+        "dot_balls": 2
+      },
+      "form_score": 1.5,
+      "form_trend": "stable",
+      "last_5_scores": [
+        5
+      ],
+      "impact_score": 6.6,
+      "playoff_contribution": 3.1
+    },
+    {
+      "name": "Ajinkya Rahane",
+      "team": "KKR",
+      "team_color": "#3A225D",
+      "role": "batter",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 20,
+        "balls_faced": 18,
+        "fours": 2,
+        "sixes": 0,
+        "dismissals": 1,
+        "strike_rate": 111.1,
+        "average": 20.0,
+        "highest_score": 20,
+        "fifties": 0,
+        "hundreds": 0
+      },
+      "bowling_stats": null,
+      "form_score": 3.0,
+      "form_trend": "stable",
+      "last_5_scores": [
+        20
+      ],
+      "impact_score": 6.5,
+      "playoff_contribution": 3.1
+    },
+    {
+      "name": "Bhuvneshwar Kumar",
+      "team": "SRH",
+      "team_color": "#F26522",
+      "role": "bowler",
+      "season_stats": null,
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 20,
+        "overs": 3.3,
+        "runs_conceded": 32,
+        "wickets": 1,
+        "economy": 9.6,
+        "average": 32.0,
+        "best_figures": "1/32",
+        "dot_balls": 5
+      },
+      "form_score": 1.5,
+      "form_trend": "stable",
+      "last_5_scores": [],
+      "impact_score": 6.0,
+      "playoff_contribution": 2.2
+    },
+    {
+      "name": "MS Dhoni",
+      "team": "CSK",
+      "team_color": "#F5C000",
+      "role": "wicketkeeper",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 12,
+        "balls_faced": 8,
+        "fours": 0,
+        "sixes": 1,
+        "dismissals": 1,
+        "strike_rate": 150.0,
+        "average": 12.0,
+        "highest_score": 12,
+        "fifties": 0,
+        "hundreds": 0
+      },
+      "bowling_stats": null,
+      "form_score": 2.4,
+      "form_trend": "stable",
+      "last_5_scores": [
+        12
+      ],
+      "impact_score": 5.7,
+      "playoff_contribution": 2.6
+    },
+    {
+      "name": "Abhishek Sharma",
+      "team": "SRH",
+      "team_color": "#F26522",
+      "role": "batter",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 15,
+        "balls_faced": 12,
+        "fours": 2,
+        "sixes": 0,
+        "dismissals": 1,
+        "strike_rate": 125.0,
+        "average": 15.0,
+        "highest_score": 15,
+        "fifties": 0,
+        "hundreds": 0
+      },
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 18,
+        "overs": 3.0,
+        "runs_conceded": 26,
+        "wickets": 0,
+        "economy": 8.7,
+        "average": 26.0,
+        "best_figures": "0/26",
+        "dot_balls": 3
+      },
+      "form_score": 2.5,
+      "form_trend": "stable",
+      "last_5_scores": [
+        15
+      ],
+      "impact_score": 5.5,
+      "playoff_contribution": 2.2
+    },
+    {
+      "name": "Ravindra Jadeja",
+      "team": "CSK",
+      "team_color": "#F5C000",
+      "role": "allrounder",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 15,
+        "balls_faced": 12,
+        "fours": 1,
+        "sixes": 1,
+        "dismissals": 1,
+        "strike_rate": 125.0,
+        "average": 15.0,
+        "highest_score": 15,
+        "fifties": 0,
+        "hundreds": 0
+      },
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 16,
+        "overs": 2.7,
+        "runs_conceded": 25,
+        "wickets": 0,
+        "economy": 9.4,
+        "average": 25.0,
+        "best_figures": "0/25",
+        "dot_balls": 2
+      },
+      "form_score": 2.5,
+      "form_trend": "stable",
+      "last_5_scores": [
+        15
+      ],
+      "impact_score": 5.0,
+      "playoff_contribution": 2.6
+    },
+    {
+      "name": "Josh Hazlewood",
+      "team": "RCB",
+      "team_color": "#D4001A",
+      "role": "bowler",
+      "season_stats": null,
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 21,
+        "overs": 3.5,
+        "runs_conceded": 43,
+        "wickets": 2,
+        "economy": 12.3,
+        "average": 21.5,
+        "best_figures": "2/43",
+        "dot_balls": 3
+      },
+      "form_score": 3.0,
+      "form_trend": "stable",
+      "last_5_scores": [],
+      "impact_score": 4.4,
+      "playoff_contribution": 7.1
+    },
+    {
+      "name": "Pat Cummins",
+      "team": "SRH",
+      "team_color": "#F26522",
+      "role": "allrounder",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 8,
+        "balls_faced": 8,
+        "fours": 0,
+        "sixes": 1,
+        "dismissals": 1,
+        "strike_rate": 100.0,
+        "average": 8.0,
+        "highest_score": 8,
+        "fifties": 0,
+        "hundreds": 0
+      },
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 18,
+        "overs": 3.0,
+        "runs_conceded": 29,
+        "wickets": 1,
+        "economy": 9.7,
+        "average": 29.0,
+        "best_figures": "1/29",
+        "dot_balls": 3
+      },
+      "form_score": 1.5,
+      "form_trend": "stable",
+      "last_5_scores": [
+        8
+      ],
+      "impact_score": 4.2,
+      "playoff_contribution": 2.2
+    },
+    {
+      "name": "Phil Salt",
+      "team": "RCB",
+      "team_color": "#D4001A",
+      "role": "wicketkeeper",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 12,
+        "balls_faced": 10,
+        "fours": 1,
+        "sixes": 0,
+        "dismissals": 1,
+        "strike_rate": 120.0,
+        "average": 12.0,
+        "highest_score": 12,
+        "fifties": 0,
+        "hundreds": 0
+      },
+      "bowling_stats": null,
+      "form_score": 1.9,
+      "form_trend": "stable",
+      "last_5_scores": [
+        12
+      ],
+      "impact_score": 4.0,
+      "playoff_contribution": 7.0
+    },
+    {
+      "name": "Naman Dhir",
+      "team": "MI",
+      "team_color": "#004BA0",
+      "role": "batter",
+      "season_stats": {
+        "matches": 1,
+        "innings": 1,
+        "runs": 5,
+        "balls_faced": 5,
+        "fours": 0,
+        "sixes": 0,
+        "dismissals": 0,
+        "strike_rate": 100.0,
+        "average": 5.0,
+        "highest_score": 5,
+        "fifties": 0,
+        "hundreds": 0
+      },
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 14,
+        "overs": 2.3,
+        "runs_conceded": 11,
+        "wickets": 1,
+        "economy": 4.7,
+        "average": 11.0,
+        "best_figures": "1/11",
+        "dot_balls": 3
+      },
+      "form_score": 0.7,
+      "form_trend": "stable",
+      "last_5_scores": [
+        5
+      ],
+      "impact_score": 0.2,
+      "playoff_contribution": 6.5
+    },
+    {
+      "name": "Riyan Parag",
+      "team": "RR",
+      "team_color": "#E83673",
+      "role": "allrounder",
+      "season_stats": null,
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "balls": 18,
+        "overs": 3.0,
+        "runs_conceded": 42,
+        "wickets": 1,
+        "economy": 14.0,
+        "average": 42.0,
+        "best_figures": "1/42",
+        "dot_balls": 3
+      },
+      "form_score": 1.5,
+      "form_trend": "stable",
+      "last_5_scores": [],
+      "impact_score": -3.5,
+      "playoff_contribution": 4.1
+    },
+    {
+      "name": "Mohammed Siraj",
+      "team": "RCB",
+      "team_color": "#D4001A",
+      "role": "bowler",
+      "season_stats": null,
+      "bowling_stats": {
+        "matches": 2,
+        "innings": 2,
+        "balls": 33,
+        "overs": 5.5,
+        "runs_conceded": 70,
+        "wickets": 0,
+        "economy": 12.7,
+        "average": 70.0,
+        "best_figures": "0/35",
+        "dot_balls": 6
+      },
+      "form_score": 0.0,
+      "form_trend": "stable",
+      "last_5_scores": [],
+      "impact_score": -20.3,
+      "playoff_contribution": 3.9
+    }
+  ],
+  "leaderboards": {
+    "orange_cap": [
+      {
+        "name": "Suryakumar Yadav",
+        "team": "MI",
+        "team_color": "#004BA0",
+        "runs": 62,
+        "balls": 38,
+        "strike_rate": 163.2,
+        "matches": 1
+      },
+      {
+        "name": "Travis Head",
+        "team": "SRH",
+        "team_color": "#F26522",
+        "runs": 62,
+        "balls": 38,
+        "strike_rate": 163.2,
+        "matches": 1
+      },
+      {
+        "name": "Yashasvi Jaiswal",
+        "team": "RR",
+        "team_color": "#E83673",
+        "runs": 55,
+        "balls": 35,
+        "strike_rate": 157.1,
+        "matches": 1
+      },
+      {
+        "name": "Devdutt Padikkal",
+        "team": "RCB",
+        "team_color": "#D4001A",
+        "runs": 47,
+        "balls": 32,
+        "strike_rate": 146.9,
+        "matches": 1
+      },
+      {
+        "name": "Sanju Samson",
+        "team": "RR",
+        "team_color": "#E83673",
+        "runs": 45,
+        "balls": 28,
+        "strike_rate": 160.7,
+        "matches": 1
+      },
+      {
+        "name": "Rohit Sharma",
+        "team": "MI",
+        "team_color": "#004BA0",
+        "runs": 45,
+        "balls": 32,
+        "strike_rate": 140.6,
+        "matches": 1
+      },
+      {
+        "name": "Devon Conway",
+        "team": "CSK",
+        "team_color": "#F5C000",
+        "runs": 42,
+        "balls": 35,
+        "strike_rate": 120.0,
+        "matches": 1
+      },
+      {
+        "name": "Sunil Narine",
+        "team": "KKR",
+        "team_color": "#3A225D",
+        "runs": 35,
+        "balls": 25,
+        "strike_rate": 140.0,
+        "matches": 1
+      },
+      {
+        "name": "Ruturaj Gaikwad",
+        "team": "CSK",
+        "team_color": "#F5C000",
+        "runs": 35,
+        "balls": 28,
+        "strike_rate": 125.0,
+        "matches": 1
+      },
+      {
+        "name": "Rajat Patidar",
+        "team": "RCB",
+        "team_color": "#D4001A",
+        "runs": 32,
+        "balls": 20,
+        "strike_rate": 160.0,
+        "matches": 1
+      }
+    ],
+    "purple_cap": [
+      {
+        "name": "Jacob Duffy",
+        "team": "RCB",
+        "team_color": "#D4001A",
+        "wickets": 3,
+        "economy": 7.2,
+        "best": "3/29",
+        "matches": 1
+      },
+      {
+        "name": "Jasprit Bumrah",
+        "team": "MI",
+        "team_color": "#004BA0",
+        "wickets": 3,
+        "economy": 7.5,
+        "best": "3/25",
+        "matches": 1
+      },
+      {
+        "name": "Jofra Archer",
+        "team": "RR",
+        "team_color": "#E83673",
+        "wickets": 2,
+        "economy": 5.4,
+        "best": "2/19",
+        "matches": 1
+      },
+      {
+        "name": "Trent Boult",
+        "team": "RR",
+        "team_color": "#E83673",
+        "wickets": 2,
+        "economy": 6.8,
+        "best": "2/25",
+        "matches": 1
+      },
+      {
+        "name": "Hardik Pandya",
+        "team": "MI",
+        "team_color": "#004BA0",
+        "wickets": 2,
+        "economy": 7.3,
+        "best": "2/23",
+        "matches": 1
+      },
+      {
+        "name": "Varun Chakaravarthy",
+        "team": "KKR",
+        "team_color": "#3A225D",
+        "wickets": 2,
+        "economy": 9.1,
+        "best": "2/32",
+        "matches": 1
+      },
+      {
+        "name": "Josh Hazlewood",
+        "team": "RCB",
+        "team_color": "#D4001A",
+        "wickets": 2,
+        "economy": 12.3,
+        "best": "2/43",
+        "matches": 1
+      },
+      {
+        "name": "Naman Dhir",
+        "team": "MI",
+        "team_color": "#004BA0",
+        "wickets": 1,
+        "economy": 4.7,
+        "best": "1/11",
+        "matches": 1
+      },
+      {
+        "name": "Krunal Pandya",
+        "team": "RCB",
+        "team_color": "#D4001A",
+        "wickets": 1,
+        "economy": 6.3,
+        "best": "1/22",
+        "matches": 1
+      },
+      {
+        "name": "Harshal Patel",
+        "team": "SRH",
+        "team_color": "#F26522",
+        "wickets": 1,
+        "economy": 8.7,
+        "best": "1/29",
+        "matches": 1
+      }
+    ],
+    "top_impact_batters": [
+      {
+        "name": "Suryakumar Yadav",
+        "team": "MI",
+        "impact": 29.0
+      },
+      {
+        "name": "Travis Head",
+        "team": "SRH",
+        "impact": 29.0
+      },
+      {
+        "name": "Yashasvi Jaiswal",
+        "team": "RR",
+        "impact": 25.3
+      },
+      {
+        "name": "Sanju Samson",
+        "team": "RR",
+        "impact": 21.1
+      },
+      {
+        "name": "Devdutt Padikkal",
+        "team": "RCB",
+        "impact": 20.8
+      }
+    ],
+    "top_impact_bowlers": [
+      {
+        "name": "Jacob Duffy",
+        "team": "RCB",
+        "impact": 31.2
+      },
+      {
+        "name": "Jasprit Bumrah",
+        "team": "MI",
+        "impact": 28.9
+      },
+      {
+        "name": "Jofra Archer",
+        "team": "RR",
+        "impact": 28.6
+      },
+      {
+        "name": "Trent Boult",
+        "team": "RR",
+        "impact": 24.1
+      },
+      {
+        "name": "Hardik Pandya",
+        "team": "MI",
+        "impact": 21.4
+      }
+    ]
+  },
+  "team_performers": {
+    "RR": {
+      "top_batter": {
+        "name": "Yashasvi Jaiswal",
+        "runs": 55,
+        "balls": 35,
+        "sr": 157.1
+      },
+      "top_bowler": {
+        "name": "Jofra Archer",
+        "wickets": 2,
+        "runs": 19,
+        "econ": 5.4
+      },
+      "biggest_impact": {
+        "name": "Jofra Archer",
+        "score": 28.6
+      }
+    },
+    "KKR": {
+      "top_batter": {
+        "name": "Sunil Narine",
+        "runs": 35,
+        "balls": 25,
+        "sr": 140.0
+      },
+      "top_bowler": {
+        "name": "Varun Chakaravarthy",
+        "wickets": 2,
+        "runs": 32,
+        "econ": 9.1
+      },
+      "biggest_impact": {
+        "name": "Varun Chakaravarthy",
+        "score": 15.7
+      }
+    },
+    "RCB": {
+      "top_batter": {
+        "name": "Devdutt Padikkal",
+        "runs": 47,
+        "balls": 32,
+        "sr": 146.9
+      },
+      "top_bowler": {
+        "name": "Jacob Duffy",
+        "wickets": 3,
+        "runs": 29,
+        "econ": 7.2
+      },
+      "biggest_impact": {
+        "name": "Jacob Duffy",
+        "score": 31.2
+      }
+    },
+    "CSK": {
+      "top_batter": {
+        "name": "Devon Conway",
+        "runs": 42,
+        "balls": 35,
+        "sr": 120.0
+      },
+      "top_bowler": {
+        "name": "Deepak Chahar",
+        "wickets": 1,
+        "runs": 25,
+        "econ": 8.8
+      },
+      "biggest_impact": {
+        "name": "Devon Conway",
+        "score": 16.0
+      }
+    },
+    "MI": {
+      "top_batter": {
+        "name": "Suryakumar Yadav",
+        "runs": 62,
+        "balls": 38,
+        "sr": 163.2
+      },
+      "top_bowler": {
+        "name": "Jasprit Bumrah",
+        "wickets": 3,
+        "runs": 25,
+        "econ": 7.5
+      },
+      "biggest_impact": {
+        "name": "Suryakumar Yadav",
+        "score": 29.0
+      }
+    },
+    "SRH": {
+      "top_batter": {
+        "name": "Travis Head",
+        "runs": 62,
+        "balls": 38,
+        "sr": 163.2
+      },
+      "top_bowler": {
+        "name": "Harshal Patel",
+        "wickets": 1,
+        "runs": 29,
+        "econ": 8.7
+      },
+      "biggest_impact": {
+        "name": "Travis Head",
+        "score": 29.0
+      }
+    }
+  }
+}
