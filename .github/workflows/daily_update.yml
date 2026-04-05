@@ -41,6 +41,13 @@ jobs:
         run: |
           if [ -n "$GEMINI_API_KEY" ]; then
             echo "✓ GEMINI_API_KEY is set (${#GEMINI_API_KEY} chars)"
+            # Quick connectivity test
+            HTTP=$(curl -s -o /tmp/gemini_test.json -w "%{http_code}" \
+              -X POST "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=$GEMINI_API_KEY" \
+              -H "Content-Type: application/json" \
+              -d '{"contents":[{"parts":[{"text":"Say OK"}]}]}')
+            echo "Gemini test HTTP status: $HTTP"
+            cat /tmp/gemini_test.json | python3 -c "import sys,json; d=json.load(sys.stdin); print('Gemini response:', d.get('candidates',[{}])[0].get('content',{}).get('parts',[{}])[0].get('text','ERROR: '+str(d)))" 2>/dev/null || cat /tmp/gemini_test.json
           else
             echo "✗ GEMINI_API_KEY is NOT set — stories will use fallback templates"
           fi

@@ -126,6 +126,8 @@ def call_gemini(prompt, api_key):
     payload = {"contents": [{"parts": [{"text": prompt}]}]}
     resp = req.post(url, json=payload, timeout=30)
     log.info(f"  Gemini HTTP {resp.status_code}")
+    if resp.status_code != 200:
+        log.error(f"  Gemini error body: {resp.text[:500]}")
     resp.raise_for_status()
     return resp.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
 
