@@ -1,42 +1,6 @@
 {
   "fixtures": [
     {
-      "team1": "PBKS",
-      "team2": "GT",
-      "date": "2026-03-31",
-      "venue": "Punjab Cricket Association IS Bindra Stadium"
-    },
-    {
-      "team1": "LSG",
-      "team2": "DC",
-      "date": "2026-04-01",
-      "venue": "BRSABV Ekana Cricket Stadium"
-    },
-    {
-      "team1": "KKR",
-      "team2": "SRH",
-      "date": "2026-04-02",
-      "venue": "Eden Gardens"
-    },
-    {
-      "team1": "CSK",
-      "team2": "PBKS",
-      "date": "2026-04-03",
-      "venue": "MA Chidambaram Stadium"
-    },
-    {
-      "team1": "DC",
-      "team2": "MI",
-      "date": "2026-04-04",
-      "venue": "Arun Jaitley Stadium"
-    },
-    {
-      "team1": "GT",
-      "team2": "RR",
-      "date": "2026-04-04",
-      "venue": "Narendra Modi Stadium"
-    },
-    {
       "team1": "SRH",
       "team2": "LSG",
       "date": "2026-04-05",
