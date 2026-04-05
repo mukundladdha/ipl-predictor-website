@@ -89,10 +89,16 @@ def week_already_written(stories_data, label):
 
 
 def call_gemini(prompt, api_key):
-    import google.generativeai as genai
-    genai.configure(api_key=api_key)
-    model = genai.GenerativeModel("gemini-1.5-flash")
-    return model.generate_content(prompt).text.strip()
+    """Call Gemini via REST API directly — no SDK, no versioning issues."""
+    import requests as req
+    url = (
+        "https://generativelanguage.googleapis.com/v1beta/models/"
+        f"gemini-1.5-flash:generateContent?key={api_key}"
+    )
+    payload = {"contents": [{"parts": [{"text": prompt}]}]}
+    resp = req.post(url, json=payload, timeout=30)
+    resp.raise_for_status()
+    return resp.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
 
 
 def main():
