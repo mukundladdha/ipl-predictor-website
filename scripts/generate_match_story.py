@@ -120,8 +120,8 @@ def call_gemini(prompt, api_key):
     """Call Gemini via REST API directly — no SDK, no versioning issues."""
     import requests as req
     url = (
-        "https://generativelanguage.googleapis.com/v1/models/"
-        f"gemini-1.5-flash:generateContent?key={api_key}"
+        "https://generativelanguage.googleapis.com/v1beta/models/"
+        f"gemini-2.0-flash:generateContent?key={api_key}"
     )
     payload = {"contents": [{"parts": [{"text": prompt}]}]}
     resp = req.post(url, json=payload, timeout=30)
