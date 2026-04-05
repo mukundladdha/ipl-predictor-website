@@ -24,7 +24,7 @@
       "form_trend": "stable",
       "last_5_scores": [],
       "impact_score": 31.2,
-      "playoff_contribution": 10.5
+      "playoff_contribution": 10.6
     },
     {
       "name": "Suryakumar Yadav",
@@ -52,7 +52,7 @@
         62
       ],
       "impact_score": 29.0,
-      "playoff_contribution": 7.0
+      "playoff_contribution": 7.1
     },
     {
       "name": "Travis Head",
@@ -139,7 +139,7 @@
       "form_trend": "stable",
       "last_5_scores": [],
       "impact_score": 28.6,
-      "playoff_contribution": 9.2
+      "playoff_contribution": 9.3
     },
     {
       "name": "Yashasvi Jaiswal",
@@ -178,7 +178,7 @@
         55
       ],
       "impact_score": 25.3,
-      "playoff_contribution": 8.8
+      "playoff_contribution": 8.9
     },
     {
       "name": "Trent Boult",
@@ -241,7 +241,7 @@
         45
       ],
       "impact_score": 21.1,
-      "playoff_contribution": 8.3
+      "playoff_contribution": 8.4
     },
     {
       "name": "Devdutt Padikkal",
@@ -693,7 +693,7 @@
         28
       ],
       "impact_score": 11.0,
-      "playoff_contribution": 7.9
+      "playoff_contribution": 8.0
     },
     {
       "name": "Tilak Varma",
@@ -760,7 +760,7 @@
         22
       ],
       "impact_score": 9.9,
-      "playoff_contribution": 7.0
+      "playoff_contribution": 7.1
     },
     {
       "name": "Harshal Patel",
@@ -823,7 +823,7 @@
       "form_trend": "stable",
       "last_5_scores": [],
       "impact_score": 8.8,
-      "playoff_contribution": 7.6
+      "playoff_contribution": 7.7
     },
     {
       "name": "Deepak Chahar",
@@ -875,7 +875,7 @@
         22
       ],
       "impact_score": 8.2,
-      "playoff_contribution": 3.5
+      "playoff_contribution": 3.6
     },
     {
       "name": "Shivam Dube",
@@ -914,7 +914,7 @@
         28
       ],
       "impact_score": 7.9,
-      "playoff_contribution": 1.6
+      "playoff_contribution": 1.5
     },
     {
       "name": "Harshit Rana",
@@ -953,7 +953,7 @@
         5
       ],
       "impact_score": 6.6,
-      "playoff_contribution": 1.6
+      "playoff_contribution": 1.5
     },
     {
       "name": "Ajinkya Rahane",
@@ -981,7 +981,7 @@
         20
       ],
       "impact_score": 6.5,
-      "playoff_contribution": 1.6
+      "playoff_contribution": 1.5
     },
     {
       "name": "Bhuvneshwar Kumar",
@@ -1551,22 +1551,22 @@
         "score": 29.0
       }
     },
-    "RR": {
+    "RCB": {
       "top_batter": {
-        "name": "Yashasvi Jaiswal",
-        "runs": 55,
-        "balls": 35,
-        "sr": 157.1
+        "name": "Devdutt Padikkal",
+        "runs": 47,
+        "balls": 32,
+        "sr": 146.9
       },
       "top_bowler": {
-        "name": "Jofra Archer",
-        "wickets": 2,
-        "runs": 19,
-        "econ": 5.4
+        "name": "Jacob Duffy",
+        "wickets": 3,
+        "runs": 29,
+        "econ": 7.2
       },
       "biggest_impact": {
-        "name": "Jofra Archer",
-        "score": 28.6
+        "name": "Jacob Duffy",
+        "score": 31.2
       }
     },
     "KKR": {
@@ -1605,24 +1605,6 @@
         "score": 29.0
       }
     },
-    "RCB": {
-      "top_batter": {
-        "name": "Devdutt Padikkal",
-        "runs": 47,
-        "balls": 32,
-        "sr": 146.9
-      },
-      "top_bowler": {
-        "name": "Jacob Duffy",
-        "wickets": 3,
-        "runs": 29,
-        "econ": 7.2
-      },
-      "biggest_impact": {
-        "name": "Jacob Duffy",
-        "score": 31.2
-      }
-    },
     "CSK": {
       "top_batter": {
         "name": "Devon Conway",
@@ -1639,6 +1621,24 @@
       "biggest_impact": {
         "name": "Devon Conway",
         "score": 16.0
+      }
+    },
+    "RR": {
+      "top_batter": {
+        "name": "Yashasvi Jaiswal",
+        "runs": 55,
+        "balls": 35,
+        "sr": 157.1
+      },
+      "top_bowler": {
+        "name": "Jofra Archer",
+        "wickets": 2,
+        "runs": 19,
+        "econ": 5.4
+      },
+      "biggest_impact": {
+        "name": "Jofra Archer",
+        "score": 28.6
       }
     }
   }
