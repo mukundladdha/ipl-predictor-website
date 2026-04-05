@@ -2,37 +2,41 @@ name: Daily IPL Update
 
 on:
   schedule:
-    - cron: '30 18 * * *'  # 00:00 IST midnight (UTC+5:30) = 18:30 UTC — catches same-day evening matches
-    - cron: '30 2 * * *'   # 08:00 IST morning — catches any late-night matches / retry
-  workflow_dispatch:         # Manual trigger from GitHub Actions UI
+    - cron: '30 18 * * *'  # 00:00 IST midnight (UTC+5:30) = 18:30 UTC
+    - cron: '30 2 * * *'   # 08:00 IST morning — retry / late-night matches
+  workflow_dispatch:
 
 jobs:
   update-projections:
     runs-on: ubuntu-latest
     permissions:
-      contents: write        # Required to push commits
+      contents: write
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python 3.11
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Cache pip dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements-scripts.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
 
-      - name: Install dependencies
-        run: pip install -r requirements-scripts.txt
+      - name: Install core dependencies
+        run: pip install requests beautifulsoup4 numpy python-dotenv
+
+      - name: Install Gemini SDK
+        run: pip install google-generativeai
+        continue-on-error: true   # non-fatal — story script falls back gracefully
 
       - name: Fetch latest match results
         run: python scripts/fetch_results.py
@@ -42,25 +46,31 @@ jobs:
 
       - name: Generate why-changed explanations
         run: python scripts/generate_why_changed.py
+        continue-on-error: true
 
       - name: Track model accuracy
         run: python scripts/track_accuracy.py
+        continue-on-error: true
 
       - name: Calculate player stats
         run: python scripts/calculate_player_stats.py
+        continue-on-error: true
 
       - name: Generate match story
         run: python scripts/generate_match_story.py
+        continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Generate weekly narrative (Mondays only)
-        if: github.event_name == 'schedule' && startsWith(github.event.schedule, '30 2')
         run: |
           DAY=$(date +%u)
           if [ "$DAY" = "1" ]; then
             python scripts/generate_weekly_narrative.py
+          else
+            echo "Not Monday (day=$DAY) — skipping weekly narrative"
           fi
+        continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
@@ -68,13 +78,13 @@ jobs:
         run: |
           git config user.name  "Duckworth Bot"
           git config user.email "bot@duckworth.in"
-          git add data/results.csv
-          git add public/data/projections.json
-          git add public/data/fixtures.json
-          git add public/data/player_stats.json
-          git add public/data/stories.json
-          git add public/data/accuracy.json
-          git add data/raw/ipl_2026_bbb.csv
+          git add data/results.csv || true
+          git add public/data/projections.json || true
+          git add public/data/fixtures.json || true
+          git add public/data/player_stats.json || true
+          git add public/data/stories.json || true
+          git add public/data/accuracy.json || true
+          git add data/raw/ipl_2026_bbb.csv || true
           git diff --staged --quiet || \
             git commit -m "auto: update projections + stories + accuracy $(date +'%Y-%m-%d')"
           git push
