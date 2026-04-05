@@ -620,6 +620,144 @@
       },
       "generated_at": "2026-04-05T08:59:26.348380",
       "type": "match"
+    },
+    {
+      "match_id": "rcb_vs_csk_20260405",
+      "date": "2026-04-05",
+      "teams": [
+        "RCB",
+        "CSK"
+      ],
+      "result": "Royal Challengers Bengaluru won by 43 runs",
+      "headline": "RCB +10.9% after match 10",
+      "body": "Royal Challengers Bengaluru beat Chennai Super Kings in match 10 of IPL 2026. The result shifted RCB's playoff probability by +10.9% to 82.5%. CSK drop to 8.2% after the defeat. Full analysis updating shortly.",
+      "odds_changes": {
+        "MI": {
+          "before": 49.2,
+          "after": 50.1,
+          "delta": 0.9
+        },
+        "RCB": {
+          "before": 71.6,
+          "after": 82.5,
+          "delta": 10.9
+        },
+        "KKR": {
+          "before": 15.1,
+          "after": 15.3,
+          "delta": 0.2
+        },
+        "GT": {
+          "before": 15.0,
+          "after": 15.6,
+          "delta": 0.6
+        },
+        "CSK": {
+          "before": 14.6,
+          "after": 8.2,
+          "delta": -6.4
+        },
+        "SRH": {
+          "before": 33.3,
+          "after": 17.3,
+          "delta": -16.0
+        },
+        "PBKS": {
+          "before": 79.9,
+          "after": 80.8,
+          "delta": 0.9
+        },
+        "RR": {
+          "before": 64.5,
+          "after": 65.4,
+          "delta": 0.9
+        },
+        "DC": {
+          "before": 52.6,
+          "after": 54.3,
+          "delta": 1.7
+        },
+        "LSG": {
+          "before": 4.3,
+          "after": 10.4,
+          "delta": 6.1
+        }
+      },
+      "top_performers": {
+        "batter": "Devdutt Padikkal",
+        "bowler": "Jacob Duffy"
+      },
+      "generated_at": "2026-04-05T19:11:36.108485",
+      "type": "match"
+    },
+    {
+      "match_id": "srh_vs_lsg_20260405",
+      "date": "2026-04-05",
+      "teams": [
+        "SRH",
+        "LSG"
+      ],
+      "result": "Lucknow Super Giants won by 5 wickets",
+      "headline": "LSG +6.1% after match 11",
+      "body": "Lucknow Super Giants beat Sunrisers Hyderabad in match 11 of IPL 2026. The result shifted LSG's playoff probability by +6.1% to 10.4%. SRH drop to 17.3% after the defeat. Full analysis updating shortly.",
+      "odds_changes": {
+        "MI": {
+          "before": 49.2,
+          "after": 50.1,
+          "delta": 0.9
+        },
+        "RCB": {
+          "before": 71.6,
+          "after": 82.5,
+          "delta": 10.9
+        },
+        "KKR": {
+          "before": 15.1,
+          "after": 15.3,
+          "delta": 0.2
+        },
+        "GT": {
+          "before": 15.0,
+          "after": 15.6,
+          "delta": 0.6
+        },
+        "CSK": {
+          "before": 14.6,
+          "after": 8.2,
+          "delta": -6.4
+        },
+        "SRH": {
+          "before": 33.3,
+          "after": 17.3,
+          "delta": -16.0
+        },
+        "PBKS": {
+          "before": 79.9,
+          "after": 80.8,
+          "delta": 0.9
+        },
+        "RR": {
+          "before": 64.5,
+          "after": 65.4,
+          "delta": 0.9
+        },
+        "DC": {
+          "before": 52.6,
+          "after": 54.3,
+          "delta": 1.7
+        },
+        "LSG": {
+          "before": 4.3,
+          "after": 10.4,
+          "delta": 6.1
+        }
+      },
+      "top_performers": {
+        "batter": "Travis Head",
+        "bowler": "Harshal Patel"
+      },
+      "generated_at": "2026-04-05T19:11:36.209199",
+      "type": "match"
     }
   ]
 }
