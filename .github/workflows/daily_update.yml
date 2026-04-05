@@ -36,7 +36,16 @@ jobs:
 
       - name: Install Gemini SDK
         run: pip install google-generativeai
-        continue-on-error: true   # non-fatal — story script falls back gracefully
+
+      - name: Check Gemini API key is set
+        run: |
+          if [ -n "$GEMINI_API_KEY" ]; then
+            echo "✓ GEMINI_API_KEY is set (${#GEMINI_API_KEY} chars)"
+          else
+            echo "✗ GEMINI_API_KEY is NOT set — stories will use fallback templates"
+          fi
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Fetch latest match results
         run: python scripts/fetch_results.py
@@ -57,7 +66,10 @@ jobs:
         continue-on-error: true
 
       - name: Generate match story
-        run: python scripts/generate_match_story.py
+        run: |
+          python scripts/generate_match_story.py
+          echo "--- story log ---"
+          cat logs/story_log.txt 2>/dev/null || echo "(no log)"
         continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
