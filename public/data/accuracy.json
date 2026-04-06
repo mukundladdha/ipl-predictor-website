@@ -1,7 +1,7 @@
 {
-  "total_predictions": 11,
+  "total_predictions": 12,
   "correct": 5,
-  "accuracy_pct": 45.5,
+  "accuracy_pct": 41.7,
   "predictions": [
     {
       "match_key": "2026-03-28_RCB_SRH",
@@ -112,6 +112,16 @@
       "actual_winner": "LSG",
       "correct_elo": false,
       "correct_form": false
+    },
+    {
+      "match_key": "2026-04-06_KKR_PBKS",
+      "date": "2026-04-06",
+      "match": "KKR vs PBKS",
+      "predicted_winner_elo": "PBKS",
+      "predicted_probability": 0.3869,
+      "actual_winner": "NO_",
+      "correct_elo": false,
+      "correct_form": false
     }
   ],
   "calibration": {
@@ -120,7 +130,7 @@
       "correct": 4
     },
     "60_70": {
-      "predictions": 2,
+      "predictions": 3,
       "correct": 1
     },
     "70_80": {
@@ -135,11 +145,11 @@
   "by_model": {
     "elo": {
       "correct": 5,
-      "total": 11
+      "total": 12
     },
     "form": {
       "correct": 5,
-      "total": 11
+      "total": 12
     }
   }
 }

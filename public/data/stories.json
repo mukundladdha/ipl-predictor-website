@@ -774,6 +774,75 @@
         "fall": -0.40000000000000213
       },
       "generated_at": "2026-04-06"
+    },
+    {
+      "match_id": "kkr_vs_pbks_20260406",
+      "date": "2026-04-06",
+      "teams": [
+        "KKR",
+        "PBKS"
+      ],
+      "result": "no_result won by no_result",
+      "headline": "NO_ +0.0% after match 12",
+      "body": "no_result beat Kolkata Knight Riders in match 12 of IPL 2026. The result shifted NO_'s playoff probability by +0.0% to 0.0%. KKR drop to 11.0% after the defeat. Full analysis updating shortly.",
+      "odds_changes": {
+        "MI": {
+          "before": 50.3,
+          "after": 52.7,
+          "delta": 2.4
+        },
+        "RCB": {
+          "before": 82.5,
+          "after": 83.4,
+          "delta": 0.9
+        },
+        "KKR": {
+          "before": 15.5,
+          "after": 11.0,
+          "delta": -4.5
+        },
+        "GT": {
+          "before": 15.4,
+          "after": 16.9,
+          "delta": 1.5
+        },
+        "CSK": {
+          "before": 8.4,
+          "after": 9.1,
+          "delta": 0.7
+        },
+        "SRH": {
+          "before": 16.9,
+          "after": 18.7,
+          "delta": 1.8
+        },
+        "PBKS": {
+          "before": 80.6,
+          "after": 72.8,
+          "delta": -7.8
+        },
+        "RR": {
+          "before": 65.4,
+          "after": 67.3,
+          "delta": 1.9
+        },
+        "DC": {
+          "before": 54.6,
+          "after": 56.9,
+          "delta": 2.3
+        },
+        "LSG": {
+          "before": 10.2,
+          "after": 11.2,
+          "delta": 1.0
+        }
+      },
+      "top_performers": {
+        "batter": "Sunil Narine",
+        "bowler": "Varun Chakaravarthy"
+      },
+      "generated_at": "2026-04-06T19:37:00.756855",
+      "type": "match"
     }
   ]
 }

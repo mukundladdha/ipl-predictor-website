@@ -1,12 +1,6 @@
 {
   "fixtures": [
     {
-      "team1": "KKR",
-      "team2": "PBKS",
-      "date": "2026-04-06",
-      "venue": "Eden Gardens"
-    },
-    {
       "team1": "RR",
       "team2": "MI",
       "date": "2026-04-07",
