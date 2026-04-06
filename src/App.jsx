@@ -7,7 +7,6 @@ import ConceptCards from './components/ConceptCards'
 import MonteCarloStrip from './components/MonteCarloStrip'
 import PlayoffRace from './components/PlayoffRace'
 import WeeklyNarrative from './components/WeeklyNarrative'
-import ModelAccuracy from './components/ModelAccuracy'
 import BottomMetaStrip from './components/BottomMetaStrip'
 import BumpsChart from './components/BumpsChart'
 import RankProbChart from './components/RankProbChart'
@@ -81,7 +80,6 @@ function App() {
         <Divider />
         <ConceptCards />
         <MonteCarloStrip />
-        <ModelAccuracy />
         <BottomMetaStrip
           matchesPlayed={data.matches_played}
           matchesRemaining={data.matches_remaining}
