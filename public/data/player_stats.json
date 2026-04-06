@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-05",
+  "last_updated": "2026-04-06",
   "season": "2026",
   "players": [
     {
@@ -91,7 +91,7 @@
         62
       ],
       "impact_score": 29.0,
-      "playoff_contribution": 2.5
+      "playoff_contribution": 2.4
     },
     {
       "name": "Jasprit Bumrah",
@@ -414,7 +414,7 @@
         4
       ],
       "impact_score": 15.7,
-      "playoff_contribution": 1.8
+      "playoff_contribution": 1.9
     },
     {
       "name": "Sunil Narine",
@@ -548,7 +548,7 @@
         35
       ],
       "impact_score": 13.7,
-      "playoff_contribution": 0.9
+      "playoff_contribution": 1.0
     },
     {
       "name": "Venkatesh Iyer",
@@ -587,7 +587,7 @@
         28
       ],
       "impact_score": 12.4,
-      "playoff_contribution": 1.7
+      "playoff_contribution": 1.8
     },
     {
       "name": "Andre Russell",
@@ -626,7 +626,7 @@
         22
       ],
       "impact_score": 12.1,
-      "playoff_contribution": 1.7
+      "playoff_contribution": 1.8
     },
     {
       "name": "Glenn Maxwell",
@@ -732,7 +732,7 @@
         23
       ],
       "impact_score": 10.7,
-      "playoff_contribution": 5.5
+      "playoff_contribution": 5.6
     },
     {
       "name": "Jos Buttler",
@@ -799,7 +799,7 @@
         10
       ],
       "impact_score": 9.0,
-      "playoff_contribution": 1.9
+      "playoff_contribution": 1.8
     },
     {
       "name": "Krunal Pandya",
@@ -1005,7 +1005,7 @@
       "form_trend": "stable",
       "last_5_scores": [],
       "impact_score": 6.0,
-      "playoff_contribution": 1.8
+      "playoff_contribution": 1.7
     },
     {
       "name": "MS Dhoni",
@@ -1033,7 +1033,7 @@
         12
       ],
       "impact_score": 5.7,
-      "playoff_contribution": 0.8
+      "playoff_contribution": 0.9
     },
     {
       "name": "Abhishek Sharma",
@@ -1533,6 +1533,24 @@
     ]
   },
   "team_performers": {
+    "SRH": {
+      "top_batter": {
+        "name": "Travis Head",
+        "runs": 62,
+        "balls": 38,
+        "sr": 163.2
+      },
+      "top_bowler": {
+        "name": "Harshal Patel",
+        "wickets": 1,
+        "runs": 29,
+        "econ": 8.7
+      },
+      "biggest_impact": {
+        "name": "Travis Head",
+        "score": 29.0
+      }
+    },
     "RR": {
       "top_batter": {
         "name": "Yashasvi Jaiswal",
@@ -1551,24 +1569,6 @@
         "score": 28.6
       }
     },
-    "RCB": {
-      "top_batter": {
-        "name": "Devdutt Padikkal",
-        "runs": 47,
-        "balls": 32,
-        "sr": 146.9
-      },
-      "top_bowler": {
-        "name": "Jacob Duffy",
-        "wickets": 3,
-        "runs": 29,
-        "econ": 7.2
-      },
-      "biggest_impact": {
-        "name": "Jacob Duffy",
-        "score": 31.2
-      }
-    },
     "MI": {
       "top_batter": {
         "name": "Suryakumar Yadav",
@@ -1584,24 +1584,6 @@
       },
       "biggest_impact": {
         "name": "Suryakumar Yadav",
-        "score": 29.0
-      }
-    },
-    "SRH": {
-      "top_batter": {
-        "name": "Travis Head",
-        "runs": 62,
-        "balls": 38,
-        "sr": 163.2
-      },
-      "top_bowler": {
-        "name": "Harshal Patel",
-        "wickets": 1,
-        "runs": 29,
-        "econ": 8.7
-      },
-      "biggest_impact": {
-        "name": "Travis Head",
         "score": 29.0
       }
     },
@@ -1639,6 +1621,24 @@
       "biggest_impact": {
         "name": "Varun Chakaravarthy",
         "score": 15.7
+      }
+    },
+    "RCB": {
+      "top_batter": {
+        "name": "Devdutt Padikkal",
+        "runs": 47,
+        "balls": 32,
+        "sr": 146.9
+      },
+      "top_bowler": {
+        "name": "Jacob Duffy",
+        "wickets": 3,
+        "runs": 29,
+        "econ": 7.2
+      },
+      "biggest_impact": {
+        "name": "Jacob Duffy",
+        "score": 31.2
       }
     }
   }
