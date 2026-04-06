@@ -1,18 +1,6 @@
 {
   "fixtures": [
     {
-      "team1": "SRH",
-      "team2": "LSG",
-      "date": "2026-04-05",
-      "venue": "Rajiv Gandhi International Stadium"
-    },
-    {
-      "team1": "RCB",
-      "team2": "CSK",
-      "date": "2026-04-05",
-      "venue": "M. Chinnaswamy Stadium"
-    },
-    {
       "team1": "KKR",
       "team2": "PBKS",
       "date": "2026-04-06",
