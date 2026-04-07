@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-04-08",
+  "last_updated": "2026-04-07",
   "season": "2026",
   "matches_covered": 14,
-  "matches_played": 12,
+  "matches_played": 13,
   "players": [
     {
       "name": "Yashasvi Jaiswal",
@@ -77,8 +77,8 @@
         "matches": 3,
         "innings": 3,
         "runs": 118,
-        "average": 59.0,
-        "strike_rate": 173.53,
+        "average": 39.33,
+        "strike_rate": 168.57,
         "fours": 11,
         "sixes": 7
       },
@@ -236,18 +236,18 @@
       "bowling_stats": null
     },
     {
-      "name": "Sai Sudharsan",
-      "team": "GT",
-      "team_color": "#1B2133",
+      "name": "Tim David",
+      "team": "UNK",
+      "team_color": "#888",
       "role": "batter",
       "season_stats": {
         "matches": 2,
         "innings": 2,
         "runs": 86,
-        "average": 43.0,
-        "strike_rate": 156.36,
-        "fours": 11,
-        "sixes": 3
+        "average": 0.0,
+        "strike_rate": 245.71,
+        "fours": 4,
+        "sixes": 9
       },
       "bowling_stats": null
     },
@@ -530,10 +530,10 @@
       "bowling_stats": {
         "matches": 3,
         "innings": 3,
-        "overs": 9.0,
-        "runs_conceded": 67,
+        "overs": 10.0,
+        "runs_conceded": 74,
         "wickets": 3,
-        "economy": 7.44
+        "economy": 7.4
       }
     },
     {
@@ -545,10 +545,10 @@
       "bowling_stats": {
         "matches": 3,
         "innings": 3,
-        "overs": 8.0,
-        "runs_conceded": 67,
-        "wickets": 4,
-        "economy": 8.38
+        "overs": 9.0,
+        "runs_conceded": 76,
+        "wickets": 5,
+        "economy": 8.44
       }
     },
     {
@@ -575,10 +575,10 @@
       "bowling_stats": {
         "matches": 3,
         "innings": 3,
-        "overs": 7.4,
-        "runs_conceded": 73,
-        "wickets": 2,
-        "economy": 9.86
+        "overs": 8.4,
+        "runs_conceded": 82,
+        "wickets": 3,
+        "economy": 9.76
       }
     },
     {
@@ -1010,10 +1010,10 @@
       "bowling_stats": {
         "matches": 2,
         "innings": 2,
-        "overs": 4.5,
-        "runs_conceded": 52,
+        "overs": 5.0,
+        "runs_conceded": 53,
         "wickets": 2,
-        "economy": 11.56
+        "economy": 10.6
       }
     },
     {
@@ -1154,8 +1154,8 @@
         "runs": 118,
         "matches": 3,
         "innings": 3,
-        "average": 59.0,
-        "strike_rate": 173.53,
+        "average": 39.33,
+        "strike_rate": 168.57,
         "fours": 11,
         "sixes": 7
       },
@@ -1278,16 +1278,16 @@
       },
       {
         "rank": 15,
-        "name": "Sai Sudharsan",
-        "team": "GT",
-        "team_color": "#1B2133",
+        "name": "Tim David",
+        "team": "UNK",
+        "team_color": "#888",
         "runs": 86,
         "matches": 2,
         "innings": 2,
-        "average": 43.0,
-        "strike_rate": 156.36,
-        "fours": 11,
-        "sixes": 3
+        "average": 0.0,
+        "strike_rate": 245.71,
+        "fours": 4,
+        "sixes": 9
       }
     ],
     "purple_cap": [
@@ -1315,6 +1315,17 @@
       },
       {
         "rank": 3,
+        "name": "Nandre Burger",
+        "team": "KKR",
+        "team_color": "#3B2172",
+        "wickets": 5,
+        "matches": 3,
+        "overs": 9.0,
+        "runs_conceded": 76,
+        "economy": 8.44
+      },
+      {
+        "rank": 4,
         "name": "Anshul Kamboj",
         "team": "RCB",
         "team_color": "#D4001A",
@@ -1325,7 +1336,7 @@
         "economy": 11.73
       },
       {
-        "rank": 4,
+        "rank": 5,
         "name": "Vijaykumar Vyshak",
         "team": "PBKS",
         "team_color": "#ED1F27",
@@ -1336,7 +1347,7 @@
         "economy": 9.0
       },
       {
-        "rank": 5,
+        "rank": 6,
         "name": "Bhuvneshwar Kumar",
         "team": "SRH",
         "team_color": "#F26522",
@@ -1347,7 +1358,7 @@
         "economy": 9.0
       },
       {
-        "rank": 6,
+        "rank": 7,
         "name": "Jaydev Unadkat",
         "team": "LSG",
         "team_color": "#A0522D",
@@ -1358,7 +1369,7 @@
         "economy": 10.53
       },
       {
-        "rank": 7,
+        "rank": 8,
         "name": "Harsh Dubey",
         "team": "LSG",
         "team_color": "#A0522D",
@@ -1369,7 +1380,7 @@
         "economy": 7.78
       },
       {
-        "rank": 8,
+        "rank": 9,
         "name": "Shardul Thakur",
         "team": "RR",
         "team_color": "#E83673",
@@ -1380,7 +1391,7 @@
         "economy": 12.89
       },
       {
-        "rank": 9,
+        "rank": 10,
         "name": "Blessing Muzarabani",
         "team": "KKR",
         "team_color": "#3B2172",
@@ -1389,17 +1400,6 @@
         "overs": 7.0,
         "runs_conceded": 75,
         "economy": 10.71
-      },
-      {
-        "rank": 10,
-        "name": "Nandre Burger",
-        "team": "KKR",
-        "team_color": "#3B2172",
-        "wickets": 4,
-        "matches": 3,
-        "overs": 8.0,
-        "runs_conceded": 67,
-        "economy": 8.38
       },
       {
         "rank": 11,
