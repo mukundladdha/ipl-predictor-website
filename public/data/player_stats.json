@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-06",
+  "last_updated": "2026-04-07",
   "season": "2026",
   "players": [
     {
@@ -52,7 +52,7 @@
         62
       ],
       "impact_score": 29.0,
-      "playoff_contribution": 7.6
+      "playoff_contribution": 7.5
     },
     {
       "name": "Travis Head",
@@ -115,7 +115,7 @@
       "form_trend": "stable",
       "last_5_scores": [],
       "impact_score": 28.9,
-      "playoff_contribution": 7.6
+      "playoff_contribution": 7.5
     },
     {
       "name": "Jofra Archer",
@@ -269,7 +269,7 @@
         47
       ],
       "impact_score": 20.8,
-      "playoff_contribution": 10.7
+      "playoff_contribution": 10.8
     },
     {
       "name": "Rohit Sharma",
@@ -693,7 +693,7 @@
         28
       ],
       "impact_score": 11.0,
-      "playoff_contribution": 9.2
+      "playoff_contribution": 9.3
     },
     {
       "name": "Tilak Varma",
@@ -1135,7 +1135,7 @@
       "form_trend": "stable",
       "last_5_scores": [],
       "impact_score": 4.4,
-      "playoff_contribution": 8.2
+      "playoff_contribution": 8.3
     },
     {
       "name": "Pat Cummins",
@@ -1533,6 +1533,42 @@
     ]
   },
   "team_performers": {
+    "MI": {
+      "top_batter": {
+        "name": "Suryakumar Yadav",
+        "runs": 62,
+        "balls": 38,
+        "sr": 163.2
+      },
+      "top_bowler": {
+        "name": "Jasprit Bumrah",
+        "wickets": 3,
+        "runs": 25,
+        "econ": 7.5
+      },
+      "biggest_impact": {
+        "name": "Suryakumar Yadav",
+        "score": 29.0
+      }
+    },
+    "CSK": {
+      "top_batter": {
+        "name": "Devon Conway",
+        "runs": 42,
+        "balls": 35,
+        "sr": 120.0
+      },
+      "top_bowler": {
+        "name": "Deepak Chahar",
+        "wickets": 1,
+        "runs": 25,
+        "econ": 8.8
+      },
+      "biggest_impact": {
+        "name": "Devon Conway",
+        "score": 16.0
+      }
+    },
     "SRH": {
       "top_batter": {
         "name": "Travis Head",
@@ -1587,24 +1623,6 @@
         "score": 31.2
       }
     },
-    "CSK": {
-      "top_batter": {
-        "name": "Devon Conway",
-        "runs": 42,
-        "balls": 35,
-        "sr": 120.0
-      },
-      "top_bowler": {
-        "name": "Deepak Chahar",
-        "wickets": 1,
-        "runs": 25,
-        "econ": 8.8
-      },
-      "biggest_impact": {
-        "name": "Devon Conway",
-        "score": 16.0
-      }
-    },
     "KKR": {
       "top_batter": {
         "name": "Sunil Narine",
@@ -1621,24 +1639,6 @@
       "biggest_impact": {
         "name": "Varun Chakaravarthy",
         "score": 15.7
-      }
-    },
-    "MI": {
-      "top_batter": {
-        "name": "Suryakumar Yadav",
-        "runs": 62,
-        "balls": 38,
-        "sr": 163.2
-      },
-      "top_bowler": {
-        "name": "Jasprit Bumrah",
-        "wickets": 3,
-        "runs": 25,
-        "econ": 7.5
-      },
-      "biggest_impact": {
-        "name": "Suryakumar Yadav",
-        "score": 29.0
       }
     }
   }
