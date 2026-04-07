@@ -1,18 +1,23 @@
 #!/usr/bin/env python3
 """
 calculate_player_stats.py
-Reads ball-by-ball IPL 2026 data → public/data/player_stats.json
+Scrapes real IPL 2026 player stats from Cricbuzz → public/data/player_stats.json
+
+Batting:  mostRuns embedded JSON from Cricbuzz series stats page
+Bowling:  individual match scorecards (scorecard-bowl-grid divs)
 """
-import csv, json, logging, random
+import json, logging, re, time
 from collections import defaultdict
 from datetime import date as dt_date
 from pathlib import Path
 
-ROOT      = Path(__file__).parent.parent
-BBB_PATH  = ROOT / "data" / "raw" / "ipl_2026_bbb.csv"
+import requests
+from bs4 import BeautifulSoup
+
+ROOT     = Path(__file__).parent.parent
+OUT_PATH = ROOT / "public" / "data" / "player_stats.json"
+LOG_PATH = ROOT / "logs" / "player_stats_log.txt"
 PROJ_PATH = ROOT / "public" / "data" / "projections.json"
-OUT_PATH  = ROOT / "public" / "data" / "player_stats.json"
-LOG_PATH  = ROOT / "logs" / "player_stats_log.txt"
 
 LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
 logging.basicConfig(
@@ -22,90 +27,88 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-# ── Mappings ──────────────────────────────────────────────────────────────────
+# ── Cricbuzz ───────────────────────────────────────────────────────────────────
+CB_SERIES_ID  = "9241"
+CB_STATS_URL  = f"https://m.cricbuzz.com/cricket-series/{CB_SERIES_ID}/ipl-2026/stats"
+CB_MATCHES_URL = f"https://m.cricbuzz.com/cricket-series/{CB_SERIES_ID}/ipl-2026/matches"
+CB_SCORECARD  = "https://m.cricbuzz.com/live-cricket-scorecard"
 
-TEAM_MAP = {
-    "Royal Challengers Bengaluru": "RCB", "Royal Challengers Bangalore": "RCB",
-    "Mumbai Indians": "MI", "Kolkata Knight Riders": "KKR",
-    "Chennai Super Kings": "CSK", "Sunrisers Hyderabad": "SRH",
-    "Rajasthan Royals": "RR", "Delhi Capitals": "DC",
-    "Punjab Kings": "PBKS", "Gujarat Titans": "GT",
-    "Lucknow Super Giants": "LSG",
+MOBILE_UA = (
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) "
+    "AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 "
+    "Mobile/15E148 Safari/604.1"
+)
+HEADERS = {
+    "User-Agent": MOBILE_UA,
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
 }
+REQUEST_DELAY = 1.5
 
-NAME_MAP = {
-    # RCB
-    "V Kohli": "Virat Kohli", "Virat Kohli": "Virat Kohli",
-    "DP Padikkal": "Devdutt Padikkal", "Devdutt Padikkal": "Devdutt Padikkal",
-    "JR Hazlewood": "Josh Hazlewood", "Josh Hazlewood": "Josh Hazlewood",
-    "JA Duffy": "Jacob Duffy", "Jacob Duffy": "Jacob Duffy",
-    "GJ Maxwell": "Glenn Maxwell", "Glenn Maxwell": "Glenn Maxwell",
-    "KH Pandya": "Krunal Pandya", "Krunal Pandya": "Krunal Pandya",
-    "Mohammed Siraj": "Mohammed Siraj", "M Siraj": "Mohammed Siraj",
-    "Phil Salt": "Phil Salt", "P Salt": "Phil Salt",
-    "Rajat Patidar": "Rajat Patidar",
-    "SS Prabhudessai": "Suyash Sharma", "Suyash Sharma": "Suyash Sharma",
-    # MI
-    "RG Sharma": "Rohit Sharma", "Rohit Sharma": "Rohit Sharma",
-    "SK Yadav": "Suryakumar Yadav", "Suryakumar Yadav": "Suryakumar Yadav",
-    "HH Pandya": "Hardik Pandya", "Hardik Pandya": "Hardik Pandya",
-    "JJ Bumrah": "Jasprit Bumrah", "Jasprit Bumrah": "Jasprit Bumrah",
-    "Tilak Varma": "Tilak Varma", "N Dhir": "Naman Dhir", "Naman Dhir": "Naman Dhir",
-    # KKR
-    "Ajinkya Rahane": "Ajinkya Rahane",
-    "V Iyer": "Venkatesh Iyer", "Venkatesh Iyer": "Venkatesh Iyer",
-    "SP Narine": "Sunil Narine", "Sunil Narine": "Sunil Narine",
-    "AD Russell": "Andre Russell", "Andre Russell": "Andre Russell",
-    "Varun Chakravarthy": "Varun Chakaravarthy",
-    "Varun Chakaravarthy": "Varun Chakaravarthy",
-    "Harshit Rana": "Harshit Rana",
-    # SRH
-    "TR Head": "Travis Head", "Travis Head": "Travis Head",
-    "Abhishek Sharma": "Abhishek Sharma",
-    "HE van der Dussen": "Rassie van der Dussen",
-    "Rassie van der Dussen": "Rassie van der Dussen",
-    "HH Klaasen": "Heinrich Klaasen", "Heinrich Klaasen": "Heinrich Klaasen",
-    "PJ Cummins": "Pat Cummins", "Pat Cummins": "Pat Cummins",
-    "B Kumar": "Bhuvneshwar Kumar", "Bhuvneshwar Kumar": "Bhuvneshwar Kumar",
-    "Harshal Patel": "Harshal Patel", "H Patel": "Harshal Patel",
-    # CSK
-    "RD Gaikwad": "Ruturaj Gaikwad", "Ruturaj Gaikwad": "Ruturaj Gaikwad",
-    "MS Dhoni": "MS Dhoni",
-    "DP Conway": "Devon Conway", "Devon Conway": "Devon Conway",
-    "Shivam Dube": "Shivam Dube",
-    "D Chahar": "Deepak Chahar", "Deepak Chahar": "Deepak Chahar",
-    "RA Jadeja": "Ravindra Jadeja", "Ravindra Jadeja": "Ravindra Jadeja",
-    # RR
-    "SV Samson": "Sanju Samson", "Sanju Samson": "Sanju Samson",
-    "YBK Jaiswal": "Yashasvi Jaiswal", "Yashasvi Jaiswal": "Yashasvi Jaiswal",
-    "JC Buttler": "Jos Buttler", "Jos Buttler": "Jos Buttler",
-    "RP Parag": "Riyan Parag", "Riyan Parag": "Riyan Parag",
-    "TA Boult": "Trent Boult", "Trent Boult": "Trent Boult",
-    "JC Archer": "Jofra Archer", "Jofra Archer": "Jofra Archer",
-    # DC / GT / PBKS / LSG (common Cricsheet abbreviations)
-    "DA Warner": "David Warner", "Prithvi Shaw": "Prithvi Shaw",
-    "SH Gill": "Shubman Gill", "Shubman Gill": "Shubman Gill",
-    "KL Rahul": "KL Rahul",
-    "NE Pooran": "Nicholas Pooran", "Nicholas Pooran": "Nicholas Pooran",
-    "M Stoinis": "Marcus Stoinis", "Marcus Stoinis": "Marcus Stoinis",
+# ── Team / Role mappings ───────────────────────────────────────────────────────
+
+TEAM_COLORS = {
+    "RCB": "#D4001A", "MI": "#004BA0", "KKR": "#3B2172", "CSK": "#F9CD05",
+    "SRH": "#F26522", "RR": "#E83673", "DC": "#00008B", "PBKS": "#ED1F27",
+    "GT": "#1B2133", "LSG": "#A0522D",
 }
 
 PLAYER_TEAM = {
+    # RCB
     "Virat Kohli": "RCB", "Devdutt Padikkal": "RCB", "Rajat Patidar": "RCB",
     "Glenn Maxwell": "RCB", "Krunal Pandya": "RCB", "Phil Salt": "RCB",
     "Josh Hazlewood": "RCB", "Jacob Duffy": "RCB", "Mohammed Siraj": "RCB",
-    "Suyash Sharma": "RCB",
+    "Suyash Sharma": "RCB", "Liam Livingstone": "RCB",
+    # MI
     "Rohit Sharma": "MI", "Suryakumar Yadav": "MI", "Tilak Varma": "MI",
     "Hardik Pandya": "MI", "Naman Dhir": "MI", "Jasprit Bumrah": "MI",
+    "Ryan Rickelton": "MI", "Will Jacks": "MI",
+    # KKR
     "Ajinkya Rahane": "KKR", "Venkatesh Iyer": "KKR", "Sunil Narine": "KKR",
     "Andre Russell": "KKR", "Varun Chakaravarthy": "KKR", "Harshit Rana": "KKR",
+    "Angkrish Raghuvanshi": "KKR", "Quinton de Kock": "KKR",
+    # SRH
     "Travis Head": "SRH", "Abhishek Sharma": "SRH",
     "Rassie van der Dussen": "SRH", "Heinrich Klaasen": "SRH",
     "Pat Cummins": "SRH", "Bhuvneshwar Kumar": "SRH", "Harshal Patel": "SRH",
+    "Nitish Kumar Reddy": "SRH", "Ishan Kishan": "SRH",
+    # CSK
     "Ruturaj Gaikwad": "CSK", "MS Dhoni": "CSK", "Devon Conway": "CSK",
     "Shivam Dube": "CSK", "Deepak Chahar": "CSK", "Ravindra Jadeja": "CSK",
+    "Matheesha Pathirana": "CSK",
+    # RR
     "Sanju Samson": "RR", "Yashasvi Jaiswal": "RR", "Jos Buttler": "RR",
     "Riyan Parag": "RR", "Trent Boult": "RR", "Jofra Archer": "RR",
+    "Dhruv Jurel": "RR",
+    # DC
+    "David Warner": "DC", "Axar Patel": "DC", "Kuldeep Yadav": "DC",
+    "Tristan Stubbs": "DC", "KL Rahul": "DC", "Jake Fraser-McGurk": "DC",
+    "Faf du Plessis": "DC",
+    # PBKS
+    "Prabhsimran Singh": "PBKS", "Shashank Singh": "PBKS",
+    "Arshdeep Singh": "PBKS", "Sam Curran": "PBKS",
+    "Sameer Rizvi": "PBKS", "Harnoor Pannu": "PBKS",
+    # GT
+    "Shubman Gill": "GT", "Sai Sudharsan": "GT", "Rashid Khan": "GT",
+    "Kagiso Rabada": "GT", "Mohammed Shami": "GT",
+    "Prasidh Krishna": "GT", "Kumar Kushagra": "GT",
+    "Noor Ahmad": "GT",
+    # LSG
+    "Nicholas Pooran": "LSG", "Ravi Bishnoi": "LSG",
+    "Mohsin Khan": "LSG", "Avesh Khan": "LSG",
+    "Sarfaraz Khan": "LSG", "Cooper Connolly": "LSG",
+    "David Miller": "LSG", "Jaydev Unadkat": "LSG",
+    # RR
+    "Vaibhav Sooryavanshi": "RR", "Kartik Tyagi": "RR",
+    "Yuzvendra Chahal": "RR",
+    # KKR
+    "Nandre Burger": "KKR",
+    # MI
+    "Naman Dhir": "MI", "Robin Minz": "MI", "Hardik Pandya": "MI",
+    # CSK
+    "Lungi Ngidi": "CSK", "Matheesha Pathirana": "CSK",
+    # PBKS
+    "Vijaykumar Vyshak": "PBKS",
 }
 
 PLAYER_ROLE = {
@@ -113,489 +116,405 @@ PLAYER_ROLE = {
     "Phil Salt": "wicketkeeper", "Travis Head": "batter", "Abhishek Sharma": "batter",
     "Rassie van der Dussen": "batter", "Heinrich Klaasen": "wicketkeeper",
     "Rohit Sharma": "batter", "Suryakumar Yadav": "batter", "Tilak Varma": "batter",
-    "Ajinkya Rahane": "batter", "Ruturaj Gaikwad": "batter",
-    "MS Dhoni": "wicketkeeper", "Devon Conway": "batter",
-    "Yashasvi Jaiswal": "batter", "Sanju Samson": "wicketkeeper",
-    "Jos Buttler": "batter", "Naman Dhir": "batter",
+    "Ajinkya Rahane": "batter", "Ruturaj Gaikwad": "batter", "Devon Conway": "batter",
+    "MS Dhoni": "wicketkeeper", "Yashasvi Jaiswal": "batter",
+    "Sanju Samson": "wicketkeeper", "Jos Buttler": "batter", "Naman Dhir": "batter",
     "Glenn Maxwell": "allrounder", "Krunal Pandya": "allrounder",
     "Hardik Pandya": "allrounder", "Sunil Narine": "allrounder",
     "Andre Russell": "allrounder", "Pat Cummins": "allrounder",
     "Shivam Dube": "allrounder", "Ravindra Jadeja": "allrounder",
     "Venkatesh Iyer": "allrounder", "Riyan Parag": "allrounder",
+    "Axar Patel": "allrounder", "Nitish Kumar Reddy": "allrounder",
+    "Sameer Rizvi": "batter", "Angkrish Raghuvanshi": "batter",
+    "Ryan Rickelton": "batter", "Dhruv Jurel": "wicketkeeper",
+    "Sai Sudharsan": "batter", "Shubman Gill": "batter",
+    "Nicholas Pooran": "wicketkeeper", "KL Rahul": "wicketkeeper",
+    "Ishan Kishan": "wicketkeeper",
     "Josh Hazlewood": "bowler", "Jacob Duffy": "bowler",
     "Mohammed Siraj": "bowler", "Suyash Sharma": "bowler",
     "Jasprit Bumrah": "bowler", "Bhuvneshwar Kumar": "bowler",
     "Harshal Patel": "bowler", "Varun Chakaravarthy": "bowler",
     "Harshit Rana": "bowler", "Deepak Chahar": "bowler",
     "Trent Boult": "bowler", "Jofra Archer": "bowler",
+    "Rashid Khan": "bowler", "Kuldeep Yadav": "bowler",
+    "Kagiso Rabada": "bowler", "Mohammed Shami": "bowler",
+    "Prasidh Krishna": "bowler", "Arshdeep Singh": "bowler",
+    "Sam Curran": "allrounder", "Ravi Bishnoi": "bowler",
+    "Mohsin Khan": "bowler", "Avesh Khan": "bowler",
+    "Matheesha Pathirana": "bowler",
 }
 
-BATTING_DISMISSALS  = {"bowled","caught","lbw","stumped","caught and bowled","hit wicket","hit the ball twice"}
-BOWLING_WICKET_TYPES = {"bowled","caught","lbw","stumped","caught and bowled","hit wicket"}
+# ── HTTP helper ────────────────────────────────────────────────────────────────
 
-# ── Sample data ───────────────────────────────────────────────────────────────
+def get(session, url, **kwargs):
+    try:
+        resp = session.get(url, headers=HEADERS, timeout=15, **kwargs)
+        resp.raise_for_status()
+        return resp
+    except Exception as e:
+        log.warning(f"  GET failed {url}: {e}")
+        return None
 
-def _seq(runs, total_balls, fours, sixes):
-    """Build a shuffled list of per-ball run values that sums to runs."""
-    seq = [6]*sixes + [4]*fours
-    singles = runs - 6*sixes - 4*fours
-    seq += [1]*singles + [0]*(total_balls - sixes - fours - singles)
-    random.shuffle(seq)
-    return seq
+# ── Batting stats from Cricbuzz stats page ─────────────────────────────────────
 
-def generate_sample_bbb():
-    """Synthetic ball-by-ball rows for IPL 2026 matches 1-3."""
-    random.seed(42)
-    rows = []
-    counter = [0]
+def fetch_batting_stats(session):
+    """Returns list of dicts: name, matches, innings, runs, avg, sr, fours, sixes"""
+    log.info("Fetching batting stats (mostRuns)…")
+    resp = get(session, CB_STATS_URL)
+    if not resp:
+        return []
 
-    def add_innings(match_id, date, venue, inn_num,
-                    bat_team, bowl_team, batters, bowler_pool):
-        """
-        batters: list of (name, partner, runs, balls, fours, sixes, out_type, out_bowler)
-        out_type="" means not out.
-        """
-        ball_idx = [0]
-        for (name, partner, runs, total_balls, fours, sixes, out_type, out_bowler) in batters:
-            seq = _seq(runs, total_balls, fours, sixes)
-            n = len(bowler_pool)
-            for i, r in enumerate(seq):
-                is_last = (i == len(seq) - 1)
-                dismissed = is_last and bool(out_type)
-                bowler = out_bowler if dismissed and out_bowler else bowler_pool[ball_idx[0] % n]
-                counter[0] += 1
-                rows.append({
-                    "match_id": match_id, "season": "2026",
-                    "start_date": date, "venue": venue, "innings": inn_num,
-                    "ball": f"{ball_idx[0]//6+1}.{ball_idx[0]%6+1}",
-                    "batting_team": bat_team, "bowling_team": bowl_team,
-                    "striker": name, "non_striker": partner, "bowler": bowler,
-                    "runs_off_bat": r, "extras": 0, "wides": 0, "noballs": 0,
-                    "byes": 0, "legbyes": 0, "penalty": 0,
-                    "wicket_type": out_type if dismissed else "",
-                    "player_dismissed": name if dismissed else "",
-                    "other_wicket_type": "", "other_player_dismissed": "",
+    html = resp.text
+    # mostRuns data is embedded as escaped JSON in the HTML
+    # Quotes appear as \" in the raw HTML string
+    # Format: {\"values\":[\"player_id\",\"name\",\"matches\",\"innings\",\"runs\",\"avg\",\"sr\",\"4s\",\"6s\"]}
+    pattern = r'\\\"values\\\":\[\\\"(\d+)\\\",\\\"([^\\\"]+)\\\",\\\"(\d+)\\\",\\\"(\d+)\\\",\\\"(\d+)\\\",\\\"([\d.]+|--)\\\",\\\"([\d.]+|--)\\\",\\\"(\d+)\\\",\\\"(\d+)\\\"'
+    rows = re.findall(pattern, html)
+
+    if not rows:
+        log.warning("  No batting rows found in stats page")
+        return []
+
+    results = []
+    for pid, name, matches, innings, runs, avg, sr, fours, sixes in rows:
+        results.append({
+            "name": name,
+            "matches": int(matches),
+            "innings": int(innings),
+            "runs": int(runs),
+            "average": float(avg) if avg not in ("--", "-") else 0.0,
+            "strike_rate": float(sr) if sr not in ("--", "-") else 0.0,
+            "fours": int(fours),
+            "sixes": int(sixes),
+        })
+
+    log.info(f"  Found {len(results)} batters")
+    return results
+
+# ── Match IDs from series page ─────────────────────────────────────────────────
+
+def find_match_ids(session):
+    """Returns list of (match_id, slug) for completed IPL 2026 matches.
+
+    We seed with known match IDs (pattern: first match 149618, +11 each).
+    Then extend dynamically from the series page for any newer matches.
+    """
+    log.info("Finding completed match IDs…")
+
+    # Known completed matches — update as season progresses
+    # Format: (cricbuzz_match_id, slug)
+    KNOWN_MATCHES = [
+        ("149618", "rcb-vs-srh-1st-match-ipl-2026"),
+        ("149629", "mi-vs-kkr-2nd-match-ipl-2026"),
+        ("149640", "rr-vs-csk-3rd-match-ipl-2026"),
+        ("149651", "pbks-vs-gt-4th-match-ipl-2026"),
+        ("149662", "lsg-vs-dc-5th-match-ipl-2026"),
+        ("149673", "kkr-vs-srh-6th-match-ipl-2026"),
+        ("149684", "csk-vs-pbks-7th-match-ipl-2026"),
+        ("149695", "dc-vs-mi-8th-match-ipl-2026"),
+        ("149699", "gt-vs-rr-9th-match-ipl-2026"),
+        ("149710", "srh-vs-lsg-10th-match-ipl-2026"),
+        ("149721", "rcb-vs-csk-11th-match-ipl-2026"),
+    ]
+
+    seen = {mid: slug for mid, slug in KNOWN_MATCHES}
+
+    # Extend with any newer matches from the series page
+    resp = get(session, CB_MATCHES_URL)
+    if resp:
+        html = resp.text
+        raw = re.findall(
+            r'/live-cricket-(?:scores|scorecard)/(\d+)/([a-z0-9-]+(?:ipl-2026|indian-premier-league-2026)[a-z0-9-]*)',
+            html
+        )
+        for mid, slug in raw:
+            if mid not in seen:
+                seen[mid] = slug
+                log.info(f"  New match found on series page: {mid}/{slug[:40]}")
+
+    match_ids = sorted(seen.items(), key=lambda x: int(x[0]))
+    log.info(f"  Total IPL matches: {len(match_ids)}")
+    return match_ids
+
+# ── Bowling stats from individual scorecards ───────────────────────────────────
+
+def parse_scorecard(session, match_id, slug):
+    """Returns bowling_rows with team info from a scorecard page.
+
+    Each innings section has a team header. We extract the bowling team
+    for each section by reading the innings team label.
+    Returns list of dicts: name, team, overs, maidens, runs, wickets, economy
+    """
+    url = f"{CB_SCORECARD}/{match_id}/{slug}"
+    resp = get(session, url)
+    if not resp:
+        return []
+
+    soup = BeautifulSoup(resp.text, "html.parser")
+    bowling = []
+
+    # The page has 2 innings blocks. Each contains batting then bowling section.
+    # Team names appear in the innings header: "RCB Innings (20.0 Ovs)" etc.
+    # We walk top-level blocks and track which team is bowling.
+    # Extract teams from slug: "rcb-vs-srh-1st-match-ipl-2026" → RCB, SRH
+    # Inn1: team2 bats (team1 bowls); Inn2: team1 bats (team2 bowls)
+    slug_teams = re.match(r'([a-z]+)-vs-([a-z]+)-', slug)
+    inn_bowling = []
+    if slug_teams:
+        t1 = slug_teams.group(1).upper()
+        t2 = slug_teams.group(2).upper()
+        if t1 in TEAM_COLORS and t2 in TEAM_COLORS:
+            inn_bowling = [t1, t2]  # inn1: t1 bowls; inn2: t2 bowls
+
+    # Bowling rows — cells layout: [O, M, R, W, NB, WD, ECO] (no name in cells)
+    all_bowl_grids = soup.find_all("div", class_=lambda c: c and "scorecard-bowl-grid" in c)
+    # Cricbuzz renders each innings twice (mobile + desktop views) — take first half only
+    bowl_grids = all_bowl_grids[:len(all_bowl_grids) // 2]
+
+    # Split grids into two innings: first header → inn1, second header → inn2
+    inn1_grids, inn2_grids = [], []
+    separator_found = False
+    header_count = 0
+    for row in bowl_grids:
+        if not row.find("a"):
+            header_count += 1
+            if header_count == 2:
+                separator_found = True
+            continue
+        if separator_found:
+            inn2_grids.append(row)
+        else:
+            inn1_grids.append(row)
+
+    def extract_bowl(grids, bowling_team):
+        entries = []
+        for row in grids:
+            link = row.find("a")
+            if not link:
+                continue
+            name = link.get_text(strip=True).replace(" (c)", "").strip()
+            cells = [d.get_text(strip=True) for d in row.find_all("div")]
+            nums = []
+            for c in cells:
+                try:
+                    nums.append(float(c))
+                except ValueError:
+                    pass
+            if len(nums) >= 5:
+                entries.append({
+                    "name": name,
+                    "inferred_team": bowling_team,
+                    "overs": nums[0],
+                    "maidens": int(nums[1]),
+                    "runs": int(nums[2]),
+                    "wickets": int(nums[3]),
+                    "economy": nums[-1],
                 })
-                ball_idx[0] += 1
+        return entries
 
-    # ── Match 1: RCB vs SRH, 2026-03-28 (RCB won by 6 wkts) ─────────────────
-    add_innings("ipl2026m1","2026-03-28","M. Chinnaswamy Stadium", 1,
-        "Sunrisers Hyderabad", "Royal Challengers Bengaluru",
-        [
-            ("Travis Head",          "Abhishek Sharma",    62,38,5,3,"bowled",  "Jacob Duffy"),
-            ("Abhishek Sharma",      "Travis Head",        15,12,2,0,"caught",  "Jacob Duffy"),
-            ("Rassie van der Dussen","Abhishek Sharma",    22,18,3,0,"lbw",     "Josh Hazlewood"),
-            ("Heinrich Klaasen",     "Pat Cummins",        30,19,2,2,"caught",  "Josh Hazlewood"),
-            ("Pat Cummins",          "Harshal Patel",       8, 8,0,1,"bowled",  "Jacob Duffy"),
-            ("Harshal Patel",        "Bhuvneshwar Kumar",  10, 7,1,0,"caught",  "Krunal Pandya"),
-        ],
-        ["Jacob Duffy","Josh Hazlewood","Mohammed Siraj","Krunal Pandya","Glenn Maxwell"],
-    )
-    add_innings("ipl2026m1","2026-03-28","M. Chinnaswamy Stadium", 2,
-        "Royal Challengers Bengaluru", "Sunrisers Hyderabad",
-        [
-            ("Virat Kohli",    "Phil Salt",        28,22,2,1,"caught","Bhuvneshwar Kumar"),
-            ("Phil Salt",      "Virat Kohli",      12,10,1,0,"lbw",   "Pat Cummins"),
-            ("Devdutt Padikkal","Rajat Patidar",   47,32,5,2,"",""),          # not out
-            ("Rajat Patidar",  "Devdutt Padikkal", 32,20,3,1,"caught","Harshal Patel"),
-            ("Glenn Maxwell",  "Devdutt Padikkal", 15,10,0,1,"",""),          # not out
-        ],
-        ["Bhuvneshwar Kumar","Pat Cummins","Harshal Patel","Abhishek Sharma","Travis Head"],
-    )
+    t1 = inn_bowling[0] if len(inn_bowling) > 0 else None
+    t2 = inn_bowling[1] if len(inn_bowling) > 1 else None
+    bowling = extract_bowl(inn1_grids, t1) + extract_bowl(inn2_grids, t2)
 
-    # ── Match 2: MI vs KKR, 2026-03-29 (MI won) ─────────────────────────────
-    add_innings("ipl2026m2","2026-03-29","Eden Gardens", 1,
-        "Kolkata Knight Riders", "Mumbai Indians",
-        [
-            ("Sunil Narine",       "Ajinkya Rahane",     35,25,3,2,"bowled","Jasprit Bumrah"),
-            ("Ajinkya Rahane",     "Sunil Narine",       20,18,2,0,"caught","Hardik Pandya"),
-            ("Venkatesh Iyer",     "Andre Russell",      28,20,2,1,"lbw",   "Jasprit Bumrah"),
-            ("Andre Russell",      "Venkatesh Iyer",     22,12,1,2,"caught","Hardik Pandya"),
-            ("Varun Chakaravarthy","Harshit Rana",        4, 5,0,0,"bowled","Jasprit Bumrah"),
-            ("Harshit Rana",       "Varun Chakaravarthy", 5, 5,0,0,"caught","Naman Dhir"),
-        ],
-        ["Jasprit Bumrah","Hardik Pandya","Mohammed Siraj","Tilak Varma","Naman Dhir"],
-    )
-    add_innings("ipl2026m2","2026-03-29","Eden Gardens", 2,
-        "Mumbai Indians", "Kolkata Knight Riders",
-        [
-            ("Rohit Sharma",     "Suryakumar Yadav", 45,32,4,2,"caught","Varun Chakaravarthy"),
-            ("Suryakumar Yadav", "Rohit Sharma",     62,38,4,3,"",""),        # not out
-            ("Tilak Varma",      "Hardik Pandya",    23,15,2,1,"caught","Harshit Rana"),
-            ("Hardik Pandya",    "Suryakumar Yadav", 15,10,1,1,"bowled","Varun Chakaravarthy"),
-            ("Naman Dhir",       "Suryakumar Yadav",  5, 4,0,0,"",""),        # not out
-        ],
-        ["Harshit Rana","Varun Chakaravarthy","Sunil Narine","Andre Russell","Venkatesh Iyer"],
-    )
+    return bowling
 
-    # ── Match 3: RR vs CSK, 2026-03-30 (RR won by 8 wkts) ───────────────────
-    add_innings("ipl2026m3","2026-03-30","Barsapara Cricket Stadium", 1,
-        "Chennai Super Kings", "Rajasthan Royals",
-        [
-            ("Ruturaj Gaikwad","Devon Conway",    35,28,3,1,"caught","Jofra Archer"),
-            ("Devon Conway",   "Ruturaj Gaikwad", 42,35,4,1,"bowled","Trent Boult"),
-            ("Shivam Dube",    "Ravindra Jadeja", 28,18,2,2,"caught","Jofra Archer"),
-            ("Ravindra Jadeja","MS Dhoni",        15,12,1,1,"bowled","Trent Boult"),
-            ("MS Dhoni",       "Deepak Chahar",   12, 8,0,1,"caught","Riyan Parag"),
-        ],
-        ["Jofra Archer","Trent Boult","Riyan Parag","Yashasvi Jaiswal","Sanju Samson"],
-    )
-    add_innings("ipl2026m3","2026-03-30","Barsapara Cricket Stadium", 2,
-        "Rajasthan Royals", "Chennai Super Kings",
-        [
-            ("Yashasvi Jaiswal","Sanju Samson",  55,35,5,3,"caught","Deepak Chahar"),
-            ("Sanju Samson",    "Jos Buttler",   45,28,4,2,"",""),            # not out
-            ("Jos Buttler",     "Sanju Samson",  22,15,2,1,"",""),            # not out
-        ],
-        ["Deepak Chahar","Ravindra Jadeja","Shivam Dube","Devon Conway","Ruturaj Gaikwad"],
-    )
+# ── Aggregate all stats ────────────────────────────────────────────────────────
 
-    log.info(f"Generated {counter[0]} sample deliveries for 3 matches")
-    return rows
+def aggregate_stats(batting_season, bowling_scorecards, team_lookup=None):
+    """
+    batting_season: list of {name, matches, innings, runs, avg, sr, fours, sixes}
+                   from Cricbuzz mostRuns (aggregated, authoritative)
+    bowling_scorecards: dict name → {matches, innings, overs, runs, wickets, economy}
+                       from scraped scorecards
+    Returns: list of player dicts for player_stats.json
+    """
+    players = []
+    seen = set()
 
-# ── Data loading ──────────────────────────────────────────────────────────────
-
-_warned_names: set = set()
-
-def normalize_name(n: str) -> str:
-    c = NAME_MAP.get(n)
-    if c:
-        return c
-    if n not in _warned_names:
-        log.warning(f"Unknown player name: '{n}' — using as-is")
-        _warned_names.add(n)
-    return n
-
-def load_bbb():
-    if not BBB_PATH.exists():
-        log.info("ipl_2026_bbb.csv not found — generating sample data")
-        sample = generate_sample_bbb()
-        BBB_PATH.parent.mkdir(parents=True, exist_ok=True)
-        with open(BBB_PATH, "w", newline="") as f:
-            w = csv.DictWriter(f, fieldnames=list(sample[0].keys()))
-            w.writeheader(); w.writerows(sample)
-        return sample
-
-    rows = []
-    with open(BBB_PATH, newline="") as f:
-        for r in csv.DictReader(f):
-            r["batting_team"] = TEAM_MAP.get(r["batting_team"], r["batting_team"])
-            r["bowling_team"] = TEAM_MAP.get(r["bowling_team"], r["bowling_team"])
-            r["striker"]  = normalize_name(r["striker"])
-            r["non_striker"] = normalize_name(r.get("non_striker",""))
-            r["bowler"]   = normalize_name(r["bowler"])
-            if r.get("player_dismissed"):
-                r["player_dismissed"] = normalize_name(r["player_dismissed"])
-            for col in ("runs_off_bat","extras","wides","noballs","byes","legbyes"):
-                r[col] = int(r.get(col) or 0)
-            rows.append(r)
-    log.info(f"Loaded {len(rows)} deliveries from {BBB_PATH}")
-    return rows
-
-# ── Stats calculations ────────────────────────────────────────────────────────
-
-def get_batting_stats(rows):
-    matches  = defaultdict(set)
-    inn_set  = defaultdict(set)
-    runs     = defaultdict(int)
-    balls    = defaultdict(int)
-    fours    = defaultdict(int)
-    sixes    = defaultdict(int)
-    dism     = defaultdict(int)
-    inn_runs = defaultdict(lambda: defaultdict(int))
-    inn_balls= defaultdict(lambda: defaultdict(int))
-
-    for r in rows:
-        s = r["striker"]
-        key = (r["match_id"], r["innings"])
-        if int(r.get("wides") or 0):
+    # Batting players first
+    lookup = team_lookup or PLAYER_TEAM
+    for b in batting_season:
+        name = b["name"]
+        if name in seen:
             continue
-        matches[s].add(r["match_id"])
-        inn_set[s].add(key)
-        runs[s]  += int(r["runs_off_bat"])
-        balls[s] += 1
-        inn_runs[s][key]  += int(r["runs_off_bat"])
-        inn_balls[s][key] += 1
-        if int(r["runs_off_bat"]) == 4: fours[s] += 1
-        if int(r["runs_off_bat"]) == 6: sixes[s] += 1
-        if r.get("player_dismissed") == s and r.get("wicket_type","") in BATTING_DISMISSALS:
-            dism[s] += 1
+        seen.add(name)
+        team = lookup.get(name, PLAYER_TEAM.get(name, "UNK"))
+        role = PLAYER_ROLE.get(name, "batter")
 
-    out = {}
-    for p in balls:
-        if balls[p] == 0:
+        # Look up bowling if they also bowl
+        bowl = bowling_scorecards.get(name)
+
+        entry = {
+            "name": name,
+            "team": team,
+            "team_color": TEAM_COLORS.get(team, "#888"),
+            "role": role,
+            "season_stats": {
+                "matches": b["matches"],
+                "innings": b["innings"],
+                "runs": b["runs"],
+                "average": b["average"],
+                "strike_rate": b["strike_rate"],
+                "fours": b["fours"],
+                "sixes": b["sixes"],
+            },
+            "bowling_stats": {
+                "matches": bowl["matches"],
+                "innings": bowl["innings"],
+                "overs": bowl["overs"],
+                "runs_conceded": bowl["runs"],
+                "wickets": bowl["wickets"],
+                "economy": bowl["economy"],
+            } if bowl and bowl["wickets"] > 0 else None,
+        }
+        players.append(entry)
+
+    # Bowlers not in batting list
+    for name, bowl in bowling_scorecards.items():
+        if name in seen or bowl["wickets"] == 0:
             continue
-        r_val = runs[p]; b_val = balls[p]; d = dism[p]
-        sr = round(r_val / b_val * 100, 1)
-        avg = round(r_val / max(d, 1), 1)
-        hs  = max(inn_runs[p].values()) if inn_runs[p] else 0
-        fifties  = sum(1 for v in inn_runs[p].values() if 30 <= v < 50)
-        hundreds = sum(1 for v in inn_runs[p].values() if v >= 50)
-        # innings list chronological (oldest first)
-        sorted_keys = sorted(inn_runs[p].keys())
-        inn_list = [(inn_runs[p][k], round(inn_runs[p][k]/max(inn_balls[p][k],1)*100,1))
-                    for k in sorted_keys]
-        out[p] = {
-            "matches": len(matches[p]), "innings": len(inn_set[p]),
-            "runs": r_val, "balls_faced": b_val,
-            "fours": fours[p], "sixes": sixes[p], "dismissals": d,
-            "strike_rate": sr, "average": avg,
-            "highest_score": hs, "fifties": fifties, "hundreds": hundreds,
-            "_inn_list": inn_list,
-        }
-    return out
+        seen.add(name)
+        team = lookup.get(name, PLAYER_TEAM.get(name, "UNK"))
+        role = PLAYER_ROLE.get(name, "bowler")
+        players.append({
+            "name": name,
+            "team": team,
+            "team_color": TEAM_COLORS.get(team, "#888"),
+            "role": role,
+            "season_stats": None,
+            "bowling_stats": {
+                "matches": bowl["matches"],
+                "innings": bowl["innings"],
+                "overs": bowl["overs"],
+                "runs_conceded": bowl["runs"],
+                "wickets": bowl["wickets"],
+                "economy": bowl["economy"],
+            },
+        })
 
+    return players
 
-def get_bowling_stats(rows):
-    matches  = defaultdict(set)
-    inn_set  = defaultdict(set)
-    balls    = defaultdict(int)
-    runs_c   = defaultdict(int)
-    wickets  = defaultdict(int)
-    dots     = defaultdict(int)
-    s_balls  = defaultdict(lambda: defaultdict(int))
-    s_runs   = defaultdict(lambda: defaultdict(int))
-    s_wkts   = defaultdict(lambda: defaultdict(int))
+# ── Build leaderboards ─────────────────────────────────────────────────────────
 
-    for r in rows:
-        bwl = r["bowler"]
-        key = (r["match_id"], r["innings"])
-        is_wide  = bool(int(r.get("wides")  or 0))
-        is_noball= bool(int(r.get("noballs") or 0))
-        run_tot  = int(r["runs_off_bat"]) + int(r["extras"])
+def build_leaderboards(players):
+    batters = [p for p in players if p["season_stats"] and p["season_stats"]["runs"] > 0]
+    batters.sort(key=lambda p: p["season_stats"]["runs"], reverse=True)
 
-        matches[bwl].add(r["match_id"])
-        inn_set[bwl].add(key)
-        runs_c[bwl] += run_tot
-        s_runs[bwl][key] += run_tot
+    bowlers = [p for p in players if p["bowling_stats"] and p["bowling_stats"]["wickets"] > 0]
+    bowlers.sort(key=lambda p: p["bowling_stats"]["wickets"], reverse=True)
 
-        if not is_wide and not is_noball:
-            balls[bwl] += 1
-            s_balls[bwl][key] += 1
-            if int(r["runs_off_bat"]) == 0 and int(r["extras"]) == 0:
-                dots[bwl] += 1
+    orange_cap = []
+    for i, p in enumerate(batters[:15]):
+        s = p["season_stats"]
+        orange_cap.append({
+            "rank": i + 1,
+            "name": p["name"],
+            "team": p["team"],
+            "team_color": p["team_color"],
+            "runs": s["runs"],
+            "matches": s["matches"],
+            "innings": s["innings"],
+            "average": s["average"],
+            "strike_rate": s["strike_rate"],
+            "fours": s["fours"],
+            "sixes": s["sixes"],
+        })
 
-        if r.get("wicket_type","") in BOWLING_WICKET_TYPES:
-            wickets[bwl] += 1
-            s_wkts[bwl][key] += 1
+    purple_cap = []
+    for i, p in enumerate(bowlers[:15]):
+        b = p["bowling_stats"]
+        purple_cap.append({
+            "rank": i + 1,
+            "name": p["name"],
+            "team": p["team"],
+            "team_color": p["team_color"],
+            "wickets": b["wickets"],
+            "matches": b["matches"],
+            "overs": b["overs"],
+            "runs_conceded": b["runs_conceded"],
+            "economy": b["economy"],
+        })
 
-    out = {}
-    for p in matches:
-        b = balls[p]; rc = runs_c[p]; w = wickets[p]
-        econ = round(rc / b * 6, 1) if b > 0 else 0.0
-        avg  = round(rc / max(w, 1), 1)
-        overs= round(b / 6, 1)
-        # Best figures
-        best_w, best_r = 0, 999
-        spells = []
-        for key in s_balls[p]:
-            sb = s_balls[p][key]; sr = s_runs[p][key]; sw = s_wkts[p][key]
-            spells.append((sw, round(sr/max(sb,1)*6, 1)))
-            if sw > best_w or (sw == best_w and sr < best_r):
-                best_w, best_r = sw, sr
-        out[p] = {
-            "matches": len(matches[p]), "innings": len(inn_set[p]),
-            "balls": b, "overs": overs, "runs_conceded": rc,
-            "wickets": w, "economy": econ, "average": avg,
-            "best_figures": f"{best_w}/{best_r}",
-            "dot_balls": dots[p],
-            "_spells": spells,  # chronological
-        }
-    return out
+    return {"orange_cap": orange_cap, "purple_cap": purple_cap}
 
-# ── Form / impact / contribution ──────────────────────────────────────────────
-
-def batting_form_score(inn_list_recent_first):
-    last5 = inn_list_recent_first[:5]
-    if not last5:
-        return 0.0
-    weights = [0.75**i for i in range(len(last5))]
-    scores  = [(r * (sr/150)) * w for (r, sr), w in zip(last5, weights)]
-    raw = sum(scores) / sum(weights)
-    return min(round(raw / 5, 1), 10.0)
-
-def bowling_form_score(spells_recent_first):
-    last5 = spells_recent_first[:5]
-    if not last5:
-        return 0.0
-    weights = [0.75**i for i in range(len(last5))]
-    scores  = [((wk*3) + max(0, 9-ec)) * w for (wk, ec), w in zip(last5, weights)]
-    raw = sum(scores) / sum(weights)
-    return min(round(raw / 2, 1), 10.0)
-
-def _form_trend(series_recent_first):
-    """'up'/'down'/'stable' by comparing avg last-2 vs previous-3."""
-    if len(series_recent_first) < 2:
-        return "stable"
-    vals = [x for x, _ in series_recent_first] if isinstance(series_recent_first[0], tuple) else series_recent_first
-    recent = sum(vals[:2]) / 2
-    prev   = vals[2:5]
-    if not prev:
-        return "stable"
-    prev_avg = sum(prev) / len(prev)
-    if prev_avg == 0:
-        return "stable"
-    delta = (recent - prev_avg) / prev_avg
-    return "up" if delta > 0.15 else ("down" if delta < -0.15 else "stable")
-
-def batting_impact(s, venue_avg_sr=140):
-    runs_above = s["runs"] - (s["balls_faced"] * 0.4)
-    sr_above   = s["strike_rate"] - venue_avg_sr
-    return round((runs_above * 0.6) + (sr_above * 0.4) / 10, 1)
-
-def bowling_impact(s, venue_avg_econ=9.0):
-    econ_saved  = (venue_avg_econ - s["economy"]) * s["overs"]
-    wicket_val  = s["wickets"] * 8
-    return round(econ_saved + wicket_val, 1)
-
-def playoff_contribution(impact, team_pct):
-    base = team_pct / 11
-    return round(base * (1 + impact / 50), 1)
-
-# ── Main ──────────────────────────────────────────────────────────────────────
+# ── Main ───────────────────────────────────────────────────────────────────────
 
 def main():
     log.info("=== calculate_player_stats.py start ===")
+    session = requests.Session()
 
-    rows = load_bbb()
+    # 1. Batting stats from Cricbuzz mostRuns
+    batting_season = fetch_batting_stats(session)
 
-    with open(PROJ_PATH) as f:
-        proj = json.load(f)
-    elo_pct   = {t["short"]: t["models"]["elo"]["playoff_pct"] for t in proj["teams"]}
-    team_color= {t["short"]: t["color"] for t in proj["teams"]}
+    # 2. Find match IDs and scrape bowling scorecards
+    match_ids = find_match_ids(session)
 
-    bat  = get_batting_stats(rows)
-    bowl = get_bowling_stats(rows)
+    bowling_scorecards = defaultdict(lambda: {
+        "matches": 0, "innings": 0, "overs": 0.0, "runs": 0, "wickets": 0, "economy": 0.0
+    })
+    runs_sum = defaultdict(float)
+    overs_sum = defaultdict(float)
 
-    all_players = sorted(set(bat) | set(bowl))
-    players_out = []
+    player_teams_inferred = {}  # learned from scorecard context
 
-    for name in all_players:
-        team = PLAYER_TEAM.get(name)
-        if not team:
-            log.warning(f"No team mapping for '{name}' — skipping")
-            continue
+    for match_id, slug in match_ids:
+        log.info(f"  Parsing scorecard {match_id}/{slug[:40]}…")
+        bowling_rows = parse_scorecard(session, match_id, slug)
+        log.info(f"    → {len(bowling_rows)} bowling entries")
+        for b in bowling_rows:
+            name = b["name"]
+            bowl = bowling_scorecards[name]
+            bowl["matches"] += 1
+            bowl["innings"] += 1
+            bowl["overs"] += b["overs"]
+            bowl["runs"] += b["runs"]
+            bowl["wickets"] += b["wickets"]
+            runs_sum[name] += b["runs"]
+            overs_sum[name] += b["overs"]
+            # Learn team from scorecard if not already known
+            if name not in PLAYER_TEAM and b.get("inferred_team"):
+                player_teams_inferred[name] = b["inferred_team"]
+        time.sleep(REQUEST_DELAY)
 
-        role  = PLAYER_ROLE.get(name, "allrounder")
-        color = team_color.get(team, "#888")
-        pct   = elo_pct.get(team, 40.0)
+    # Compute season economy
+    for name, bowl in bowling_scorecards.items():
+        if overs_sum[name] > 0:
+            bowl["economy"] = round(runs_sum[name] / overs_sum[name], 2)
 
-        b_s  = bat.get(name)
-        bw_s = bowl.get(name)
+    # 3. Aggregate (merge inferred teams into PLAYER_TEAM for this run)
+    combined_team = {**player_teams_inferred, **PLAYER_TEAM}  # PLAYER_TEAM takes priority
+    players = aggregate_stats(batting_season, bowling_scorecards, combined_team)
 
-        # Batting form — most recent first
-        inn_rf = list(reversed(b_s["_inn_list"])) if b_s else []
-        b_form  = batting_form_score(inn_rf)
-        b_trend = _form_trend(inn_rf) if inn_rf else "stable"
-        b_imp   = batting_impact(b_s) if b_s and b_s["balls_faced"] > 0 else 0.0
+    # 4. Build leaderboards
+    leaderboards = build_leaderboards(players)
 
-        # Bowling form — most recent first
-        sp_rf  = list(reversed(bw_s["_spells"])) if bw_s else []
-        bw_form  = bowling_form_score(sp_rf)
-        bw_trend = _form_trend(sp_rf) if sp_rf else "stable"
-        bw_imp   = bowling_impact(bw_s) if bw_s and bw_s["balls"] > 0 else 0.0
-
-        if role in ("batter", "wicketkeeper"):
-            form = b_form; trend = b_trend; imp = b_imp
-        elif role == "bowler":
-            form = bw_form; trend = bw_trend; imp = bw_imp
-        else:
-            form  = round(max(b_form, bw_form), 1)
-            trend = b_trend if b_form >= bw_form else bw_trend
-            imp   = round(b_imp + bw_imp * 0.5, 1)
-
-        contrib = playoff_contribution(imp, pct)
-
-        bat_out  = ({k: v for k, v in b_s.items()  if not k.startswith("_")}
-                    if b_s and b_s["balls_faced"] > 0 else None)
-        bowl_out = ({k: v for k, v in bw_s.items() if not k.startswith("_")}
-                    if bw_s and bw_s["balls"] > 0 else None)
-
-        players_out.append({
-            "name": name, "team": team, "team_color": color, "role": role,
-            "season_stats": bat_out, "bowling_stats": bowl_out,
-            "form_score": form, "form_trend": trend,
-            "last_5_scores": [r for r, _ in inn_rf[:5]],
-            "impact_score": imp, "playoff_contribution": contrib,
-        })
-
-    players_out.sort(key=lambda p: p["impact_score"], reverse=True)
-
-    # ── Leaderboards ──────────────────────────────────────────────────────────
-    orange_cap = sorted(
-        [p for p in players_out if p["season_stats"]],
-        key=lambda p: p["season_stats"]["runs"], reverse=True,
-    )[:10]
-    purple_cap = sorted(
-        [p for p in players_out if p["bowling_stats"] and p["bowling_stats"]["wickets"] > 0],
-        key=lambda p: (-p["bowling_stats"]["wickets"], p["bowling_stats"]["economy"]),
-    )[:10]
-    top_imp_bat = sorted(
-        [p for p in players_out if p["season_stats"] and p["season_stats"]["balls_faced"] >= 5],
-        key=lambda p: batting_impact(p["season_stats"]), reverse=True,
-    )[:5]
-    top_imp_bowl = sorted(
-        [p for p in players_out if p["bowling_stats"] and p["bowling_stats"]["balls"] >= 6],
-        key=lambda p: bowling_impact(p["bowling_stats"]), reverse=True,
-    )[:5]
-
-    leaderboards = {
-        "orange_cap": [{
-            "name": p["name"], "team": p["team"], "team_color": p["team_color"],
-            "runs": p["season_stats"]["runs"], "balls": p["season_stats"]["balls_faced"],
-            "strike_rate": p["season_stats"]["strike_rate"],
-            "matches": p["season_stats"]["matches"],
-        } for p in orange_cap],
-        "purple_cap": [{
-            "name": p["name"], "team": p["team"], "team_color": p["team_color"],
-            "wickets": p["bowling_stats"]["wickets"],
-            "economy": p["bowling_stats"]["economy"],
-            "best": p["bowling_stats"]["best_figures"],
-            "matches": p["bowling_stats"]["matches"],
-        } for p in purple_cap],
-        "top_impact_batters": [{
-            "name": p["name"], "team": p["team"],
-            "impact": batting_impact(p["season_stats"]),
-        } for p in top_imp_bat],
-        "top_impact_bowlers": [{
-            "name": p["name"], "team": p["team"],
-            "impact": bowling_impact(p["bowling_stats"]),
-        } for p in top_imp_bowl],
-    }
-
-    # ── Team performers ───────────────────────────────────────────────────────
-    team_performers = {}
-    for team in set(p["team"] for p in players_out):
-        tp = [p for p in players_out if p["team"] == team]
-        batters = [p for p in tp if p["season_stats"] and p["season_stats"]["balls_faced"] >= 3]
-        bowlers = [p for p in tp if p["bowling_stats"] and p["bowling_stats"]["balls"] >= 6]
-        top_b  = max(batters,  key=lambda p: p["season_stats"]["runs"],      default=None)
-        top_bw = max(bowlers,  key=lambda p: p["bowling_stats"]["wickets"],   default=None)
-        top_i  = max(tp,       key=lambda p: p["impact_score"],              default=None)
-        # Include key stats for quick rendering
-        team_performers[team] = {
-            "top_batter":  {"name": top_b["name"],  "runs": top_b["season_stats"]["runs"],
-                            "balls": top_b["season_stats"]["balls_faced"],
-                            "sr": top_b["season_stats"]["strike_rate"]} if top_b  else None,
-            "top_bowler":  {"name": top_bw["name"], "wickets": top_bw["bowling_stats"]["wickets"],
-                            "runs": top_bw["bowling_stats"]["runs_conceded"],
-                            "econ": top_bw["bowling_stats"]["economy"]} if top_bw else None,
-            "biggest_impact": {"name": top_i["name"], "score": top_i["impact_score"]} if top_i else None,
-        }
+    # 5. Get matches played from projections
+    matches_played = 0
+    try:
+        with open(PROJ_PATH) as f:
+            proj = json.load(f)
+        matches_played = proj.get("matches_played", 0)
+    except Exception:
+        pass
 
     out = {
-        "last_updated": dt_date.today().isoformat(),
+        "last_updated": str(dt_date.today()),
         "season": "2026",
-        "players": players_out,
+        "matches_covered": len(match_ids),
+        "matches_played": matches_played,
+        "players": players,
         "leaderboards": leaderboards,
-        "team_performers": team_performers,
     }
 
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(OUT_PATH, "w") as f:
-        json.dump(out, f, indent=2, ensure_ascii=False)
-    log.info(f"Written {len(players_out)} players → {OUT_PATH}")
+        json.dump(out, f, indent=2)
+
+    log.info(f"player_stats.json: {len(players)} players, "
+             f"{len(leaderboards['orange_cap'])} batters, "
+             f"{len(leaderboards['purple_cap'])} bowlers")
     log.info("=== calculate_player_stats.py done ===")
+
 
 if __name__ == "__main__":
     main()
