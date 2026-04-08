@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-07",
+  "last_updated": "2026-04-08",
   "season": "2026",
   "matches_covered": 14,
   "matches_played": 13,
@@ -236,18 +236,18 @@
       "bowling_stats": null
     },
     {
-      "name": "Tim David",
-      "team": "UNK",
-      "team_color": "#888",
+      "name": "Sai Sudharsan",
+      "team": "GT",
+      "team_color": "#1B2133",
       "role": "batter",
       "season_stats": {
         "matches": 2,
         "innings": 2,
         "runs": 86,
-        "average": 0.0,
-        "strike_rate": 245.71,
-        "fours": 4,
-        "sixes": 9
+        "average": 43.0,
+        "strike_rate": 156.36,
+        "fours": 11,
+        "sixes": 3
       },
       "bowling_stats": null
     },
@@ -1278,16 +1278,16 @@
       },
       {
         "rank": 15,
-        "name": "Tim David",
-        "team": "UNK",
-        "team_color": "#888",
+        "name": "Sai Sudharsan",
+        "team": "GT",
+        "team_color": "#1B2133",
         "runs": 86,
         "matches": 2,
         "innings": 2,
-        "average": 0.0,
-        "strike_rate": 245.71,
-        "fours": 4,
-        "sixes": 9
+        "average": 43.0,
+        "strike_rate": 156.36,
+        "fours": 11,
+        "sixes": 3
       }
     ],
     "purple_cap": [
