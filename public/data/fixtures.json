@@ -1,18 +1,6 @@
 {
   "fixtures": [
     {
-      "team1": "PBKS",
-      "team2": "SRH",
-      "date": "2026-04-11",
-      "venue": "Punjab Cricket Association IS Bindra Stadium"
-    },
-    {
-      "team1": "CSK",
-      "team2": "DC",
-      "date": "2026-04-11",
-      "venue": "MA Chidambaram Stadium"
-    },
-    {
       "team1": "LSG",
       "team2": "GT",
       "date": "2026-04-12",
