@@ -1,18 +1,6 @@
 {
   "fixtures": [
     {
-      "team1": "LSG",
-      "team2": "GT",
-      "date": "2026-04-12",
-      "venue": "BRSABV Ekana Cricket Stadium"
-    },
-    {
-      "team1": "MI",
-      "team2": "RCB",
-      "date": "2026-04-12",
-      "venue": "Wankhede Stadium"
-    },
-    {
       "team1": "SRH",
       "team2": "RR",
       "date": "2026-04-13",
