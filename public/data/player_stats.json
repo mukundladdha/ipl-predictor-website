@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-11",
+  "last_updated": "2026-04-12",
   "season": "2026",
   "matches_covered": 15,
   "matches_played": 18,
@@ -117,22 +117,6 @@
       "bowling_stats": null
     },
     {
-      "name": "Sanju Samson",
-      "team": "RR",
-      "team_color": "#E83673",
-      "role": "wicketkeeper",
-      "season_stats": {
-        "matches": 4,
-        "innings": 4,
-        "runs": 137,
-        "average": 45.67,
-        "strike_rate": 182.67,
-        "fours": 17,
-        "sixes": 5
-      },
-      "bowling_stats": null
-    },
-    {
       "name": "Shreyas Iyer",
       "team": "UNK",
       "team_color": "#888",
@@ -145,6 +129,22 @@
         "strike_rate": 187.67,
         "fours": 9,
         "sixes": 10
+      },
+      "bowling_stats": null
+    },
+    {
+      "name": "Sanju Samson",
+      "team": "RR",
+      "team_color": "#E83673",
+      "role": "wicketkeeper",
+      "season_stats": {
+        "matches": 4,
+        "innings": 4,
+        "runs": 137,
+        "average": 45.67,
+        "strike_rate": 182.67,
+        "fours": 17,
+        "sixes": 5
       },
       "bowling_stats": null
     },
@@ -181,22 +181,6 @@
       "bowling_stats": null
     },
     {
-      "name": "Virat Kohli",
-      "team": "RCB",
-      "team_color": "#D4001A",
-      "role": "batter",
-      "season_stats": {
-        "matches": 3,
-        "innings": 3,
-        "runs": 129,
-        "average": 64.5,
-        "strike_rate": 179.17,
-        "fours": 14,
-        "sixes": 6
-      },
-      "bowling_stats": null
-    },
-    {
       "name": "Abhishek Sharma",
       "team": "SRH",
       "team_color": "#F26522",
@@ -209,6 +193,22 @@
         "strike_rate": 218.64,
         "fours": 9,
         "sixes": 13
+      },
+      "bowling_stats": null
+    },
+    {
+      "name": "Virat Kohli",
+      "team": "RCB",
+      "team_color": "#D4001A",
+      "role": "batter",
+      "season_stats": {
+        "matches": 3,
+        "innings": 3,
+        "runs": 129,
+        "average": 64.5,
+        "strike_rate": 179.17,
+        "fours": 14,
+        "sixes": 6
       },
       "bowling_stats": null
     },
@@ -1255,19 +1255,6 @@
       },
       {
         "rank": 8,
-        "name": "Sanju Samson",
-        "team": "RR",
-        "team_color": "#E83673",
-        "runs": 137,
-        "matches": 4,
-        "innings": 4,
-        "average": 45.67,
-        "strike_rate": 182.67,
-        "fours": 17,
-        "sixes": 5
-      },
-      {
-        "rank": 9,
         "name": "Shreyas Iyer",
         "team": "UNK",
         "team_color": "#888",
@@ -1278,6 +1265,19 @@
         "strike_rate": 187.67,
         "fours": 9,
         "sixes": 10
+      },
+      {
+        "rank": 9,
+        "name": "Sanju Samson",
+        "team": "RR",
+        "team_color": "#E83673",
+        "runs": 137,
+        "matches": 4,
+        "innings": 4,
+        "average": 45.67,
+        "strike_rate": 182.67,
+        "fours": 17,
+        "sixes": 5
       },
       {
         "rank": 10,
@@ -1307,19 +1307,6 @@
       },
       {
         "rank": 12,
-        "name": "Virat Kohli",
-        "team": "RCB",
-        "team_color": "#D4001A",
-        "runs": 129,
-        "matches": 3,
-        "innings": 3,
-        "average": 64.5,
-        "strike_rate": 179.17,
-        "fours": 14,
-        "sixes": 6
-      },
-      {
-        "rank": 13,
         "name": "Abhishek Sharma",
         "team": "SRH",
         "team_color": "#F26522",
@@ -1330,6 +1317,19 @@
         "strike_rate": 218.64,
         "fours": 9,
         "sixes": 13
+      },
+      {
+        "rank": 13,
+        "name": "Virat Kohli",
+        "team": "RCB",
+        "team_color": "#D4001A",
+        "runs": 129,
+        "matches": 3,
+        "innings": 3,
+        "average": 64.5,
+        "strike_rate": 179.17,
+        "fours": 14,
+        "sixes": 6
       },
       {
         "rank": 14,
