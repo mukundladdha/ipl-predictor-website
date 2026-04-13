@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-12",
+  "last_updated": "2026-04-13",
   "season": "2026",
   "matches_covered": 14,
   "matches_played": 20,
@@ -85,22 +85,6 @@
       "bowling_stats": null
     },
     {
-      "name": "Dhruv Jurel",
-      "team": "RR",
-      "team_color": "#E83673",
-      "role": "wicketkeeper",
-      "season_stats": {
-        "matches": 4,
-        "innings": 4,
-        "runs": 176,
-        "average": 58.67,
-        "strike_rate": 181.44,
-        "fours": 17,
-        "sixes": 8
-      },
-      "bowling_stats": null
-    },
-    {
       "name": "Jos Buttler",
       "team": "RR",
       "team_color": "#E83673",
@@ -113,6 +97,22 @@
         "strike_rate": 158.56,
         "fours": 22,
         "sixes": 7
+      },
+      "bowling_stats": null
+    },
+    {
+      "name": "Dhruv Jurel",
+      "team": "RR",
+      "team_color": "#E83673",
+      "role": "wicketkeeper",
+      "season_stats": {
+        "matches": 4,
+        "innings": 4,
+        "runs": 176,
+        "average": 58.67,
+        "strike_rate": 181.44,
+        "fours": 17,
+        "sixes": 8
       },
       "bowling_stats": null
     },
@@ -1184,19 +1184,6 @@
       },
       {
         "rank": 6,
-        "name": "Dhruv Jurel",
-        "team": "RR",
-        "team_color": "#E83673",
-        "runs": 176,
-        "matches": 4,
-        "innings": 4,
-        "average": 58.67,
-        "strike_rate": 181.44,
-        "fours": 17,
-        "sixes": 8
-      },
-      {
-        "rank": 7,
         "name": "Jos Buttler",
         "team": "RR",
         "team_color": "#E83673",
@@ -1207,6 +1194,19 @@
         "strike_rate": 158.56,
         "fours": 22,
         "sixes": 7
+      },
+      {
+        "rank": 7,
+        "name": "Dhruv Jurel",
+        "team": "RR",
+        "team_color": "#E83673",
+        "runs": 176,
+        "matches": 4,
+        "innings": 4,
+        "average": 58.67,
+        "strike_rate": 181.44,
+        "fours": 17,
+        "sixes": 8
       },
       {
         "rank": 8,

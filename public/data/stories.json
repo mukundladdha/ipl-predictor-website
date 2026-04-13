@@ -843,6 +843,22 @@
       },
       "generated_at": "2026-04-06T19:37:00.756855",
       "type": "match"
+    },
+    {
+      "match_id": "weekly_week_3__apr_11___apr_17",
+      "date": "2026-04-13",
+      "week_label": "WEEK 3 · APR 11 – APR 17",
+      "type": "weekly",
+      "headline": "WEEK 3 · APR 11 – APR 17",
+      "body": "IPL 2026 Week 3: 1 matches played. MI gained the most ground this week (+0.3%), while PBKS slipped (-0.2%). Current top 4: RR 94.2%, PBKS 86.2%, RCB 86.1%, GT 43.5%. The cutoff fight between PBKS (86.2%) vs RCB (86.1%) is the race to watch. Full projections updated after every match.",
+      "top4": "RR 94.2%, PBKS 86.2%, RCB 86.1%, GT 43.5%",
+      "biggest_mover": {
+        "riser": "MI",
+        "rise": 0.3000000000000007,
+        "faller": "PBKS",
+        "fall": -0.20000000000000284
+      },
+      "generated_at": "2026-04-13"
     }
   ]
 }
