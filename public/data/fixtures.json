@@ -1,12 +1,6 @@
 {
   "fixtures": [
     {
-      "team1": "CSK",
-      "team2": "KKR",
-      "date": "2026-04-14",
-      "venue": "MA Chidambaram Stadium"
-    },
-    {
       "team1": "RCB",
       "team2": "LSG",
       "date": "2026-04-15",
