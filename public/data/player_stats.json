@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-13",
+  "last_updated": "2026-04-14",
   "season": "2026",
   "matches_covered": 14,
   "matches_played": 21,
@@ -181,22 +181,6 @@
       "bowling_stats": null
     },
     {
-      "name": "Sanju Samson",
-      "team": "RR",
-      "team_color": "#E83673",
-      "role": "wicketkeeper",
-      "season_stats": {
-        "matches": 4,
-        "innings": 4,
-        "runs": 137,
-        "average": 45.67,
-        "strike_rate": 182.67,
-        "fours": 17,
-        "sixes": 5
-      },
-      "bowling_stats": null
-    },
-    {
       "name": "Rohit Sharma",
       "team": "MI",
       "team_color": "#004BA0",
@@ -225,6 +209,22 @@
         "strike_rate": 187.67,
         "fours": 9,
         "sixes": 10
+      },
+      "bowling_stats": null
+    },
+    {
+      "name": "Sanju Samson",
+      "team": "RR",
+      "team_color": "#E83673",
+      "role": "wicketkeeper",
+      "season_stats": {
+        "matches": 4,
+        "innings": 4,
+        "runs": 137,
+        "average": 45.67,
+        "strike_rate": 182.67,
+        "fours": 17,
+        "sixes": 5
       },
       "bowling_stats": null
     },
@@ -1292,19 +1292,6 @@
       },
       {
         "rank": 12,
-        "name": "Sanju Samson",
-        "team": "RR",
-        "team_color": "#E83673",
-        "runs": 137,
-        "matches": 4,
-        "innings": 4,
-        "average": 45.67,
-        "strike_rate": 182.67,
-        "fours": 17,
-        "sixes": 5
-      },
-      {
-        "rank": 13,
         "name": "Rohit Sharma",
         "team": "MI",
         "team_color": "#004BA0",
@@ -1317,7 +1304,7 @@
         "sixes": 8
       },
       {
-        "rank": 14,
+        "rank": 13,
         "name": "Shreyas Iyer",
         "team": "UNK",
         "team_color": "#888",
@@ -1328,6 +1315,19 @@
         "strike_rate": 187.67,
         "fours": 9,
         "sixes": 10
+      },
+      {
+        "rank": 14,
+        "name": "Sanju Samson",
+        "team": "RR",
+        "team_color": "#E83673",
+        "runs": 137,
+        "matches": 4,
+        "innings": 4,
+        "average": 45.67,
+        "strike_rate": 182.67,
+        "fours": 17,
+        "sixes": 5
       },
       {
         "rank": 15,
