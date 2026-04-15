@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-14",
+  "last_updated": "2026-04-15",
   "season": "2026",
   "matches_covered": 15,
   "matches_played": 22,
@@ -133,22 +133,6 @@
       "bowling_stats": null
     },
     {
-      "name": "Jos Buttler",
-      "team": "RR",
-      "team_color": "#E83673",
-      "role": "batter",
-      "season_stats": {
-        "matches": 4,
-        "innings": 4,
-        "runs": 176,
-        "average": 44.0,
-        "strike_rate": 158.56,
-        "fours": 22,
-        "sixes": 7
-      },
-      "bowling_stats": null
-    },
-    {
       "name": "Dhruv Jurel",
       "team": "RR",
       "team_color": "#E83673",
@@ -161,6 +145,22 @@
         "strike_rate": 177.78,
         "fours": 17,
         "sixes": 8
+      },
+      "bowling_stats": null
+    },
+    {
+      "name": "Jos Buttler",
+      "team": "RR",
+      "team_color": "#E83673",
+      "role": "batter",
+      "season_stats": {
+        "matches": 4,
+        "innings": 4,
+        "runs": 176,
+        "average": 44.0,
+        "strike_rate": 158.56,
+        "fours": 22,
+        "sixes": 7
       },
       "bowling_stats": null
     },
@@ -229,18 +229,18 @@
       "bowling_stats": null
     },
     {
-      "name": "Rohit Sharma",
-      "team": "MI",
-      "team_color": "#004BA0",
+      "name": "Shreyas Iyer",
+      "team": "UNK",
+      "team_color": "#888",
       "role": "batter",
       "season_stats": {
         "matches": 4,
-        "innings": 4,
+        "innings": 3,
         "runs": 137,
-        "average": 45.67,
-        "strike_rate": 165.06,
-        "fours": 13,
-        "sixes": 8
+        "average": 68.5,
+        "strike_rate": 187.67,
+        "fours": 9,
+        "sixes": 10
       },
       "bowling_stats": null
     },
@@ -1298,19 +1298,6 @@
       },
       {
         "rank": 9,
-        "name": "Jos Buttler",
-        "team": "RR",
-        "team_color": "#E83673",
-        "runs": 176,
-        "matches": 4,
-        "innings": 4,
-        "average": 44.0,
-        "strike_rate": 158.56,
-        "fours": 22,
-        "sixes": 7
-      },
-      {
-        "rank": 10,
         "name": "Dhruv Jurel",
         "team": "RR",
         "team_color": "#E83673",
@@ -1321,6 +1308,19 @@
         "strike_rate": 177.78,
         "fours": 17,
         "sixes": 8
+      },
+      {
+        "rank": 10,
+        "name": "Jos Buttler",
+        "team": "RR",
+        "team_color": "#E83673",
+        "runs": 176,
+        "matches": 4,
+        "innings": 4,
+        "average": 44.0,
+        "strike_rate": 158.56,
+        "fours": 22,
+        "sixes": 7
       },
       {
         "rank": 11,
@@ -1376,16 +1376,16 @@
       },
       {
         "rank": 15,
-        "name": "Rohit Sharma",
-        "team": "MI",
-        "team_color": "#004BA0",
+        "name": "Shreyas Iyer",
+        "team": "UNK",
+        "team_color": "#888",
         "runs": 137,
         "matches": 4,
-        "innings": 4,
-        "average": 45.67,
-        "strike_rate": 165.06,
-        "fours": 13,
-        "sixes": 8
+        "innings": 3,
+        "average": 68.5,
+        "strike_rate": 187.67,
+        "fours": 9,
+        "sixes": 10
       }
     ],
     "purple_cap": [
