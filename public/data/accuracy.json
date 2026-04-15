@@ -1,7 +1,7 @@
 {
-  "total_predictions": 22,
-  "correct": 9,
-  "accuracy_pct": 40.9,
+  "total_predictions": 23,
+  "correct": 10,
+  "accuracy_pct": 43.5,
   "predictions": [
     {
       "match_key": "2026-03-28_RCB_SRH",
@@ -222,6 +222,16 @@
       "actual_winner": "CSK",
       "correct_elo": true,
       "correct_form": true
+    },
+    {
+      "match_key": "2026-04-15_RCB_LSG",
+      "date": "2026-04-15",
+      "match": "RCB vs LSG",
+      "predicted_winner_elo": "RCB",
+      "predicted_probability": 0.6919,
+      "actual_winner": "RCB",
+      "correct_elo": true,
+      "correct_form": true
     }
   ],
   "calibration": {
@@ -230,8 +240,8 @@
       "correct": 7
     },
     "60_70": {
-      "predictions": 5,
-      "correct": 2
+      "predictions": 6,
+      "correct": 3
     },
     "70_80": {
       "predictions": 0,
@@ -244,12 +254,12 @@
   },
   "by_model": {
     "elo": {
-      "correct": 9,
-      "total": 22
+      "correct": 10,
+      "total": 23
     },
     "form": {
-      "correct": 9,
-      "total": 22
+      "correct": 10,
+      "total": 23
     }
   }
 }
