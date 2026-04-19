@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-18",
+  "last_updated": "2026-04-19",
   "season": "2026",
   "matches_covered": 15,
   "matches_played": 27,
@@ -133,22 +133,6 @@
       "bowling_stats": null
     },
     {
-      "name": "Jos Buttler",
-      "team": "RR",
-      "team_color": "#E83673",
-      "role": "batter",
-      "season_stats": {
-        "matches": 5,
-        "innings": 5,
-        "runs": 201,
-        "average": 40.2,
-        "strike_rate": 159.52,
-        "fours": 24,
-        "sixes": 9
-      },
-      "bowling_stats": null
-    },
-    {
       "name": "Ayush Mhatre",
       "team": "UNK",
       "team_color": "#888",
@@ -161,6 +145,22 @@
         "strike_rate": 177.88,
         "fours": 20,
         "sixes": 12
+      },
+      "bowling_stats": null
+    },
+    {
+      "name": "Jos Buttler",
+      "team": "RR",
+      "team_color": "#E83673",
+      "role": "batter",
+      "season_stats": {
+        "matches": 5,
+        "innings": 5,
+        "runs": 201,
+        "average": 40.2,
+        "strike_rate": 159.52,
+        "fours": 24,
+        "sixes": 9
       },
       "bowling_stats": null
     },
@@ -1253,19 +1253,6 @@
       },
       {
         "rank": 9,
-        "name": "Jos Buttler",
-        "team": "RR",
-        "team_color": "#E83673",
-        "runs": 201,
-        "matches": 5,
-        "innings": 5,
-        "average": 40.2,
-        "strike_rate": 159.52,
-        "fours": 24,
-        "sixes": 9
-      },
-      {
-        "rank": 10,
         "name": "Ayush Mhatre",
         "team": "UNK",
         "team_color": "#888",
@@ -1276,6 +1263,19 @@
         "strike_rate": 177.88,
         "fours": 20,
         "sixes": 12
+      },
+      {
+        "rank": 10,
+        "name": "Jos Buttler",
+        "team": "RR",
+        "team_color": "#E83673",
+        "runs": 201,
+        "matches": 5,
+        "innings": 5,
+        "average": 40.2,
+        "strike_rate": 159.52,
+        "fours": 24,
+        "sixes": 9
       },
       {
         "rank": 11,
