@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-19",
+  "last_updated": "2026-04-20",
   "season": "2026",
   "matches_covered": 14,
   "matches_played": 29,
@@ -133,22 +133,6 @@
       "bowling_stats": null
     },
     {
-      "name": "Prabhsimran Singh",
-      "team": "PBKS",
-      "team_color": "#ED1F27",
-      "role": "batter",
-      "season_stats": {
-        "matches": 6,
-        "innings": 5,
-        "runs": 211,
-        "average": 52.75,
-        "strike_rate": 171.54,
-        "fours": 22,
-        "sixes": 11
-      },
-      "bowling_stats": null
-    },
-    {
       "name": "Priyansh Arya",
       "team": "UNK",
       "team_color": "#888",
@@ -161,6 +145,22 @@
         "strike_rate": 248.24,
         "fours": 14,
         "sixes": 20
+      },
+      "bowling_stats": null
+    },
+    {
+      "name": "Prabhsimran Singh",
+      "team": "PBKS",
+      "team_color": "#ED1F27",
+      "role": "batter",
+      "season_stats": {
+        "matches": 6,
+        "innings": 5,
+        "runs": 211,
+        "average": 52.75,
+        "strike_rate": 171.54,
+        "fours": 22,
+        "sixes": 11
       },
       "bowling_stats": null
     },
@@ -1238,19 +1238,6 @@
       },
       {
         "rank": 9,
-        "name": "Prabhsimran Singh",
-        "team": "PBKS",
-        "team_color": "#ED1F27",
-        "runs": 211,
-        "matches": 6,
-        "innings": 5,
-        "average": 52.75,
-        "strike_rate": 171.54,
-        "fours": 22,
-        "sixes": 11
-      },
-      {
-        "rank": 10,
         "name": "Priyansh Arya",
         "team": "UNK",
         "team_color": "#888",
@@ -1261,6 +1248,19 @@
         "strike_rate": 248.24,
         "fours": 14,
         "sixes": 20
+      },
+      {
+        "rank": 10,
+        "name": "Prabhsimran Singh",
+        "team": "PBKS",
+        "team_color": "#ED1F27",
+        "runs": 211,
+        "matches": 6,
+        "innings": 5,
+        "average": 52.75,
+        "strike_rate": 171.54,
+        "fours": 22,
+        "sixes": 11
       },
       {
         "rank": 11,

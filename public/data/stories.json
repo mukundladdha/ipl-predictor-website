@@ -859,6 +859,22 @@
         "fall": -0.20000000000000284
       },
       "generated_at": "2026-04-13"
+    },
+    {
+      "match_id": "weekly_week_4__apr_18___apr_24",
+      "date": "2026-04-20",
+      "week_label": "WEEK 4 · APR 18 – APR 24",
+      "type": "weekly",
+      "headline": "WEEK 4 · APR 18 – APR 24",
+      "body": "IPL 2026 Week 4: 0 matches played. GT gained the most ground this week (+0.4%), while RR slipped (-0.2%). Current top 4: PBKS 95.4%, RCB 77.4%, RR 69.0%, GT 56.5%. The cutoff fight between LSG (3.7%) vs KKR (1.0%) is the race to watch. Full projections updated after every match.",
+      "top4": "PBKS 95.4%, RCB 77.4%, RR 69.0%, GT 56.5%",
+      "biggest_mover": {
+        "riser": "GT",
+        "rise": 0.3999999999999986,
+        "faller": "RR",
+        "fall": -0.20000000000000284
+      },
+      "generated_at": "2026-04-20"
     }
   ]
 }
