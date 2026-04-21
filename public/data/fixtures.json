@@ -1,12 +1,6 @@
 {
   "fixtures": [
     {
-      "team1": "SRH",
-      "team2": "DC",
-      "date": "2026-04-21",
-      "venue": "Rajiv Gandhi International Stadium"
-    },
-    {
       "team1": "LSG",
       "team2": "RR",
       "date": "2026-04-22",
