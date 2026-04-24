@@ -1,12 +1,6 @@
 {
   "fixtures": [
     {
-      "team1": "RCB",
-      "team2": "GT",
-      "date": "2026-04-24",
-      "venue": "M. Chinnaswamy Stadium"
-    },
-    {
       "team1": "DC",
       "team2": "PBKS",
       "date": "2026-04-25",
