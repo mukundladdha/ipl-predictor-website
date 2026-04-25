@@ -1,18 +1,6 @@
 {
   "fixtures": [
     {
-      "team1": "DC",
-      "team2": "PBKS",
-      "date": "2026-04-25",
-      "venue": "Arun Jaitley Stadium"
-    },
-    {
-      "team1": "RR",
-      "team2": "SRH",
-      "date": "2026-04-25",
-      "venue": "Sawai Mansingh Stadium"
-    },
-    {
       "team1": "GT",
       "team2": "CSK",
       "date": "2026-04-26",
