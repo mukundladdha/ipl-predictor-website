@@ -1,18 +1,6 @@
 {
   "fixtures": [
     {
-      "team1": "GT",
-      "team2": "CSK",
-      "date": "2026-04-26",
-      "venue": "Narendra Modi Stadium"
-    },
-    {
-      "team1": "LSG",
-      "team2": "KKR",
-      "date": "2026-04-26",
-      "venue": "BRSABV Ekana Cricket Stadium"
-    },
-    {
       "team1": "DC",
       "team2": "RCB",
       "date": "2026-04-27",
