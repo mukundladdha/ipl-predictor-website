@@ -1,7 +1,7 @@
 {
-  "total_predictions": 38,
-  "correct": 19,
-  "accuracy_pct": 50.0,
+  "total_predictions": 39,
+  "correct": 20,
+  "accuracy_pct": 51.3,
   "predictions": [
     {
       "match_key": "2026-03-28_RCB_SRH",
@@ -382,6 +382,16 @@
       "actual_winner": "GT",
       "correct_elo": true,
       "correct_form": true
+    },
+    {
+      "match_key": "2026-04-27_DC_RCB",
+      "date": "2026-04-27",
+      "match": "DC vs RCB",
+      "predicted_winner_elo": "RCB",
+      "predicted_probability": 0.3508,
+      "actual_winner": "RCB",
+      "correct_elo": true,
+      "correct_form": true
     }
   ],
   "calibration": {
@@ -390,8 +400,8 @@
       "correct": 12
     },
     "60_70": {
-      "predictions": 11,
-      "correct": 6
+      "predictions": 12,
+      "correct": 7
     },
     "70_80": {
       "predictions": 1,
@@ -404,12 +414,12 @@
   },
   "by_model": {
     "elo": {
-      "correct": 19,
-      "total": 38
+      "correct": 20,
+      "total": 39
     },
     "form": {
-      "correct": 19,
-      "total": 38
+      "correct": 20,
+      "total": 39
     }
   }
 }
