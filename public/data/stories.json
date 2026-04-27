@@ -875,6 +875,22 @@
         "fall": -0.20000000000000284
       },
       "generated_at": "2026-04-20"
+    },
+    {
+      "match_id": "weekly_week_5__apr_25___may_01",
+      "date": "2026-04-27",
+      "week_label": "WEEK 5 · APR 25 – MAY 01",
+      "type": "weekly",
+      "headline": "WEEK 5 · APR 25 – MAY 01",
+      "body": "IPL 2026 Week 5: 0 matches played. SRH gained the most ground this week (+0.4%), while GT slipped (-0.5%). Current top 4: PBKS 98.5%, RCB 90.3%, RR 71.8%, SRH 70.4%. The cutoff fight between RR (71.8%) vs SRH (70.4%) is the race to watch. Full projections updated after every match.",
+      "top4": "PBKS 98.5%, RCB 90.3%, RR 71.8%, SRH 70.4%",
+      "biggest_mover": {
+        "riser": "SRH",
+        "rise": 0.4000000000000057,
+        "faller": "GT",
+        "fall": -0.5
+      },
+      "generated_at": "2026-04-27"
     }
   ]
 }
