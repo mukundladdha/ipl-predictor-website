@@ -1,7 +1,7 @@
 {
-  "total_predictions": 40,
-  "correct": 20,
-  "accuracy_pct": 50.0,
+  "total_predictions": 41,
+  "correct": 21,
+  "accuracy_pct": 51.2,
   "predictions": [
     {
       "match_key": "2026-03-28_RCB_SRH",
@@ -402,12 +402,22 @@
       "actual_winner": "RR",
       "correct_elo": false,
       "correct_form": false
+    },
+    {
+      "match_key": "2026-04-29_MI_SRH",
+      "date": "2026-04-29",
+      "match": "MI vs SRH",
+      "predicted_winner_elo": "SRH",
+      "predicted_probability": 0.4458,
+      "actual_winner": "SRH",
+      "correct_elo": true,
+      "correct_form": true
     }
   ],
   "calibration": {
     "50_60": {
-      "predictions": 26,
-      "correct": 12
+      "predictions": 27,
+      "correct": 13
     },
     "60_70": {
       "predictions": 13,
@@ -424,12 +434,12 @@
   },
   "by_model": {
     "elo": {
-      "correct": 20,
-      "total": 40
+      "correct": 21,
+      "total": 41
     },
     "form": {
-      "correct": 20,
-      "total": 40
+      "correct": 21,
+      "total": 41
     }
   }
 }
