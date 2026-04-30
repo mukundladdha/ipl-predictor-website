@@ -1,12 +1,6 @@
 {
   "fixtures": [
     {
-      "team1": "GT",
-      "team2": "RCB",
-      "date": "2026-04-30",
-      "venue": "Narendra Modi Stadium"
-    },
-    {
       "team1": "RR",
       "team2": "DC",
       "date": "2026-05-01",
