@@ -1,7 +1,7 @@
 {
-  "total_predictions": 43,
+  "total_predictions": 44,
   "correct": 21,
-  "accuracy_pct": 48.8,
+  "accuracy_pct": 47.7,
   "predictions": [
     {
       "match_key": "2026-03-28_RCB_SRH",
@@ -432,11 +432,21 @@
       "actual_winner": "DC",
       "correct_elo": false,
       "correct_form": false
+    },
+    {
+      "match_key": "2026-05-02_CSK_MI",
+      "date": "2026-05-02",
+      "match": "CSK vs MI",
+      "predicted_winner_elo": "MI",
+      "predicted_probability": 0.4986,
+      "actual_winner": "CSK",
+      "correct_elo": false,
+      "correct_form": false
     }
   ],
   "calibration": {
     "50_60": {
-      "predictions": 28,
+      "predictions": 29,
       "correct": 13
     },
     "60_70": {
@@ -455,11 +465,11 @@
   "by_model": {
     "elo": {
       "correct": 21,
-      "total": 43
+      "total": 44
     },
     "form": {
       "correct": 21,
-      "total": 43
+      "total": 44
     }
   }
 }
