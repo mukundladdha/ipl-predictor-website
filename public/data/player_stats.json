@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-03",
+  "last_updated": "2026-05-04",
   "season": "2026",
-  "matches_covered": 15,
+  "matches_covered": 14,
   "matches_played": 46,
   "players": [
     {
@@ -831,47 +831,32 @@
     },
     {
       "name": "Anshul Kamboj",
-      "team": "MI",
-      "team_color": "#004BA0",
+      "team": "RCB",
+      "team_color": "#D4001A",
       "role": "bowler",
       "season_stats": null,
       "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 8.0,
-        "runs_conceded": 84,
-        "wickets": 4,
-        "economy": 10.5
-      }
-    },
-    {
-      "name": "Noor Ahmad",
-      "team": "GT",
-      "team_color": "#1B2133",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 8.0,
-        "runs_conceded": 75,
-        "wickets": 2,
-        "economy": 9.38
+        "matches": 1,
+        "innings": 1,
+        "overs": 4.0,
+        "runs_conceded": 52,
+        "wickets": 1,
+        "economy": 13.0
       }
     },
     {
       "name": "Jamie Overton",
-      "team": "MI",
-      "team_color": "#004BA0",
+      "team": "RCB",
+      "team_color": "#D4001A",
       "role": "bowler",
       "season_stats": null,
       "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 7.0,
-        "runs_conceded": 65,
-        "wickets": 2,
-        "economy": 9.29
+        "matches": 1,
+        "innings": 1,
+        "overs": 3.0,
+        "runs_conceded": 42,
+        "wickets": 1,
+        "economy": 14.0
       }
     },
     {
@@ -887,21 +872,6 @@
         "runs_conceded": 30,
         "wickets": 1,
         "economy": 15.0
-      }
-    },
-    {
-      "name": "Ramakrishna Ghosh",
-      "team": "MI",
-      "team_color": "#004BA0",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 3.0,
-        "runs_conceded": 24,
-        "wickets": 1,
-        "economy": 8.0
       }
     },
     {
@@ -1191,17 +1161,6 @@
       },
       {
         "rank": 6,
-        "name": "Anshul Kamboj",
-        "team": "MI",
-        "team_color": "#004BA0",
-        "wickets": 4,
-        "matches": 2,
-        "overs": 8.0,
-        "runs_conceded": 84,
-        "economy": 10.5
-      },
-      {
-        "rank": 7,
         "name": "Jason Holder",
         "team": "PBKS",
         "team_color": "#ED1F27",
@@ -1212,7 +1171,7 @@
         "economy": 6.0
       },
       {
-        "rank": 8,
+        "rank": 7,
         "name": "Jacob Duffy",
         "team": "RCB",
         "team_color": "#D4001A",
@@ -1223,7 +1182,7 @@
         "economy": 5.5
       },
       {
-        "rank": 9,
+        "rank": 8,
         "name": "Romario Shepherd",
         "team": "RCB",
         "team_color": "#D4001A",
@@ -1234,7 +1193,7 @@
         "economy": 13.5
       },
       {
-        "rank": 10,
+        "rank": 9,
         "name": "Shardul Thakur",
         "team": "MI",
         "team_color": "#004BA0",
@@ -1245,7 +1204,7 @@
         "economy": 9.75
       },
       {
-        "rank": 11,
+        "rank": 10,
         "name": "Yuzvendra Chahal",
         "team": "RR",
         "team_color": "#E83673",
@@ -1256,7 +1215,7 @@
         "economy": 7.0
       },
       {
-        "rank": 12,
+        "rank": 11,
         "name": "Vaibhav Arora",
         "team": "SRH",
         "team_color": "#F26522",
@@ -1267,7 +1226,7 @@
         "economy": 10.29
       },
       {
-        "rank": 13,
+        "rank": 12,
         "name": "Varun Chakaravarthy",
         "team": "KKR",
         "team_color": "#3B2172",
@@ -1278,7 +1237,7 @@
         "economy": 11.17
       },
       {
-        "rank": 14,
+        "rank": 13,
         "name": "Kartik Tyagi",
         "team": "RR",
         "team_color": "#E83673",
@@ -1289,7 +1248,7 @@
         "economy": 9.75
       },
       {
-        "rank": 15,
+        "rank": 14,
         "name": "Mohammed Siraj",
         "team": "RCB",
         "team_color": "#D4001A",
@@ -1298,6 +1257,17 @@
         "overs": 8.0,
         "runs_conceded": 76,
         "economy": 9.5
+      },
+      {
+        "rank": 15,
+        "name": "Jofra Archer",
+        "team": "RR",
+        "team_color": "#E83673",
+        "wickets": 2,
+        "matches": 1,
+        "overs": 4.0,
+        "runs_conceded": 19,
+        "economy": 4.75
       }
     ]
   }

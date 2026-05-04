@@ -891,6 +891,22 @@
         "fall": -0.5
       },
       "generated_at": "2026-04-27"
+    },
+    {
+      "match_id": "weekly_week_6__may_02___may_08",
+      "date": "2026-05-04",
+      "week_label": "WEEK 6 · MAY 02 – MAY 08",
+      "type": "weekly",
+      "headline": "WEEK 6 · MAY 02 – MAY 08",
+      "body": "IPL 2026 Week 6: 0 matches played. PBKS gained the most ground this week (+0.3%), while RR slipped (-0.5%). Current top 4: PBKS 88.2%, RCB 86.9%, GT 69.1%, RR 68.2%. The cutoff fight between PBKS (88.2%) vs RCB (86.9%) is the race to watch. Full projections updated after every match.",
+      "top4": "PBKS 88.2%, RCB 86.9%, GT 69.1%, RR 68.2%",
+      "biggest_mover": {
+        "riser": "PBKS",
+        "rise": 0.29999999999999716,
+        "faller": "RR",
+        "fall": -0.5
+      },
+      "generated_at": "2026-05-04"
     }
   ]
 }
