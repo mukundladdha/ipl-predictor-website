@@ -1,7 +1,7 @@
 {
-  "total_predictions": 48,
+  "total_predictions": 49,
   "correct": 23,
-  "accuracy_pct": 47.9,
+  "accuracy_pct": 46.9,
   "predictions": [
     {
       "match_key": "2026-03-28_RCB_SRH",
@@ -482,11 +482,21 @@
       "actual_winner": "CSK",
       "correct_elo": true,
       "correct_form": true
+    },
+    {
+      "match_key": "2026-05-06_SRH_PBKS",
+      "date": "2026-05-06",
+      "match": "SRH vs PBKS",
+      "predicted_winner_elo": "PBKS",
+      "predicted_probability": 0.446,
+      "actual_winner": "SRH",
+      "correct_elo": false,
+      "correct_form": false
     }
   ],
   "calibration": {
     "50_60": {
-      "predictions": 31,
+      "predictions": 32,
       "correct": 14
     },
     "60_70": {
@@ -505,11 +515,11 @@
   "by_model": {
     "elo": {
       "correct": 23,
-      "total": 48
+      "total": 49
     },
     "form": {
       "correct": 23,
-      "total": 48
+      "total": 49
     }
   }
 }
