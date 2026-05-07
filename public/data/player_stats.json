@@ -138,11 +138,11 @@
       "team_color": "#D4001A",
       "role": "batter",
       "season_stats": {
-        "matches": 9,
-        "innings": 9,
+        "matches": 10,
+        "innings": 10,
         "runs": 379,
-        "average": 54.14,
-        "strike_rate": 165.5,
+        "average": 47.38,
+        "strike_rate": 164.07,
         "fours": 42,
         "sixes": 15
       },
@@ -177,6 +177,22 @@
         "strike_rate": 171.36,
         "fours": 31,
         "sixes": 26
+      },
+      "bowling_stats": null
+    },
+    {
+      "name": "Mitchell Marsh",
+      "team": "UNK",
+      "team_color": "#888",
+      "role": "batter",
+      "season_stats": {
+        "matches": 10,
+        "innings": 10,
+        "runs": 367,
+        "average": 36.7,
+        "strike_rate": 152.92,
+        "fours": 31,
+        "sixes": 23
       },
       "bowling_stats": null
     },
@@ -229,22 +245,6 @@
       "bowling_stats": null
     },
     {
-      "name": "Shreyas Iyer",
-      "team": "UNK",
-      "team_color": "#888",
-      "role": "batter",
-      "season_stats": {
-        "matches": 10,
-        "innings": 9,
-        "runs": 333,
-        "average": 47.57,
-        "strike_rate": 164.04,
-        "fours": 22,
-        "sixes": 22
-      },
-      "bowling_stats": null
-    },
-    {
       "name": "Jacob Duffy",
       "team": "RCB",
       "team_color": "#D4001A",
@@ -266,12 +266,12 @@
       "role": "bowler",
       "season_stats": null,
       "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 31,
+        "matches": 2,
+        "innings": 2,
+        "overs": 8.0,
+        "runs_conceded": 65,
         "wickets": 1,
-        "economy": 7.75
+        "economy": 8.12
       }
     },
     {
@@ -311,12 +311,27 @@
       "role": "bowler",
       "season_stats": null,
       "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 3.0,
-        "runs_conceded": 28,
+        "matches": 2,
+        "innings": 2,
+        "overs": 5.0,
+        "runs_conceded": 49,
         "wickets": 1,
-        "economy": 9.33
+        "economy": 9.8
+      }
+    },
+    {
+      "name": "Krunal Pandya",
+      "team": "RCB",
+      "team_color": "#D4001A",
+      "role": "allrounder",
+      "season_stats": null,
+      "bowling_stats": {
+        "matches": 2,
+        "innings": 2,
+        "overs": 6.0,
+        "runs_conceded": 57,
+        "wickets": 1,
+        "economy": 9.5
       }
     },
     {
@@ -332,21 +347,6 @@
         "runs_conceded": 39,
         "wickets": 1,
         "economy": 13.0
-      }
-    },
-    {
-      "name": "AM Ghazanfar",
-      "team": "LSG",
-      "team_color": "#A0522D",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 8.0,
-        "runs_conceded": 101,
-        "wickets": 1,
-        "economy": 12.62
       }
     },
     {
@@ -890,36 +890,6 @@
       }
     },
     {
-      "name": "Will Jacks",
-      "team": "MI",
-      "team_color": "#004BA0",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 2.0,
-        "runs_conceded": 34,
-        "wickets": 1,
-        "economy": 17.0
-      }
-    },
-    {
-      "name": "Corbin Bosch",
-      "team": "LSG",
-      "team_color": "#A0522D",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 2.0,
-        "runs_conceded": 20,
-        "wickets": 2,
-        "economy": 10.0
-      }
-    },
-    {
       "name": "Akeal Hosein",
       "team": "DC",
       "team_color": "#00008B",
@@ -977,6 +947,36 @@
         "runs_conceded": 41,
         "wickets": 1,
         "economy": 10.25
+      }
+    },
+    {
+      "name": "Josh Hazlewood",
+      "team": "RCB",
+      "team_color": "#D4001A",
+      "role": "bowler",
+      "season_stats": null,
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "overs": 4.0,
+        "runs_conceded": 49,
+        "wickets": 1,
+        "economy": 12.25
+      }
+    },
+    {
+      "name": "Rasikh Salam Dar",
+      "team": "LSG",
+      "team_color": "#A0522D",
+      "role": "bowler",
+      "season_stats": null,
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "overs": 4.0,
+        "runs_conceded": 53,
+        "wickets": 1,
+        "economy": 13.25
       }
     }
   ],
@@ -1092,10 +1092,10 @@
         "team": "RCB",
         "team_color": "#D4001A",
         "runs": 379,
-        "matches": 9,
-        "innings": 9,
-        "average": 54.14,
-        "strike_rate": 165.5,
+        "matches": 10,
+        "innings": 10,
+        "average": 47.38,
+        "strike_rate": 164.07,
         "fours": 42,
         "sixes": 15
       },
@@ -1127,6 +1127,19 @@
       },
       {
         "rank": 12,
+        "name": "Mitchell Marsh",
+        "team": "UNK",
+        "team_color": "#888",
+        "runs": 367,
+        "matches": 10,
+        "innings": 10,
+        "average": 36.7,
+        "strike_rate": 152.92,
+        "fours": 31,
+        "sixes": 23
+      },
+      {
+        "rank": 13,
         "name": "Prabhsimran Singh",
         "team": "PBKS",
         "team_color": "#ED1F27",
@@ -1139,7 +1152,7 @@
         "sixes": 17
       },
       {
-        "rank": 13,
+        "rank": 14,
         "name": "Travis Head",
         "team": "SRH",
         "team_color": "#F26522",
@@ -1152,7 +1165,7 @@
         "sixes": 22
       },
       {
-        "rank": 14,
+        "rank": 15,
         "name": "Jos Buttler",
         "team": "RR",
         "team_color": "#E83673",
@@ -1163,19 +1176,6 @@
         "strike_rate": 152.97,
         "fours": 34,
         "sixes": 17
-      },
-      {
-        "rank": 15,
-        "name": "Shreyas Iyer",
-        "team": "UNK",
-        "team_color": "#888",
-        "runs": 333,
-        "matches": 10,
-        "innings": 9,
-        "average": 47.57,
-        "strike_rate": 164.04,
-        "fours": 22,
-        "sixes": 22
       }
     ],
     "purple_cap": [
