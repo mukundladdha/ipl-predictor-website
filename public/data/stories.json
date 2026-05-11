@@ -907,6 +907,22 @@
         "fall": -0.5
       },
       "generated_at": "2026-05-04"
+    },
+    {
+      "match_id": "weekly_week_7__may_09___may_15",
+      "date": "2026-05-11",
+      "week_label": "WEEK 7 · MAY 09 – MAY 15",
+      "type": "weekly",
+      "headline": "WEEK 7 · MAY 09 – MAY 15",
+      "body": "IPL 2026 Week 7: 0 matches played. GT gained the most ground this week (+0.1%), while KKR slipped (-0.2%). Current top 4: RCB 92.4%, GT 78.2%, PBKS 73.2%, SRH 70.9%. The cutoff fight between PBKS (73.2%) vs SRH (70.9%) is the race to watch. Full projections updated after every match.",
+      "top4": "RCB 92.4%, GT 78.2%, PBKS 73.2%, SRH 70.9%",
+      "biggest_mover": {
+        "riser": "GT",
+        "rise": 0.10000000000000853,
+        "faller": "KKR",
+        "fall": -0.20000000000000018
+      },
+      "generated_at": "2026-05-11"
     }
   ]
 }

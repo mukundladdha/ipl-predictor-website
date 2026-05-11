@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-10",
+  "last_updated": "2026-05-11",
   "season": "2026",
   "matches_covered": 15,
   "matches_played": 53,
@@ -69,22 +69,6 @@
       "bowling_stats": null
     },
     {
-      "name": "Vaibhav Sooryavanshi",
-      "team": "RR",
-      "team_color": "#E83673",
-      "role": "batter",
-      "season_stats": {
-        "matches": 11,
-        "innings": 11,
-        "runs": 440,
-        "average": 40.0,
-        "strike_rate": 236.56,
-        "fours": 38,
-        "sixes": 40
-      },
-      "bowling_stats": null
-    },
-    {
       "name": "Sai Sudharsan",
       "team": "GT",
       "team_color": "#1B2133",
@@ -97,6 +81,22 @@
         "strike_rate": 157.71,
         "fours": 44,
         "sixes": 20
+      },
+      "bowling_stats": null
+    },
+    {
+      "name": "Vaibhav Sooryavanshi",
+      "team": "RR",
+      "team_color": "#E83673",
+      "role": "batter",
+      "season_stats": {
+        "matches": 11,
+        "innings": 11,
+        "runs": 440,
+        "average": 40.0,
+        "strike_rate": 236.56,
+        "fours": 38,
+        "sixes": 40
       },
       "bowling_stats": null
     },
@@ -961,19 +961,6 @@
       },
       {
         "rank": 5,
-        "name": "Vaibhav Sooryavanshi",
-        "team": "RR",
-        "team_color": "#E83673",
-        "runs": 440,
-        "matches": 11,
-        "innings": 11,
-        "average": 40.0,
-        "strike_rate": 236.56,
-        "fours": 38,
-        "sixes": 40
-      },
-      {
-        "rank": 6,
         "name": "Sai Sudharsan",
         "team": "GT",
         "team_color": "#1B2133",
@@ -984,6 +971,19 @@
         "strike_rate": 157.71,
         "fours": 44,
         "sixes": 20
+      },
+      {
+        "rank": 6,
+        "name": "Vaibhav Sooryavanshi",
+        "team": "RR",
+        "team_color": "#E83673",
+        "runs": 440,
+        "matches": 11,
+        "innings": 11,
+        "average": 40.0,
+        "strike_rate": 236.56,
+        "fours": 38,
+        "sixes": 40
       },
       {
         "rank": 7,
