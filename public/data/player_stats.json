@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-13",
+  "last_updated": "2026-05-14",
   "season": "2026",
   "matches_covered": 14,
   "matches_played": 56,
@@ -181,22 +181,6 @@
       "bowling_stats": null
     },
     {
-      "name": "Prabhsimran Singh",
-      "team": "PBKS",
-      "team_color": "#ED1F27",
-      "role": "batter",
-      "season_stats": {
-        "matches": 11,
-        "innings": 10,
-        "runs": 382,
-        "average": 42.44,
-        "strike_rate": 169.03,
-        "fours": 42,
-        "sixes": 17
-      },
-      "bowling_stats": null
-    },
-    {
       "name": "Ryan Rickelton",
       "team": "MI",
       "team_color": "#004BA0",
@@ -209,6 +193,22 @@
         "strike_rate": 188.18,
         "fours": 25,
         "sixes": 33
+      },
+      "bowling_stats": null
+    },
+    {
+      "name": "Prabhsimran Singh",
+      "team": "PBKS",
+      "team_color": "#ED1F27",
+      "role": "batter",
+      "season_stats": {
+        "matches": 11,
+        "innings": 10,
+        "runs": 382,
+        "average": 42.44,
+        "strike_rate": 169.03,
+        "fours": 42,
+        "sixes": 17
       },
       "bowling_stats": null
     },
@@ -1067,19 +1067,6 @@
       },
       {
         "rank": 12,
-        "name": "Prabhsimran Singh",
-        "team": "PBKS",
-        "team_color": "#ED1F27",
-        "runs": 382,
-        "matches": 11,
-        "innings": 10,
-        "average": 42.44,
-        "strike_rate": 169.03,
-        "fours": 42,
-        "sixes": 17
-      },
-      {
-        "rank": 13,
         "name": "Ryan Rickelton",
         "team": "MI",
         "team_color": "#004BA0",
@@ -1090,6 +1077,19 @@
         "strike_rate": 188.18,
         "fours": 25,
         "sixes": 33
+      },
+      {
+        "rank": 13,
+        "name": "Prabhsimran Singh",
+        "team": "PBKS",
+        "team_color": "#ED1F27",
+        "runs": 382,
+        "matches": 11,
+        "innings": 10,
+        "average": 42.44,
+        "strike_rate": 169.03,
+        "fours": 42,
+        "sixes": 17
       },
       {
         "rank": 14,

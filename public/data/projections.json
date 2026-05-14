@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-05-13",
+  "last_updated": "2026-05-14",
   "season_start": "2026-03-28",
   "defending_champion": "RCB",
   "pre_season": false,
   "matches_played": 56,
   "matches_remaining": 14,
   "playoff_spots": 4,
-  "model_note": "Elo ratings calculated from all IPL results through 2026-05-13. Monte Carlo simulation uses 100,000 iterations per model.",
+  "model_note": "Elo ratings calculated from all IPL results through 2026-05-14. Monte Carlo simulation uses 100,000 iterations per model.",
   "teams": [
     {
       "name": "Mumbai Indians",
@@ -27,11 +27,11 @@
             0.0,
             0.0,
             0.1,
-            0.7,
-            5.6,
-            20.9,
-            56.4,
-            16.3
+            0.8,
+            5.5,
+            21.3,
+            56.0,
+            16.4
           ]
         },
         "form": {
@@ -43,10 +43,10 @@
             0.0,
             0.1,
             1.2,
-            5.5,
-            19.8,
-            50.4,
-            22.9
+            5.4,
+            20.0,
+            50.5,
+            22.8
           ]
         }
       },
@@ -158,6 +158,7 @@
           0.0,
           0.0,
           0.0,
+          0.0,
           0.0
         ],
         "form": [
@@ -261,6 +262,7 @@
           0.0,
           0.0,
           0.0,
+          0.0,
           0.0
         ]
       },
@@ -279,12 +281,12 @@
       "nrr": 0.0,
       "models": {
         "elo": {
-          "playoff_pct": 98.6,
+          "playoff_pct": 98.5,
           "rank_probs": [
-            69.6,
-            19.4,
-            6.7,
-            2.9,
+            69.3,
+            19.6,
+            6.8,
+            3.0,
             1.1,
             0.3,
             0.0,
@@ -296,12 +298,12 @@
         "form": {
           "playoff_pct": 98.4,
           "rank_probs": [
-            69.1,
-            19.5,
-            7.0,
+            69.0,
+            19.6,
+            6.9,
             2.8,
             1.3,
-            0.4,
+            0.3,
             0.0,
             0.0,
             0.0,
@@ -417,7 +419,8 @@
           94.0,
           94.0,
           94.1,
-          98.6
+          98.6,
+          98.5
         ],
         "form": [
           76,
@@ -520,11 +523,12 @@
           92.4,
           92.5,
           92.8,
+          98.4,
           98.4
         ]
       },
       "key_players": "Virat Kohli, Faf du Plessis, Josh Hazlewood",
-      "why_changed": "Won vs KKR · Elo 1571→1584 · odds +4.5% to 98.6% · Next: vs LSG (2026-05-07)"
+      "why_changed": "Won vs KKR · Elo 1584→1584 · odds -0.1% to 98.5% · Next: vs LSG (2026-05-07)"
     },
     {
       "name": "Kolkata Knight Riders",
@@ -538,17 +542,17 @@
       "nrr": 0.0,
       "models": {
         "elo": {
-          "playoff_pct": 0.3,
+          "playoff_pct": 0.4,
           "rank_probs": [
             0.0,
             0.0,
             0.0,
             0.3,
-            2.0,
+            1.9,
             6.6,
-            28.7,
-            39.2,
-            20.5,
+            28.5,
+            39.3,
+            20.8,
             2.6
           ]
         },
@@ -559,12 +563,12 @@
             0.0,
             0.0,
             0.7,
-            3.1,
+            2.9,
             8.2,
-            26.6,
-            37.3,
-            19.8,
-            4.2
+            26.5,
+            37.6,
+            19.9,
+            4.1
           ]
         }
       },
@@ -676,7 +680,8 @@
           3.9,
           3.6,
           3.5,
-          0.3
+          0.3,
+          0.4
         ],
         "form": [
           52,
@@ -779,11 +784,12 @@
           7.4,
           7.2,
           7.2,
+          0.7,
           0.7
         ]
       },
       "key_players": "Ajinkya Rahane, Andre Russell, Sunil Narine",
-      "why_changed": "Lost vs RCB · Elo 1500→1487 · odds -3.2% to 0.3% · Next: vs GT (2026-05-16)"
+      "why_changed": "Lost vs RCB · Elo 1487→1487 · odds +0.1% to 0.4% · Next: vs GT (2026-05-16)"
     },
     {
       "name": "Gujarat Titans",
@@ -797,12 +803,12 @@
       "nrr": 0.0,
       "models": {
         "elo": {
-          "playoff_pct": 95.7,
+          "playoff_pct": 95.6,
           "rank_probs": [
-            23.3,
+            23.8,
             48.7,
-            16.2,
-            7.5,
+            16.1,
+            7.1,
             3.4,
             0.9,
             0.0,
@@ -814,10 +820,10 @@
         "form": {
           "playoff_pct": 95.7,
           "rank_probs": [
-            22.6,
-            46.7,
-            18.0,
-            8.4,
+            22.7,
+            47.0,
+            17.8,
+            8.2,
             3.5,
             0.8,
             0.0,
@@ -935,7 +941,8 @@
           82.0,
           95.3,
           95.4,
-          95.7
+          95.7,
+          95.6
         ],
         "form": [
           46,
@@ -1038,11 +1045,12 @@
           80.9,
           94.8,
           94.9,
+          95.7,
           95.7
         ]
       },
       "key_players": "Shubman Gill, Rashid Khan, Jos Buttler",
-      "why_changed": "Lost vs None · Elo 1580→1580 · odds +0.3% to 95.7% · Next: vs KKR (2026-05-16)"
+      "why_changed": "Lost vs None · Elo 1580→1580 · odds -0.1% to 95.6% · Next: vs KKR (2026-05-16)"
     },
     {
       "name": "Chennai Super Kings",
@@ -1059,28 +1067,28 @@
           "playoff_pct": 44.4,
           "rank_probs": [
             1.5,
-            8.8,
+            8.6,
             15.4,
-            18.7,
-            21.4,
-            25.5,
-            7.7,
-            1.0,
+            18.8,
+            21.3,
+            25.4,
+            7.8,
+            1.1,
             0.0,
             0.0
           ]
         },
         "form": {
-          "playoff_pct": 53.2,
+          "playoff_pct": 53.5,
           "rank_probs": [
-            2.3,
-            12.1,
-            18.9,
-            19.9,
-            20.2,
-            18.6,
+            2.4,
+            11.7,
+            19.3,
+            20.1,
+            20.3,
+            18.4,
             6.7,
-            1.2,
+            1.1,
             0.1,
             0.0
           ]
@@ -1194,6 +1202,7 @@
           43.5,
           44.3,
           44.7,
+          44.4,
           44.4
         ],
         "form": [
@@ -1297,11 +1306,12 @@
           51.1,
           53.4,
           53.4,
-          53.2
+          53.2,
+          53.5
         ]
       },
       "key_players": "Ruturaj Gaikwad, Ravindra Jadeja, Deepak Chahar",
-      "why_changed": "Lost vs None · Elo 1520→1520 · odds -0.3% to 44.4% · Next: vs LSG (2026-05-15)"
+      "why_changed": "Lost vs None · Elo 1520→1520 · odds 0.0% to 44.4% · Next: vs LSG (2026-05-15)"
     },
     {
       "name": "Sunrisers Hyderabad",
@@ -1315,14 +1325,14 @@
       "nrr": 0.0,
       "models": {
         "elo": {
-          "playoff_pct": 58.7,
+          "playoff_pct": 58.8,
           "rank_probs": [
-            2.6,
+            2.5,
             9.2,
-            23.5,
+            23.7,
             23.4,
-            20.8,
-            17.9,
+            20.5,
+            18.2,
             2.6,
             0.0,
             0.0,
@@ -1330,14 +1340,14 @@
           ]
         },
         "form": {
-          "playoff_pct": 61.5,
+          "playoff_pct": 61.4,
           "rank_probs": [
-            3.3,
-            10.3,
-            24.6,
-            23.2,
-            20.5,
-            15.2,
+            3.2,
+            10.4,
+            24.4,
+            23.4,
+            20.3,
+            15.5,
             2.8,
             0.0,
             0.0,
@@ -1453,7 +1463,8 @@
           75.8,
           59.7,
           59.4,
-          58.7
+          58.7,
+          58.8
         ],
         "form": [
           52,
@@ -1556,11 +1567,12 @@
           79.2,
           61.9,
           61.8,
-          61.5
+          61.5,
+          61.4
         ]
       },
       "key_players": "Pat Cummins, Travis Head, Heinrich Klaasen",
-      "why_changed": "Lost vs None · Elo 1530→1530 · odds -0.7% to 58.7% · Next: vs CSK (2026-05-18)"
+      "why_changed": "Lost vs None · Elo 1530→1530 · odds +0.1% to 58.8% · Next: vs CSK (2026-05-18)"
     },
     {
       "name": "Punjab Kings",
@@ -1577,28 +1589,28 @@
           "playoff_pct": 49.5,
           "rank_probs": [
             1.9,
-            6.7,
-            18.0,
+            6.8,
+            17.8,
             22.9,
-            24.2,
+            24.1,
             19.5,
             5.9,
-            0.9,
+            1.0,
             0.0,
             0.0
           ]
         },
         "form": {
-          "playoff_pct": 41.0,
+          "playoff_pct": 40.8,
           "rank_probs": [
             1.7,
-            5.2,
+            5.1,
             13.9,
-            20.3,
-            23.1,
+            20.1,
             23.2,
+            23.1,
             10.3,
-            2.3,
+            2.4,
             0.1,
             0.0
           ]
@@ -1712,6 +1724,7 @@
           49.1,
           50.5,
           50.3,
+          49.5,
           49.5
         ],
         "form": [
@@ -1815,11 +1828,12 @@
           40.8,
           41.5,
           41.2,
-          41.0
+          41.0,
+          40.8
         ]
       },
       "key_players": "Shreyas Iyer, Yuzvendra Chahal, Arshdeep Singh",
-      "why_changed": "Lost vs None · Elo 1526→1526 · odds -0.8% to 49.5% · Next: vs MI (2026-05-14)"
+      "why_changed": "Lost vs None · Elo 1526→1526 · odds 0.0% to 49.5% · Next: vs MI (2026-05-14)"
     },
     {
       "name": "Rajasthan Royals",
@@ -1833,15 +1847,15 @@
       "nrr": 0.0,
       "models": {
         "elo": {
-          "playoff_pct": 51.6,
+          "playoff_pct": 51.5,
           "rank_probs": [
             1.1,
-            7.2,
-            20.2,
-            23.1,
-            22.2,
-            16.8,
-            7.7,
+            7.1,
+            20.1,
+            23.2,
+            22.6,
+            16.4,
+            7.8,
             1.6,
             0.1,
             0.0
@@ -1850,13 +1864,13 @@
         "form": {
           "playoff_pct": 47.4,
           "rank_probs": [
-            1.0,
+            1.1,
             6.2,
-            17.5,
+            17.6,
             22.6,
-            21.3,
-            18.1,
-            10.2,
+            21.5,
+            18.0,
+            10.1,
             2.8,
             0.2,
             0.0
@@ -1971,7 +1985,8 @@
           50.7,
           51.6,
           51.5,
-          51.6
+          51.6,
+          51.5
         ],
         "form": [
           30,
@@ -2074,11 +2089,12 @@
           46.3,
           46.9,
           47.0,
+          47.4,
           47.4
         ]
       },
       "key_players": "Sanju Samson, Shimron Hetmyer, Wanindu Hasaranga",
-      "why_changed": "Lost vs None · Elo 1491→1491 · odds +0.1% to 51.6% · Next: vs DC (2026-05-17)"
+      "why_changed": "Lost vs None · Elo 1491→1491 · odds -0.1% to 51.5% · Next: vs DC (2026-05-17)"
     },
     {
       "name": "Delhi Capitals",
@@ -2098,12 +2114,12 @@
             0.0,
             0.1,
             1.2,
-            4.9,
-            11.7,
-            41.3,
-            33.9,
+            5.0,
+            11.9,
+            41.7,
+            33.3,
             6.6,
-            0.3
+            0.2
           ]
         },
         "form": {
@@ -2113,11 +2129,11 @@
             0.0,
             0.1,
             2.0,
-            6.8,
-            14.1,
-            37.0,
-            32.3,
-            7.1,
+            6.7,
+            14.3,
+            37.6,
+            31.8,
+            7.0,
             0.6
           ]
         }
@@ -2230,6 +2246,7 @@
           1.1,
           1.1,
           1.1,
+          1.3,
           1.3
         ],
         "form": [
@@ -2333,11 +2350,12 @@
           1.7,
           1.9,
           1.8,
+          2.1,
           2.1
         ]
       },
       "key_players": "Axar Patel, Jake Fraser-McGurk, Kuldeep Yadav",
-      "why_changed": "Lost vs None · Elo 1460→1460 · odds +0.2% to 1.3% · Next: vs RR (2026-05-17)"
+      "why_changed": "Lost vs None · Elo 1460→1460 · odds 0.0% to 1.3% · Next: vs RR (2026-05-17)"
     },
     {
       "name": "Lucknow Super Giants",
@@ -2361,7 +2379,7 @@
             0.1,
             0.3,
             2.4,
-            16.4,
+            16.5,
             80.8
           ]
         },
@@ -2374,10 +2392,10 @@
             0.0,
             0.0,
             0.2,
-            0.8,
-            4.4,
-            22.3,
-            72.3
+            0.7,
+            4.3,
+            22.2,
+            72.5
           ]
         }
       },
@@ -2489,6 +2507,7 @@
           0.0,
           0.0,
           0.0,
+          0.0,
           0.0
         ],
         "form": [
@@ -2586,6 +2605,7 @@
           0.1,
           0.1,
           0.1,
+          0.0,
           0.0,
           0.0,
           0.0,
