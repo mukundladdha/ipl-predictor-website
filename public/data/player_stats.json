@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-14",
+  "last_updated": "2026-05-15",
   "season": "2026",
   "matches_covered": 14,
   "matches_played": 57,
@@ -149,22 +149,6 @@
       "bowling_stats": null
     },
     {
-      "name": "Ryan Rickelton",
-      "team": "MI",
-      "team_color": "#004BA0",
-      "role": "batter",
-      "season_stats": {
-        "matches": 10,
-        "innings": 10,
-        "runs": 430,
-        "average": 47.78,
-        "strike_rate": 190.27,
-        "fours": 29,
-        "sixes": 37
-      },
-      "bowling_stats": null
-    },
-    {
       "name": "Sanju Samson",
       "team": "RR",
       "team_color": "#E83673",
@@ -177,6 +161,22 @@
         "strike_rate": 169.29,
         "fours": 45,
         "sixes": 23
+      },
+      "bowling_stats": null
+    },
+    {
+      "name": "Ryan Rickelton",
+      "team": "MI",
+      "team_color": "#004BA0",
+      "role": "batter",
+      "season_stats": {
+        "matches": 10,
+        "innings": 10,
+        "runs": 430,
+        "average": 47.78,
+        "strike_rate": 190.27,
+        "fours": 29,
+        "sixes": 37
       },
       "bowling_stats": null
     },
@@ -1026,19 +1026,6 @@
       },
       {
         "rank": 10,
-        "name": "Ryan Rickelton",
-        "team": "MI",
-        "team_color": "#004BA0",
-        "runs": 430,
-        "matches": 10,
-        "innings": 10,
-        "average": 47.78,
-        "strike_rate": 190.27,
-        "fours": 29,
-        "sixes": 37
-      },
-      {
-        "rank": 11,
         "name": "Sanju Samson",
         "team": "RR",
         "team_color": "#E83673",
@@ -1049,6 +1036,19 @@
         "strike_rate": 169.29,
         "fours": 45,
         "sixes": 23
+      },
+      {
+        "rank": 11,
+        "name": "Ryan Rickelton",
+        "team": "MI",
+        "team_color": "#004BA0",
+        "runs": 430,
+        "matches": 10,
+        "innings": 10,
+        "average": 47.78,
+        "strike_rate": 190.27,
+        "fours": 29,
+        "sixes": 37
       },
       {
         "rank": 12,
