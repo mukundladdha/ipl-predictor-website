@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-15",
+  "last_updated": "2026-05-16",
   "season": "2026",
   "matches_covered": 13,
   "matches_played": 58,
@@ -85,22 +85,6 @@
       "bowling_stats": null
     },
     {
-      "name": "Mitchell Marsh",
-      "team": "UNK",
-      "team_color": "#888",
-      "role": "batter",
-      "season_stats": {
-        "matches": 12,
-        "innings": 12,
-        "runs": 467,
-        "average": 38.92,
-        "strike_rate": 162.15,
-        "fours": 40,
-        "sixes": 31
-      },
-      "bowling_stats": null
-    },
-    {
       "name": "Shubman Gill",
       "team": "GT",
       "team_color": "#1B2133",
@@ -113,6 +97,22 @@
         "strike_rate": 158.31,
         "fours": 45,
         "sixes": 20
+      },
+      "bowling_stats": null
+    },
+    {
+      "name": "Mitchell Marsh",
+      "team": "UNK",
+      "team_color": "#888",
+      "role": "batter",
+      "season_stats": {
+        "matches": 12,
+        "innings": 12,
+        "runs": 467,
+        "average": 38.92,
+        "strike_rate": 162.15,
+        "fours": 40,
+        "sixes": 31
       },
       "bowling_stats": null
     },
@@ -944,19 +944,6 @@
       },
       {
         "rank": 6,
-        "name": "Mitchell Marsh",
-        "team": "UNK",
-        "team_color": "#888",
-        "runs": 467,
-        "matches": 12,
-        "innings": 12,
-        "average": 38.92,
-        "strike_rate": 162.15,
-        "fours": 40,
-        "sixes": 31
-      },
-      {
-        "rank": 7,
         "name": "Shubman Gill",
         "team": "GT",
         "team_color": "#1B2133",
@@ -967,6 +954,19 @@
         "strike_rate": 158.31,
         "fours": 45,
         "sixes": 20
+      },
+      {
+        "rank": 7,
+        "name": "Mitchell Marsh",
+        "team": "UNK",
+        "team_color": "#888",
+        "runs": 467,
+        "matches": 12,
+        "innings": 12,
+        "average": 38.92,
+        "strike_rate": 162.15,
+        "fours": 40,
+        "sixes": 31
       },
       {
         "rank": 8,
