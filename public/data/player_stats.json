@@ -1,9 +1,25 @@
 {
   "last_updated": "2026-05-18",
   "season": "2026",
-  "matches_covered": 14,
-  "matches_played": 61,
+  "matches_covered": 15,
+  "matches_played": 62,
   "players": [
+    {
+      "name": "Heinrich Klaasen",
+      "team": "SRH",
+      "team_color": "#F26522",
+      "role": "wicketkeeper",
+      "season_stats": {
+        "matches": 13,
+        "innings": 13,
+        "runs": 555,
+        "average": 50.45,
+        "strike_rate": 155.9,
+        "fours": 44,
+        "sixes": 25
+      },
+      "bowling_stats": null
+    },
     {
       "name": "Sai Sudharsan",
       "team": "GT",
@@ -69,18 +85,34 @@
       "bowling_stats": null
     },
     {
-      "name": "Heinrich Klaasen",
+      "name": "Abhishek Sharma",
+      "team": "SRH",
+      "team_color": "#F26522",
+      "role": "batter",
+      "season_stats": {
+        "matches": 13,
+        "innings": 13,
+        "runs": 507,
+        "average": 42.25,
+        "strike_rate": 201.99,
+        "fours": 46,
+        "sixes": 38
+      },
+      "bowling_stats": null
+    },
+    {
+      "name": "Ishan Kishan",
       "team": "SRH",
       "team_color": "#F26522",
       "role": "wicketkeeper",
       "season_stats": {
-        "matches": 12,
-        "innings": 12,
-        "runs": 508,
-        "average": 50.8,
-        "strike_rate": 153.94,
-        "fours": 38,
-        "sixes": 23
+        "matches": 13,
+        "innings": 13,
+        "runs": 490,
+        "average": 37.69,
+        "strike_rate": 179.49,
+        "fours": 49,
+        "sixes": 26
       },
       "bowling_stats": null
     },
@@ -101,18 +133,18 @@
       "bowling_stats": null
     },
     {
-      "name": "Abhishek Sharma",
-      "team": "SRH",
-      "team_color": "#F26522",
-      "role": "batter",
+      "name": "Sanju Samson",
+      "team": "RR",
+      "team_color": "#E83673",
+      "role": "wicketkeeper",
       "season_stats": {
-        "matches": 12,
-        "innings": 12,
-        "runs": 481,
-        "average": 43.73,
-        "strike_rate": 209.13,
-        "fours": 43,
-        "sixes": 37
+        "matches": 13,
+        "innings": 13,
+        "runs": 477,
+        "average": 47.7,
+        "strike_rate": 166.2,
+        "fours": 53,
+        "sixes": 24
       },
       "bowling_stats": null
     },
@@ -145,22 +177,6 @@
         "strike_rate": 162.15,
         "fours": 40,
         "sixes": 31
-      },
-      "bowling_stats": null
-    },
-    {
-      "name": "Sanju Samson",
-      "team": "RR",
-      "team_color": "#E83673",
-      "role": "wicketkeeper",
-      "season_stats": {
-        "matches": 12,
-        "innings": 12,
-        "runs": 450,
-        "average": 50.0,
-        "strike_rate": 164.23,
-        "fours": 48,
-        "sixes": 23
       },
       "bowling_stats": null
     },
@@ -209,22 +225,6 @@
         "strike_rate": 146.53,
         "fours": 40,
         "sixes": 19
-      },
-      "bowling_stats": null
-    },
-    {
-      "name": "Ishan Kishan",
-      "team": "SRH",
-      "team_color": "#F26522",
-      "role": "wicketkeeper",
-      "season_stats": {
-        "matches": 12,
-        "innings": 12,
-        "runs": 420,
-        "average": 35.0,
-        "strike_rate": 185.84,
-        "fours": 42,
-        "sixes": 23
       },
       "bowling_stats": null
     },
@@ -903,12 +903,85 @@
         "wickets": 2,
         "economy": 6.75
       }
+    },
+    {
+      "name": "Praful Hinge",
+      "team": "CSK",
+      "team_color": "#F9CD05",
+      "role": "bowler",
+      "season_stats": null,
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "overs": 3.0,
+        "runs_conceded": 37,
+        "wickets": 1,
+        "economy": 12.33
+      }
+    },
+    {
+      "name": "Pat Cummins",
+      "team": "SRH",
+      "team_color": "#F26522",
+      "role": "allrounder",
+      "season_stats": null,
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "overs": 4.0,
+        "runs_conceded": 28,
+        "wickets": 3,
+        "economy": 7.0
+      }
+    },
+    {
+      "name": "Eshan Malinga",
+      "team": "CSK",
+      "team_color": "#F9CD05",
+      "role": "bowler",
+      "season_stats": null,
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "overs": 4.0,
+        "runs_conceded": 26,
+        "wickets": 1,
+        "economy": 6.5
+      }
+    },
+    {
+      "name": "Sakib Hussain",
+      "team": "CSK",
+      "team_color": "#F9CD05",
+      "role": "bowler",
+      "season_stats": null,
+      "bowling_stats": {
+        "matches": 1,
+        "innings": 1,
+        "overs": 4.0,
+        "runs_conceded": 34,
+        "wickets": 2,
+        "economy": 8.5
+      }
     }
   ],
   "leaderboards": {
     "orange_cap": [
       {
         "rank": 1,
+        "name": "Heinrich Klaasen",
+        "team": "SRH",
+        "team_color": "#F26522",
+        "runs": 555,
+        "matches": 13,
+        "innings": 13,
+        "average": 50.45,
+        "strike_rate": 155.9,
+        "fours": 44,
+        "sixes": 25
+      },
+      {
+        "rank": 2,
         "name": "Sai Sudharsan",
         "team": "GT",
         "team_color": "#1B2133",
@@ -921,7 +994,7 @@
         "sixes": 25
       },
       {
-        "rank": 2,
+        "rank": 3,
         "name": "Shubman Gill",
         "team": "GT",
         "team_color": "#1B2133",
@@ -934,7 +1007,7 @@
         "sixes": 27
       },
       {
-        "rank": 3,
+        "rank": 4,
         "name": "Virat Kohli",
         "team": "RCB",
         "team_color": "#D4001A",
@@ -947,7 +1020,7 @@
         "sixes": 21
       },
       {
-        "rank": 4,
+        "rank": 5,
         "name": "KL Rahul",
         "team": "DC",
         "team_color": "#00008B",
@@ -960,20 +1033,33 @@
         "sixes": 27
       },
       {
-        "rank": 5,
-        "name": "Heinrich Klaasen",
+        "rank": 6,
+        "name": "Abhishek Sharma",
         "team": "SRH",
         "team_color": "#F26522",
-        "runs": 508,
-        "matches": 12,
-        "innings": 12,
-        "average": 50.8,
-        "strike_rate": 153.94,
-        "fours": 38,
-        "sixes": 23
+        "runs": 507,
+        "matches": 13,
+        "innings": 13,
+        "average": 42.25,
+        "strike_rate": 201.99,
+        "fours": 46,
+        "sixes": 38
       },
       {
-        "rank": 6,
+        "rank": 7,
+        "name": "Ishan Kishan",
+        "team": "SRH",
+        "team_color": "#F26522",
+        "runs": 490,
+        "matches": 13,
+        "innings": 13,
+        "average": 37.69,
+        "strike_rate": 179.49,
+        "fours": 49,
+        "sixes": 26
+      },
+      {
+        "rank": 8,
         "name": "Vaibhav Sooryavanshi",
         "team": "RR",
         "team_color": "#E83673",
@@ -986,20 +1072,20 @@
         "sixes": 43
       },
       {
-        "rank": 7,
-        "name": "Abhishek Sharma",
-        "team": "SRH",
-        "team_color": "#F26522",
-        "runs": 481,
-        "matches": 12,
-        "innings": 12,
-        "average": 43.73,
-        "strike_rate": 209.13,
-        "fours": 43,
-        "sixes": 37
+        "rank": 9,
+        "name": "Sanju Samson",
+        "team": "RR",
+        "team_color": "#E83673",
+        "runs": 477,
+        "matches": 13,
+        "innings": 13,
+        "average": 47.7,
+        "strike_rate": 166.2,
+        "fours": 53,
+        "sixes": 24
       },
       {
-        "rank": 8,
+        "rank": 10,
         "name": "Cooper Connolly",
         "team": "LSG",
         "team_color": "#A0522D",
@@ -1012,7 +1098,7 @@
         "sixes": 32
       },
       {
-        "rank": 9,
+        "rank": 11,
         "name": "Mitchell Marsh",
         "team": "UNK",
         "team_color": "#888",
@@ -1025,20 +1111,7 @@
         "sixes": 31
       },
       {
-        "rank": 10,
-        "name": "Sanju Samson",
-        "team": "RR",
-        "team_color": "#E83673",
-        "runs": 450,
-        "matches": 12,
-        "innings": 12,
-        "average": 50.0,
-        "strike_rate": 164.23,
-        "fours": 48,
-        "sixes": 23
-      },
-      {
-        "rank": 11,
+        "rank": 12,
         "name": "Prabhsimran Singh",
         "team": "PBKS",
         "team_color": "#ED1F27",
@@ -1051,7 +1124,7 @@
         "sixes": 21
       },
       {
-        "rank": 12,
+        "rank": 13,
         "name": "Ryan Rickelton",
         "team": "MI",
         "team_color": "#004BA0",
@@ -1064,7 +1137,7 @@
         "sixes": 37
       },
       {
-        "rank": 13,
+        "rank": 14,
         "name": "Angkrish Raghuvanshi",
         "team": "KKR",
         "team_color": "#3B2172",
@@ -1075,19 +1148,6 @@
         "strike_rate": 146.53,
         "fours": 40,
         "sixes": 19
-      },
-      {
-        "rank": 14,
-        "name": "Ishan Kishan",
-        "team": "SRH",
-        "team_color": "#F26522",
-        "runs": 420,
-        "matches": 12,
-        "innings": 12,
-        "average": 35.0,
-        "strike_rate": 185.84,
-        "fours": 42,
-        "sixes": 23
       },
       {
         "rank": 15,
@@ -1205,6 +1265,17 @@
       },
       {
         "rank": 10,
+        "name": "Pat Cummins",
+        "team": "SRH",
+        "team_color": "#F26522",
+        "wickets": 3,
+        "matches": 1,
+        "overs": 4.0,
+        "runs_conceded": 28,
+        "economy": 7.0
+      },
+      {
+        "rank": 11,
         "name": "Jofra Archer",
         "team": "RR",
         "team_color": "#E83673",
@@ -1215,7 +1286,7 @@
         "economy": 4.75
       },
       {
-        "rank": 11,
+        "rank": 12,
         "name": "Nandre Burger",
         "team": "KKR",
         "team_color": "#3B2172",
@@ -1226,7 +1297,7 @@
         "economy": 6.5
       },
       {
-        "rank": 12,
+        "rank": 13,
         "name": "Ravindra Jadeja",
         "team": "CSK",
         "team_color": "#F9CD05",
@@ -1237,7 +1308,7 @@
         "economy": 6.0
       },
       {
-        "rank": 13,
+        "rank": 14,
         "name": "Marco Jansen",
         "team": "CSK",
         "team_color": "#F9CD05",
@@ -1248,7 +1319,7 @@
         "economy": 7.88
       },
       {
-        "rank": 14,
+        "rank": 15,
         "name": "Mukesh Kumar",
         "team": "RR",
         "team_color": "#E83673",
@@ -1257,17 +1328,6 @@
         "overs": 8.0,
         "runs_conceded": 83,
         "economy": 10.38
-      },
-      {
-        "rank": 15,
-        "name": "Axar Patel",
-        "team": "DC",
-        "team_color": "#00008B",
-        "wickets": 2,
-        "matches": 3,
-        "overs": 11.0,
-        "runs_conceded": 70,
-        "economy": 6.36
       }
     ]
   }
