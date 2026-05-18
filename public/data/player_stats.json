@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-17",
+  "last_updated": "2026-05-18",
   "season": "2026",
-  "matches_covered": 15,
+  "matches_covered": 14,
   "matches_played": 61,
   "players": [
     {
@@ -229,18 +229,18 @@
       "bowling_stats": null
     },
     {
-      "name": "Devdutt Padikkal",
-      "team": "RCB",
-      "team_color": "#D4001A",
+      "name": "Jos Buttler",
+      "team": "RR",
+      "team_color": "#E83673",
       "role": "batter",
       "season_stats": {
         "matches": 13,
-        "innings": 12,
+        "innings": 13,
         "runs": 412,
-        "average": 37.45,
-        "strike_rate": 173.11,
-        "fours": 42,
-        "sixes": 23
+        "average": 34.33,
+        "strike_rate": 149.82,
+        "fours": 41,
+        "sixes": 20
       },
       "bowling_stats": null
     },
@@ -671,12 +671,12 @@
       "role": "bowler",
       "season_stats": null,
       "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 8.0,
-        "runs_conceded": 98,
-        "wickets": 2,
-        "economy": 12.25
+        "matches": 1,
+        "innings": 1,
+        "overs": 4.0,
+        "runs_conceded": 48,
+        "wickets": 1,
+        "economy": 12.0
       }
     },
     {
@@ -686,12 +686,12 @@
       "role": "bowler",
       "season_stats": null,
       "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 8.0,
-        "runs_conceded": 82,
+        "matches": 1,
+        "innings": 1,
+        "overs": 4.0,
+        "runs_conceded": 42,
         "wickets": 2,
-        "economy": 10.25
+        "economy": 10.5
       }
     },
     {
@@ -731,12 +731,12 @@
       "role": "bowler",
       "season_stats": null,
       "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 8.0,
-        "runs_conceded": 96,
+        "matches": 1,
+        "innings": 1,
+        "overs": 4.0,
+        "runs_conceded": 39,
         "wickets": 1,
-        "economy": 12.0
+        "economy": 9.75
       }
     },
     {
@@ -857,21 +857,6 @@
         "runs_conceded": 30,
         "wickets": 1,
         "economy": 15.0
-      }
-    },
-    {
-      "name": "Ravisrinivasan Sai Kishore",
-      "team": "KKR",
-      "team_color": "#3B2172",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 3.0,
-        "runs_conceded": 38,
-        "wickets": 1,
-        "economy": 12.67
       }
     },
     {
@@ -1106,16 +1091,16 @@
       },
       {
         "rank": 15,
-        "name": "Devdutt Padikkal",
-        "team": "RCB",
-        "team_color": "#D4001A",
+        "name": "Jos Buttler",
+        "team": "RR",
+        "team_color": "#E83673",
         "runs": 412,
         "matches": 13,
-        "innings": 12,
-        "average": 37.45,
-        "strike_rate": 173.11,
-        "fours": 42,
-        "sixes": 23
+        "innings": 13,
+        "average": 34.33,
+        "strike_rate": 149.82,
+        "fours": 41,
+        "sixes": 20
       }
     ],
     "purple_cap": [

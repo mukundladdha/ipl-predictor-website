@@ -923,6 +923,22 @@
         "fall": -0.20000000000000018
       },
       "generated_at": "2026-05-11"
+    },
+    {
+      "match_id": "weekly_week_8__may_16___may_22",
+      "date": "2026-05-18",
+      "week_label": "WEEK 8 · MAY 16 – MAY 22",
+      "type": "weekly",
+      "headline": "WEEK 8 · MAY 16 – MAY 22",
+      "body": "IPL 2026 Week 8: 0 matches played. RR gained the most ground this week (+0.2%), while CSK slipped (-0.4%). Current top 4: RCB 100.0%, GT 99.4%, SRH 82.2%, RR 48.1%. The cutoff fight between RCB (100.0%) vs GT (99.4%) is the race to watch. Full projections updated after every match.",
+      "top4": "RCB 100.0%, GT 99.4%, SRH 82.2%, RR 48.1%",
+      "biggest_mover": {
+        "riser": "RR",
+        "rise": 0.20000000000000284,
+        "faller": "CSK",
+        "fall": -0.3999999999999986
+      },
+      "generated_at": "2026-05-18"
     }
   ]
 }
