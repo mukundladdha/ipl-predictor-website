@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-19",
+  "last_updated": "2026-05-20",
   "season": "2026",
-  "matches_covered": 14,
+  "matches_covered": 13,
   "matches_played": 63,
   "players": [
     {
@@ -845,66 +845,6 @@
       }
     },
     {
-      "name": "Praful Hinge",
-      "team": "CSK",
-      "team_color": "#F9CD05",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 3.0,
-        "runs_conceded": 37,
-        "wickets": 1,
-        "economy": 12.33
-      }
-    },
-    {
-      "name": "Pat Cummins",
-      "team": "SRH",
-      "team_color": "#F26522",
-      "role": "allrounder",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 28,
-        "wickets": 3,
-        "economy": 7.0
-      }
-    },
-    {
-      "name": "Eshan Malinga",
-      "team": "CSK",
-      "team_color": "#F9CD05",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 26,
-        "wickets": 1,
-        "economy": 6.5
-      }
-    },
-    {
-      "name": "Sakib Hussain",
-      "team": "CSK",
-      "team_color": "#F9CD05",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 34,
-        "wickets": 2,
-        "economy": 8.5
-      }
-    },
-    {
       "name": "Yash Raj Punja",
       "team": "LSG",
       "team_color": "#A0522D",
@@ -1220,17 +1160,6 @@
       },
       {
         "rank": 10,
-        "name": "Pat Cummins",
-        "team": "SRH",
-        "team_color": "#F26522",
-        "wickets": 3,
-        "matches": 1,
-        "overs": 4.0,
-        "runs_conceded": 28,
-        "economy": 7.0
-      },
-      {
-        "rank": 11,
         "name": "Nandre Burger",
         "team": "KKR",
         "team_color": "#3B2172",
@@ -1241,7 +1170,7 @@
         "economy": 6.5
       },
       {
-        "rank": 12,
+        "rank": 11,
         "name": "Ravindra Jadeja",
         "team": "CSK",
         "team_color": "#F9CD05",
@@ -1252,7 +1181,7 @@
         "economy": 6.0
       },
       {
-        "rank": 13,
+        "rank": 12,
         "name": "Marco Jansen",
         "team": "CSK",
         "team_color": "#F9CD05",
@@ -1263,7 +1192,7 @@
         "economy": 7.88
       },
       {
-        "rank": 14,
+        "rank": 13,
         "name": "Mukesh Kumar",
         "team": "DC",
         "team_color": "#00008B",
@@ -1274,7 +1203,7 @@
         "economy": 7.17
       },
       {
-        "rank": 15,
+        "rank": 14,
         "name": "Axar Patel",
         "team": "DC",
         "team_color": "#00008B",
@@ -1283,6 +1212,17 @@
         "overs": 7.0,
         "runs_conceded": 39,
         "economy": 5.57
+      },
+      {
+        "rank": 15,
+        "name": "Kuldeep Yadav",
+        "team": "DC",
+        "team_color": "#00008B",
+        "wickets": 2,
+        "matches": 2,
+        "overs": 7.0,
+        "runs_conceded": 62,
+        "economy": 8.86
       }
     ]
   }
