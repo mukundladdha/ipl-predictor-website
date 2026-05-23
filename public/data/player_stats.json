@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-22",
+  "last_updated": "2026-05-23",
   "season": "2026",
   "matches_covered": 14,
   "matches_played": 66,
@@ -85,22 +85,6 @@
       "bowling_stats": null
     },
     {
-      "name": "Mitchell Marsh",
-      "team": "UNK",
-      "team_color": "#888",
-      "role": "batter",
-      "season_stats": {
-        "matches": 13,
-        "innings": 13,
-        "runs": 563,
-        "average": 43.31,
-        "strike_rate": 163.19,
-        "fours": 51,
-        "sixes": 36
-      },
-      "bowling_stats": null
-    },
-    {
       "name": "Abhishek Sharma",
       "team": "SRH",
       "team_color": "#F26522",
@@ -113,6 +97,22 @@
         "strike_rate": 206.23,
         "fours": 50,
         "sixes": 43
+      },
+      "bowling_stats": null
+    },
+    {
+      "name": "Mitchell Marsh",
+      "team": "UNK",
+      "team_color": "#888",
+      "role": "batter",
+      "season_stats": {
+        "matches": 13,
+        "innings": 13,
+        "runs": 563,
+        "average": 43.31,
+        "strike_rate": 163.19,
+        "fours": 51,
+        "sixes": 36
       },
       "bowling_stats": null
     },
@@ -974,19 +974,6 @@
       },
       {
         "rank": 6,
-        "name": "Mitchell Marsh",
-        "team": "UNK",
-        "team_color": "#888",
-        "runs": 563,
-        "matches": 13,
-        "innings": 13,
-        "average": 43.31,
-        "strike_rate": 163.19,
-        "fours": 51,
-        "sixes": 36
-      },
-      {
-        "rank": 7,
         "name": "Abhishek Sharma",
         "team": "SRH",
         "team_color": "#F26522",
@@ -997,6 +984,19 @@
         "strike_rate": 206.23,
         "fours": 50,
         "sixes": 43
+      },
+      {
+        "rank": 7,
+        "name": "Mitchell Marsh",
+        "team": "UNK",
+        "team_color": "#888",
+        "runs": 563,
+        "matches": 13,
+        "innings": 13,
+        "average": 43.31,
+        "strike_rate": 163.19,
+        "fours": 51,
+        "sixes": 36
       },
       {
         "rank": 8,
