@@ -1,6 +1,6 @@
 {
-  "total_predictions": 67,
-  "correct": 35,
+  "total_predictions": 69,
+  "correct": 36,
   "accuracy_pct": 52.2,
   "predictions": [
     {
@@ -672,12 +672,32 @@
       "actual_winner": "PBKS",
       "correct_elo": true,
       "correct_form": true
+    },
+    {
+      "match_key": "2026-05-24_KKR_DC",
+      "date": "2026-05-24",
+      "match": "KKR vs DC",
+      "predicted_winner_elo": "KKR",
+      "predicted_probability": 0.565,
+      "actual_winner": "DC",
+      "correct_elo": false,
+      "correct_form": false
+    },
+    {
+      "match_key": "2026-05-24_MI_RR",
+      "date": "2026-05-24",
+      "match": "MI vs RR",
+      "predicted_winner_elo": "RR",
+      "predicted_probability": 0.4757,
+      "actual_winner": "RR",
+      "correct_elo": true,
+      "correct_form": true
     }
   ],
   "calibration": {
     "50_60": {
-      "predictions": 40,
-      "correct": 19
+      "predictions": 42,
+      "correct": 20
     },
     "60_70": {
       "predictions": 25,
@@ -694,12 +714,12 @@
   },
   "by_model": {
     "elo": {
-      "correct": 35,
-      "total": 67
+      "correct": 36,
+      "total": 69
     },
     "form": {
-      "correct": 35,
-      "total": 67
+      "correct": 36,
+      "total": 69
     }
   }
 }
