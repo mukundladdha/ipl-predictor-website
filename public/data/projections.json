@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-05-24",
+  "last_updated": "2026-05-25",
   "season_start": "2026-03-28",
   "defending_champion": "RCB",
   "pre_season": false,
   "matches_played": 69,
   "matches_remaining": 1,
   "playoff_spots": 4,
-  "model_note": "Elo ratings calculated from all IPL results through 2026-05-24. Monte Carlo simulation uses 100,000 iterations per model.",
+  "model_note": "Elo ratings calculated from all IPL results through 2026-05-25. Monte Carlo simulation uses 100,000 iterations per model.",
   "teams": [
     {
       "name": "Mumbai Indians",
@@ -45,8 +45,8 @@
             0.0,
             0.0,
             0.0,
-            81.1,
-            18.9
+            81.3,
+            18.7
           ]
         }
       },
@@ -170,6 +170,7 @@
           0.1,
           0.2,
           0.2,
+          0.0,
           0.0,
           0.0,
           0.0,
@@ -305,11 +306,12 @@
           0.0,
           0.0,
           0.0,
+          0.0,
           0.0
         ]
       },
       "key_players": "Rohit Sharma, Jasprit Bumrah, Hardik Pandya",
-      "why_changed": "Lost vs RR · Elo 1468→1453 · odds 0.0% to 0.0% · Next fixture TBD"
+      "why_changed": "Lost vs RR · Elo 1453→1453 · odds 0.0% to 0.0% · Next fixture TBD"
     },
     {
       "name": "Royal Challengers Bengaluru",
@@ -326,8 +328,8 @@
           "playoff_pct": 100.0,
           "rank_probs": [
             85.3,
-            7.5,
             7.3,
+            7.4,
             0.0,
             0.0,
             0.0,
@@ -340,8 +342,8 @@
         "form": {
           "playoff_pct": 100.0,
           "rank_probs": [
-            74.7,
-            12.7,
+            74.9,
+            12.6,
             12.5,
             0.0,
             0.0,
@@ -483,6 +485,7 @@
           100.0,
           100.0,
           100.0,
+          100.0,
           100.0
         ],
         "form": [
@@ -608,6 +611,7 @@
           100.0,
           100.0,
           100.0,
+          100.0,
           100.0
         ]
       },
@@ -649,8 +653,8 @@
             0.0,
             0.0,
             0.0,
-            50.2,
             49.8,
+            50.2,
             0.0,
             0.0
           ]
@@ -786,6 +790,7 @@
           10.4,
           8.9,
           8.9,
+          0.0,
           0.0
         ],
         "form": [
@@ -911,11 +916,12 @@
           10.8,
           8.6,
           8.5,
+          0.0,
           0.0
         ]
       },
       "key_players": "Ajinkya Rahane, Andre Russell, Sunil Narine",
-      "why_changed": "Lost vs None · Elo 1522→1504 · odds -8.9% to 0.0% · Next fixture TBD"
+      "why_changed": "Lost vs None · Elo 1504→1504 · odds 0.0% to 0.0% · Next fixture TBD"
     },
     {
       "name": "Gujarat Titans",
@@ -931,9 +937,9 @@
         "elo": {
           "playoff_pct": 100.0,
           "rank_probs": [
-            7.5,
-            46.2,
-            46.3,
+            7.3,
+            46.6,
+            46.1,
             0.0,
             0.0,
             0.0,
@@ -946,9 +952,9 @@
         "form": {
           "playoff_pct": 100.0,
           "rank_probs": [
-            12.7,
+            12.5,
+            43.8,
             43.7,
-            43.6,
             0.0,
             0.0,
             0.0,
@@ -1089,6 +1095,7 @@
           100.0,
           100.0,
           100.0,
+          100.0,
           100.0
         ],
         "form": [
@@ -1214,6 +1221,7 @@
           100.0,
           100.0,
           100.0,
+          100.0,
           100.0
         ]
       },
@@ -1255,8 +1263,8 @@
             0.0,
             0.0,
             0.0,
-            49.8,
             50.2,
+            49.8,
             0.0,
             0.0
           ]
@@ -1392,6 +1400,7 @@
           0.0,
           0.0,
           0.0,
+          0.0,
           0.0
         ],
         "form": [
@@ -1517,6 +1526,7 @@
           0.0,
           0.0,
           0.0,
+          0.0,
           0.0
         ]
       },
@@ -1537,9 +1547,9 @@
         "elo": {
           "playoff_pct": 100.0,
           "rank_probs": [
-            7.2,
-            46.3,
-            46.4,
+            7.4,
+            46.1,
+            46.5,
             0.0,
             0.0,
             0.0,
@@ -1553,8 +1563,8 @@
           "playoff_pct": 100.0,
           "rank_probs": [
             12.5,
-            43.6,
-            43.9,
+            43.7,
+            43.8,
             0.0,
             0.0,
             0.0,
@@ -1695,6 +1705,7 @@
           100.0,
           100.0,
           100.0,
+          100.0,
           100.0
         ],
         "form": [
@@ -1820,6 +1831,7 @@
           100.0,
           100.0,
           100.0,
+          100.0,
           100.0
         ]
       },
@@ -1844,8 +1856,8 @@
             0.0,
             0.0,
             0.0,
-            50.2,
-            49.8,
+            50.1,
+            49.9,
             0.0,
             0.0,
             0.0,
@@ -1859,8 +1871,8 @@
             0.0,
             0.0,
             0.0,
-            50.1,
-            49.9,
+            50.3,
+            49.7,
             0.0,
             0.0,
             0.0,
@@ -1998,6 +2010,7 @@
           10.7,
           15.9,
           16.0,
+          0.0,
           0.0
         ],
         "form": [
@@ -2123,11 +2136,12 @@
           7.5,
           15.5,
           15.9,
+          0.0,
           0.0
         ]
       },
       "key_players": "Shreyas Iyer, Yuzvendra Chahal, Arshdeep Singh",
-      "why_changed": "Lost vs None · Elo 1505→1505 · odds -16.0% to 0.0% · Next fixture TBD"
+      "why_changed": "Lost vs None · Elo 1505→1505 · odds 0.0% to 0.0% · Next fixture TBD"
     },
     {
       "name": "Rajasthan Royals",
@@ -2301,6 +2315,7 @@
           71.1,
           68.3,
           68.2,
+          100.0,
           100.0
         ],
         "form": [
@@ -2426,11 +2441,12 @@
           72.4,
           68.6,
           68.5,
+          100.0,
           100.0
         ]
       },
       "key_players": "Sanju Samson, Shimron Hetmyer, Wanindu Hasaranga",
-      "why_changed": "Won vs MI · Elo 1485→1500 · odds +31.8% to 100.0% · Next fixture TBD"
+      "why_changed": "Won vs MI · Elo 1500→1500 · odds 0.0% to 100.0% · Next fixture TBD"
     },
     {
       "name": "Delhi Capitals",
@@ -2450,8 +2466,8 @@
             0.0,
             0.0,
             0.0,
-            49.8,
-            50.2,
+            49.9,
+            50.1,
             0.0,
             0.0,
             0.0,
@@ -2465,8 +2481,8 @@
             0.0,
             0.0,
             0.0,
-            49.9,
-            50.1,
+            49.7,
+            50.3,
             0.0,
             0.0,
             0.0,
@@ -2604,6 +2620,7 @@
           7.8,
           6.9,
           6.9,
+          0.0,
           0.0
         ],
         "form": [
@@ -2729,11 +2746,12 @@
           9.3,
           7.3,
           7.1,
+          0.0,
           0.0
         ]
       },
       "key_players": "Axar Patel, Jake Fraser-McGurk, Kuldeep Yadav",
-      "why_changed": "Lost vs None · Elo 1477→1495 · odds -6.9% to 0.0% · Next fixture TBD"
+      "why_changed": "Lost vs None · Elo 1495→1495 · odds 0.0% to 0.0% · Next fixture TBD"
     },
     {
       "name": "Lucknow Super Giants",
@@ -2772,8 +2790,8 @@
             0.0,
             0.0,
             0.0,
-            18.9,
-            81.1
+            18.7,
+            81.3
           ]
         }
       },
@@ -2879,6 +2897,7 @@
           0.0,
           0.0,
           0.1,
+          0.0,
           0.0,
           0.0,
           0.0,
@@ -3022,6 +3041,7 @@
           0.1,
           0.1,
           0.1,
+          0.0,
           0.0,
           0.0,
           0.0,
