@@ -335,33 +335,18 @@
       }
     },
     {
-      "name": "AM Ghazanfar",
-      "team": "RR",
-      "team_color": "#E83673",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 7.0,
-        "runs_conceded": 96,
-        "wickets": 1,
-        "economy": 13.71
-      }
-    },
-    {
       "name": "Shardul Thakur",
-      "team": "RR",
-      "team_color": "#E83673",
+      "team": "MI",
+      "team_color": "#004BA0",
       "role": "bowler",
       "season_stats": null,
       "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 8.0,
-        "runs_conceded": 80,
-        "wickets": 5,
-        "economy": 10.0
+        "matches": 1,
+        "innings": 1,
+        "overs": 4.0,
+        "runs_conceded": 39,
+        "wickets": 3,
+        "economy": 9.75
       }
     },
     {
@@ -890,51 +875,6 @@
       }
     },
     {
-      "name": "Deepak Chahar",
-      "team": "CSK",
-      "team_color": "#F9CD05",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 43,
-        "wickets": 2,
-        "economy": 10.75
-      }
-    },
-    {
-      "name": "Will Jacks",
-      "team": "MI",
-      "team_color": "#004BA0",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 2.0,
-        "runs_conceded": 12,
-        "wickets": 1,
-        "economy": 6.0
-      }
-    },
-    {
-      "name": "Corbin Bosch",
-      "team": "RR",
-      "team_color": "#E83673",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 38,
-        "wickets": 1,
-        "economy": 9.5
-      }
-    },
-    {
       "name": "Saurabh Dubey",
       "team": "DC",
       "team_color": "#00008B",
@@ -1151,17 +1091,6 @@
     "purple_cap": [
       {
         "rank": 1,
-        "name": "Shardul Thakur",
-        "team": "RR",
-        "team_color": "#E83673",
-        "wickets": 5,
-        "matches": 2,
-        "overs": 8.0,
-        "runs_conceded": 80,
-        "economy": 10.0
-      },
-      {
-        "rank": 2,
         "name": "Vijaykumar Vyshak",
         "team": "PBKS",
         "team_color": "#ED1F27",
@@ -1172,7 +1101,7 @@
         "economy": 9.0
       },
       {
-        "rank": 3,
+        "rank": 2,
         "name": "Lungi Ngidi",
         "team": "CSK",
         "team_color": "#F9CD05",
@@ -1183,7 +1112,7 @@
         "economy": 8.24
       },
       {
-        "rank": 4,
+        "rank": 3,
         "name": "T Natarajan",
         "team": "DC",
         "team_color": "#00008B",
@@ -1194,7 +1123,7 @@
         "economy": 7.57
       },
       {
-        "rank": 5,
+        "rank": 4,
         "name": "Blessing Muzarabani",
         "team": "KKR",
         "team_color": "#3B2172",
@@ -1205,7 +1134,7 @@
         "economy": 10.25
       },
       {
-        "rank": 6,
+        "rank": 5,
         "name": "Jacob Duffy",
         "team": "RCB",
         "team_color": "#D4001A",
@@ -1216,7 +1145,7 @@
         "economy": 5.5
       },
       {
-        "rank": 7,
+        "rank": 6,
         "name": "Romario Shepherd",
         "team": "RCB",
         "team_color": "#D4001A",
@@ -1225,6 +1154,17 @@
         "overs": 4.0,
         "runs_conceded": 54,
         "economy": 13.5
+      },
+      {
+        "rank": 7,
+        "name": "Shardul Thakur",
+        "team": "MI",
+        "team_color": "#004BA0",
+        "wickets": 3,
+        "matches": 1,
+        "overs": 4.0,
+        "runs_conceded": 39,
+        "economy": 9.75
       },
       {
         "rank": 8,
