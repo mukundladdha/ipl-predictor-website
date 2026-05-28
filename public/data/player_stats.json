@@ -117,22 +117,6 @@
       "bowling_stats": null
     },
     {
-      "name": "Abhishek Sharma",
-      "team": "SRH",
-      "team_color": "#F26522",
-      "role": "batter",
-      "season_stats": {
-        "matches": 15,
-        "innings": 15,
-        "runs": 563,
-        "average": 40.21,
-        "strike_rate": 204.73,
-        "fours": 50,
-        "sixes": 43
-      },
-      "bowling_stats": null
-    },
-    {
       "name": "Mitchell Marsh",
       "team": "UNK",
       "team_color": "#888",
@@ -145,6 +129,22 @@
         "strike_rate": 163.19,
         "fours": 51,
         "sixes": 36
+      },
+      "bowling_stats": null
+    },
+    {
+      "name": "Abhishek Sharma",
+      "team": "SRH",
+      "team_color": "#F26522",
+      "role": "batter",
+      "season_stats": {
+        "matches": 15,
+        "innings": 15,
+        "runs": 563,
+        "average": 40.21,
+        "strike_rate": 204.73,
+        "fours": 50,
+        "sixes": 43
       },
       "bowling_stats": null
     },
@@ -656,12 +656,12 @@
       "role": "bowler",
       "season_stats": null,
       "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 7.0,
-        "runs_conceded": 94,
+        "matches": 1,
+        "innings": 1,
+        "overs": 4.0,
+        "runs_conceded": 48,
         "wickets": 1,
-        "economy": 13.43
+        "economy": 12.0
       }
     },
     {
@@ -671,12 +671,12 @@
       "role": "bowler",
       "season_stats": null,
       "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 8.0,
-        "runs_conceded": 96,
-        "wickets": 4,
-        "economy": 12.0
+        "matches": 1,
+        "innings": 1,
+        "overs": 4.0,
+        "runs_conceded": 42,
+        "wickets": 2,
+        "economy": 10.5
       }
     },
     {
@@ -701,12 +701,12 @@
       "role": "bowler",
       "season_stats": null,
       "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 8.0,
-        "runs_conceded": 96,
-        "wickets": 2,
-        "economy": 12.0
+        "matches": 1,
+        "innings": 1,
+        "overs": 4.0,
+        "runs_conceded": 43,
+        "wickets": 1,
+        "economy": 10.75
       }
     },
     {
@@ -716,12 +716,12 @@
       "role": "bowler",
       "season_stats": null,
       "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 7.0,
-        "runs_conceded": 68,
+        "matches": 1,
+        "innings": 1,
+        "overs": 4.0,
+        "runs_conceded": 39,
         "wickets": 1,
-        "economy": 9.71
+        "economy": 9.75
       }
     },
     {
@@ -842,21 +842,6 @@
         "runs_conceded": 30,
         "wickets": 1,
         "economy": 15.0
-      }
-    },
-    {
-      "name": "Jason Holder",
-      "team": "RCB",
-      "team_color": "#D4001A",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 39,
-        "wickets": 2,
-        "economy": 9.75
       }
     },
     {
@@ -1015,19 +1000,6 @@
       },
       {
         "rank": 8,
-        "name": "Abhishek Sharma",
-        "team": "SRH",
-        "team_color": "#F26522",
-        "runs": 563,
-        "matches": 15,
-        "innings": 15,
-        "average": 40.21,
-        "strike_rate": 204.73,
-        "fours": 50,
-        "sixes": 43
-      },
-      {
-        "rank": 9,
         "name": "Mitchell Marsh",
         "team": "UNK",
         "team_color": "#888",
@@ -1038,6 +1010,19 @@
         "strike_rate": 163.19,
         "fours": 51,
         "sixes": 36
+      },
+      {
+        "rank": 9,
+        "name": "Abhishek Sharma",
+        "team": "SRH",
+        "team_color": "#F26522",
+        "runs": 563,
+        "matches": 15,
+        "innings": 15,
+        "average": 40.21,
+        "strike_rate": 204.73,
+        "fours": 50,
+        "sixes": 43
       },
       {
         "rank": 10,
@@ -1165,17 +1150,6 @@
       },
       {
         "rank": 5,
-        "name": "Kagiso Rabada",
-        "team": "GT",
-        "team_color": "#1B2133",
-        "wickets": 4,
-        "matches": 2,
-        "overs": 8.0,
-        "runs_conceded": 96,
-        "economy": 12.0
-      },
-      {
-        "rank": 6,
         "name": "Jacob Duffy",
         "team": "RCB",
         "team_color": "#D4001A",
@@ -1186,7 +1160,7 @@
         "economy": 5.5
       },
       {
-        "rank": 7,
+        "rank": 6,
         "name": "Romario Shepherd",
         "team": "RCB",
         "team_color": "#D4001A",
@@ -1197,7 +1171,7 @@
         "economy": 13.5
       },
       {
-        "rank": 8,
+        "rank": 7,
         "name": "Shardul Thakur",
         "team": "MI",
         "team_color": "#004BA0",
@@ -1208,7 +1182,7 @@
         "economy": 9.75
       },
       {
-        "rank": 9,
+        "rank": 8,
         "name": "Yuzvendra Chahal",
         "team": "RR",
         "team_color": "#E83673",
@@ -1219,7 +1193,7 @@
         "economy": 7.0
       },
       {
-        "rank": 10,
+        "rank": 9,
         "name": "Praful Hinge",
         "team": "RR",
         "team_color": "#E83673",
@@ -1230,7 +1204,7 @@
         "economy": 13.5
       },
       {
-        "rank": 11,
+        "rank": 10,
         "name": "Jofra Archer",
         "team": "RR",
         "team_color": "#E83673",
@@ -1241,7 +1215,7 @@
         "economy": 4.75
       },
       {
-        "rank": 12,
+        "rank": 11,
         "name": "Nandre Burger",
         "team": "KKR",
         "team_color": "#3B2172",
@@ -1252,7 +1226,7 @@
         "economy": 6.5
       },
       {
-        "rank": 13,
+        "rank": 12,
         "name": "Ravindra Jadeja",
         "team": "CSK",
         "team_color": "#F9CD05",
@@ -1263,7 +1237,7 @@
         "economy": 6.0
       },
       {
-        "rank": 14,
+        "rank": 13,
         "name": "Marco Jansen",
         "team": "CSK",
         "team_color": "#F9CD05",
@@ -1274,7 +1248,7 @@
         "economy": 7.88
       },
       {
-        "rank": 15,
+        "rank": 14,
         "name": "Mukesh Kumar",
         "team": "DC",
         "team_color": "#00008B",
@@ -1283,6 +1257,17 @@
         "overs": 6.0,
         "runs_conceded": 43,
         "economy": 7.17
+      },
+      {
+        "rank": 15,
+        "name": "Axar Patel",
+        "team": "DC",
+        "team_color": "#00008B",
+        "wickets": 2,
+        "matches": 2,
+        "overs": 7.0,
+        "runs_conceded": 39,
+        "economy": 5.57
       }
     ]
   }
