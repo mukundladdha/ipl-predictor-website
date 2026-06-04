@@ -1,7 +1,7 @@
 {
   "last_updated": "2026-06-04",
   "season": "2026",
-  "matches_covered": 12,
+  "matches_covered": 11,
   "matches_played": 69,
   "players": [
     {
@@ -251,12 +251,12 @@
       "role": "bowler",
       "season_stats": null,
       "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 8.0,
-        "runs_conceded": 60,
+        "matches": 1,
+        "innings": 1,
+        "overs": 4.0,
+        "runs_conceded": 22,
         "wickets": 3,
-        "economy": 7.5
+        "economy": 5.5
       }
     },
     {
@@ -266,12 +266,12 @@
       "role": "bowler",
       "season_stats": null,
       "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 8.0,
-        "runs_conceded": 60,
-        "wickets": 3,
-        "economy": 7.5
+        "matches": 1,
+        "innings": 1,
+        "overs": 4.0,
+        "runs_conceded": 31,
+        "wickets": 1,
+        "economy": 7.75
       }
     },
     {
@@ -317,21 +317,6 @@
         "runs_conceded": 28,
         "wickets": 1,
         "economy": 9.33
-      }
-    },
-    {
-      "name": "Krunal Pandya",
-      "team": "RCB",
-      "team_color": "#D4001A",
-      "role": "allrounder",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 6.0,
-        "runs_conceded": 49,
-        "wickets": 1,
-        "economy": 8.17
       }
     },
     {
@@ -858,36 +843,6 @@
         "wickets": 1,
         "economy": 15.0
       }
-    },
-    {
-      "name": "Josh Hazlewood",
-      "team": "RCB",
-      "team_color": "#D4001A",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 37,
-        "wickets": 2,
-        "economy": 9.25
-      }
-    },
-    {
-      "name": "Rasikh Salam Dar",
-      "team": "GT",
-      "team_color": "#1B2133",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 27,
-        "wickets": 3,
-        "economy": 6.75
-      }
     }
   ],
   "leaderboards": {
@@ -1139,24 +1094,13 @@
         "team": "RCB",
         "team_color": "#D4001A",
         "wickets": 3,
-        "matches": 2,
-        "overs": 8.0,
-        "runs_conceded": 60,
-        "economy": 7.5
+        "matches": 1,
+        "overs": 4.0,
+        "runs_conceded": 22,
+        "economy": 5.5
       },
       {
         "rank": 6,
-        "name": "Bhuvneshwar Kumar",
-        "team": "SRH",
-        "team_color": "#F26522",
-        "wickets": 3,
-        "matches": 2,
-        "overs": 8.0,
-        "runs_conceded": 60,
-        "economy": 7.5
-      },
-      {
-        "rank": 7,
         "name": "Romario Shepherd",
         "team": "RCB",
         "team_color": "#D4001A",
@@ -1167,7 +1111,7 @@
         "economy": 13.5
       },
       {
-        "rank": 8,
+        "rank": 7,
         "name": "Shardul Thakur",
         "team": "MI",
         "team_color": "#004BA0",
@@ -1178,7 +1122,7 @@
         "economy": 9.75
       },
       {
-        "rank": 9,
+        "rank": 8,
         "name": "Yuzvendra Chahal",
         "team": "RR",
         "team_color": "#E83673",
@@ -1189,18 +1133,7 @@
         "economy": 7.0
       },
       {
-        "rank": 10,
-        "name": "Rasikh Salam Dar",
-        "team": "GT",
-        "team_color": "#1B2133",
-        "wickets": 3,
-        "matches": 1,
-        "overs": 4.0,
-        "runs_conceded": 27,
-        "economy": 6.75
-      },
-      {
-        "rank": 11,
+        "rank": 9,
         "name": "Jofra Archer",
         "team": "RR",
         "team_color": "#E83673",
@@ -1211,7 +1144,7 @@
         "economy": 4.75
       },
       {
-        "rank": 12,
+        "rank": 10,
         "name": "Nandre Burger",
         "team": "KKR",
         "team_color": "#3B2172",
@@ -1222,7 +1155,7 @@
         "economy": 6.5
       },
       {
-        "rank": 13,
+        "rank": 11,
         "name": "Ravindra Jadeja",
         "team": "CSK",
         "team_color": "#F9CD05",
@@ -1233,7 +1166,7 @@
         "economy": 6.0
       },
       {
-        "rank": 14,
+        "rank": 12,
         "name": "Marco Jansen",
         "team": "CSK",
         "team_color": "#F9CD05",
@@ -1244,7 +1177,7 @@
         "economy": 7.88
       },
       {
-        "rank": 15,
+        "rank": 13,
         "name": "Mukesh Kumar",
         "team": "DC",
         "team_color": "#00008B",
@@ -1253,6 +1186,28 @@
         "overs": 6.0,
         "runs_conceded": 43,
         "economy": 7.17
+      },
+      {
+        "rank": 14,
+        "name": "Axar Patel",
+        "team": "DC",
+        "team_color": "#00008B",
+        "wickets": 2,
+        "matches": 2,
+        "overs": 7.0,
+        "runs_conceded": 39,
+        "economy": 5.57
+      },
+      {
+        "rank": 15,
+        "name": "Kuldeep Yadav",
+        "team": "DC",
+        "team_color": "#00008B",
+        "wickets": 2,
+        "matches": 2,
+        "overs": 7.0,
+        "runs_conceded": 62,
+        "economy": 8.86
       }
     ]
   }
