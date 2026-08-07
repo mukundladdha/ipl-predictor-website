@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-06",
+  "last_updated": "2026-08-07",
   "season": "2026",
   "matches_covered": 11,
   "matches_played": 69,
@@ -117,22 +117,6 @@
       "bowling_stats": null
     },
     {
-      "name": "Mitchell Marsh",
-      "team": "UNK",
-      "team_color": "#888",
-      "role": "batter",
-      "season_stats": {
-        "matches": 13,
-        "innings": 13,
-        "runs": 563,
-        "average": 43.31,
-        "strike_rate": 163.19,
-        "fours": 51,
-        "sixes": 36
-      },
-      "bowling_stats": null
-    },
-    {
       "name": "Abhishek Sharma",
       "team": "SRH",
       "team_color": "#F26522",
@@ -145,6 +129,22 @@
         "strike_rate": 204.73,
         "fours": 50,
         "sixes": 43
+      },
+      "bowling_stats": null
+    },
+    {
+      "name": "Mitchell Marsh",
+      "team": "UNK",
+      "team_color": "#888",
+      "role": "batter",
+      "season_stats": {
+        "matches": 13,
+        "innings": 13,
+        "runs": 563,
+        "average": 43.31,
+        "strike_rate": 163.19,
+        "fours": 51,
+        "sixes": 36
       },
       "bowling_stats": null
     },
@@ -245,603 +245,18 @@
       "bowling_stats": null
     },
     {
-      "name": "Jacob Duffy",
+      "name": "View match performance",
       "team": "RCB",
       "team_color": "#D4001A",
       "role": "bowler",
       "season_stats": null,
       "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 22,
-        "wickets": 3,
-        "economy": 5.5
-      }
-    },
-    {
-      "name": "Bhuvneshwar Kumar",
-      "team": "SRH",
-      "team_color": "#F26522",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 31,
-        "wickets": 1,
-        "economy": 7.75
-      }
-    },
-    {
-      "name": "Abhinandan Singh",
-      "team": "RCB",
-      "team_color": "#D4001A",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 3.0,
-        "runs_conceded": 38,
-        "wickets": 1,
-        "economy": 12.67
-      }
-    },
-    {
-      "name": "Romario Shepherd",
-      "team": "RCB",
-      "team_color": "#D4001A",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 54,
-        "wickets": 3,
-        "economy": 13.5
-      }
-    },
-    {
-      "name": "Suyash Sharma",
-      "team": "RCB",
-      "team_color": "#D4001A",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 3.0,
-        "runs_conceded": 28,
-        "wickets": 1,
-        "economy": 9.33
-      }
-    },
-    {
-      "name": "Hardik Pandya",
-      "team": "MI",
-      "team_color": "#004BA0",
-      "role": "allrounder",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 3.0,
-        "runs_conceded": 39,
-        "wickets": 1,
-        "economy": 13.0
-      }
-    },
-    {
-      "name": "Shardul Thakur",
-      "team": "MI",
-      "team_color": "#004BA0",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 39,
-        "wickets": 3,
-        "economy": 9.75
-      }
-    },
-    {
-      "name": "Jofra Archer",
-      "team": "RR",
-      "team_color": "#E83673",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 19,
-        "wickets": 2,
-        "economy": 4.75
-      }
-    },
-    {
-      "name": "Nandre Burger",
-      "team": "KKR",
-      "team_color": "#3B2172",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 26,
-        "wickets": 2,
-        "economy": 6.5
-      }
-    },
-    {
-      "name": "Brijesh Sharma",
-      "team": "RR",
-      "team_color": "#E83673",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 3.0,
-        "runs_conceded": 17,
-        "wickets": 1,
-        "economy": 5.67
-      }
-    },
-    {
-      "name": "Sandeep Sharma",
-      "team": "RR",
-      "team_color": "#E83673",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 2.4,
-        "runs_conceded": 22,
-        "wickets": 1,
-        "economy": 9.17
-      }
-    },
-    {
-      "name": "Ravi Bishnoi",
-      "team": "LSG",
-      "team_color": "#A0522D",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 3.0,
-        "runs_conceded": 16,
-        "wickets": 1,
-        "economy": 5.33
-      }
-    },
-    {
-      "name": "Ravindra Jadeja",
-      "team": "CSK",
-      "team_color": "#F9CD05",
-      "role": "allrounder",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 3.0,
-        "runs_conceded": 18,
-        "wickets": 2,
-        "economy": 6.0
-      }
-    },
-    {
-      "name": "Xavier Bartlett",
-      "team": "CSK",
-      "team_color": "#F9CD05",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 8.0,
-        "runs_conceded": 84,
-        "wickets": 1,
-        "economy": 10.5
-      }
-    },
-    {
-      "name": "Marco Jansen",
-      "team": "CSK",
-      "team_color": "#F9CD05",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 8.0,
-        "runs_conceded": 63,
-        "wickets": 2,
-        "economy": 7.88
-      }
-    },
-    {
-      "name": "Vijaykumar Vyshak",
-      "team": "PBKS",
-      "team_color": "#ED1F27",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 8.0,
-        "runs_conceded": 72,
-        "wickets": 5,
-        "economy": 9.0
-      }
-    },
-    {
-      "name": "Yuzvendra Chahal",
-      "team": "RR",
-      "team_color": "#E83673",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 7.0,
-        "runs_conceded": 49,
-        "wickets": 3,
-        "economy": 7.0
-      }
-    },
-    {
-      "name": "Mukesh Kumar",
-      "team": "DC",
-      "team_color": "#00008B",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 6.0,
-        "runs_conceded": 43,
-        "wickets": 2,
-        "economy": 7.17
-      }
-    },
-    {
-      "name": "Lungi Ngidi",
-      "team": "CSK",
-      "team_color": "#F9CD05",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 7.4,
-        "runs_conceded": 61,
-        "wickets": 4,
-        "economy": 8.24
-      }
-    },
-    {
-      "name": "Axar Patel",
-      "team": "DC",
-      "team_color": "#00008B",
-      "role": "allrounder",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 7.0,
-        "runs_conceded": 39,
-        "wickets": 2,
-        "economy": 5.57
-      }
-    },
-    {
-      "name": "T Natarajan",
-      "team": "DC",
-      "team_color": "#00008B",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 7.0,
-        "runs_conceded": 53,
-        "wickets": 4,
-        "economy": 7.57
-      }
-    },
-    {
-      "name": "Kuldeep Yadav",
-      "team": "DC",
-      "team_color": "#00008B",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 7.0,
-        "runs_conceded": 62,
-        "wickets": 2,
-        "economy": 8.86
-      }
-    },
-    {
-      "name": "Vipraj Nigam",
-      "team": "DC",
-      "team_color": "#00008B",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 2,
-        "innings": 2,
-        "overs": 4.0,
-        "runs_conceded": 32,
-        "wickets": 1,
-        "economy": 8.0
-      }
-    },
-    {
-      "name": "Vaibhav Arora",
-      "team": "KKR",
-      "team_color": "#3B2172",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 47,
-        "wickets": 2,
-        "economy": 11.75
-      }
-    },
-    {
-      "name": "Blessing Muzarabani",
-      "team": "KKR",
-      "team_color": "#3B2172",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 41,
-        "wickets": 4,
-        "economy": 10.25
-      }
-    },
-    {
-      "name": "Kartik Tyagi",
-      "team": "RR",
-      "team_color": "#E83673",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 48,
-        "wickets": 1,
-        "economy": 12.0
-      }
-    },
-    {
-      "name": "Anukul Roy",
-      "team": "KKR",
-      "team_color": "#3B2172",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 2.0,
-        "runs_conceded": 16,
-        "wickets": 1,
-        "economy": 8.0
-      }
-    },
-    {
-      "name": "Mohammed Siraj",
-      "team": "RCB",
-      "team_color": "#D4001A",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 48,
-        "wickets": 1,
-        "economy": 12.0
-      }
-    },
-    {
-      "name": "Kagiso Rabada",
-      "team": "GT",
-      "team_color": "#1B2133",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 42,
-        "wickets": 2,
-        "economy": 10.5
-      }
-    },
-    {
-      "name": "Ashok Sharma",
-      "team": "GT",
-      "team_color": "#1B2133",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 37,
-        "wickets": 1,
-        "economy": 9.25
-      }
-    },
-    {
-      "name": "Prasidh Krishna",
-      "team": "GT",
-      "team_color": "#1B2133",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 43,
-        "wickets": 1,
-        "economy": 10.75
-      }
-    },
-    {
-      "name": "Rashid Khan",
-      "team": "GT",
-      "team_color": "#1B2133",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 39,
-        "wickets": 1,
-        "economy": 9.75
-      }
-    },
-    {
-      "name": "Mohammed Shami",
-      "team": "GT",
-      "team_color": "#1B2133",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 9,
-        "wickets": 2,
-        "economy": 2.25
-      }
-    },
-    {
-      "name": "Digvesh Singh Rathi",
-      "team": "SRH",
-      "team_color": "#F26522",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 46,
-        "wickets": 1,
-        "economy": 11.5
-      }
-    },
-    {
-      "name": "Prince Yadav",
-      "team": "SRH",
-      "team_color": "#F26522",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 34,
-        "wickets": 2,
-        "economy": 8.5
-      }
-    },
-    {
-      "name": "Manimaran Siddharth",
-      "team": "SRH",
-      "team_color": "#F26522",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 29,
-        "wickets": 1,
-        "economy": 7.25
-      }
-    },
-    {
-      "name": "Avesh Khan",
-      "team": "LSG",
-      "team_color": "#A0522D",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 36,
-        "wickets": 2,
-        "economy": 9.0
-      }
-    },
-    {
-      "name": "Anshul Kamboj",
-      "team": "RCB",
-      "team_color": "#D4001A",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 4.0,
-        "runs_conceded": 52,
-        "wickets": 1,
-        "economy": 13.0
-      }
-    },
-    {
-      "name": "Jamie Overton",
-      "team": "RCB",
-      "team_color": "#D4001A",
-      "role": "bowler",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 3.0,
-        "runs_conceded": 42,
-        "wickets": 1,
-        "economy": 14.0
-      }
-    },
-    {
-      "name": "Shivam Dube",
-      "team": "CSK",
-      "team_color": "#F9CD05",
-      "role": "allrounder",
-      "season_stats": null,
-      "bowling_stats": {
-        "matches": 1,
-        "innings": 1,
-        "overs": 2.0,
-        "runs_conceded": 30,
-        "wickets": 1,
-        "economy": 15.0
+        "matches": 62,
+        "innings": 62,
+        "overs": 216.8,
+        "runs_conceded": 2007,
+        "wickets": 73,
+        "economy": 9.26
       }
     }
   ],
@@ -940,19 +355,6 @@
       },
       {
         "rank": 8,
-        "name": "Mitchell Marsh",
-        "team": "UNK",
-        "team_color": "#888",
-        "runs": 563,
-        "matches": 13,
-        "innings": 13,
-        "average": 43.31,
-        "strike_rate": 163.19,
-        "fours": 51,
-        "sixes": 36
-      },
-      {
-        "rank": 9,
         "name": "Abhishek Sharma",
         "team": "SRH",
         "team_color": "#F26522",
@@ -963,6 +365,19 @@
         "strike_rate": 204.73,
         "fours": 50,
         "sixes": 43
+      },
+      {
+        "rank": 9,
+        "name": "Mitchell Marsh",
+        "team": "UNK",
+        "team_color": "#888",
+        "runs": 563,
+        "matches": 13,
+        "innings": 13,
+        "average": 43.31,
+        "strike_rate": 163.19,
+        "fours": 51,
+        "sixes": 36
       },
       {
         "rank": 10,
@@ -1046,168 +461,14 @@
     "purple_cap": [
       {
         "rank": 1,
-        "name": "Vijaykumar Vyshak",
-        "team": "PBKS",
-        "team_color": "#ED1F27",
-        "wickets": 5,
-        "matches": 2,
-        "overs": 8.0,
-        "runs_conceded": 72,
-        "economy": 9.0
-      },
-      {
-        "rank": 2,
-        "name": "Lungi Ngidi",
-        "team": "CSK",
-        "team_color": "#F9CD05",
-        "wickets": 4,
-        "matches": 2,
-        "overs": 7.4,
-        "runs_conceded": 61,
-        "economy": 8.24
-      },
-      {
-        "rank": 3,
-        "name": "T Natarajan",
-        "team": "DC",
-        "team_color": "#00008B",
-        "wickets": 4,
-        "matches": 2,
-        "overs": 7.0,
-        "runs_conceded": 53,
-        "economy": 7.57
-      },
-      {
-        "rank": 4,
-        "name": "Blessing Muzarabani",
-        "team": "KKR",
-        "team_color": "#3B2172",
-        "wickets": 4,
-        "matches": 1,
-        "overs": 4.0,
-        "runs_conceded": 41,
-        "economy": 10.25
-      },
-      {
-        "rank": 5,
-        "name": "Jacob Duffy",
+        "name": "View match performance",
         "team": "RCB",
         "team_color": "#D4001A",
-        "wickets": 3,
-        "matches": 1,
-        "overs": 4.0,
-        "runs_conceded": 22,
-        "economy": 5.5
-      },
-      {
-        "rank": 6,
-        "name": "Romario Shepherd",
-        "team": "RCB",
-        "team_color": "#D4001A",
-        "wickets": 3,
-        "matches": 1,
-        "overs": 4.0,
-        "runs_conceded": 54,
-        "economy": 13.5
-      },
-      {
-        "rank": 7,
-        "name": "Shardul Thakur",
-        "team": "MI",
-        "team_color": "#004BA0",
-        "wickets": 3,
-        "matches": 1,
-        "overs": 4.0,
-        "runs_conceded": 39,
-        "economy": 9.75
-      },
-      {
-        "rank": 8,
-        "name": "Yuzvendra Chahal",
-        "team": "RR",
-        "team_color": "#E83673",
-        "wickets": 3,
-        "matches": 2,
-        "overs": 7.0,
-        "runs_conceded": 49,
-        "economy": 7.0
-      },
-      {
-        "rank": 9,
-        "name": "Jofra Archer",
-        "team": "RR",
-        "team_color": "#E83673",
-        "wickets": 2,
-        "matches": 1,
-        "overs": 4.0,
-        "runs_conceded": 19,
-        "economy": 4.75
-      },
-      {
-        "rank": 10,
-        "name": "Nandre Burger",
-        "team": "KKR",
-        "team_color": "#3B2172",
-        "wickets": 2,
-        "matches": 1,
-        "overs": 4.0,
-        "runs_conceded": 26,
-        "economy": 6.5
-      },
-      {
-        "rank": 11,
-        "name": "Ravindra Jadeja",
-        "team": "CSK",
-        "team_color": "#F9CD05",
-        "wickets": 2,
-        "matches": 1,
-        "overs": 3.0,
-        "runs_conceded": 18,
-        "economy": 6.0
-      },
-      {
-        "rank": 12,
-        "name": "Marco Jansen",
-        "team": "CSK",
-        "team_color": "#F9CD05",
-        "wickets": 2,
-        "matches": 2,
-        "overs": 8.0,
-        "runs_conceded": 63,
-        "economy": 7.88
-      },
-      {
-        "rank": 13,
-        "name": "Mukesh Kumar",
-        "team": "DC",
-        "team_color": "#00008B",
-        "wickets": 2,
-        "matches": 2,
-        "overs": 6.0,
-        "runs_conceded": 43,
-        "economy": 7.17
-      },
-      {
-        "rank": 14,
-        "name": "Axar Patel",
-        "team": "DC",
-        "team_color": "#00008B",
-        "wickets": 2,
-        "matches": 2,
-        "overs": 7.0,
-        "runs_conceded": 39,
-        "economy": 5.57
-      },
-      {
-        "rank": 15,
-        "name": "Kuldeep Yadav",
-        "team": "DC",
-        "team_color": "#00008B",
-        "wickets": 2,
-        "matches": 2,
-        "overs": 7.0,
-        "runs_conceded": 62,
-        "economy": 8.86
+        "wickets": 73,
+        "matches": 62,
+        "overs": 216.8,
+        "runs_conceded": 2007,
+        "economy": 9.26
       }
     ]
   }
