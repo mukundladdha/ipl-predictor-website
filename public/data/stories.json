@@ -1115,6 +1115,22 @@
         "fall": 0.0
       },
       "generated_at": "2026-08-03"
+    },
+    {
+      "match_id": "weekly_week_20__aug_08___aug_14",
+      "date": "2026-08-10",
+      "week_label": "WEEK 20 · AUG 08 – AUG 14",
+      "type": "weekly",
+      "headline": "WEEK 20 · AUG 08 – AUG 14",
+      "body": "IPL 2026 Week 20: 0 matches played. MI gained the most ground this week (+0.0%), while MI slipped (+0.0%). Current top 4: RCB 100.0%, GT 100.0%, SRH 100.0%, RR 100.0%. The cutoff fight between RCB (100.0%) vs GT (100.0%) is the race to watch. Full projections updated after every match.",
+      "top4": "RCB 100.0%, GT 100.0%, SRH 100.0%, RR 100.0%",
+      "biggest_mover": {
+        "riser": "MI",
+        "rise": 0.0,
+        "faller": "MI",
+        "fall": 0.0
+      },
+      "generated_at": "2026-08-10"
     }
   ]
 }
