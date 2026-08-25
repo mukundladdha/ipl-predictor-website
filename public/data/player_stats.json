@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-24",
+  "last_updated": "2026-08-25",
   "season": "2026",
   "matches_covered": 11,
   "matches_played": 69,
@@ -117,22 +117,6 @@
       "bowling_stats": null
     },
     {
-      "name": "Abhishek Sharma",
-      "team": "SRH",
-      "team_color": "#F26522",
-      "role": "batter",
-      "season_stats": {
-        "matches": 15,
-        "innings": 15,
-        "runs": 563,
-        "average": 40.21,
-        "strike_rate": 204.73,
-        "fours": 50,
-        "sixes": 43
-      },
-      "bowling_stats": null
-    },
-    {
       "name": "Mitchell Marsh",
       "team": "UNK",
       "team_color": "#888",
@@ -145,6 +129,22 @@
         "strike_rate": 163.19,
         "fours": 51,
         "sixes": 36
+      },
+      "bowling_stats": null
+    },
+    {
+      "name": "Abhishek Sharma",
+      "team": "SRH",
+      "team_color": "#F26522",
+      "role": "batter",
+      "season_stats": {
+        "matches": 15,
+        "innings": 15,
+        "runs": 563,
+        "average": 40.21,
+        "strike_rate": 204.73,
+        "fours": 50,
+        "sixes": 43
       },
       "bowling_stats": null
     },
@@ -355,19 +355,6 @@
       },
       {
         "rank": 8,
-        "name": "Abhishek Sharma",
-        "team": "SRH",
-        "team_color": "#F26522",
-        "runs": 563,
-        "matches": 15,
-        "innings": 15,
-        "average": 40.21,
-        "strike_rate": 204.73,
-        "fours": 50,
-        "sixes": 43
-      },
-      {
-        "rank": 9,
         "name": "Mitchell Marsh",
         "team": "UNK",
         "team_color": "#888",
@@ -378,6 +365,19 @@
         "strike_rate": 163.19,
         "fours": 51,
         "sixes": 36
+      },
+      {
+        "rank": 9,
+        "name": "Abhishek Sharma",
+        "team": "SRH",
+        "team_color": "#F26522",
+        "runs": 563,
+        "matches": 15,
+        "innings": 15,
+        "average": 40.21,
+        "strike_rate": 204.73,
+        "fours": 50,
+        "sixes": 43
       },
       {
         "rank": 10,
