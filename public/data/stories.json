@@ -1211,6 +1211,22 @@
         "fall": 0.0
       },
       "generated_at": "2026-09-14"
+    },
+    {
+      "match_id": "weekly_week_26__sep_19___sep_25",
+      "date": "2026-09-21",
+      "week_label": "WEEK 26 · SEP 19 – SEP 25",
+      "type": "weekly",
+      "headline": "WEEK 26 · SEP 19 – SEP 25",
+      "body": "IPL 2026 Week 26: 0 matches played. MI gained the most ground this week (+0.0%), while MI slipped (+0.0%). Current top 4: RCB 100.0%, GT 100.0%, SRH 100.0%, RR 100.0%. The cutoff fight between RCB (100.0%) vs GT (100.0%) is the race to watch. Full projections updated after every match.",
+      "top4": "RCB 100.0%, GT 100.0%, SRH 100.0%, RR 100.0%",
+      "biggest_mover": {
+        "riser": "MI",
+        "rise": 0.0,
+        "faller": "MI",
+        "fall": 0.0
+      },
+      "generated_at": "2026-09-21"
     }
   ]
 }
