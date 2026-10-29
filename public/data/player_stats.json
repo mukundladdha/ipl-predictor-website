@@ -246,17 +246,17 @@
     },
     {
       "name": "View match performance",
-      "team": "RCB",
-      "team_color": "#D4001A",
+      "team": "SRH",
+      "team_color": "#F26522",
       "role": "bowler",
       "season_stats": null,
       "bowling_stats": {
-        "matches": 62,
-        "innings": 62,
-        "overs": 216.8,
-        "runs_conceded": 2007,
-        "wickets": 73,
-        "economy": 9.26
+        "matches": 22,
+        "innings": 22,
+        "overs": 77.4,
+        "runs_conceded": 696,
+        "wickets": 30,
+        "economy": 8.99
       }
     }
   ],
@@ -462,13 +462,13 @@
       {
         "rank": 1,
         "name": "View match performance",
-        "team": "RCB",
-        "team_color": "#D4001A",
-        "wickets": 73,
-        "matches": 62,
-        "overs": 216.8,
-        "runs_conceded": 2007,
-        "economy": 9.26
+        "team": "SRH",
+        "team_color": "#F26522",
+        "wickets": 30,
+        "matches": 22,
+        "overs": 77.4,
+        "runs_conceded": 696,
+        "economy": 8.99
       }
     ]
   }
